@@ -2,15 +2,3 @@
 [project]
 name = "clarity-mainnet-contracts"
 
-[[project.requirements]]
-contract_id = "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait"
-
-[[project.requirements]]
-contract_id = "SP3N4AJFZZYC4BK99H53XP8KDGXFGQ2PRSQP2HGT6.operable"
-
-[[project.requirements]]
-contract_id = "SP3N4AJFZZYC4BK99H53XP8KDGXFGQ2PRSQP2HGT6.transferable"
-
-[contracts.contract1]
-path = "contracts/SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1.clar"
-depends_on = []
