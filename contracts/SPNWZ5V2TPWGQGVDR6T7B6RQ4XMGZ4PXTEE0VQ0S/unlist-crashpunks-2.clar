@@ -1,0 +1,5 @@
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u5410))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u5409))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u2356))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u2355))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u5402))

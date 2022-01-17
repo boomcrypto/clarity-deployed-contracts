@@ -1,0 +1,1 @@
+(define-fungible-token test-for-fungible-token u100000)

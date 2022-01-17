@@ -1,0 +1,6 @@
+(try! (contract-call? .wgmiami claim-for 'SP2N3KC4CR7CC0JP592S9RBA9GHVVD30WRA5GXE8G u134))
+(try! (contract-call? .wgmiami claim-for 'SP2AS7ZK5AFC6WG46V8XDHDT40T30M7519WHCM6KY u199))
+(try! (contract-call? .wgmiami claim-for 'SP1P3H2SFSNHMW3B7EJZRDE0KY25X3F2J84JK6KKH u186))
+(try! (contract-call? .wgmiami claim-for 'SPHAFGQX5ZS1TMQKE0PHYTKTM98QDJ6GSSK2FRNP u19))
+(try! (contract-call? .wgmiami claim-for 'SP4PJTG8Z14F64KQA8HH88B282YTEKG2SG7KWXAC u164))
+(try! (contract-call? .wgmiami claim-for 'SP10JT2HB7FAGKY84E9G2NXE0TKRS2HX4JJA27S18 u162))

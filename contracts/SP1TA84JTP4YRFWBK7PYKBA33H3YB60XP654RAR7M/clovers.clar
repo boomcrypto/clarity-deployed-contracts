@@ -1,0 +1,1 @@
+(define-fungible-token clovers u1000)

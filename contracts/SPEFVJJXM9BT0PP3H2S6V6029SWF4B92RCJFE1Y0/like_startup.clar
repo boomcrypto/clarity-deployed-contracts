@@ -1,0 +1,1 @@
+(contract-call? .laser_eyes set_ext_contract .like true)
