@@ -10,6 +10,7 @@ import {
   existsSync,
   mkdir,
   mkdirSync,
+  readFileSync,
   readdir,
   readdirSync,
   rmSync,
@@ -42,18 +43,18 @@ async function downloadSource(contractAddress, contractName) {
 }
 
 async function loadAll() {
+  const lastBlockString = readFileSync("last-block.txt");
+  const lastBlock = parseInt(lastBlockString);
+
   const coreInfo = await infoApi.getCoreApiInfo();
-  console.log(coreInfo.stacks_tip_height)
-  writeFileSync(
-    "last-block.txt",
-    coreInfo.stacks_tip_height.toString()
-  );
+  console.log(coreInfo.stacks_tip_height);
+  writeFileSync("last-block.txt", coreInfo.stacks_tip_height.toString());
 
   let contracts = [];
-  mkdirSync(`contracts`, {recursive: true});
+  mkdirSync(`contracts`, { recursive: true });
   readdirSync("contracts").forEach((d) => {
     contracts = contracts.concat(
-      readdirSync(`contracts/${d}`).map((c) => `${d}.${c}`)
+      readdirSync(`contracts/${d}`).map((c) => `${d}/${c}`)
     );
   });
   console.log("cached already", contracts.length);
@@ -66,10 +67,16 @@ async function loadAll() {
       type: [GetTransactionListTypeEnum.smart_contract],
     });
     total = paged.total;
-    console.log({ offset, total });
+    console.log({ offset, total, lastBlock, currentBlock: paged.results[0].block_height });
+    if (
+      paged.results.length > 0 &&
+      paged.results[0].block_height <= lastBlock
+    ) {
+      break;
+    }
     for (let t of paged.results.filter((t) => t.tx_status === "success")) {
       const [address, name] = t.smart_contract.contract_id.split(".");
-      if (contracts.indexOf(`${address}.${name}.clar`) < 0) {
+      if (contracts.indexOf(`${address}/${name}.clar`) < 0) {
         try {
           console.log(`handling ${address}.${name}`);
           mkdirSync(`contracts/${address}`, { recursive: true });
@@ -77,6 +84,7 @@ async function loadAll() {
             `contracts/${address}/${name}.clar`,
             t.smart_contract.source_code
           );
+          contracts.push(`${address}/${name}.clar`);
           //await downloadSource(address, name);
         } catch (e) {
           console.log(e, t.tx_id);
@@ -86,6 +94,7 @@ async function loadAll() {
     }
     offset += paged.results.length;
   }
+  console.log(contracts.length);
 }
 
 loadAll();
