@@ -2,3 +2,6 @@
 settings/Mainnet.toml
 settings/Testnet.toml
 history.txt
+
+node_modules
+.vscode
