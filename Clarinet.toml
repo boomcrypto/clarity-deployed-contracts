@@ -2,3 +2,7 @@
 [project]
 name = "clarity-deployed-contracts"
 
+
+[contracts.contract1]
+path = "contracts/ST2PABAF9FTAJYNFZH93XENAJ8FVY99RRM4DF2YCW.test-pops-ice-v1.clar"
+depends_on = []
