@@ -7,6 +7,7 @@ import {
 } from "@stacks/blockchain-api-client";
 import { txidFromData } from "@stacks/transactions";
 import {
+  existsSync,
   mkdir,
   mkdirSync,
   readdir,
@@ -47,7 +48,9 @@ async function loadAll() {
     "last-block.txt",
     coreInfo.stacks_tip_height.toString()
   );
+
   let contracts = [];
+  mkdirSync(`contracts`, {recursive: true});
   readdirSync("contracts").forEach((d) => {
     contracts = contracts.concat(
       readdirSync(`contracts/${d}`).map((c) => `${d}.${c}`)
