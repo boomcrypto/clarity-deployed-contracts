@@ -6,4 +6,4 @@ Branch `main` contains contracts of mainnet. Updated via Github Actions daily.
 Branch `testnet` contains contracts of testnet. Not maintained currently.
 
 ## Blacklist
-Contracts that are seens as bad actors in general are listed in the file `blacklist.txt`. This is an opinonated selection.
+Contracts that are seen as bad actors in general are listed in the file `blacklist.txt`. This is an opinonated selection.
