@@ -1,0 +1,6 @@
+SP2JG9X0GAAGCKPB5J9EHF75Y6K6Q9AKX0EEP1P95.*,disguised interaction with arkadiko
+SP2G64V1Z09D8P4HGMH0AWN87G7VP2ADE233AGWQQ.*,disguised interaction with arkadiko
+SP2GJBMGXEMMGW7HRSFRG9WFNEDB8238KTW48J1QN.*,disguised interaction with arkadiko
+SP5YF41VPG2FZ8NYK4GYGJXNFVSRPKWH26402X1T.*,disguised interaction with byzantion v5 (stacks-dragons)
+SP3ZJP253DENMN3CQFEQSPZWY7DK35EH3SEH0J8PK.*,disguised interaction with byzantion v5 (bitcoin-tulips)
+SPP4ETJ72VES0W9D6A3VB6TXC00X2E2FFPH8NSFS.*,exploiting arkadiko v1
