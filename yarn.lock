@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.0.0.tgz#8863915676f837d9dad7b76f50cb500c1e9422e9"
   integrity sha512-2pTGuibAXJswAPJjaKisthqS/NOK5ypG4LYT6tEAV0S/mxW0zOIvYvGK0V8w8+SHxAm6vRMSjqSalFXeBAqs+Q==
 
-"@stacks/blockchain-api-client@^0.71.2":
-  version "0.71.2"
-  resolved "https://registry.yarnpkg.com/@stacks/blockchain-api-client/-/blockchain-api-client-0.71.2.tgz#19c9d7d9b9ee874c7b4b2ddd5919f477d645e164"
-  integrity sha512-tJmSpkPnRVzn+pcg9aHY3LZpaG3+Kq7EMsaVV3WTlxv7SRzv1rFls57LCoGqJPkHgubbdhWcGiORYS4SwHe23g==
+"@stacks/blockchain-api-client@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@stacks/blockchain-api-client/-/blockchain-api-client-1.0.7.tgz#7ae58e34c362d45d3e7dd2a8d4c0c8719677da72"
+  integrity sha512-L1MgxZI1Fbw3LlwOvnjUIfU6uNbo/DMBFW1haKaGxmR4KrDnlPVyfME9GFTJi116CLqJVQTVGz6Q2jogot3egw==
   dependencies:
     "@stacks/stacks-blockchain-api-types" "*"
     "@types/ws" "^7.4.0"

@@ -8,7 +8,7 @@
     "start": "node scripts/getSource.mjs"
   },
   "dependencies": {
-    "@stacks/blockchain-api-client": "^0.71.2",
+    "@stacks/blockchain-api-client": "^1.0.7",
     "@stacks/network": "^3.0.0",
     "@stacks/transactions": "^3.1.0",
     "node-fetch": "^3.1.0"

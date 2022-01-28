@@ -18,43 +18,40 @@ import {
 } from "fs";
 import fetch from "node-fetch";
 
-const STACKS_API_URL = "https://stacks-node-api.mainnet.stacks.co";
-
-const config = new Configuration({
-  basePath: STACKS_API_URL,
-  fetchApi: fetch,
-});
-
-const api = new SmartContractsApi(config);
-const transactionsApi = new TransactionsApi(config);
-const infoApi = new InfoApi(config);
-
-async function downloadSource(contractAddress, contractName) {
+async function downloadSource(contractAddress, contractName, path) {
   console.log(`downloading ${contractAddress}.${contractName}`);
   const result = await api.getContractSource({
     contractAddress,
     contractName,
   });
-  mkdirSync(`contracts/${contractAddress}`, { recursive: true });
+  mkdirSync(`${path}/contracts/${contractAddress}`, { recursive: true });
   writeFileSync(
-    `contracts/${contractAddress}/${contractName}.clar`,
+    `${path}/contracts/${contractAddress}/${contractName}.clar`,
     result.source
   );
 }
 
-async function loadAll() {
-  const lastBlockString = readFileSync("last-block.txt");
+async function loadAll(config, path) {
+  const api = new SmartContractsApi(config);
+  const transactionsApi = new TransactionsApi(config);
+  const infoApi = new InfoApi(config);
+
+  mkdirSync(`${path}`, { recursive: true });
+  const lastBlockString = readFileSync(`${path}/last-block.txt`);
   const lastBlock = parseInt(lastBlockString);
 
   const coreInfo = await infoApi.getCoreApiInfo();
   console.log(coreInfo.stacks_tip_height);
-  writeFileSync("last-block.txt", coreInfo.stacks_tip_height.toString());
+  writeFileSync(
+    `${path}/last-block.txt`,
+    coreInfo.stacks_tip_height.toString()
+  );
 
   let contracts = [];
-  mkdirSync(`contracts`, { recursive: true });
-  readdirSync("contracts").forEach((d) => {
+  mkdirSync(`${path}/contracts`, { recursive: true });
+  readdirSync(`${path}/contracts`).forEach((d) => {
     contracts = contracts.concat(
-      readdirSync(`contracts/${d}`).map((c) => `${d}/${c}`)
+      readdirSync(`${path}/contracts/${d}`).map((c) => `${d}/${c}`)
     );
   });
   console.log("cached already", contracts.length);
@@ -67,7 +64,12 @@ async function loadAll() {
       type: [GetTransactionListTypeEnum.smart_contract],
     });
     total = paged.total;
-    console.log({ offset, total, lastBlock, currentBlock: paged.results[0].block_height });
+    console.log({
+      offset,
+      total,
+      lastBlock,
+      currentBlock: paged.results[0].block_height,
+    });
     if (
       paged.results.length > 0 &&
       paged.results[0].block_height <= lastBlock
@@ -79,9 +81,9 @@ async function loadAll() {
       if (contracts.indexOf(`${address}/${name}.clar`) < 0) {
         try {
           console.log(`handling ${address}.${name}`);
-          mkdirSync(`contracts/${address}`, { recursive: true });
+          mkdirSync(`${path}/contracts/${address}`, { recursive: true });
           writeFileSync(
-            `contracts/${address}/${name}.clar`,
+            `${path}/contracts/${address}/${name}.clar`,
             t.smart_contract.source_code
           );
           contracts.push(`${address}/${name}.clar`);
@@ -97,4 +99,19 @@ async function loadAll() {
   console.log(contracts.length);
 }
 
-loadAll();
+loadAll(
+  new Configuration({
+    basePath: "https://stacks-node-api.mainnet.stacks.co",
+    fetchApi: fetch,
+  }),
+  "."
+);
+
+
+loadAll(
+  new Configuration({
+    basePath: "https://stacks-node-api.testnet.stacks.co",
+    fetchApi: fetch,
+  }),
+  "testnet"
+);
