@@ -1,0 +1,11 @@
+---
+title: "Trait unlist-crashpunks-7"
+draft: true
+---
+```
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u3739))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u3880))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u3332))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u3087))
+(try! (contract-call? .marketplace-v4 admin-unlist-asset 'SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ.crashpunks-v1 u3334))
+```

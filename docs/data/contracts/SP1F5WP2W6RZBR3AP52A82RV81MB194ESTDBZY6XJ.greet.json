@@ -1,0 +1,1 @@
+{"address":"SP1F5WP2W6RZBR3AP52A82RV81MB194ESTDBZY6XJ","name":"greet","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"greet","access":"public","args":[],"outputs":{"type":{"response":{"ok":"uint128","error":"none"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

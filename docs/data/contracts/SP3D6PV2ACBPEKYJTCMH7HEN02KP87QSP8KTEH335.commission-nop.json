@@ -1,0 +1,1 @@
+{"address":"SP3D6PV2ACBPEKYJTCMH7HEN02KP87QSP8KTEH335","name":"commission-nop","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"pay","access":"public","args":[{"name":"id","type":"uint128"},{"name":"price","type":"uint128"}],"outputs":{"type":{"response":{"ok":"bool","error":"none"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

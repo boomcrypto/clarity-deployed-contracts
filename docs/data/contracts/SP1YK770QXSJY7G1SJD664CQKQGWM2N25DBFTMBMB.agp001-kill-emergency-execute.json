@@ -1,0 +1,1 @@
+{"address":"SP1YK770QXSJY7G1SJD664CQKQGWM2N25DBFTMBMB","name":"agp001-kill-emergency-execute","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"execute","access":"public","args":[{"name":"sender","type":"principal"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

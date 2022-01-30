@@ -1,0 +1,1 @@
+{"address":"SPEFVJJXM9BT0PP3H2S6V6029SWF4B92RCJFE1Y0","name":"tob","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"get_summary","access":"read_only","args":[],"outputs":{"type":{"tuple":[{"name":"bbh","type":"uint128"},{"name":"t","type":{"optional":"uint128"}}]}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

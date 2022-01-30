@@ -1,0 +1,1 @@
+{"address":"SP3XD3G5ETW7KHR1F3EDF3MZ8S3B9PGREG3Q8RSFF","name":"btc-badgers-v2-airdrop","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"pay-out","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

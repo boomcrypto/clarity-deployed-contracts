@@ -1,0 +1,1 @@
+{"address":"SP3R4CT6FKSE76H0ZKNDHFP8XNARB53Z5JBRGQAVE","name":"hello-world","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"say-hi","access":"public","args":[],"outputs":{"type":{"response":{"ok":{"string-ascii":{"length":13}},"error":"none"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

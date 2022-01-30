@@ -2,8 +2,8 @@
 (begin
   (try! (contract-call? 'SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-swap-v1-1 
   create-pair 
-  .ex-token-a
-  .ex-token-a
+  .ex-token-c
+  .ex-token-c
   'SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-swap-token-diko-usda 
   "diko-stxxxx" u1000000000000 u372154904868)) 
 

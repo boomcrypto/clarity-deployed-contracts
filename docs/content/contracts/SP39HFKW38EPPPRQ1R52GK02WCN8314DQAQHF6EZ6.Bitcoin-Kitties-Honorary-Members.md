@@ -1,0 +1,12 @@
+---
+title: "Contract Bitcoin-Kitties-Honorary-Members"
+draft: true
+---
+Deployer: SP39HFKW38EPPPRQ1R52GK02WCN8314DQAQHF6EZ6
+
+SIP-009: true
+
+SIP-010: false
+
+Functions:
+{"name":"balance-of","access":"private","args":[{"name":"account","type":"principal"}],"outputs":{"type":"uint128"}}, {"name":"mint","access":"private","args":[{"name":"new-owner","type":"principal"}],"outputs":{"type":{"response":{"ok":"uint128","error":"uint128"}}}}, {"name":"claim","access":"public","args":[],"outputs":{"type":{"response":{"ok":"uint128","error":"uint128"}}}}, {"name":"claim-six","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"set-cost-per-mint","access":"public","args":[{"name":"value","type":"uint128"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"set-minting-disabled","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"set-minting-enabled","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"transfer","access":"public","args":[{"name":"token-id","type":"uint128"},{"name":"sender","type":"principal"},{"name":"recipient","type":"principal"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"get-artist-address","access":"read_only","args":[],"outputs":{"type":{"response":{"ok":"principal","error":"none"}}}}, {"name":"get-contract-metadata","access":"read_only","args":[],"outputs":{"type":{"response":{"ok":{"optional":{"string-ascii":{"length":85}}},"error":"none"}}}}, {"name":"get-last-token-id","access":"read_only","args":[],"outputs":{"type":{"response":{"ok":"uint128","error":"none"}}}}, {"name":"get-mint-price","access":"read_only","args":[],"outputs":{"type":{"response":{"ok":"uint128","error":"none"}}}}, {"name":"get-owner","access":"read_only","args":[{"name":"token-id","type":"uint128"}],"outputs":{"type":{"response":{"ok":{"optional":"principal"},"error":"none"}}}}, {"name":"get-token-uri","access":"read_only","args":[{"name":"token-id","type":"uint128"}],"outputs":{"type":{"response":{"ok":{"optional":{"string-ascii":{"length":138}}},"error":"none"}}}}
