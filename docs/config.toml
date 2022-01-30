@@ -1,4 +1,4 @@
-baseURL = "http://localhost"
+baseURL = "https://clarity-deployed-contracts.netlify.app"
 title = "Deployed Clarity Contracts"
 theme = "hugo-geekdoc"
 
