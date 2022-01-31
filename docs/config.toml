@@ -25,5 +25,6 @@ enableRobotsTXT = true
    tag = "tags"
 
 [params]
+  geekdocLogo = "nexus_white.png"
   geekdocRepo = "https://github.com/boomcrypto/clarity-deployed-contracts"
   geekdocEditPath = "edit/main/docs/content"
