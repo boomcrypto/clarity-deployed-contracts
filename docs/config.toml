@@ -23,3 +23,7 @@ enableRobotsTXT = true
 
 [taxonomies]
    tag = "tags"
+
+[params]
+  geekdocRepo = "https://github.com/boomcrypto/clarity-deployed-contracts"
+  geekdocEditPath = "edit/main/docs/content"

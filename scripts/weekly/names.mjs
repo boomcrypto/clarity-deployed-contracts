@@ -46,17 +46,18 @@ List of accounts that deployed a contract AND own a name
 | Address| Current Name|
 | -------|-------------|
 ${[
-      ...Object.keys(names).map((address) => `|${address} | ${names[address]}|`),
+      ...Object.keys(names).map((address) => `|[${address}]({{<githubref>}}/tree/main/contracts/${address}) | ${names[address]}|`),
     ].join("\n")}
 
-Updated: ${new Date().toISOString()}
+Updated: ${new Date().toLocaleString("en-US", { timeZone: 'UTC' })}
     `
   );
 }
 
 loadAllNames(
   new Configuration({
-    basePath: "http://localhost:3999",
+    basePath: "https://stacks-node-api.mainnet.stacks.co",
+    //basePath: "http://localhost:3999",
     fetchApi: fetch,
   })
 );

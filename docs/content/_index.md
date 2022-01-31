@@ -6,7 +6,7 @@ The [Stacks](https://stacks.co) blockchain is an open-source blockchain network 
 
 ## Actions
 
-Browse the source code of all deployed contracts at [github](https://github.com/boomcrypto/clarity-deployed-contracts).
+Browse the source code of all deployed contracts at [github]({{<githubref>}}).
 
 Read about individial contracts in the [Protocols]({{<ref protocols>}}) section.
 

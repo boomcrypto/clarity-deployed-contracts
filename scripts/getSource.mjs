@@ -121,7 +121,7 @@ title: "Contracts"
 ${contracts
   .map(
     (c) =>
-      `[${c.address}.${c.name}](https://github.com/boomcrypto/clarity-deployed-contracts/blob/main/contracts/${c.address}/${c.name}.clar)`
+      `[${c.address}.${c.name}]({{<githubref>}}/blob/main/contracts/${c.address}/${c.name}.clar)`
   )
   .join("\n")}
 `

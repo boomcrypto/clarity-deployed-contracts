@@ -3,3 +3,5 @@ A group of Clarity developers came together to build tools to educate others abo
 The group consists of the following github users:
 
 * {{<githubuser friedger >}}
+* {{<githubuser setzeus >}}
+* {{<githubuser homiebtc >}}
