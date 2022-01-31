@@ -1,4 +1,4 @@
-name: Commit date to master
+name: Add new contracts
 on:
   schedule:
     - cron: '0 0 * * *' 
