@@ -24,7 +24,7 @@ jobs:
           file_pattern: contracts *.txt
       - name: Checkout docs and merge main
         run: |
-          git checkout docs
+          git checkout docs --
           git merge --commit main
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
