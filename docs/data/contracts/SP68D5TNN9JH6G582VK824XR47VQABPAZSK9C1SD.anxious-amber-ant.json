@@ -1,1 +1,0 @@
-{"address":"SP68D5TNN9JH6G582VK824XR47VQABPAZSK9C1SD","name":"anxious-amber-ant","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"check-get-owner","access":"public","args":[{"name":"id","type":"uint128"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

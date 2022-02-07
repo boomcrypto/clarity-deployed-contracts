@@ -1,1 +1,0 @@
-{"address":"SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR","name":"arkadiko-burn-swap-v1","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"burn-and-mint","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

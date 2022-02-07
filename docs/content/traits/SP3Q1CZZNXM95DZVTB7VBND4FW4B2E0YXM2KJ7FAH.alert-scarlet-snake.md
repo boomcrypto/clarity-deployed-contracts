@@ -1,7 +1,0 @@
----
-title: "Trait alert-scarlet-snake"
-draft: true
----
-```
-(try! (contract-call? 'SP1QK1AZ24R132C0D84EEQ8Y2JDHARDR58R72E1ZW.boomboxes-cycle-22 transfer u128 'SP3Q1CZZNXM95DZVTB7VBND4FW4B2E0YXM2KJ7FAH 'SPV0WDJQHWJVR2XD59H5NGX9AMNNTP4Q92XV77JD))
-```

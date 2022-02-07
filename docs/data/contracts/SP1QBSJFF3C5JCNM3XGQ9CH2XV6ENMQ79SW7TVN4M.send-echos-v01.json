@@ -1,1 +1,0 @@
-{"address":"SP1QBSJFF3C5JCNM3XGQ9CH2XV6ENMQ79SW7TVN4M","name":"send-echos-v01","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"send-echo","access":"public","args":[],"outputs":{"type":{"response":{"ok":{"string-ascii":{"length":7}},"error":"none"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

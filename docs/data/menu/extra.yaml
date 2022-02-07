@@ -1,6 +1,0 @@
----
-header:
-  - name: GitHub
-    ref: https://github.com/boomcrypto/clarity-deployed-contracts
-    icon: gdoc_github
-    external: true

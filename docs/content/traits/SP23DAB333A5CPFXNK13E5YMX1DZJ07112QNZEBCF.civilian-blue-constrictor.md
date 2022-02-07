@@ -1,7 +1,0 @@
----
-title: "Trait civilian-blue-constrictor"
-draft: true
----
-```
-(contract-call? 'SP1Z92MPDQEWZXW36VX71Q25HKF5K2EPCJ304F275.liquidity-tokensoft-v1-token-v0a1 transfer u220259 'SP1Z92MPDQEWZXW36VX71Q25HKF5K2EPCJ304F275 'SP1EJCSKR1PV69PYM4HGVG88N4G5XJ1SD157N4Y0V)
-```

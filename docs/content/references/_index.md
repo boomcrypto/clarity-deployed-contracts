@@ -1,4 +1,0 @@
-
-[Accounts](accounts)
-
-[Contracts](contracts)

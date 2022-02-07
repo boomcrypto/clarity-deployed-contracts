@@ -1,7 +1,0 @@
----
-title: "Trait relaxed-copper-tern"
-draft: true
----
-```
-(try! (contract-call? 'SP27F9EJH20K3GT6GHZG0RD08REZKY2TDMD6D9M2Z.btc-badgers-v2 admin-mint-drop 'SP25VWGTPR19E344S4ENTHQT8651216EPNABRYE51 u684))
-```
