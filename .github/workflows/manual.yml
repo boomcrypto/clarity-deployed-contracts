@@ -1,7 +1,5 @@
-name: Add new contracts
-on:
-  schedule:
-    - cron: '0 0 * * *'
+name: Add new contracts manually
+on: workflow_dispatch
 jobs:
   get-contracts:
     runs-on: ubuntu-latest
