@@ -1,0 +1,1 @@
+{"address":"SP2KAF9RF86PVX3NEE27DFV1CQX0T4WGR41X3S45C","name":"banana-airdrop-two","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"airdrop","access":"public","args":[],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}

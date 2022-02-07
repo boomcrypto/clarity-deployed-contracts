@@ -1,0 +1,7 @@
+<table>
+  {{ range $.Site.Data.contracts}}
+    {{if .sip9 }}
+      {{ partial "contractRow.html" . }}
+    {{end}}
+   {{ end }}
+</table>

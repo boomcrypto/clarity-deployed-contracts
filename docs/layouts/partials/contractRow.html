@@ -1,0 +1,10 @@
+<tr>
+  <td>
+    <a
+      href="{{ site.Params.geekdocrepo}}/blob/main/contracts/{{ .address }}/{{ .name }}.clar"
+    >
+      {{ .address }}.{{ .name }}</a
+    >
+  </td>
+  <td>{{ with .sip9 }} SIP-009 {{end}} {{with .sip10 }}SIP-010 {{end}}</td>
+</tr>

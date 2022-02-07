@@ -1,0 +1,12 @@
+---
+title: "Contract like"
+draft: true
+---
+Deployer: SPEFVJJXM9BT0PP3H2S6V6029SWF4B92RCJFE1Y0
+
+SIP-009: false
+
+SIP-010: false
+
+Functions:
+{"name":"loop_l","access":"private","args":[{"name":"i","type":"uint128"},{"name":"ud","type":{"tuple":[{"name":"r","type":{"list":{"type":"uint128","length":25}}},{"name":"tid","type":"uint128"}]}}],"outputs":{"type":{"tuple":[{"name":"r","type":{"list":{"type":"uint128","length":25}}},{"name":"tid","type":"uint128"}]}}}, {"name":"loop_ld","access":"private","args":[{"name":"i","type":"uint128"},{"name":"ud","type":{"tuple":[{"name":"r","type":{"list":{"type":"uint128","length":25}}},{"name":"tid","type":"uint128"}]}}],"outputs":{"type":{"tuple":[{"name":"r","type":{"list":{"type":"uint128","length":25}}},{"name":"tid","type":"uint128"}]}}}, {"name":"like","access":"public","args":[{"name":"tid","type":"uint128"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"set_like_price","access":"public","args":[{"name":"price","type":"uint128"}],"outputs":{"type":{"response":{"ok":"bool","error":"uint128"}}}}, {"name":"get_like_count","access":"read_only","args":[{"name":"tid","type":"uint128"}],"outputs":{"type":"uint128"}}, {"name":"get_like_data","access":"read_only","args":[{"name":"tid","type":"uint128"},{"name":"index_list","type":{"list":{"type":"uint128","length":25}}}],"outputs":{"type":{"tuple":[{"name":"likes","type":{"list":{"type":"uint128","length":25}}},{"name":"total","type":"uint128"}]}}}, {"name":"get_like_list","access":"read_only","args":[{"name":"tid","type":"uint128"},{"name":"index_list","type":{"list":{"type":"uint128","length":25}}}],"outputs":{"type":{"list":{"type":"uint128","length":25}}}}, {"name":"get_liked_count","access":"read_only","args":[{"name":"tid","type":"uint128"}],"outputs":{"type":"uint128"}}, {"name":"get_liked_data","access":"read_only","args":[{"name":"tid","type":"uint128"},{"name":"index_list","type":{"list":{"type":"uint128","length":25}}}],"outputs":{"type":{"tuple":[{"name":"likes","type":{"list":{"type":"uint128","length":25}}},{"name":"total","type":"uint128"}]}}}, {"name":"get_liked_list","access":"read_only","args":[{"name":"tid","type":"uint128"},{"name":"index_list","type":{"list":{"type":"uint128","length":25}}}],"outputs":{"type":{"list":{"type":"uint128","length":25}}}}, {"name":"has_like","access":"read_only","args":[{"name":"tid","type":"uint128"},{"name":"liked_tid","type":"uint128"}],"outputs":{"type":"bool"}}

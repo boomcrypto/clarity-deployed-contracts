@@ -1,0 +1,1 @@
+{"address":"SP10CCTKY2CCQNP5GZWRKYNH9S0D37AQ47GVHRRB7","name":"excited-bronze-sawfish-2","sip9":false,"sip10":false,"contractInterface":{"functions":[{"name":"hello-world","access":"read_only","args":[],"outputs":{"type":{"response":{"ok":{"string-ascii":{"length":11}},"error":"none"}}}}],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
