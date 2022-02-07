@@ -1,7 +1,5 @@
 name: Add new contracts manually
-on:
-  release:
-    types: [published]
+on: workflow_dispatch
 jobs:
   get-contracts:
     runs-on: ubuntu-latest
