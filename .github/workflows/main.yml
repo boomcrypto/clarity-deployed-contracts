@@ -27,7 +27,7 @@ jobs:
       - name: Checkout docs and merge main
         run: |
           git checkout docs --
-          git merge --commit main --allow-unrelated-histories
+          git merge main --allow-unrelated-histories
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
