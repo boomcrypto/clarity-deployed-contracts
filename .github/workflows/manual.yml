@@ -21,11 +21,13 @@ jobs:
         with:
           commit_message: add new contracts
           branch: main
-          file_pattern: contracts
-
+          file_pattern: contracts *.txt
+      - name: Checkout docs and merge main
+        run: |
+          git checkout docs
+          git merge main
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: add new documentation
           branch: docs
-          file_pattern: docs
