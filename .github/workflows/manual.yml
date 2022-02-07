@@ -25,13 +25,13 @@ jobs:
       - name: Checkout docs
         run: |
           git checkout docs --
-      - name: Merge main
-        uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
+      - name: Merge main to docs
+        uses: devmasx/merge-branch@master
         with:
-          # Branch to merge
-          branchtomerge: main
-          # Branch that will be updated
-          branch: docs
+          type: now
+          from_branch: main
+          target_branch: docs
+          github_token: ${{ github.token }}
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

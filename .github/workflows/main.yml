@@ -24,10 +24,16 @@ jobs:
           commit_message: add new contracts
           branch: main
           file_pattern: contracts *.txt
-      - name: Checkout docs and merge main
+      - name: Checkout docs
         run: |
           git checkout docs --
-          git merge main --allow-unrelated-histories
+      - name: Merge main to docs
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: docs
+          github_token: ${{ github.token }}
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
