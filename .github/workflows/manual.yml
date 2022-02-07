@@ -25,7 +25,7 @@ jobs:
       - name: Checkout docs
         run: |
           git checkout docs --
-     - name: Merge main
+      - name: Merge main
         uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
         with:
           # Branch to merge
