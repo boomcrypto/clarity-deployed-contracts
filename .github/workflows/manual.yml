@@ -1,4 +1,7 @@
-name: Add new contracts
+name: Add new contracts manually
+on:
+  release:
+    types: [published]
 jobs:
   get-contracts:
     runs-on: ubuntu-latest
