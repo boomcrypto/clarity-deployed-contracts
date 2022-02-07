@@ -22,6 +22,10 @@ const sip9TraitPath =
   "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9/nft-trait/nft-trait";
 const sip10TraitPath =
   "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE/sip-010-trait-ft-standard/sip-010-trait";
+const commissionTraitPath =
+  "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9/commission-trait/commission-trait";
+const operableTraitPath =
+  "SPGAKH27HF1T170QET72C727873H911BKNMPF8YB/operable/operable";
 
 async function downloadSource(contractAddress, contractName, path) {
   console.log(`downloading ${contractAddress}.${contractName}`);
@@ -79,9 +83,13 @@ function writeContractDocDraft(
   path,
   address,
   name,
+  block_height,
+  burn_block_time_iso,
   contractInterface,
   sip9,
-  sip10
+  sip10,
+  commission,
+  operable
 ) {
   writeFileSync(
     `${path}/docs/content/contracts/${address}.${name}.md`,
@@ -91,12 +99,20 @@ draft: true
 ---
 Deployer: ${address}
 
-SIP-009: ${sip9}
+${sip9 || sip10 || commission || operable ? "Traits:" : ""}
+${sip9 ? "SIP-009" : ""} ${sip10 ? "SIP-0010" : ""}
+${commission ? "Commission" : ""}
+${operable ? "Operable" : ""}
 
-SIP-010: ${sip10}
+Block height: ${block_height} (${burn_block_time_iso})
+
+Source code: {{<contractref "${name}" ${address} ${name}>}}
 
 Functions:
-${contractInterface.functions.map((f) => JSON.stringify(f)).join(", ")}
+
+${contractInterface.functions
+  .map((f) => `* ${f.name} _${f.access}_`)
+  .join("\n")}
 `
   );
 
@@ -105,9 +121,13 @@ ${contractInterface.functions.map((f) => JSON.stringify(f)).join(", ")}
     JSON.stringify({
       address,
       name,
+      block_height,
+      burn_block_time_iso,
+      contractInterface,
       sip9,
       sip10,
-      contractInterface,
+      commission,
+      operable,
     })
   );
 }
@@ -150,11 +170,33 @@ async function implementedSip10(config, address, name) {
   }
 }
 
+async function implementedCommission(config, address, name) {
+  const url = `${config.basePath}/v2/traits/${address}/${name}/${commissionTraitPath}`;
+  try {
+    const result = await (await fetch(url)).json();
+    return result && result.is_implemented;
+  } catch (e) {
+    console.log(url, e);
+    return false;
+  }
+}
+
+async function implementedOperable(config, address, name) {
+  const url = `${config.basePath}/v2/traits/${address}/${name}/${operableTraitPath}`;
+  try {
+    const result = await (await fetch(url)).json();
+    return result && result.is_implemented;
+  } catch (e) {
+    console.log(url, e);
+    return false;
+  }
+}
+
 function definesTrait(sourceCode) {
   return sourceCode.indexOf("(define-trait " >= 0);
 }
 
-async function handleNewContracts(config, path) {
+async function handleNewContracts({ config, path, updateAll }) {
   const api = new SmartContractsApi(config);
   const transactionsApi = new TransactionsApi(config);
   const infoApi = new InfoApi(config);
@@ -166,10 +208,6 @@ async function handleNewContracts(config, path) {
   // update last block
   const coreInfo = await infoApi.getCoreApiInfo();
   console.log(coreInfo.stacks_tip_height);
-  writeFileSync(
-    `${path}/last-block.txt`,
-    coreInfo.stacks_tip_height.toString()
-  );
 
   // setup contracts
   mkdirSync(`${path}/contracts`, { recursive: true });
@@ -227,10 +265,14 @@ async function handleNewContracts(config, path) {
       const [address, name] = t.smart_contract.contract_id.split(".");
       const contractFilename = `${name}.clar`;
 
-      if (contracts.indexOf(`${address}/${contractFilename}`) < 0) {
+      if (
+        updateAll ||
+        contracts.indexOf(`${address}/${contractFilename}`) < 0
+      ) {
         try {
           console.log(`handling ${address}.${name}`);
           const sourceCode = t.smart_contract.source_code;
+          const { block_height, burn_block_time_iso } = t;
           // the tx contains already the source code, no need to
           // make another api call.
           // do the api call if you want to verify the api
@@ -246,14 +288,20 @@ async function handleNewContracts(config, path) {
           });
           const sip9 = await implementedSip9(config, address, name);
           const sip10 = await implementedSip10(config, address, name);
+          const commission = await implementedCommission(config, address, name);
+          const operable = await implementedOperable(config, address, name);
 
           writeContractDocDraft(
             path,
             address,
             name,
+            block_height,
+            burn_block_time_iso,
             contractInterface,
             sip9,
-            sip10
+            sip10,
+            commission,
+            operable
           );
 
           if (sip9) {
@@ -273,14 +321,19 @@ async function handleNewContracts(config, path) {
     }
     offset += pageOfTxs.results.length;
   }
+  writeFileSync(
+    `${path}/last-block.txt`,
+    coreInfo.stacks_tip_height.toString()
+  );
   console.log(contracts.length);
 }
 
-handleNewContracts(
-  new Configuration({
-    basePath: "https://stacks-node-api.mainnet.stacks.co",
-    //basePath: "http://localhost:3999",
+handleNewContracts({
+  config: new Configuration({
+    //basePath: "https://stacks-node-api.mainnet.stacks.co",
+    basePath: "http://localhost:3999",
     fetchApi: fetch,
   }),
-  "."
-);
+  path: ".",
+  updateAll: true,
+});
