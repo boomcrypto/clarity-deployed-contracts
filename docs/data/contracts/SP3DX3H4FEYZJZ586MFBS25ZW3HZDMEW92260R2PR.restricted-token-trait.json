@@ -1,1 +1,1 @@
-{"address":"SP3DX3H4FEYZJZ586MFBS25ZW3HZDMEW92260R2PR","name":"restricted-token-trait","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP3DX3H4FEYZJZ586MFBS25ZW3HZDMEW92260R2PR","name":"restricted-token-trait","block_height":32507,"burn_block_time_iso":"2021-10-04T21:33:08.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

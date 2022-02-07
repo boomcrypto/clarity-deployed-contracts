@@ -1,1 +1,1 @@
-{"address":"SP1P712A95CRHVZEQ8E4EPXJJNN41P3MAB0RPBATS","name":"trait-multisig-vote","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP1P712A95CRHVZEQ8E4EPXJJNN41P3MAB0RPBATS","name":"trait-multisig-vote","block_height":45257,"burn_block_time_iso":"2022-01-16T02:05:50.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

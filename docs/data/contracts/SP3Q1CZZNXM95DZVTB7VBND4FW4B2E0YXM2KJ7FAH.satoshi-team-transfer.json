@@ -1,1 +1,1 @@
-{"address":"SP3Q1CZZNXM95DZVTB7VBND4FW4B2E0YXM2KJ7FAH","name":"satoshi-team-transfer","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP3Q1CZZNXM95DZVTB7VBND4FW4B2E0YXM2KJ7FAH","name":"satoshi-team-transfer","block_height":41209,"burn_block_time_iso":"2021-12-12T02:20:47.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

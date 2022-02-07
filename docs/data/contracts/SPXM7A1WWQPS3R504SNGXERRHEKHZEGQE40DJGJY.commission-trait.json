@@ -1,1 +1,1 @@
-{"address":"SPXM7A1WWQPS3R504SNGXERRHEKHZEGQE40DJGJY","name":"commission-trait","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SPXM7A1WWQPS3R504SNGXERRHEKHZEGQE40DJGJY","name":"commission-trait","block_height":42562,"burn_block_time_iso":"2021-12-24T04:27:05.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

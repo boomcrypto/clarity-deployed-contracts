@@ -1,1 +1,1 @@
-{"address":"SP2BE8TZATXEVPGZ8HAFZYE5GKZ02X0YDKAN7ZTGW","name":"artie-transfer-1","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP2BE8TZATXEVPGZ8HAFZYE5GKZ02X0YDKAN7ZTGW","name":"artie-transfer-1","block_height":45240,"burn_block_time_iso":"2022-01-15T23:39:32.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

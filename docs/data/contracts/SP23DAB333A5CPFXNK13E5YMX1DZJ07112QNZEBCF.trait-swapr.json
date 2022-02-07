@@ -1,1 +1,1 @@
-{"address":"SP23DAB333A5CPFXNK13E5YMX1DZJ07112QNZEBCF","name":"trait-swapr","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP23DAB333A5CPFXNK13E5YMX1DZJ07112QNZEBCF","name":"trait-swapr","block_height":20150,"burn_block_time_iso":"2021-07-01T05:35:21.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

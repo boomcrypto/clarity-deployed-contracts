@@ -1,1 +1,1 @@
-{"address":"SP1R2J6JB94PMJ2DJNXV1FEHBM7CKR71W96NQKZB8","name":"ard-funding-trait","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP1R2J6JB94PMJ2DJNXV1FEHBM7CKR71W96NQKZB8","name":"ard-funding-trait","block_height":10476,"burn_block_time_iso":"2021-04-09T08:37:44.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

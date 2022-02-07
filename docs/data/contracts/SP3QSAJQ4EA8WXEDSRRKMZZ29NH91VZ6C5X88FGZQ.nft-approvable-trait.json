@@ -1,1 +1,1 @@
-{"address":"SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ","name":"nft-approvable-trait","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP3QSAJQ4EA8WXEDSRRKMZZ29NH91VZ6C5X88FGZQ","name":"nft-approvable-trait","block_height":15302,"burn_block_time_iso":"2021-05-16T08:29:20.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}

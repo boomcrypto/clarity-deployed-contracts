@@ -1,1 +1,1 @@
-{"address":"SP23DAB333A5CPFXNK13E5YMX1DZJ07112QNZEBCF","name":"sip-010-v0a","sip9":false,"sip10":false,"contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]}}
+{"address":"SP23DAB333A5CPFXNK13E5YMX1DZJ07112QNZEBCF","name":"sip-010-v0a","block_height":20250,"burn_block_time_iso":"2021-07-02T06:15:07.000Z","contractInterface":{"functions":[],"variables":[],"maps":[],"fungible_tokens":[],"non_fungible_tokens":[]},"sip9":false,"sip10":false,"commission":false,"operable":false}
