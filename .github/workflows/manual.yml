@@ -1,0 +1,30 @@
+name: Add new contracts
+jobs:
+  get-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the branch
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.1
+
+      - name: get contracts
+        run: |
+          yarn
+          yarn start
+
+      - name: commit main
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: add new contracts
+          branch: main
+          file_pattern: contracts
+
+      - name: commit docs
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: add new documentation
+          branch: docs
+          file_pattern: docs
