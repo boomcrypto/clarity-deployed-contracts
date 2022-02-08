@@ -330,10 +330,11 @@ async function handleNewContracts({ config, path, updateAll }) {
 
 handleNewContracts({
   config: new Configuration({
-    //basePath: "https://stacks-node-api.mainnet.stacks.co",
-    basePath: "http://localhost:3999",
+    basePath: "https://stacks-node-api.mainnet.stacks.co",
+    //basePath: "http://localhost:3999",
     fetchApi: fetch,
   }),
   path: ".",
-  updateAll: true,
+  //updateAll: true,
+  updateAll: false,
 });
