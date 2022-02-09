@@ -35,7 +35,7 @@ jobs:
       - name: Merge master back to dev
         run: |
           git pull
-          git merge --no-ff main -m "Auto-merge main to docs"
+          git merge --no-ff main -m "Auto-merge main to docs" --allow-unrelated-histories
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
