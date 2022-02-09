@@ -35,7 +35,7 @@ jobs:
           git config --local user.name "Github Actions"
       - name: Merge master back to dev
         run: |
-          git merge --no-ff main -m "Auto-merge main to docs" --allow-unrelated-histories
+          git merge --no-ff origin/main -m "Auto-merge main to docs" --allow-unrelated-histories
       - name: commit docs
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
