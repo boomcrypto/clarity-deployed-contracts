@@ -42,3 +42,4 @@ jobs:
         with:
           commit_message: add new documentation
           branch: docs
+          skip_dirty_check: true
