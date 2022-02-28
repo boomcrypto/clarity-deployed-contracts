@@ -37,9 +37,6 @@ jobs:
       - name: Merge master back to dev
         run: |
           git merge --no-ff origin/main -m "Auto-merge main to docs" --allow-unrelated-histories -s recursive -Xtheirs
-      - name: commit docs
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: add new documentation
-          branch: docs
-          skip_dirty_check: true
+          git add .
+          git commit -m "add new documentation" --author="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          git push origin docs
