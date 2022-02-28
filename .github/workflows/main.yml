@@ -25,15 +25,14 @@ jobs:
           commit_message: add new contracts
           branch: main
           file_pattern: contracts *.txt
-      - name: Checkout docs
-        uses: actions/checkout@v2
-        with:
-          ref: docs
-          clean: false
       - name: Set Git config
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
+      - name: Checkout docs
+        run: |
+          git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +refs/heads/docs*:refs/remotes/origin/docs* +refs/tags/docs*:refs/tags/docs*
+          git checkout --progress --force -b docs refs/remotes/origin/docs
       - name: Merge master back to dev
         run: |
           git merge --no-ff origin/main -m "Auto-merge main to docs" --allow-unrelated-histories -s recursive -Xtheirs
