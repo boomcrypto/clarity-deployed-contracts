@@ -36,6 +36,11 @@ jobs:
       - name: Merge master back to dev
         run: |
           git merge --no-ff origin/main -m "Auto-merge main to docs" --allow-unrelated-histories -s recursive -Xtheirs
+      - name: Write gitignore
+        run: |
+          sed -i "s,docs,docs/public,g" .gitignore
+      - name: Commit docs
+        run: |
           git add .
           git commit -m "add new documentation" --author="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
           git push origin docs
