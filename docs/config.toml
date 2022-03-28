@@ -1,5 +1,5 @@
-baseURL = "https://clarity-deployed-contracts.netlify.app"
-title = "Deployed Clarity Contracts"
+baseURL = "https://source-of-clarity.com"
+title = "Source of Clarity - Deployed Clarity Contracts"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
