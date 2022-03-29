@@ -2,7 +2,7 @@
 title: "Explore Clarity Contracts on Stacks"
 ---
 
-The [Stacks](https://stacks.co) blockchain is an open-source blockchain network that leverages the security and capital of Bitcoin for decentralized apps and smart contracts. Smart contracts are written in [Clarity](https://clarity-lang.org), interpreted and their source code is store in plain text.
+The [Stacks](https://stacks.co) blockchain is an open-source blockchain network that leverages the security and capital of Bitcoin for decentralized apps and smart contracts. Smart contracts are written in [Clarity](https://clarity-lang.org), interpreted and their source code is stored in plain text.
 
 ## Actions
 
