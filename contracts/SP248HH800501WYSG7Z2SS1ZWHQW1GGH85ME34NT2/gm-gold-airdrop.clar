@@ -1,0 +1,161 @@
+(impl-trait 'SP248HH800501WYSG7Z2SS1ZWHQW1GGH85ME34NT2.nft-trait.nft-trait)
+
+(define-constant ERR-PRICE-MUST-BE-OVER-100 (err u974))
+(define-constant ERR-INSUFFICIENT-STX (err u975))
+(define-constant ERR-TOKEN-NOT-FOR-SALE (err u976))
+(define-constant ERR-NOT-AUTHORIZED (err u978))
+(define-constant ERR-DATA-FAILED-TO-UNWRAP (err u986))
+(define-constant ERR-FAILED-TO-SET-TOKEN-DATA (err u995))
+(define-constant ERR-TOKEN-DOES-NOT-EXIST (err u997))
+(define-constant ERR-GETTING-TOKEN-OWNER (err u999))
+
+(define-constant token-metadata "ipfs://QmUpn8sFns9N3qX3hucidki2k24Z4a1ox2RknEJPrWQTac")
+(define-constant gmer 'SP2R4ZCMA92WV07XHRDTN6HTJCF7B8B0KYQ4SM73D)
+(define-non-fungible-token gm-gold uint)
+(define-data-var admin principal tx-sender)
+(define-data-var last-token-id uint u0)
+(define-map token-data {token-id: uint} {price: uint, for-sale: bool})
+
+(define-private (mint-token-transfer (recipient principal))
+  (let ((token-id (+ u1 (var-get last-token-id)))) 
+    (try! (nft-mint? gm-gold token-id gmer))
+    (try! (nft-transfer? gm-gold token-id gmer recipient))
+    (map-insert token-data {token-id: token-id} {price: u644600000, for-sale: false})
+    (var-set last-token-id token-id)
+    (ok token-id)
+  )
+)
+
+(define-private (pay-share (to-pay uint) (recipient principal))
+  (if (not (is-eq tx-sender recipient))
+    (stx-transfer? to-pay tx-sender recipient)
+    (ok false)
+  )
+)
+
+(define-public (change-admin (new-admin principal))
+  (begin 
+    (asserts! (is-eq tx-sender (var-get admin)) ERR-NOT-AUTHORIZED)
+    (ok (var-set admin new-admin))
+  )
+)
+
+(define-public (purchase (token-id uint))
+  (let 
+    (
+      (data (unwrap! (map-get? token-data { token-id: token-id }) ERR-DATA-FAILED-TO-UNWRAP))
+      (is-token-for-sale (get for-sale data))
+      (token-price (get price data))
+      (token-owner (unwrap! (nft-get-owner? gm-gold token-id) ERR-GETTING-TOKEN-OWNER))
+    )
+    (asserts! is-token-for-sale ERR-TOKEN-NOT-FOR-SALE)
+    (asserts! (>= (stx-get-balance tx-sender) token-price) ERR-INSUFFICIENT-STX)
+    (try! (pay token-price token-owner))
+    (try! (nft-transfer? gm-gold token-id token-owner tx-sender))
+    (ok (map-set token-data { token-id: token-id } {for-sale: false, price: token-price}))
+  )
+)
+
+(define-public (pay (price uint) (owner-address principal))
+  (begin
+    (try! (pay-share (/ (* price u10) u100) (var-get admin))) ;; Layer royalty
+    (try! (pay-share (/ (* price u5) u100) gmer)) ;; Creator royalty
+    (try! (pay-share (/ (* price u85) u100) owner-address)) ;; Owner share
+    (ok true)
+  )
+)
+
+(define-public (complete-sale (token-id uint) (new-owner-address principal) (old-owner-address principal) (token-price uint))
+  (begin 
+    (asserts! (is-eq tx-sender (var-get admin)) ERR-NOT-AUTHORIZED)
+    (try! (pay token-price old-owner-address))
+    (try! (nft-transfer? gm-gold token-id tx-sender new-owner-address))
+    (ok true)
+  )
+)
+
+(define-public (set-token-price-data (token-id uint) (price uint) (for-sale bool))
+  (begin 
+    (asserts! (is-eq (some tx-sender) (nft-get-owner? gm-gold token-id)) ERR-NOT-AUTHORIZED)
+    (asserts! (>= price u100) ERR-PRICE-MUST-BE-OVER-100)
+    (ok (map-set token-data {token-id: token-id} {price: price, for-sale: for-sale}))
+  )
+)
+
+(define-read-only (get-all-token-data (token-id uint))
+  (ok {
+      token-id: token-id,
+      token-metadata: token-metadata,
+      token-data: (unwrap! (map-get? token-data {token-id: token-id}) ERR-TOKEN-DOES-NOT-EXIST),
+      token-owner: (unwrap! (nft-get-owner? gm-gold token-id) ERR-GETTING-TOKEN-OWNER),
+    })
+)
+
+(define-public (delete-nft (token-id uint))
+  (let ((nft-owner (unwrap! (nft-get-owner? gm-gold token-id) ERR-GETTING-TOKEN-OWNER)))
+    (asserts! (is-eq tx-sender nft-owner) ERR-NOT-AUTHORIZED)
+    (nft-burn? gm-gold token-id nft-owner)
+  )
+)
+
+(define-public (transfer (token-id uint) (owner principal) (recipient principal))
+  (begin 
+    (asserts! (is-eq (some tx-sender) (nft-get-owner? gm-gold token-id)) ERR-NOT-AUTHORIZED)
+    (try! (nft-transfer? gm-gold token-id owner recipient))
+    (ok (map-set token-data {token-id: token-id} (merge (unwrap! (map-get? token-data {token-id: token-id}) ERR-FAILED-TO-SET-TOKEN-DATA) {for-sale: false})))
+  )
+)
+
+(define-read-only (get-owner (token-id uint))
+  (ok (nft-get-owner? gm-gold token-id))
+)
+
+(define-read-only (get-last-token-id)
+  (ok (var-get last-token-id))
+)
+
+(define-read-only (get-token-uri (token-id uint))
+  (ok (some token-metadata))
+)
+
+(mint-token-transfer 'SP1DMPD0JNAVDRCTY17S2MNHX8F6502NB0Z25RVR)
+(mint-token-transfer 'SP32VHEQ158NJ9GTFSWG27HARAZYK2BPBJMKGS557)
+(mint-token-transfer 'SP1PYATPDBGJY8B5Y5R8N68TXA7V216TV0HYAN4XP)
+(mint-token-transfer 'SPJFS18F5KA5WV1A94PXABAGADGX494JBZM7044C)
+(mint-token-transfer 'SP3SVQDD38C11A12KWBNBNH23RBT8NA6VYG17S1KK)
+(mint-token-transfer 'SP1746CACSYFW05NV0ZATVCT50DJZ1STHVNV631JA)
+(mint-token-transfer 'SP2X1GD24FA3TGGV6T4TRPKT8MVZ8F02RZESYWEH5)
+(mint-token-transfer 'SP3SA0WRRVKHH7CY4PXG0NRKP6GGPQ9RSMF04CM9Z)
+(mint-token-transfer 'SPYWT3H4JQG72G0PVZW4E2M6FAK997KN6PDC26GM)
+(mint-token-transfer 'SPMA0EH4FZGPA1FJBQXJREE22CBKYCBBVH8M55TV)
+(mint-token-transfer 'SP2C20XGZBAYFZ1NYNHT1J6MGMM0EW9X7PFBWK7QG)
+(mint-token-transfer 'SP37T386B9ZB0KASRZCR6BYSQYGBQ88EPG5QH10P7)
+(mint-token-transfer 'SP3BQJKHGAX1GGSN5XYAVJKXEX9QZ413J21TYW1P9)
+(mint-token-transfer 'SP33ZZR48MQ70KTFGNCC67521KCN5MWQ1HZM2YA4H)
+(mint-token-transfer 'SP1ZCYG0D3HCK2F7SY8VH9ZREB0JWCBSAPFNS8V5Z)
+(mint-token-transfer 'SP1A117MKHREYN33PVF2FGB9RJ9NPWKB8SEH4MGW1)
+(mint-token-transfer 'SP3RBYXAQ3VC97QC6K9C2F7ST1180AKRJT34BCNFG)
+(mint-token-transfer 'SP197GMEG6WGBRDTCTGGWMRA1G77E65TRXWYKGCT7)
+(mint-token-transfer 'SP2TKGQ8V47CKXN3P2AZBT0K93FMD69KJTPW4B54K)
+(mint-token-transfer 'SP3G0PW77W2MFDA004PCFEHRXEPD9BHR560P11P2K)
+(mint-token-transfer 'SP2E1PVST9YB35ZB4C9Q5DNN2XXM6C9T3HW7F1KM7)
+(mint-token-transfer 'SP31SJ2X5683KDX8P58HWRA2DXY3ED4WZ6Z3DM0A9)
+(mint-token-transfer 'SPCP6QYQG399SWCF2TVAFHVHN302TB3ABRTWHPEH)
+(mint-token-transfer 'SP2P4VYTRP48QFJFBM35V38AVF0KEJ7HR5SVFBDXD)
+(mint-token-transfer 'SP20KCVZCG7GYWJ3H4NHMS2ZFYBHM7G4WQBP1F2KP)
+(mint-token-transfer 'SP2NGM34MN3WMWK2V6DJZJY7AACBJY4M0F7X2171N)
+(mint-token-transfer 'SP2H667JRMBHX0NRJ3ZMPPDR4R9TH6NM1ZFYW07S6)
+(mint-token-transfer 'SP2WGW1GPCYM0KXEFW3EK9CEW8ZWRRDPM7GS7DS6F)
+(mint-token-transfer 'SP217PTV2BPMB7YB5B7HDDTSZ07XSHWXNQQTGNKE9)
+(mint-token-transfer 'SP3MMG05H6T48W5NJEEST0RR3FTPGKPM7C19X5M16)
+(mint-token-transfer 'SP2WFY0H48AS2VYPA7N69V2VJ8VKS8FSPQSPJDSDN)
+(mint-token-transfer 'SP1J7VMKDJPVSC1GGM14KJ67K7PNRS3Q8FHRZ1TY)
+(mint-token-transfer 'SP1934QK1ZXGCEBB3MN9Y0FNR20GMDWM3Y5P5VV5)
+(mint-token-transfer 'SP1B49J6N8P11GYXAB421ZRMYJ0G6ACWJ3QJZ8HPZ)
+(mint-token-transfer 'SPN4Y5QPGQA8882ZXW90ADC2DHYXMSTN8VAR8C3X)
+(mint-token-transfer 'SP3RWKYHA210MKJBKFWRJ0K2K4Q3WGYXS4EGHZ82Q)
+(mint-token-transfer 'SPCH9HWZJ73ZE9MY4A77YM5ABHG09RYCVEQZNK1W)
+(mint-token-transfer 'SP32XM97P3SGFP7SZM2KGM3TD2VK02DXEDT1PKGHT)
+(mint-token-transfer 'SP3N0TH3N7BDG4WBSYV6FE2ASSAPEGWK47EEWD9TV)
+(mint-token-transfer 'SP24N19WAWSCAS5NT8PBBX3S4PBTAJDRQJZZF8CT8)
+(mint-token-transfer 'SP10RSQKEMMJGW6CWJW2QDBDAVN8SBW6FFGVZ9T4T)
