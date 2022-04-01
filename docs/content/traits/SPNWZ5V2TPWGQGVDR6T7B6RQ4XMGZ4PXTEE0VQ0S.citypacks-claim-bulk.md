@@ -1,0 +1,16 @@
+---
+title: "Trait citypacks-claim-bulk"
+draft: true
+---
+```
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+(try! (contract-call? .citypacks-001 claim-five))
+```
