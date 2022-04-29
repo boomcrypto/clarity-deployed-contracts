@@ -1,0 +1,1 @@
+(begin (print "hello, Mars-for-life"))
