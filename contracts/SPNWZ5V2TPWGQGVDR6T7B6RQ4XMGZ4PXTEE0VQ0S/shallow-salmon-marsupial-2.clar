@@ -1,0 +1,1 @@
+(try! (contract-call? .nft-oracle set-royalty-amount 'SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S.rehab-resort-og 'SP2SE1WTDPJEJ417SJEJPG31QBP1W3SD9CGB4759A u500))
