@@ -1,0 +1,15 @@
+;; 90STX Giveaway Tickets Twitter Mint
+
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
+(try! (contract-call? 'SP1STYSN178Q1D9YGKX4JRR67J8ZMV93G5S134Z8N.tickets-90stx-mint-raffle-1 claim))
