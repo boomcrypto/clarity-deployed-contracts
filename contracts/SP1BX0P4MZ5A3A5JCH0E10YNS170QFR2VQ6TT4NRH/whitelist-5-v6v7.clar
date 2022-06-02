@@ -1,0 +1,8 @@
+(begin
+  (try! (contract-call? .byzantion-market-v7 add-collection "SP1K3YDRKQYS03D9PJPSN1NDPYJE3DQ86AVC3940S.essence-of-life::essence-of-life" "essence-of-life" 'SP1K3YDRKQYS03D9PJPSN1NDPYJE3DQ86AVC3940S.essence-of-life u250 u500 'SP1ASZF73C1N45CP2AR2MKCSGB49MBYKAG2392KGV))
+  (try! (contract-call? .byzantion-market-v7 add-collection "SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE.bunnies::bunnies" "bunnies" 'SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE.bunnies u250 u500 'SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE))
+
+  (try! (contract-call? .byzantion-market-v6 add-collection "SP1K3YDRKQYS03D9PJPSN1NDPYJE3DQ86AVC3940S.essence-of-life::essence-of-life" "essence-of-life" 'SP1K3YDRKQYS03D9PJPSN1NDPYJE3DQ86AVC3940S.essence-of-life u250 u500 'SP1ASZF73C1N45CP2AR2MKCSGB49MBYKAG2392KGV))
+  (try! (contract-call? .byzantion-market-v6 add-collection "SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE.bunnies::bunnies" "bunnies" 'SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE.bunnies u250 u500 'SPFS9A6YG373VCPHJAV4QK3DJ0ZHC7RSTGWZS3ZE))
+ (ok true)
+)
