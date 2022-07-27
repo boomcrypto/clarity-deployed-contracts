@@ -1,0 +1,1 @@
+(try! (contract-call? .bitcoin-monkeys-incubators disable-premint))
