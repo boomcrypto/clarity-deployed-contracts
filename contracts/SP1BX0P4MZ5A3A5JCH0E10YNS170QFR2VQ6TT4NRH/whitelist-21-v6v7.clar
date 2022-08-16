@@ -1,0 +1,17 @@
+(begin
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34.stacks-plane::stacks-plane" "stacks-plane" 'SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34.stacks-plane u250 u500 'SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2SC0EAWCRKC597KMEBJ52TEHFSQAV4ZCXJD5J1Y.guitar-boy::guitar-boy" "guitar-boy" 'SP2SC0EAWCRKC597KMEBJ52TEHFSQAV4ZCXJD5J1Y.guitar-boy u250 u500 'SP3PN1GRGNNV6KKS47XN34TJZ6MGBGC40G7KFEGMW))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi::artificial-satoshi" "artificial-satoshi" 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi u250 u500 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49.dependents-of-hiro::dependents-of-hiro" "dependents-of-hiro" 'SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49.dependents-of-hiro u250 u500 'SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ.serious-portray::serious-portray" "serious-portray" 'SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ.serious-portray u250 u500 'SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0.gen-stacks-wallpapers-iphone-pro-max::gen-stacks-wallpapers-iphone-pro-max" "gen-stacks-wallpapers-iphone-pro-max" 'SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0.gen-stacks-wallpapers-iphone-pro-max u250 u500 'SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0))
+
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34.stacks-plane::stacks-plane" "stacks-plane" 'SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34.stacks-plane u250 u500 'SP2EK5VZQKRR1WYQ3F8MH86QDRDEHMC5WY6E3KA34))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP2SC0EAWCRKC597KMEBJ52TEHFSQAV4ZCXJD5J1Y.guitar-boy::guitar-boy" "guitar-boy" 'SP2SC0EAWCRKC597KMEBJ52TEHFSQAV4ZCXJD5J1Y.guitar-boy u250 u500 'SP3PN1GRGNNV6KKS47XN34TJZ6MGBGC40G7KFEGMW))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi::artificial-satoshi" "artificial-satoshi" 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi u250 u500 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49.dependents-of-hiro::dependents-of-hiro" "dependents-of-hiro" 'SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49.dependents-of-hiro u250 u500 'SPYMQGWH0SXVZQY2R46CYWVX1CEVHHV34H76DC49))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ.serious-portray::serious-portray" "serious-portray" 'SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ.serious-portray u250 u500 'SPC2JV3NVMP8X7CSDES4V4NM3KMZ0P8X5G586FPQ))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0.gen-stacks-wallpapers-iphone-pro-max::gen-stacks-wallpapers-iphone-pro-max" "gen-stacks-wallpapers-iphone-pro-max" 'SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0.gen-stacks-wallpapers-iphone-pro-max u250 u500 'SP26BDR15FMQNN66YM4AKWKAZG6KC335A9WG0V9C0))
+
+    (ok true)
+)
