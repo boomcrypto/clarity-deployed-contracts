@@ -1,0 +1,17 @@
+(begin
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80.flowers-of-the-universe::flowers-of-the-universe" "flowers-of-the-universe" 'SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80.flowers-of-the-universe u250 u500 'SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4.batoshis::batoshis" "batoshis" 'SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4.batoshis u250 u500 'SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1GWHGESCF29TV10Q6X0VZYWH4QJ6CM9NK6DSH9J.dynamic-weather::dynamic-weather" "dynamic-weather" 'SP1GWHGESCF29TV10Q6X0VZYWH4QJ6CM9NK6DSH9J.dynamic-weather u250 u500 'SP3RGX41T38WGH3HZJZ71P0YVB3K3DERP9HBWETYB))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT.bitascii::bitascii" "bitascii" 'SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT.bitascii u250 u500 'SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2W58YQZEAC870M2MKE6QEKS1DPG0RMZZ2BGXSM4.tickets-90stx-mini-raffle-23::ticket-90stx-mini-raffle-23" "ticket-90stx-mini-raffle-23" 'SP2W58YQZEAC870M2MKE6QEKS1DPG0RMZZ2BGXSM4.tickets-90stx-mini-raffle-23 u250 u500 'SPXGFH9JTKPF2TQZJ2AH7NSMMMXJ72VMGH8PR654))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi::artificial-satoshi" "artificial-satoshi" 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi u250 u500 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH))
+
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80.flowers-of-the-universe::flowers-of-the-universe" "flowers-of-the-universe" 'SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80.flowers-of-the-universe u250 u500 'SP2EQVT3KBS364AC2SZH2Y4E6NQ6H7JA96BDX8A80))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4.batoshis::batoshis" "batoshis" 'SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4.batoshis u250 u500 'SP1NKN5S805RDB78MMQKD26F00XEFE89X02DPSZW4))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP1GWHGESCF29TV10Q6X0VZYWH4QJ6CM9NK6DSH9J.dynamic-weather::dynamic-weather" "dynamic-weather" 'SP1GWHGESCF29TV10Q6X0VZYWH4QJ6CM9NK6DSH9J.dynamic-weather u250 u500 'SP3RGX41T38WGH3HZJZ71P0YVB3K3DERP9HBWETYB))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT.bitascii::bitascii" "bitascii" 'SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT.bitascii u250 u500 'SP3VGZVCH9NZ03XX6KNYGPWJK0ZG4BFPDV2APARVT))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP2W58YQZEAC870M2MKE6QEKS1DPG0RMZZ2BGXSM4.tickets-90stx-mini-raffle-23::ticket-90stx-mini-raffle-23" "ticket-90stx-mini-raffle-23" 'SP2W58YQZEAC870M2MKE6QEKS1DPG0RMZZ2BGXSM4.tickets-90stx-mini-raffle-23 u250 u500 'SPXGFH9JTKPF2TQZJ2AH7NSMMMXJ72VMGH8PR654))
+    (try! (contract-call? .byzantion-market-v6 add-collection "SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi::artificial-satoshi" "artificial-satoshi" 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH.artificial-satoshi u250 u500 'SP1JCPNPAMAQJ364AFHPTW3HY7X0HYZ3TJ0ZDGWZH))
+
+    (ok true)
+)
