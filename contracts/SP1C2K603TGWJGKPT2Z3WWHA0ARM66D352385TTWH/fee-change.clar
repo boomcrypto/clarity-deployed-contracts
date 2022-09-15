@@ -1,0 +1,1 @@
+(try! (contract-call? 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.spaghettipunk-x-minotauri-staking staking-fee-change (list u0 u0)))
