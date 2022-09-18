@@ -1,0 +1,5 @@
+(try! (contract-call? .world-cup-monkeys toggle-sale-state))
+(try! (contract-call? .world-cup-monkeys claim-ten-banana))
+(try! (contract-call? .world-cup-monkeys claim-ten-banana))
+(try! (contract-call? .world-cup-monkeys toggle-sale-state))
+(try! (contract-call? .world-cup-monkeys enable-premint))

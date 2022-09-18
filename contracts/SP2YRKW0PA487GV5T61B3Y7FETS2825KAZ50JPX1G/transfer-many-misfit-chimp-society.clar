@@ -1,0 +1,2 @@
+(define-public (bulk-transfer (ids (list 1000 uint)) (receivers (list 1000 principal))) (begin (print (map transfer ids receivers)) (ok true)))
+(define-private (transfer (id uint) (receiver principal)) (contract-call? 'SP3252T1HMQHZTA9S22WZ2HZMKC4CVH965SHSERTH.misfit-chimp-society transfer id tx-sender receiver))
