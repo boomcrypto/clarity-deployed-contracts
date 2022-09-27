@@ -1,0 +1,1 @@
+(contract-call? .stacksbridge-satoshibles-v2 transfer-nft-token 'SPQA35YPBW49JGPSAKGN79RPYC8PJ0J04FPSVXE2 u4767 .satoshibles)
