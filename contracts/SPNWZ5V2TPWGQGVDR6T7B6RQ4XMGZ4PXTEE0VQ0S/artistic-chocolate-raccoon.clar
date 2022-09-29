@@ -1,0 +1,5 @@
+(try! (contract-call? 'SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.crypto-gatsby-vip-pass toggle-pause))
+(try! (contract-call? 'SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.crypto-gatsby-vip-pass claim))
+(try! (contract-call? 'SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.crypto-gatsby-vip-pass transfer u46 'SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S 'SP26TZ9KS75P6AY5JCXP366X4CBD5MGREFJWK0E01))
+
+(try! (contract-call? 'SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.crypto-gatsby-vip-pass toggle-pause))
