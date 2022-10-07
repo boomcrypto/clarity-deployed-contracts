@@ -1,0 +1,3 @@
+(contract-call? .stacksbridge-monster-satoshibles transfer-nft-token 'SP1QRFVDS76WFV5XCDHAR7FQYTSNM4M1P4TGFZRK1 u666467 .monster-satoshibles)
+(contract-call? .stacksbridge-monster-satoshibles transfer-nft-token 'SP1QRFVDS76WFV5XCDHAR7FQYTSNM4M1P4TGFZRK1 u666231 .monster-satoshibles)
+(contract-call? .stacksbridge-monster-satoshibles transfer-nft-token 'SP1QRFVDS76WFV5XCDHAR7FQYTSNM4M1P4TGFZRK1 u666589 .monster-satoshibles)
