@@ -1,0 +1,22 @@
+---
+title: "Contract megapont-a-p-e-comm"
+draft: true
+---
+Deployer: SP1A32MBZDN1B28ZT5DH6MA739VJ0BFH05CJHCM8W
+
+Traits:
+ 
+Commission
+
+
+Block height: 79640 (2022-10-14T23:36:37.000Z)
+
+Source code: {{<contractref "megapont-a-p-e-comm" SP1A32MBZDN1B28ZT5DH6MA739VJ0BFH05CJHCM8W megapont-a-p-e-comm>}}
+
+Functions:
+
+* get-commission _public_
+* get-commission-address _public_
+* pay _public_
+* set-commission _public_
+* set-commission-address _public_
