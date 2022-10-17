@@ -4,6 +4,8 @@ theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
 
+ignoreErrors = ["error-remote-getjson"]
+
 # Geekdoc required configuration
 pygmentsUseClasses = true
 pygmentsCodeFences = true

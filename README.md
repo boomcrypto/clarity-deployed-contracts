@@ -3,6 +3,8 @@ This repo contains all deployed contracts on [Stacks blockchain](https://stacks.
 
 Branch `main` contains contracts of mainnet. Updated via Github Actions daily.
 
+Branch `docs` contains content for source-of-clarity.com.
+
 Branch `testnet` contains contracts of testnet. Not maintained currently.
 
 ## Blacklist
