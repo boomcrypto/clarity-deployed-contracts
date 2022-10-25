@@ -1,0 +1,3 @@
+(contract-call? 'SP1SCEXE6PMGPAC6B4N5P2MDKX8V4GF9QDE1FNNGJ.json-testers claim)
+(contract-call? 'SP1SCEXE6PMGPAC6B4N5P2MDKX8V4GF9QDE1FNNGJ.json-testers claim)
+(contract-call? 'SP1SCEXE6PMGPAC6B4N5P2MDKX8V4GF9QDE1FNNGJ.json-testers claim)
