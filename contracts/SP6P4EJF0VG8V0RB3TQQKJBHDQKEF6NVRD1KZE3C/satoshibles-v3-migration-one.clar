@@ -1,0 +1,1 @@
+(contract-call? .stacksbridge-satoshibles-v2 transfer-nft-token .stacksbridge-satoshibles-v3 u95 .satoshibles)
