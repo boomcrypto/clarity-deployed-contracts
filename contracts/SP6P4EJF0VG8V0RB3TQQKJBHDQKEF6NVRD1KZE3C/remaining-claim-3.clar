@@ -1,0 +1,1 @@
+(contract-call? .monster-satoshibles mint-id 'SPMS3CHAMWZT70BK91MC9YMYVGD83QKRHYND0HTT u6666)
