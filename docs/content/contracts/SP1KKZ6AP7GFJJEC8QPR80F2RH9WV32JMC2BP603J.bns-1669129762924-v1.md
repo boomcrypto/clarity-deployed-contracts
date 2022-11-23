@@ -1,0 +1,25 @@
+---
+title: "Contract bns-1669129762924-v1"
+draft: true
+---
+Deployer: SP1KKZ6AP7GFJJEC8QPR80F2RH9WV32JMC2BP603J
+
+
+ 
+
+
+
+Block height: 84396 (2022-11-22T15:36:18.000Z)
+
+Source code: {{<contractref "bns-1669129762924-v1" SP1KKZ6AP7GFJJEC8QPR80F2RH9WV32JMC2BP603J bns-1669129762924-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
