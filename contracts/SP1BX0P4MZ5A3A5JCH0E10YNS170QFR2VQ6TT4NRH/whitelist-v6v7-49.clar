@@ -1,0 +1,15 @@
+(begin 
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2NS78688FKS2G8ENV9B4HC4QR3Z3DNX21CRDFDQ.loobles::loobles" "loobles" 'SP2NS78688FKS2G8ENV9B4HC4QR3Z3DNX21CRDFDQ.loobles u250 u250 'SP2NS78688FKS2G8ENV9B4HC4QR3Z3DNX21CRDFDQ))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1D3Y8A2VVD2W98VFXCG5AXRYX5PJBBEMV1YPKF1.nonnish-harvest-helpers::nonnish-harvest-helpers" "nonnish-harvest-helpers" 'SP1D3Y8A2VVD2W98VFXCG5AXRYX5PJBBEMV1YPKF1.nonnish-harvest-helpers u250 u250 'SP1D3Y8A2VVD2W98VFXCG5AXRYX5PJBBEMV1YPKF1))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPRNXX5QK42QJVG8VNNH2PTYCS22KSV09WKSN03G.nft-art-movement-on-chain::nft-art-movement-on-chain" "nft-art-movement-on-chain" 'SPRNXX5QK42QJVG8VNNH2PTYCS22KSV09WKSN03G.nft-art-movement-on-chain u250 u250 'SPRNXX5QK42QJVG8VNNH2PTYCS22KSV09WKSN03G))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPPCHF5474M4X5ZS79TCKSNRKJ24Y71J77ZKTAP3.dinonyana::dinonyana" "dinonyana" 'SPPCHF5474M4X5ZS79TCKSNRKJ24Y71J77ZKTAP3.dinonyana u250 u250 'SPPCHF5474M4X5ZS79TCKSNRKJ24Y71J77ZKTAP3))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP3D642JWKC41K09THVMDEX208TGH4RK3BRKCFYWD.h4unt3d::h4unt3d" "h4unt3d" 'SP3D642JWKC41K09THVMDEX208TGH4RK3BRKCFYWD.h4unt3d u250 u250 'SP3D642JWKC41K09THVMDEX208TGH4RK3BRKCFYWD))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP25VWGTPR19E344S4ENTHQT8651216EPNABRYE51.project-indigo-lost-shipments::project-indigo-lost-shipments" "project-indigo-lost-shipments" 'SP25VWGTPR19E344S4ENTHQT8651216EPNABRYE51.project-indigo-lost-shipments u250 u250 'SP2DADKD5KK22MHMVN3DCSKS10T17CM7PDTC6WQV8))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP25VWGTPR19E344S4ENTHQT8651216EPNABRYE51.project-indigo-equipment::ice-and-fire-a-collection-from-iceland" "ice-and-fire-a-collection-from-iceland" 'SP25VWGTPR19E344S4ENTHQT8651216EPNABRYE51.project-indigo-equipment u250 u250 'SP2DADKD5KK22MHMVN3DCSKS10T17CM7PDTC6WQV8))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2XD80BWCFN1W4ECVTE9EDC6TZV805MYF761YRK.chicco-universe::chicco-universe" "chicco-universe" 'SP2XD80BWCFN1W4ECVTE9EDC6TZV805MYF761YRK.chicco-universe u250 u250 'SP2XD80BWCFN1W4ECVTE9EDC6TZV805MYF761YRK))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP3EB7YHV5NERS2HMCGSGKNMN0BEH52W9H7YE4T9C.btc-ghosts::btc-ghosts" "btc-ghosts" 'SP3EB7YHV5NERS2HMCGSGKNMN0BEH52W9H7YE4T9C.btc-ghosts u250 u250 'SP3EB7YHV5NERS2HMCGSGKNMN0BEH52W9H7YE4T9C))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPGGAEQWA7Y9HRZY5T0XJCEYEZ28J6RKCCC1HP9M.PaperPlanes::PaperPlanes" "PaperPlanes" 'SPGGAEQWA7Y9HRZY5T0XJCEYEZ28J6RKCCC1HP9M.PaperPlanes u250 u250 'SP28KZ784B7AA6FGANSCPHV9V5CW4J43XT79DFKHG))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPQJENNC82VH8HTYX1BBFP2K8RRF60P5G5N1GEBB.el-bots::el-bots" "el-bots" 'SPQJENNC82VH8HTYX1BBFP2K8RRF60P5G5N1GEBB.el-bots u250 u250 'SPQJENNC82VH8HTYX1BBFP2K8RRF60P5G5N1GEBB))
+
+    (ok true)
+)
