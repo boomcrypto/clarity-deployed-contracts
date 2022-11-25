@@ -1,0 +1,13 @@
+(begin 
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.peer-to-peer::peer-to-peer" "peer-to-peer" 'SP2QDMH88MEZ8FFAYHW4B0BTXJRTHX8XBD54FE7HJ.peer-to-peer u250 u500 'SPNWZ5V2TPWGQGVDR6T7B6RQ4XMGZ4PXTEE0VQ0S))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2BE8TZATXEVPGZ8HAFZYE5GKZ02X0YDKAN7ZTGW.btc-sports-flags-nft::btc-sports-flags" "btc-sports-flags" 'SP2BE8TZATXEVPGZ8HAFZYE5GKZ02X0YDKAN7ZTGW.btc-sports-flags-nft u250 u500 'SP5T742YTQR68RNMBB4QRWRWD9SR01C6E1WNJ06T))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPDKRP4ESV0037MT3SX0WE817WVR9EQ9A0JBVRP4.atlantic-dolphins::atlantic-dolphins" "atlantic-dolphins" 'SPDKRP4ESV0037MT3SX0WE817WVR9EQ9A0JBVRP4.atlantic-dolphins u250 u500 'SPDKRP4ESV0037MT3SX0WE817WVR9EQ9A0JBVRP4))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SPQS1J3X9FJ6N4E9K2MW81W5DNBSCC8ZPHR6K2YA.carole-levy-with-gamma::carole-levy-with-gamma" "carole-levy-with-gamma" 'SPQS1J3X9FJ6N4E9K2MW81W5DNBSCC8ZPHR6K2YA.carole-levy-with-gamma u250 u500 'SPQS1J3X9FJ6N4E9K2MW81W5DNBSCC8ZPHR6K2YA))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP8CZNESYSP7XAWX8QA4WV23VT2D9MC8SAZAERR0.stacksdev-v2::stacksdev-v2" "stacksdev-v2" 'SP8CZNESYSP7XAWX8QA4WV23VT2D9MC8SAZAERR0.stacksdev-v2 u250 u500 'SP8CZNESYSP7XAWX8QA4WV23VT2D9MC8SAZAERR0))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP2BN54RFN13H1VVV7E651G77D4FM9B5GX1RTH2TS.far-q-artefacts-on-stacks::far-q-artefacts-on-stacks" "far-q-artefacts-on-stacks" 'SP2BN54RFN13H1VVV7E651G77D4FM9B5GX1RTH2TS.far-q-artefacts-on-stacks u250 u500 'SP2BN54RFN13H1VVV7E651G77D4FM9B5GX1RTH2TS))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP1FKP2KHZKXSPY7ZFMXBCZS19E149T2S936EJYVJ.sock-monster-genesis::sock-monster-genesis" "sock-monster-genesis" 'SP1FKP2KHZKXSPY7ZFMXBCZS19E149T2S936EJYVJ.sock-monster-genesis u250 u500 'SP1FKP2KHZKXSPY7ZFMXBCZS19E149T2S936EJYVJ))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP15PSYKVN74V73KDHST925KRWHKNKTTKVTGSHKPF.borderline-collage::borderline-collage" "borderline-collage" 'SP15PSYKVN74V73KDHST925KRWHKNKTTKVTGSHKPF.borderline-collage u250 u500 'SP15PSYKVN74V73KDHST925KRWHKNKTTKVTGSHKPF))
+    (try! (contract-call? .byzantion-market-v7 add-collection "SP377R6M98T0AC4MJZZFQ80DQX6AB1RFAY1WQK2D6.robopunk-s-revenge-v4::robopunk-s-revenge-v4" "robopunk-s-revenge-v4" 'SP377R6M98T0AC4MJZZFQ80DQX6AB1RFAY1WQK2D6.robopunk-s-revenge-v4 u250 u500 'SP377R6M98T0AC4MJZZFQ80DQX6AB1RFAY1WQK2D6))
+
+    (ok true)
+)
