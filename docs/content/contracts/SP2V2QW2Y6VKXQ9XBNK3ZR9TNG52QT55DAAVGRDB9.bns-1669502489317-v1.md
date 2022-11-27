@@ -1,0 +1,25 @@
+---
+title: "Contract bns-1669502489317-v1"
+draft: true
+---
+Deployer: SP2V2QW2Y6VKXQ9XBNK3ZR9TNG52QT55DAAVGRDB9
+
+
+ 
+
+
+
+Block height: 84864 (2022-11-26T22:50:04.000Z)
+
+Source code: {{<contractref "bns-1669502489317-v1" SP2V2QW2Y6VKXQ9XBNK3ZR9TNG52QT55DAAVGRDB9 bns-1669502489317-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
