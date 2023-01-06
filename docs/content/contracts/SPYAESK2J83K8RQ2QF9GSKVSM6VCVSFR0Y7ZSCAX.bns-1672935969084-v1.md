@@ -1,0 +1,25 @@
+---
+title: "Contract bns-1672935969084-v1"
+draft: true
+---
+Deployer: SPYAESK2J83K8RQ2QF9GSKVSM6VCVSFR0Y7ZSCAX
+
+
+ 
+
+
+
+Block height: 90004 (2023-01-05T16:55:21.000Z)
+
+Source code: {{<contractref "bns-1672935969084-v1" SPYAESK2J83K8RQ2QF9GSKVSM6VCVSFR0Y7ZSCAX bns-1672935969084-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
