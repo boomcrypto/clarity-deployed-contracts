@@ -1,0 +1,25 @@
+---
+title: "Contract bns-1675725395886-v1"
+draft: true
+---
+Deployer: SP1MTKY7A4XDWYQSWT8F9C0TWAYNT5QS7E2D92QQ8
+
+
+ 
+
+
+
+Block height: 94315 (2023-02-06T23:21:45.000Z)
+
+Source code: {{<contractref "bns-1675725395886-v1" SP1MTKY7A4XDWYQSWT8F9C0TWAYNT5QS7E2D92QQ8 bns-1675725395886-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
