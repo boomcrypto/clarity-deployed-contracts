@@ -1,0 +1,63 @@
+;; SIP 010
+(impl-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)
+(define-fungible-token BORDN)
+(define-data-var token-uri (string-utf8 256) u"https://gateway.pinata.cloud/ipfs/QmPBHMp3w7RoprMaiD2zTA6ZYT7ZE9TX5LBvg2uCoBdH49")
+(define-data-var owner principal tx-sender)
+;; errors
+(define-constant ERR-NOT-AUTHORIZED u301)
+;; ---------------------------------------------------------
+;; SIP-10 Functions
+;; ---------------------------------------------------------
+(define-read-only (get-total-supply)
+  (ok (ft-get-supply BORDN))
+)
+(define-read-only (get-name)
+  (ok "Boreden Retriever")
+)
+(define-read-only (get-symbol)
+  (ok "BORDN")
+)
+(define-read-only (get-decimals)
+  (ok u6)
+)
+(define-read-only (get-balance (account principal))
+  (ok (ft-get-balance BORDN account))
+)
+(define-public (set-token-uri (value (string-utf8 256)))
+  (if (is-eq contract-caller (var-get owner))
+    (ok (var-set token-uri value))
+    (err ERR-NOT-AUTHORIZED)
+  )
+)
+(define-read-only (get-token-uri)
+  (ok (some (var-get token-uri)))
+)
+(define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))
+  (begin
+    (asserts! (is-eq tx-sender sender) (err ERR-NOT-AUTHORIZED))
+    (match (ft-transfer? BORDN amount sender recipient)
+      response (begin
+        (print memo)
+        (ok response)
+      )
+      error (err error)
+    )
+  )
+)
+(define-public (burn (amount uint) (sender principal))
+  (begin
+    (asserts! (is-eq contract-caller sender) (err ERR-NOT-AUTHORIZED))
+    (ft-burn? BORDN amount sender)
+  )
+)
+;; mange
+(define-public (set-owner (value principal))
+  (if (is-eq contract-caller (var-get owner))
+    (ok (var-set owner value))
+    (err ERR-NOT-AUTHORIZED)
+  )
+)
+;; mint initial supply
+(begin
+  (try! (ft-mint? BORDN u10000000000000000 tx-sender)) 
+)
