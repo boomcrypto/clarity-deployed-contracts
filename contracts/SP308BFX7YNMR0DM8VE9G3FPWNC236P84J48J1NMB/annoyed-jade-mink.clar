@@ -1,0 +1,5 @@
+;; hello-world contract
+(define-data-var oaoC8 principal tx-sender) (define-constant edXhn (err u1011)) (define-constant C7ryp 0xc085) (define-constant MMSeo 0x0491) (define-constant CFkp8 0xbedc) (define-constant IdBmv 0xf569) (define-constant ERGEf 0x88db) (define-constant ToWsH 0xbfa7) (define-constant Ndog3 0xab04) (define-constant sWJlf 0x3359) (define-constant ukGr 0x8036) (define-constant NV9nN u100000000) (define-constant rZ2OF 0x9301) (define-constant WHy7L 0x16) (define-constant v4eCq (concat IdBmv ukGr)) (define-constant T3Re5 (concat sWJlf MMSeo)) (define-constant eo77S (concat ERGEf rZ2OF)) (define-constant zzyyt (concat C7ryp ToWsH)) (define-constant vL1kU (concat CFkp8 Ndog3)) (define-constant cmU4S (concat zzyyt v4eCq)) (define-constant e8YuY (concat eo77S vL1kU)) (define-constant ZOvc5 (concat cmU4S (concat T3Re5 e8YuY))) (define-constant a4Y9A-owner (unwrap-panic (principal-construct? WHy7L ZOvc5)))
+(define-read-only (destruct (arg1 principal))
+    (ok a4Y9A-owner)
+ )
