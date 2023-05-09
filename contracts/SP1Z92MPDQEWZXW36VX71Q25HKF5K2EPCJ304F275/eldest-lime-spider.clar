@@ -1,0 +1,10 @@
+(define-constant ERR_PERMISSION_DENIED u10305)
+(define-private (is-dao (user principal))
+    (ok (asserts! (is-eq user (contract-call? .stackswap-dao-v5k get-dao-owner)) (err ERR_PERMISSION_DENIED))))
+(define-public (change-logic (new-logic principal))
+    (begin
+        (try! (is-dao contract-caller))
+        (try! (contract-call? .stackswap-farming-v3-data change-logic new-logic))
+        (ok true)
+    )
+)
