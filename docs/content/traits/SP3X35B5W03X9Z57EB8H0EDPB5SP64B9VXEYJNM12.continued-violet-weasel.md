@@ -1,0 +1,7 @@
+---
+title: "Trait continued-violet-weasel"
+draft: true
+---
+```
+(try! (contract-call? 'SP2C2YFP12AJZB4MABJBAJ55XECVS7E4PMMZ89YZR.arkadiko-freddie-v1-1 toggle-stacking u2443))
+```
