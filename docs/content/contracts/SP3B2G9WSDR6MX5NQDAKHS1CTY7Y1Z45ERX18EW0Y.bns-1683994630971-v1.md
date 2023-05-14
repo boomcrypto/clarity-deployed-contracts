@@ -1,0 +1,26 @@
+---
+title: "Contract bns-1683994630971-v1"
+draft: true
+---
+Deployer: SP3B2G9WSDR6MX5NQDAKHS1CTY7Y1Z45ERX18EW0Y
+
+
+ 
+
+
+
+Block height: 105358 (2023-05-13T16:38:35.000Z)
+
+Source code: {{<contractref "bns-1683994630971-v1" SP3B2G9WSDR6MX5NQDAKHS1CTY7Y1Z45ERX18EW0Y bns-1683994630971-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* withdraw-stx _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
