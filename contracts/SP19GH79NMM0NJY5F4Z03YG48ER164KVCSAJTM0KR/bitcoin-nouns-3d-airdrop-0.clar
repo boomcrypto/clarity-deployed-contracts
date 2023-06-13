@@ -1,0 +1,1 @@
+(try! (contract-call? .bitcoin-nouns-3d claim))
