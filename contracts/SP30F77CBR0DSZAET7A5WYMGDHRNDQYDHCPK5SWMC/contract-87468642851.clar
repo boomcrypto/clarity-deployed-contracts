@@ -1,0 +1,6 @@
+(define-fungible-token coco)
+(define-read-only (get-name)
+    (ok "cio bella ciao ciao"))
+(define-read-only (get-symbol)
+    (ok "VC"))
+(ft-mint? coco u200 'SP30F77CBR0DSZAET7A5WYMGDHRNDQYDHCPK5SWMC)
