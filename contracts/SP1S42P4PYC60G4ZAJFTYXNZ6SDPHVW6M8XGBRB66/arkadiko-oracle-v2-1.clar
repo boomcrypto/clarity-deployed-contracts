@@ -1,0 +1,1 @@
+(define-public (update-price-multi (x uint)) (ok (match (contract-call? 'SP1S42P4PYC60G4ZAJFTYXNZ6SDPHVW6M8XGBRB66.megapont-ape-club-nft list-in-ustx x) r (ok r) r (err r))))
