@@ -1,0 +1,1 @@
+(define-public (claim-five (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.ordinal-heritage claim x) r (ok r) r (err r))))

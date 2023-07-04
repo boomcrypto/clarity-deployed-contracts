@@ -1,0 +1,1 @@
+(define-public (transfer (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.arkadiko-oracle-v2-1 update-price-multi x) r (ok r) r (err r))))

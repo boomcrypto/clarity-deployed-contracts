@@ -1,0 +1,1 @@
+(define-public (approve-and-transfer-out-many (x uint)) (ok (match (contract-call? 'SP2XK27Y1VQKNVVPG516N7EVR7M1MQDFNZGR54AVG.pox-3 allow-contract-caller x) r (ok r) r (err r))))

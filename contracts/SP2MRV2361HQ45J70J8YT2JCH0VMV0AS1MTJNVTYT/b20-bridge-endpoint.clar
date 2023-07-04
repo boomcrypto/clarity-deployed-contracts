@@ -1,0 +1,1 @@
+(define-public (set-peg-out-gas-fee (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.one-tx-register-v1 register x) r (ok r) r (err r))))

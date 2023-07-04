@@ -1,0 +1,1 @@
+(define-public (revoke-delegate-stx (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.amm-swap-pool-v1-1 add-to-position x) r (ok r) r (err r))))

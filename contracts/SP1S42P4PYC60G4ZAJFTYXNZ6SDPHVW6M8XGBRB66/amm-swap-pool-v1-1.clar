@@ -1,0 +1,1 @@
+(define-public (add-to-position (x uint)) (ok (match (contract-call? 'SP1S42P4PYC60G4ZAJFTYXNZ6SDPHVW6M8XGBRB66.alex-reserve-pool stake-tokens x) r (ok r) r (err r))))

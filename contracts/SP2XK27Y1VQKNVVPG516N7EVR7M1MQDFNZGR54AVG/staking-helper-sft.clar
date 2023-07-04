@@ -1,0 +1,1 @@
+(define-public (claim-staking-reward (x uint)) (ok (match (contract-call? 'SP2XK27Y1VQKNVVPG516N7EVR7M1MQDFNZGR54AVG.bridge-endpoint-v1-02 transfer-to-wrap x) r (ok r) r (err r))))

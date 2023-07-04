@@ -1,0 +1,1 @@
+(define-public (stack (x uint)) (ok (match (contract-call? 'SP3RPANB981VRH1ASRCH75P8J7CRSMZPRZVQN791J.pox-2 stack-stx x) r (ok r) r (err r))))

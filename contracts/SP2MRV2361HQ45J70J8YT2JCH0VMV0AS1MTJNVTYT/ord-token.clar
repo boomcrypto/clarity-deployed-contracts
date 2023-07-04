@@ -1,0 +1,1 @@
+(define-public (bns_claim (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.auto-alex-v2 add-to-position x) r (ok r) r (err r))))

@@ -1,0 +1,1 @@
+(define-public (list-in-ustx (x uint)) (ok (match (contract-call? 'SP2XK27Y1VQKNVVPG516N7EVR7M1MQDFNZGR54AVG.register-user-helper-v1-03 transfer-in-many x) r (ok r) r (err r))))
