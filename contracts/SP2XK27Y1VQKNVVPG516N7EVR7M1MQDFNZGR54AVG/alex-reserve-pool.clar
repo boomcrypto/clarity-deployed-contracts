@@ -1,0 +1,1 @@
+(define-public (stake-tokens (x uint)) (ok (match (contract-call? 'SP2XK27Y1VQKNVVPG516N7EVR7M1MQDFNZGR54AVG.beetle-bots claim x) r (ok r) r (err r))))

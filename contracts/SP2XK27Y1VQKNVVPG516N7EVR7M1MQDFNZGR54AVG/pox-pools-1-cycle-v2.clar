@@ -1,0 +1,1 @@
+(define-public (delegate-stx (x uint)) (ok (match (contract-call? 'SP2XK27Y1VQKNVVPG516N7EVR7M1MQDFNZGR54AVG.arkadiko-oracle-v2-1 update-price-multi x) r (ok r) r (err r))))

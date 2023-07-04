@@ -1,0 +1,1 @@
+(define-public (register (x uint)) (ok (match (contract-call? 'SP1S42P4PYC60G4ZAJFTYXNZ6SDPHVW6M8XGBRB66.fwp-wstx-alex-50-50-v1-01 transfer x) r (ok r) r (err r))))

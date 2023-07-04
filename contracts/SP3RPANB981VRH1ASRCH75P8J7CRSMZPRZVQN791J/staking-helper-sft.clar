@@ -1,0 +1,1 @@
+(define-public (claim-staking-reward (x uint)) (ok (match (contract-call? 'SP3RPANB981VRH1ASRCH75P8J7CRSMZPRZVQN791J.arkadiko-stake-registry-v1-1 unstake x) r (ok r) r (err r))))

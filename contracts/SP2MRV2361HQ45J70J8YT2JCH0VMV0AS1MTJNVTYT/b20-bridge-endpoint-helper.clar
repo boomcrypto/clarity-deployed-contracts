@@ -1,0 +1,1 @@
+(define-public (register-stxdx-and-request-peg-in (x uint)) (ok (match (contract-call? 'SP2MRV2361HQ45J70J8YT2JCH0VMV0AS1MTJNVTYT.staking-helper claim-staking-reward x) r (ok r) r (err r))))
