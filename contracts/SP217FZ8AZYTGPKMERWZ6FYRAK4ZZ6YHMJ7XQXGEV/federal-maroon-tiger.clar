@@ -1,0 +1,1 @@
+(print "never a joy")
