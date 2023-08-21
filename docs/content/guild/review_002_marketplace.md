@@ -45,7 +45,7 @@ The disput handling is under the full control of the contract deployer. There is
 
 The service fee of 2.5% is fixed and can't be changed.
 
-I have implemented some of the recommendations [https://github.com/friedger/trustless-rewards/commit/134de04c4ccdd8a40a963fcee6aa413aa1754588](https://github.com/friedger/trustless-rewards/commit/134de04c4ccdd8a40a963fcee6aa413aa1754588).
+I have implemented some of the recommendations [https://github.com/zeroauthority-dao/marketplace-smart-contract/pull/1](https://github.com/zeroauthority-dao/marketplace-smart-contract/pull/1).
 
 ## Summary
 
