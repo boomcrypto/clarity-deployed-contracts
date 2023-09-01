@@ -1,0 +1,51 @@
+(define-constant ERR-UNAUTHORIZED (err u601))
+(define-constant CONTRACT-OWNER tx-sender) 
+(define-non-fungible-token GAME-NFT {id: uint, type: (string-ascii 32)})
+(define-data-var base-uri (string-ascii 120) "https://urlurl.url/")
+(define-data-var token-counter uint u0)
+(define-read-only (get-owner (token-id {id: uint, type: (string-ascii 32)}))
+    (ok (nft-get-owner? GAME-NFT token-id))
+)
+(define-read-only (get-token-uri (token-id {id: uint, type: (string-ascii 32)}))
+    (let 
+    (
+       (id (get id token-id))
+       (type (get type token-id))
+    )    
+       (ok (concat (var-get base-uri) (concat type ".json")))
+    )
+)
+(define-public (mint (recipient principal) (type (string-ascii 32)))
+    (begin
+        (asserts! (is-eq tx-sender contract-caller CONTRACT-OWNER) ERR-UNAUTHORIZED)
+        (let 
+            (
+                (token-id-new (+ (var-get token-counter) u1))
+                (token-data {id: token-id-new, type: type})
+            )    
+            (try! (nft-mint? GAME-NFT token-data recipient))
+            (var-set token-counter token-id-new)
+            (ok token-data)
+        )
+    )
+)
+(define-public (transfer (token-id {id: uint, type: (string-ascii 32)}) (sender principal) (recipient principal))
+    (begin
+        (asserts! (is-eq tx-sender (unwrap-panic (nft-get-owner? GAME-NFT token-id))) ERR-UNAUTHORIZED)
+        (nft-transfer? GAME-NFT token-id sender recipient)
+    )
+) 
+(define-public (burn (token-id {id: uint, type: (string-ascii 32)}))
+    (begin 
+        (asserts! (is-eq tx-sender (unwrap-panic (nft-get-owner? GAME-NFT token-id))) ERR-UNAUTHORIZED)
+        (nft-burn? GAME-NFT token-id (unwrap-panic (nft-get-owner? GAME-NFT token-id)))
+    )
+)
+(define-public (set-base-uri (uri (string-ascii 120)))
+    (begin
+        (asserts! (is-eq tx-sender CONTRACT-OWNER) ERR-UNAUTHORIZED)
+ 
+        (var-set base-uri uri)
+        (ok true)
+    ) 
+)
