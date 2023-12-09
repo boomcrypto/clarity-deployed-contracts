@@ -1,0 +1,26 @@
+---
+title: "Contract bns-1702056114566-v1"
+draft: true
+---
+Deployer: SP1KTV9775Q1YCHH8QH92QX6DMARX5MNC91R35WZY
+
+
+ 
+
+
+
+Block height: 131308 (2023-12-08T17:38:21.000Z)
+
+Source code: {{<contractref "bns-1702056114566-v1" SP1KTV9775Q1YCHH8QH92QX6DMARX5MNC91R35WZY bns-1702056114566-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* withdraw-stx _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
