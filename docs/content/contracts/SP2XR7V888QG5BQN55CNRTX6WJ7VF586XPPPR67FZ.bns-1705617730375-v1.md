@@ -1,0 +1,26 @@
+---
+title: "Contract bns-1705617730375-v1"
+draft: true
+---
+Deployer: SP2XR7V888QG5BQN55CNRTX6WJ7VF586XPPPR67FZ
+
+
+ 
+
+
+
+Block height: 136093 (2024-01-18T23:36:20.000Z)
+
+Source code: {{<contractref "bns-1705617730375-v1" SP2XR7V888QG5BQN55CNRTX6WJ7VF586XPPPR67FZ bns-1705617730375-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* withdraw-stx _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_
