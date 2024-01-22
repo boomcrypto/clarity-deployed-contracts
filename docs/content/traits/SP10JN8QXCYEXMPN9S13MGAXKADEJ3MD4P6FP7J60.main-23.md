@@ -1,0 +1,21 @@
+---
+title: "Trait main-23"
+draft: true
+---
+```
+(use-trait executor-trait .traits.executor-trait)
+
+(define-public (execute-multi
+    (s1 <executor-trait>) 
+    (in1 uint)
+    (mout1 uint)
+    (s2 <executor-trait>) 
+    (in2 uint)
+    (mout2 uint)
+)
+ (ok (list 
+       (contract-call? s1 execute in1 mout1)
+       (contract-call? s2 execute in2 mout2)
+    ))
+)
+```
