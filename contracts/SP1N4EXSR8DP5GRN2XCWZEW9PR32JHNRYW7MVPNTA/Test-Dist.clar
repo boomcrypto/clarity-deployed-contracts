@@ -1,0 +1,5 @@
+(define-private (trans (address principal))
+
+ (contract-call? 'SP1N4EXSR8DP5GRN2XCWZEW9PR32JHNRYW7MVPNTA.PomerenianBoo-Pomboo transfer u450000000000000 tx-sender address none))
+(trans 'SPBNMD07T0WD2WJAH6JZJG07GYSF0X413V69J3T9)
+(trans 'SP2NCEHR81ZBYC0145MHCK4X67JD5FQZCWFZ0F1S8)
