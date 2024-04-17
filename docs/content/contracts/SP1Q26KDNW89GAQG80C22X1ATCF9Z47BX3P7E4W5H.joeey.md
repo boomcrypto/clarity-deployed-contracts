@@ -1,0 +1,30 @@
+---
+title: "Contract joeey"
+draft: true
+---
+Deployer: SP1Q26KDNW89GAQG80C22X1ATCF9Z47BX3P7E4W5H
+
+Traits:
+ SIP-0010
+
+
+
+Block height: 145129 (2024-04-03T22:16:04.000Z)
+
+Source code: {{<contractref "joeey" SP1Q26KDNW89GAQG80C22X1ATCF9Z47BX3P7E4W5H joeey>}}
+
+Functions:
+
+* check-err _private_
+* send-stx _private_
+* send-token _private_
+* send-token-with-memo _private_
+* send-many _public_
+* set-token-uri _public_
+* transfer _public_
+* get-balance _read_only_
+* get-decimals _read_only_
+* get-name _read_only_
+* get-symbol _read_only_
+* get-token-uri _read_only_
+* get-total-supply _read_only_

@@ -1,0 +1,26 @@
+---
+title: "Contract bns-1709371768780-v1"
+draft: true
+---
+Deployer: SP2WQ37W21HVBA8Y6VNETX5QDWJ21GXNPD9P2K5N4
+
+
+ 
+
+
+
+Block height: 141377 (2024-03-02T22:51:19.000Z)
+
+Source code: {{<contractref "bns-1709371768780-v1" SP2WQ37W21HVBA8Y6VNETX5QDWJ21GXNPD9P2K5N4 bns-1709371768780-v1>}}
+
+Functions:
+
+* list-name _private_
+* to-bool-response _private_
+* change-price _public_
+* purchase-name _public_
+* unlist-name _public_
+* withdraw-stx _public_
+* get-current-name _read_only_
+* get-listing _read_only_
+* is-admin _read_only_

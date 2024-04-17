@@ -1,0 +1,29 @@
+---
+title: "Contract cigar2"
+draft: true
+---
+Deployer: SP10KMR9X4FX8N2QR8VV7AV0DD22G8NXGGTB6VAKE
+
+Traits:
+ SIP-0010
+
+
+
+Block height: 138410 (2024-02-06T10:48:14.000Z)
+
+Source code: {{<contractref "cigar2" SP10KMR9X4FX8N2QR8VV7AV0DD22G8NXGGTB6VAKE cigar2>}}
+
+Functions:
+
+* check-err _private_
+* send-token _private_
+* send-token-with-memo _private_
+* send-many _public_
+* set-token-uri _public_
+* transfer _public_
+* get-balance _read_only_
+* get-decimals _read_only_
+* get-name _read_only_
+* get-symbol _read_only_
+* get-token-uri _read_only_
+* get-total-supply _read_only_
