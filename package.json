@@ -5,7 +5,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node scripts/getSource.mjs"
+    "start": "node scripts/getSource.mjs",
+    "update:names": "node scripts/weekly/names.mjs",
+    "update:hash": "node scripts/weekly/hash.mjs"
   },
   "dependencies": {
     "@stacks/blockchain-api-client": "^1.0.7",

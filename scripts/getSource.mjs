@@ -5,18 +5,9 @@ import {
   SmartContractsApi,
   TransactionsApi,
 } from "@stacks/blockchain-api-client";
-import { txidFromData } from "@stacks/transactions";
-import {
-  existsSync,
-  mkdir,
-  mkdirSync,
-  readFileSync,
-  readdir,
-  readdirSync,
-  rmSync,
-  writeFileSync,
-} from "fs";
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "fs";
 import fetch from "node-fetch";
+import { basePath } from "./constants.mjs";
 
 const sip9TraitPath =
   "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9/nft-trait/nft-trait";
@@ -207,7 +198,7 @@ async function handleNewContracts({ config, path, updateAll }) {
 
   // update last block
   const coreInfo = await infoApi.getCoreApiInfo();
-  console.log(coreInfo.stacks_tip_height);
+  console.log("current stacks height", coreInfo.stacks_tip_height);
 
   // setup contracts
   mkdirSync(`${path}/contracts`, { recursive: true });
@@ -267,10 +258,13 @@ async function handleNewContracts({ config, path, updateAll }) {
 
       if (
         updateAll ||
+        address === "SPC0KWNBJ61BDZRPF3W2GHGK3G3GKS8WZ7ND33PS" ||
         contracts.indexOf(`${address}/${contractFilename}`) < 0
       ) {
         try {
-          console.log(`handling ${address}.${name}`);
+          if (address === "SPC0KWNBJ61BDZRPF3W2GHGK3G3GKS8WZ7ND33PS") {
+            console.log(`handling ${address}.${name}`);
+          }
           const sourceCode = t.smart_contract.source_code;
           const { block_height, burn_block_time_iso } = t;
           // the tx contains already the source code, no need to
@@ -282,10 +276,22 @@ async function handleNewContracts({ config, path, updateAll }) {
           contracts.push(`${address}/${name}.clar`);
 
           // will fail for contracts without any public functions
-          const contractInterface = await api.getContractInterface({
-            contractAddress: address,
-            contractName: name,
-          });
+          const contractInterface = await api
+            .getContractInterface({
+              contractAddress: address,
+              contractName: name,
+            })
+            .catch((_) => {
+              return {
+                noContract: true,
+                functions: [],
+                fungible_tokens: [],
+                maps: [],
+                non_fungible_tokens: [],
+                variables: [],
+              };
+            });
+
           const sip9 = await implementedSip9(config, address, name);
           const sip10 = await implementedSip10(config, address, name);
           const commission = await implementedCommission(config, address, name);
@@ -330,11 +336,9 @@ async function handleNewContracts({ config, path, updateAll }) {
 
 handleNewContracts({
   config: new Configuration({
-    basePath: "https://stacks-node-api.mainnet.stacks.co",
-    //basePath: "http://localhost:3999",
+    basePath,
     fetchApi: fetch,
   }),
   path: ".",
-  //updateAll: true,
   updateAll: false,
 });

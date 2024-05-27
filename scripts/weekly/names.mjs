@@ -1,15 +1,7 @@
-import {
-  existsSync,
-  mkdir,
-  mkdirSync,
-  readFileSync,
-  readdir,
-  readdirSync,
-  rmSync,
-  writeFileSync,
-} from "fs";
 import { Configuration, NamesApi } from "@stacks/blockchain-api-client";
+import { mkdirSync, readdirSync, writeFileSync } from "fs";
 import fetch from "node-fetch";
+import { basePath } from "../constants.mjs";
 
 async function loadAllNames(config) {
   const namesApi = new NamesApi(config);
@@ -46,18 +38,20 @@ List of accounts that deployed a contract AND own a name
 | Address| Current Name|
 | -------|-------------|
 ${[
-      ...Object.keys(names).map((address) => `|[${address}]({{<githubref>}}/tree/main/contracts/${address}) | ${names[address]}|`),
-    ].join("\n")}
+  ...Object.keys(names).map(
+    (address) =>
+      `|[${address}]({{<githubref>}}/tree/main/contracts/${address}) | ${names[address]}|`
+  ),
+].join("\n")}
 
-Updated: ${new Date().toLocaleString("en-US", { timeZone: 'UTC' })}
+Updated: ${new Date().toLocaleString("en-US", { timeZone: "UTC" })}
     `
   );
 }
 
 loadAllNames(
   new Configuration({
-    basePath: "https://stacks-node-api.mainnet.stacks.co",
-    //basePath: "http://localhost:3999",
+    basePath,
     fetchApi: fetch,
   })
 );

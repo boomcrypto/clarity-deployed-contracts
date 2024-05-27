@@ -1,13 +1,4 @@
-import {
-  existsSync,
-  mkdir,
-  mkdirSync,
-  readFileSync,
-  readdir,
-  readdirSync,
-  rmSync,
-  writeFileSync,
-} from "fs";
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "fs";
 
 String.prototype.hashCode = function () {
   var hash = 0;
