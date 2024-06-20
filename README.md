@@ -16,6 +16,7 @@ Contracts that are seen as bad actors in general are listed in the file `blackli
 
 Change the api node in `scripts/constants.mjs` if you don't want to use Hiro's api node.
 
+0. In branch `docs`, pull from remote to be up-to-date.
 1. In branch `main`,
    1. call `pnpm run start` to pull new contracts since the last call (stored in `last-block.txt`).
    2. call `pnpm run update:name` to check all contract deployers and add them to a list of they own a BNS name.

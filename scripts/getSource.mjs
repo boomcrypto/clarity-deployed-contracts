@@ -36,7 +36,7 @@ function writeSourceCode(path, address, name, sourceCode) {
   writeFileSync(`${path}/contracts/${address}/${name}.clar`, sourceCode);
 }
 
-function writeSip9(path, address, name, tokenName, description, image) {
+function writeSip9(path, address, name, contractInterface) {
   writeFileSync(
     `${path}/docs/content/assets/sip9/${address}.${name}.md`,
     `---
@@ -46,11 +46,11 @@ draft: true
   );
 }
 
-function writeSip10(path, address, name, tokenName, symbol, decimal, image) {
+function writeSip10(path, address, name, contractInterface) {
   writeFileSync(
     `${path}/docs/content/assets/sip10/${address}.${name}.md`,
     `---
-title: "Non-Fungible Token ${symbol}"
+title: "Non-Fungible Token ${name}"
 draft: true
 ---`
   );
@@ -340,5 +340,5 @@ handleNewContracts({
     fetchApi: fetch,
   }),
   path: ".",
-  updateAll: false,
+  updateAll: true,
 });
