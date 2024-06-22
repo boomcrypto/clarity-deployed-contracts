@@ -1,0 +1,8 @@
+(define-read-only (get-staking-stats-at-cycle-or-default (reward-cycle uint))
+  (contract-call? .alex-staking-v2 get-staking-stats-at-cycle-or-default reward-cycle))
+(define-read-only (get-staking-stats-at-cycle-or-default-many (reward-cycle (list 200 uint)))
+  (map get-staking-stats-at-cycle-or-default reward-cycle))
+(define-read-only (get-coinbase-amount-or-default (reward-cycle uint))
+  (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.alex-reserve-pool get-coinbase-amount-or-default 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.age000-governance-token reward-cycle))
+(define-read-only (get-coinbase-amount-or-default-many (reward-cycle (list 200 uint)))
+  (map get-coinbase-amount-or-default reward-cycle))

@@ -16,7 +16,6 @@
   uint        ;; first occur token_id
 )
 
-;; Search token id by text.
 ;; @dev bufferCV(new TextEncoder().encode(content))
 (define-read-only (find_token_id (text (buff 128)))
   (map-get? map_note text)
@@ -70,9 +69,9 @@
   (let
     (
       (sender tx-sender)
-      (start_token_id (var-get m_last_synced_token_id))
-      (end_token_id (iter_drive u0 (var-get m_last_synced_token_id)))
-      (need_reward_stx (if (> end_token_id start_token_id) REWARD_MICRO_STX_UINT u0))
+      (last_synced_token_id (var-get m_last_synced_token_id))
+      (end_token_id (iter_drive u0 last_synced_token_id))
+      (need_reward_stx (if (> end_token_id last_synced_token_id) REWARD_MICRO_STX_UINT u0))
       (balance (stx-get-balance (as-contract tx-sender)))
       (real_reward_stx (if (>= balance need_reward_stx) need_reward_stx balance))
     )
@@ -80,7 +79,7 @@
     (and (> real_reward_stx u0) (try! (as-contract (stx-transfer? real_reward_stx tx-sender sender))))
     (ok (print {
       type: "drive",
-      start_token_id: start_token_id,
+      last_synced_token_id: last_synced_token_id,
       end_token_id: end_token_id,
       reward_stx: real_reward_stx,
     }))
@@ -91,9 +90,9 @@
   (let
     (
       (sender tx-sender)
-      (start_token_id (var-get m_last_synced_token_id))
-      (end_token_id (fold iter_drive LIST_50 (var-get m_last_synced_token_id)))
-      (need_reward_stx (* (- end_token_id start_token_id) REWARD_MICRO_STX_UINT))
+      (last_synced_token_id (var-get m_last_synced_token_id))
+      (end_token_id (fold iter_drive LIST_50 last_synced_token_id))
+      (need_reward_stx (* (- end_token_id last_synced_token_id) REWARD_MICRO_STX_UINT))
       (balance (stx-get-balance (as-contract tx-sender)))
       (real_reward_stx (if (>= balance need_reward_stx) need_reward_stx balance))
     )
@@ -101,7 +100,7 @@
     (and (> real_reward_stx u0) (try! (as-contract (stx-transfer? real_reward_stx tx-sender sender))))
     (ok (print {
       type: "drive_50",
-      start_token_id: start_token_id,
+      last_synced_token_id: last_synced_token_id,
       end_token_id: end_token_id,
       reward_stx: real_reward_stx,
     }))
@@ -112,9 +111,9 @@
   (let
     (
       (sender tx-sender)
-      (start_token_id (var-get m_last_synced_token_id))
-      (end_token_id (fold iter_drive LIST_100 (var-get m_last_synced_token_id)))
-      (need_reward_stx (* (- end_token_id start_token_id) REWARD_MICRO_STX_UINT))
+      (last_synced_token_id (var-get m_last_synced_token_id))
+      (end_token_id (fold iter_drive LIST_100 last_synced_token_id))
+      (need_reward_stx (* (- end_token_id last_synced_token_id) REWARD_MICRO_STX_UINT))
       (balance (stx-get-balance (as-contract tx-sender)))
       (real_reward_stx (if (>= balance need_reward_stx) need_reward_stx balance))
     )
@@ -122,7 +121,7 @@
     (and (> real_reward_stx u0) (try! (as-contract (stx-transfer? real_reward_stx tx-sender sender))))
     (ok (print {
       type: "drive_100",
-      start_token_id: start_token_id,
+      last_synced_token_id: last_synced_token_id,
       end_token_id: end_token_id,
       reward_stx: real_reward_stx,
     }))
@@ -133,9 +132,9 @@
   (let
     (
       (sender tx-sender)
-      (start_token_id (var-get m_last_synced_token_id))
-      (end_token_id (fold iter_drive LIST_200 (var-get m_last_synced_token_id)))
-      (need_reward_stx (* (- end_token_id start_token_id) REWARD_MICRO_STX_UINT))
+      (last_synced_token_id (var-get m_last_synced_token_id))
+      (end_token_id (fold iter_drive LIST_200 last_synced_token_id))
+      (need_reward_stx (* (- end_token_id last_synced_token_id) REWARD_MICRO_STX_UINT))
       (balance (stx-get-balance (as-contract tx-sender)))
       (real_reward_stx (if (>= balance need_reward_stx) need_reward_stx balance))
     )
@@ -143,7 +142,7 @@
     (and (> real_reward_stx u0) (try! (as-contract (stx-transfer? real_reward_stx tx-sender sender))))
     (ok (print {
       type: "drive_200",
-      start_token_id: start_token_id,
+      last_synced_token_id: last_synced_token_id,
       end_token_id: end_token_id,
       reward_stx: real_reward_stx,
     }))
@@ -154,17 +153,17 @@
   (let
     (
       (sender tx-sender)
-      (start_token_id (var-get m_last_synced_token_id))
-      (end_token_id (fold iter_drive LIST_400 (var-get m_last_synced_token_id)))
-      (need_reward_stx (* (- end_token_id start_token_id) REWARD_MICRO_STX_UINT))
+      (last_synced_token_id (var-get m_last_synced_token_id))
+      (end_token_id (fold iter_drive LIST_400 last_synced_token_id))
+      (need_reward_stx (* (- end_token_id last_synced_token_id) REWARD_MICRO_STX_UINT))
       (balance (stx-get-balance (as-contract tx-sender)))
       (real_reward_stx (if (>= balance need_reward_stx) need_reward_stx balance))
     )
     (var-set m_last_synced_token_id end_token_id)
     (and (> real_reward_stx u0) (try! (as-contract (stx-transfer? real_reward_stx tx-sender sender))))
     (ok (print {
-      type: "drive",
-      start_token_id: start_token_id,
+      type: "drive_400",
+      last_synced_token_id: last_synced_token_id,
       end_token_id: end_token_id,
       reward_stx: real_reward_stx,
     }))
