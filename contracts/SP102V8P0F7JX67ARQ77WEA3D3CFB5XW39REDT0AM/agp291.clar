@@ -1,0 +1,12 @@
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(begin
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-x .token-wxusd .token-wusda u5000000 u50000))
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-y .token-wxusd .token-wusda u5000000 u50000))
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-x 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt .token-wxusd u5000000 u50000))
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-y 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt .token-wxusd u5000000 u50000))
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-x 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc .token-wxbtc u5000000 u50000))
+		(try! (contract-call? .amm-registry-v2-01 set-fee-rate-y 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc .token-wxbtc u5000000 u50000))
+		(ok true)
+	)
+)
