@@ -1,0 +1,18 @@
+---
+title: "Contract KNFE-AIRDROP-FOR-VELAR-DB"
+draft: true
+---
+Deployer: SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT
+
+
+ 
+
+
+
+Block height: 152414 (2024-06-02T07:49:04.000Z)
+
+Source code: {{<contractref "KNFE-AIRDROP-FOR-VELAR-DB" SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT KNFE-AIRDROP-FOR-VELAR-DB>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,37 @@
+---
+title: "Trait agp297"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(let (
+(max-in-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wgus u100000000 u60000000)))
+(max-out-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wgus u100000000 u60000000)))
+(start-block-0 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wgus u100000000 u0)))
+(max-in-ratio-1 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wpepe u100000000 u60000000)))
+(max-out-ratio-1 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wpepe u100000000 u60000000)))
+(start-block-1 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wpepe u100000000 u0)))
+(max-in-ratio-2 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wlong u100000000 u60000000)))
+(max-out-ratio-2 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wlong u100000000 u60000000)))
+(start-block-2 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wlong u100000000 u0)))
+(max-in-ratio-3 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wnot u100000000 u60000000)))
+(max-out-ratio-3 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wnot u100000000 u60000000)))
+(start-block-3 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wnot u100000000 u0)))
+(max-in-ratio-4 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wmax u100000000 u60000000)))
+(max-out-ratio-4 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wmax u100000000 u60000000)))
+(start-block-4 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wmax u100000000 u0)))
+(max-in-ratio-5 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wmega u100000000 u60000000)))
+(max-out-ratio-5 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wmega u100000000 u60000000)))
+(start-block-5 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wmega u100000000 u0)))
+(max-in-ratio-6 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wusda u100000000 u60000000)))
+(max-out-ratio-6 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wusda u100000000 u60000000)))
+(start-block-6 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wusda u100000000 u0)))
+(max-in-ratio-7 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wdiko u100000000 u60000000)))
+(max-out-ratio-7 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wdiko u100000000 u60000000)))
+(start-block-7 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wdiko u100000000 u0)))
+(max-in-ratio-8 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-wstx-v2 .token-alex u100000000 u60000000)))
+(max-out-ratio-8 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-wstx-v2 .token-alex u100000000 u60000000)))
+(start-block-8 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-wstx-v2 .token-alex u100000000 u0))))
+(ok true)))
+```

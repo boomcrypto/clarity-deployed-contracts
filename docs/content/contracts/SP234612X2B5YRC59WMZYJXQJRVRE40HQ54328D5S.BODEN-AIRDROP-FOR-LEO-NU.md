@@ -1,0 +1,18 @@
+---
+title: "Contract BODEN-AIRDROP-FOR-LEO-NU"
+draft: true
+---
+Deployer: SP234612X2B5YRC59WMZYJXQJRVRE40HQ54328D5S
+
+
+ 
+
+
+
+Block height: 153914 (2024-06-14T03:14:25.000Z)
+
+Source code: {{<contractref "BODEN-AIRDROP-FOR-LEO-NU" SP234612X2B5YRC59WMZYJXQJRVRE40HQ54328D5S BODEN-AIRDROP-FOR-LEO-NU>}}
+
+Functions:
+
+* send-stx _private_

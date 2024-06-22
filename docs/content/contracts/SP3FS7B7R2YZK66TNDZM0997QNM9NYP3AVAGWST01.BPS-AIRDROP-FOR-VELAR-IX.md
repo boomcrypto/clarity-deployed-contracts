@@ -1,0 +1,18 @@
+---
+title: "Contract BPS-AIRDROP-FOR-VELAR-IX"
+draft: true
+---
+Deployer: SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01
+
+
+ 
+
+
+
+Block height: 154260 (2024-06-17T06:12:30.000Z)
+
+Source code: {{<contractref "BPS-AIRDROP-FOR-VELAR-IX" SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01 BPS-AIRDROP-FOR-VELAR-IX>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract TREMP-AIRDROP-FOR-STSW-GY"
+draft: true
+---
+Deployer: SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X
+
+
+ 
+
+
+
+Block height: 154697 (2024-06-20T22:28:45.000Z)
+
+Source code: {{<contractref "TREMP-AIRDROP-FOR-STSW-GY" SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X TREMP-AIRDROP-FOR-STSW-GY>}}
+
+Functions:
+
+* send-stx _private_

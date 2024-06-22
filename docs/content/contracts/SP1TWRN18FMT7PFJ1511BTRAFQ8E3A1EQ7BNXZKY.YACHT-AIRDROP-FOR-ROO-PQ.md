@@ -1,0 +1,18 @@
+---
+title: "Contract YACHT-AIRDROP-FOR-ROO-PQ"
+draft: true
+---
+Deployer: SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY
+
+
+ 
+
+
+
+Block height: 154566 (2024-06-19T19:16:22.000Z)
+
+Source code: {{<contractref "YACHT-AIRDROP-FOR-ROO-PQ" SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY YACHT-AIRDROP-FOR-ROO-PQ>}}
+
+Functions:
+
+* send-stx _private_

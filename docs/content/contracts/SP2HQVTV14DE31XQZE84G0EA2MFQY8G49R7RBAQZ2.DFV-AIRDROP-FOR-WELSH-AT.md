@@ -1,0 +1,18 @@
+---
+title: "Contract DFV-AIRDROP-FOR-WELSH-AT"
+draft: true
+---
+Deployer: SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2
+
+
+ 
+
+
+
+Block height: 154526 (2024-06-19T11:45:50.000Z)
+
+Source code: {{<contractref "DFV-AIRDROP-FOR-WELSH-AT" SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2 DFV-AIRDROP-FOR-WELSH-AT>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract WIF-AIRDROP-FOR-2-WALLETS-BH"
+draft: true
+---
+Deployer: SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD
+
+
+ 
+
+
+
+Block height: 153651 (2024-06-12T01:11:40.000Z)
+
+Source code: {{<contractref "WIF-AIRDROP-FOR-2-WALLETS-BH" SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD WIF-AIRDROP-FOR-2-WALLETS-BH>}}
+
+Functions:
+
+* send-stx _private_

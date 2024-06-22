@@ -1,0 +1,18 @@
+---
+title: "Contract KNFE-AIRDROP-FOR-WELSH-SN"
+draft: true
+---
+Deployer: SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT
+
+
+ 
+
+
+
+Block height: 151751 (2024-05-27T20:08:57.000Z)
+
+Source code: {{<contractref "KNFE-AIRDROP-FOR-WELSH-SN" SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT KNFE-AIRDROP-FOR-WELSH-SN>}}
+
+Functions:
+
+* send-stx _private_

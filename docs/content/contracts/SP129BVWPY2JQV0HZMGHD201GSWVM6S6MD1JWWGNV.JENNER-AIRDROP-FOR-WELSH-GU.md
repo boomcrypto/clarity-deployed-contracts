@@ -1,0 +1,18 @@
+---
+title: "Contract JENNER-AIRDROP-FOR-WELSH-GU"
+draft: true
+---
+Deployer: SP129BVWPY2JQV0HZMGHD201GSWVM6S6MD1JWWGNV
+
+
+ 
+
+
+
+Block height: 151905 (2024-05-29T02:01:58.000Z)
+
+Source code: {{<contractref "JENNER-AIRDROP-FOR-WELSH-GU" SP129BVWPY2JQV0HZMGHD201GSWVM6S6MD1JWWGNV JENNER-AIRDROP-FOR-WELSH-GU>}}
+
+Functions:
+
+* send-stx _private_

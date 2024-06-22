@@ -1,0 +1,18 @@
+---
+title: "Contract YACHT-AIRDROP-FOR-VELAR-KB"
+draft: true
+---
+Deployer: SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY
+
+
+ 
+
+
+
+Block height: 154527 (2024-06-19T11:50:14.000Z)
+
+Source code: {{<contractref "YACHT-AIRDROP-FOR-VELAR-KB" SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY YACHT-AIRDROP-FOR-VELAR-KB>}}
+
+Functions:
+
+* send-stx _private_

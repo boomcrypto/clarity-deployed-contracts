@@ -1,0 +1,18 @@
+---
+title: "Contract DFV-AIRDROP-FOR-VELAR-OI"
+draft: true
+---
+Deployer: SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2
+
+
+ 
+
+
+
+Block height: 154373 (2024-06-18T03:34:41.000Z)
+
+Source code: {{<contractref "DFV-AIRDROP-FOR-VELAR-OI" SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2 DFV-AIRDROP-FOR-VELAR-OI>}}
+
+Functions:
+
+* send-stx _private_

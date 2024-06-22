@@ -1,0 +1,18 @@
+---
+title: "Contract GOLF-AIRDROP-FOR-2-WALLETS-HU"
+draft: true
+---
+Deployer: SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD
+
+
+ 
+
+
+
+Block height: 153650 (2024-06-12T00:49:14.000Z)
+
+Source code: {{<contractref "GOLF-AIRDROP-FOR-2-WALLETS-HU" SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD GOLF-AIRDROP-FOR-2-WALLETS-HU>}}
+
+Functions:
+
+* send-stx _private_

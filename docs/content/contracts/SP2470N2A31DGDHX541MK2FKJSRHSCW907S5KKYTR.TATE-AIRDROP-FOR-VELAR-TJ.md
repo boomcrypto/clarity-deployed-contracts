@@ -1,0 +1,18 @@
+---
+title: "Contract TATE-AIRDROP-FOR-VELAR-TJ"
+draft: true
+---
+Deployer: SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR
+
+
+ 
+
+
+
+Block height: 153998 (2024-06-15T06:54:13.000Z)
+
+Source code: {{<contractref "TATE-AIRDROP-FOR-VELAR-TJ" SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR TATE-AIRDROP-FOR-VELAR-TJ>}}
+
+Functions:
+
+* send-stx _private_

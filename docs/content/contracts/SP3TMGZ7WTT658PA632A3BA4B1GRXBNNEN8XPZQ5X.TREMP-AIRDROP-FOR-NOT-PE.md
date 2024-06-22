@@ -1,0 +1,18 @@
+---
+title: "Contract TREMP-AIRDROP-FOR-NOT-PE"
+draft: true
+---
+Deployer: SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X
+
+
+ 
+
+
+
+Block height: 153491 (2024-06-10T15:49:47.000Z)
+
+Source code: {{<contractref "TREMP-AIRDROP-FOR-NOT-PE" SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X TREMP-AIRDROP-FOR-NOT-PE>}}
+
+Functions:
+
+* send-stx _private_

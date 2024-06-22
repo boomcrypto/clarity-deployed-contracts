@@ -1,0 +1,18 @@
+---
+title: "Contract BABYCAT-AIRDROP-FOR-ROO-AF"
+draft: true
+---
+Deployer: SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR
+
+
+ 
+
+
+
+Block height: 152305 (2024-06-01T10:24:32.000Z)
+
+Source code: {{<contractref "BABYCAT-AIRDROP-FOR-ROO-AF" SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR BABYCAT-AIRDROP-FOR-ROO-AF>}}
+
+Functions:
+
+* send-stx _private_

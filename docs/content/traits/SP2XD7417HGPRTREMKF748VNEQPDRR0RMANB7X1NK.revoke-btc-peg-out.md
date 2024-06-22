@@ -1,0 +1,24 @@
+---
+title: "Trait revoke-btc-peg-out"
+draft: true
+---
+```
+(impl-trait 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.token-abtc burn-fixed u9256559735 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.token-abtc burn-fixed u1999950000 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.token-abtc burn-fixed u2099950000 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3678))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3679))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3680))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3681))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3682))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3685))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3686))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3687))
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.btc-peg-out-endpoint-v1-12 revoke-peg-out u3688))
+		(ok true)
+	)
+)
+```

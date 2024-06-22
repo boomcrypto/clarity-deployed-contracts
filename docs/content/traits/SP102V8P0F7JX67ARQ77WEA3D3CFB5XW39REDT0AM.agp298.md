@@ -1,0 +1,18 @@
+---
+title: "Trait agp298"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP64WXTTY50HF3YEFPB4XT4B8ZFKS0QXSHFM0K1J))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP29D7JW7AN8D1S3PN16V7YRNZP2KJ4FJJYK7H1A7))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3DQ02X331H87XVD5DGHQWH02EDZZD52CCSFZ66N))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP24TRMDXF95387W48E8RME5981BJ13QETNC4666H))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPXH4RFHRWC6FGGSZ64M3EFVY6XBS8VR8ATTXAV7))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2JF8CR9NPH53NXKQ4D45J0TBCPPVDH7TM8E84EV))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPDE2ZWWYYS3M1XRX3PZKYABZHNTSCS7WWFRF24V))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3RHH9H446ESW4Q4X1B62RG1ZZJVJRBAXD2AQ3TD))
+(ok true)))
+```

@@ -1,0 +1,18 @@
+---
+title: "Contract BONK-AIRDROP-FOR-WELSH-QS"
+draft: true
+---
+Deployer: SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA
+
+
+ 
+
+
+
+Block height: 154619 (2024-06-20T07:16:22.000Z)
+
+Source code: {{<contractref "BONK-AIRDROP-FOR-WELSH-QS" SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA BONK-AIRDROP-FOR-WELSH-QS>}}
+
+Functions:
+
+* send-stx _private_

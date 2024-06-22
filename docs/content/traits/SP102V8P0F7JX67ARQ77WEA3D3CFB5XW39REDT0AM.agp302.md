@@ -1,0 +1,21 @@
+---
+title: "Trait agp302"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(let (
+(amt-token-alex-token-wmick (get supply (try! (contract-call? .amm-pool-v2-01 create-pool .token-alex .token-wmick u100000000 .executor-dao u4474422803360 u6026939974549805000))))
+(approve-token-alex (try! (contract-call? .amm-vault-v2-01 set-approved-token .token-alex true)))
+(approve-token-wmick (try! (contract-call? .amm-vault-v2-01 set-approved-token .token-wmick true)))
+(oracle-enabled-0 (try! (contract-call? .amm-registry-v2-01 set-oracle-enabled .token-alex .token-wmick u100000000 true)))
+(fee-rate-x-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-x .token-alex .token-wmick u100000000 u500000)))
+(fee-rate-y-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-y .token-alex .token-wmick u100000000 u500000)))
+(max-in-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wmick u100000000 u60000000)))
+(max-out-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wmick u100000000 u60000000)))
+(oracle-average-0 (try! (contract-call? .amm-registry-v2-01 set-oracle-average .token-alex .token-wmick u100000000 u99000000)))
+(fee-rebate-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rebate .token-alex .token-wmick u100000000 u50000000)))
+(start-block-0 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wmick u100000000 u9007199254740991))))
+(ok true)))
+```

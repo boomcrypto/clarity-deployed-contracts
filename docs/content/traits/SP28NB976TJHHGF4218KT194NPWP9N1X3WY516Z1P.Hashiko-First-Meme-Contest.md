@@ -1,0 +1,12 @@
+---
+title: "Trait Hashiko-First-Meme-Contest"
+draft: true
+---
+```
+(define-private (sushi (address principal))
+(contract-call? 'SP28NB976TJHHGF4218KT194NPWP9N1X3WY516Z1P.Hashiko transfer u24000000000 tx-sender address none))
+(sushi 'SP04V682G0PDZFTB03RK6GD1YA1GTJNY5RZGVW8B)
+(sushi 'SP248329PJD44ZWDDP5VT8RJC4367A6PGP8HXHR13)
+(sushi 'SP1A5M0ZRSNQMF8BNPQPM8WWC5PJ6HJ4GEKFP8W4M)
+(sushi 'SP2BWMDQ6FFHCRGRP1VCAXHSMYTDY8J0T0J5AZV4Q)
+```

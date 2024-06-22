@@ -1,0 +1,18 @@
+---
+title: "Trait xip003"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant MAX_UINT u340282366920938463463374607431768211455)
+(define-public (execute (sender principal))
+	(begin		
+(try! (contract-call? .cross-peg-in-endpoint-v2-01 set-paused false))
+(try! (contract-call? .cross-peg-out-endpoint-v2-01 set-paused false))
+(try! (contract-call? .btc-bridge-registry-v2-01 approve-peg-in-address 0x00142de14d4e16040db4666dab9e7547fbca631870da true))
+(try! (contract-call? .btc-peg-in-endpoint-v2-01 pause-peg-in false))
+(try! (contract-call? .btc-peg-out-endpoint-v2-01 pause-peg-out false))
+		(ok true)
+	)
+)
+```

@@ -1,0 +1,18 @@
+---
+title: "Contract YACHT-AIRDROP-FOR-POMBOO-DT"
+draft: true
+---
+Deployer: SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY
+
+
+ 
+
+
+
+Block height: 154619 (2024-06-20T07:16:22.000Z)
+
+Source code: {{<contractref "YACHT-AIRDROP-FOR-POMBOO-DT" SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY YACHT-AIRDROP-FOR-POMBOO-DT>}}
+
+Functions:
+
+* send-stx _private_

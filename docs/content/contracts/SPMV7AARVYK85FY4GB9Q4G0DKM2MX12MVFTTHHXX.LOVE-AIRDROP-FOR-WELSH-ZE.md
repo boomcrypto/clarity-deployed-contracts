@@ -1,0 +1,18 @@
+---
+title: "Contract LOVE-AIRDROP-FOR-WELSH-ZE"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 150211 (2024-05-16T02:31:42.000Z)
+
+Source code: {{<contractref "LOVE-AIRDROP-FOR-WELSH-ZE" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX LOVE-AIRDROP-FOR-WELSH-ZE>}}
+
+Functions:
+
+* send-stx _private_

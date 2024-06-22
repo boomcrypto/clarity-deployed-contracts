@@ -1,0 +1,18 @@
+---
+title: "Contract BPS-AIRDROP-FOR-STSW-DW"
+draft: true
+---
+Deployer: SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01
+
+
+ 
+
+
+
+Block height: 154225 (2024-06-16T23:30:34.000Z)
+
+Source code: {{<contractref "BPS-AIRDROP-FOR-STSW-DW" SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01 BPS-AIRDROP-FOR-STSW-DW>}}
+
+Functions:
+
+* send-stx _private_

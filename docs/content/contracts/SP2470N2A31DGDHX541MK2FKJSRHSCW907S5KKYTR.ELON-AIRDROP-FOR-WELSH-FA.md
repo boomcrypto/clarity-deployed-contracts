@@ -1,0 +1,18 @@
+---
+title: "Contract ELON-AIRDROP-FOR-WELSH-FA"
+draft: true
+---
+Deployer: SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR
+
+
+ 
+
+
+
+Block height: 150216 (2024-05-16T03:23:41.000Z)
+
+Source code: {{<contractref "ELON-AIRDROP-FOR-WELSH-FA" SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR ELON-AIRDROP-FOR-WELSH-FA>}}
+
+Functions:
+
+* send-stx _private_

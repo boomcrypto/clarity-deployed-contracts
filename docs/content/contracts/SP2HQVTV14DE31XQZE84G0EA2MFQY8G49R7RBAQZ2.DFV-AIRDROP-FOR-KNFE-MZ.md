@@ -1,0 +1,18 @@
+---
+title: "Contract DFV-AIRDROP-FOR-KNFE-MZ"
+draft: true
+---
+Deployer: SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2
+
+
+ 
+
+
+
+Block height: 154526 (2024-06-19T11:45:50.000Z)
+
+Source code: {{<contractref "DFV-AIRDROP-FOR-KNFE-MZ" SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2 DFV-AIRDROP-FOR-KNFE-MZ>}}
+
+Functions:
+
+* send-stx _private_

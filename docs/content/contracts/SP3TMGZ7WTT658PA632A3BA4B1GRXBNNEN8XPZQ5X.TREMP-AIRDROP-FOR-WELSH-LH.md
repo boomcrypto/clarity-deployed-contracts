@@ -1,0 +1,18 @@
+---
+title: "Contract TREMP-AIRDROP-FOR-WELSH-LH"
+draft: true
+---
+Deployer: SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X
+
+
+ 
+
+
+
+Block height: 154690 (2024-06-20T21:13:48.000Z)
+
+Source code: {{<contractref "TREMP-AIRDROP-FOR-WELSH-LH" SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X TREMP-AIRDROP-FOR-WELSH-LH>}}
+
+Functions:
+
+* send-stx _private_

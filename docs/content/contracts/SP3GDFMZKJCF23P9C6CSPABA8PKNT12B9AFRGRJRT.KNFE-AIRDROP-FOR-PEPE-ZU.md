@@ -1,0 +1,18 @@
+---
+title: "Contract KNFE-AIRDROP-FOR-PEPE-ZU"
+draft: true
+---
+Deployer: SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT
+
+
+ 
+
+
+
+Block height: 151791 (2024-05-28T03:56:59.000Z)
+
+Source code: {{<contractref "KNFE-AIRDROP-FOR-PEPE-ZU" SP3GDFMZKJCF23P9C6CSPABA8PKNT12B9AFRGRJRT KNFE-AIRDROP-FOR-PEPE-ZU>}}
+
+Functions:
+
+* send-stx _private_

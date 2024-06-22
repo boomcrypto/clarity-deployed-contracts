@@ -1,0 +1,37 @@
+---
+title: "Trait engine"
+draft: true
+---
+```
+
+;; title: engine
+;; version:
+;; summary:
+;; description:
+
+;; traits
+;;
+
+;; token definitions
+;;
+
+;; constants
+;;
+
+;; data vars
+;;
+
+;; data maps
+;;
+
+;; public functions
+;;
+
+;; read only functions
+;;
+
+;; private functions
+;;
+
+
+```

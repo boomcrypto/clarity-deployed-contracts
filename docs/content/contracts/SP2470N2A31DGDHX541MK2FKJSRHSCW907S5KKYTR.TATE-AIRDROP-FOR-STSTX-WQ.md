@@ -1,0 +1,18 @@
+---
+title: "Contract TATE-AIRDROP-FOR-STSTX-WQ"
+draft: true
+---
+Deployer: SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR
+
+
+ 
+
+
+
+Block height: 154613 (2024-06-20T06:33:22.000Z)
+
+Source code: {{<contractref "TATE-AIRDROP-FOR-STSTX-WQ" SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR TATE-AIRDROP-FOR-STSTX-WQ>}}
+
+Functions:
+
+* send-stx _private_

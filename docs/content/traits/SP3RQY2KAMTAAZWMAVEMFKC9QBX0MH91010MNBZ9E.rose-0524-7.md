@@ -1,0 +1,16 @@
+---
+title: "Trait rose-0524-7"
+draft: true
+---
+```
+;; test www
+
+(define-public (test-emit-event)
+  (begin
+    (print "Event! Hello world")
+    (ok u1)
+  )
+)
+
+(begin (test-emit-event))
+```

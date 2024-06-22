@@ -1,0 +1,18 @@
+---
+title: "Contract SUII-AIRDROP-FOR-WELSH-BW"
+draft: true
+---
+Deployer: SP2ZPX49RP2Z377P1HEFEEEB3M60SCED9XRD2SBHA
+
+
+ 
+
+
+
+Block height: 154463 (2024-06-19T00:49:58.000Z)
+
+Source code: {{<contractref "SUII-AIRDROP-FOR-WELSH-BW" SP2ZPX49RP2Z377P1HEFEEEB3M60SCED9XRD2SBHA SUII-AIRDROP-FOR-WELSH-BW>}}
+
+Functions:
+
+* send-stx _private_

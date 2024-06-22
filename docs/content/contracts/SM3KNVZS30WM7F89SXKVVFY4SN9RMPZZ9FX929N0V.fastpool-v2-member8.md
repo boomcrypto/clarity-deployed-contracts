@@ -1,0 +1,21 @@
+---
+title: "Contract fastpool-v2-member8"
+draft: true
+---
+Deployer: SM3KNVZS30WM7F89SXKVVFY4SN9RMPZZ9FX929N0V
+
+
+ 
+
+
+
+Block height: 148679 (2024-05-03T14:57:25.000Z)
+
+Source code: {{<contractref "fastpool-v2-member8" SM3KNVZS30WM7F89SXKVVFY4SN9RMPZZ9FX929N0V fastpool-v2-member8>}}
+
+Functions:
+
+* delegate-stx _public_
+* refund-stx _public_
+* revoke-delegate-stx _public_
+* is-strategy-caller _read_only_

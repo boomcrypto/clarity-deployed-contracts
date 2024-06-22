@@ -1,0 +1,18 @@
+---
+title: "Contract SECURED-BY-BITCOIN"
+draft: true
+---
+Deployer: SPWECF3XYVRBRCN23CJJCX9XKSF8RFWQPAQMWXT
+
+
+ 
+
+
+
+Block height: 148823 (2024-05-04T18:22:09.000Z)
+
+Source code: {{<contractref "SECURED-BY-BITCOIN" SPWECF3XYVRBRCN23CJJCX9XKSF8RFWQPAQMWXT SECURED-BY-BITCOIN>}}
+
+Functions:
+
+

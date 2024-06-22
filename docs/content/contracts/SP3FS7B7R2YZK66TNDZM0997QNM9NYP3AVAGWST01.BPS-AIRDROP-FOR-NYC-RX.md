@@ -1,0 +1,18 @@
+---
+title: "Contract BPS-AIRDROP-FOR-NYC-RX"
+draft: true
+---
+Deployer: SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01
+
+
+ 
+
+
+
+Block height: 154262 (2024-06-17T06:19:20.000Z)
+
+Source code: {{<contractref "BPS-AIRDROP-FOR-NYC-RX" SP3FS7B7R2YZK66TNDZM0997QNM9NYP3AVAGWST01 BPS-AIRDROP-FOR-NYC-RX>}}
+
+Functions:
+
+* send-stx _private_

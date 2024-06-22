@@ -1,0 +1,18 @@
+---
+title: "Contract MEW-AIRDROP-FOR-WELSH-QJ"
+draft: true
+---
+Deployer: SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA
+
+
+ 
+
+
+
+Block height: 154016 (2024-06-15T09:22:52.000Z)
+
+Source code: {{<contractref "MEW-AIRDROP-FOR-WELSH-QJ" SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA MEW-AIRDROP-FOR-WELSH-QJ>}}
+
+Functions:
+
+* send-stx _private_

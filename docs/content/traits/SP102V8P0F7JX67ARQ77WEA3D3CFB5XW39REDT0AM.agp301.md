@@ -1,0 +1,31 @@
+---
+title: "Trait agp301"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(let (
+(amt-token-alex-token-wplay (get supply (try! (contract-call? .amm-pool-v2-01 create-pool .token-alex .token-wplay u100000000 .executor-dao u29684708932190 u141431972672573200))))
+(approve-token-alex (try! (contract-call? .amm-vault-v2-01 set-approved-token .token-alex true)))
+(approve-token-wplay (try! (contract-call? .amm-vault-v2-01 set-approved-token .token-wplay true)))
+(oracle-enabled-0 (try! (contract-call? .amm-registry-v2-01 set-oracle-enabled .token-alex .token-wplay u100000000 true)))
+(fee-rate-x-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-x .token-alex .token-wplay u100000000 u500000)))
+(fee-rate-y-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-y .token-alex .token-wplay u100000000 u500000)))
+(max-in-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-wplay u100000000 u60000000)))
+(max-out-ratio-0 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-wplay u100000000 u60000000)))
+(oracle-average-0 (try! (contract-call? .amm-registry-v2-01 set-oracle-average .token-alex .token-wplay u100000000 u99000000)))
+(fee-rebate-0 (try! (contract-call? .amm-registry-v2-01 set-fee-rebate .token-alex .token-wplay u100000000 u50000000)))
+(start-block-0 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-wplay u100000000 u9007199254740991)))
+(amt-token-alex-token-ssl-hashiko-16Z1P (get supply (try! (contract-call? .amm-pool-v2-01 create-pool .token-alex .token-whashiko u100000000 .executor-dao u9083553004780 u583886258023600000000))))
+(approve-token-ssl-hashiko-16Z1P (try! (contract-call? .amm-vault-v2-01 set-approved-token .token-whashiko true)))
+(oracle-enabled-1 (try! (contract-call? .amm-registry-v2-01 set-oracle-enabled .token-alex .token-whashiko u100000000 true)))
+(fee-rate-x-1 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-x .token-alex .token-whashiko u100000000 u500000)))
+(fee-rate-y-1 (try! (contract-call? .amm-registry-v2-01 set-fee-rate-y .token-alex .token-whashiko u100000000 u500000)))
+(max-in-ratio-1 (try! (contract-call? .amm-registry-v2-01 set-max-in-ratio .token-alex .token-whashiko u100000000 u60000000)))
+(max-out-ratio-1 (try! (contract-call? .amm-registry-v2-01 set-max-out-ratio .token-alex .token-whashiko u100000000 u60000000)))
+(oracle-average-1 (try! (contract-call? .amm-registry-v2-01 set-oracle-average .token-alex .token-whashiko u100000000 u99000000)))
+(fee-rebate-1 (try! (contract-call? .amm-registry-v2-01 set-fee-rebate .token-alex .token-whashiko u100000000 u50000000)))
+(start-block-1 (try! (contract-call? .amm-registry-v2-01 set-start-block .token-alex .token-whashiko u100000000 u9007199254740991))))
+(ok true)))
+```
