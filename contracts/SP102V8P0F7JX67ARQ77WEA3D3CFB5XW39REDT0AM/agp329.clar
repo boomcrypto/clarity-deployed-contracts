@@ -1,0 +1,13 @@
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant ONE_8 u100000000)
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2CQTA4FDFGZ1570DSEAMGHXNPKVM9JQ8J1KSJ9P))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1CBK056RX55RKE984W2FG5G1R7K0RP2XYZWDYEQ))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1H8CFEKA36BN75R5TEAQH0ZZPKAQVCFZVRB1MVX))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3G4PMTKD5QKVGANHXP7TDZZ26Y31VDT08E1VH66))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3QHH92XXAZ2W6D135BKZXQCR1ZP7CANA0RRG6CM))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP19NFFWW9VA185CY36CS4K4KCJ7Q43AP9V5ZA51S))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPT4GV83945AYKR9MS1QQHT20D2KQJ65NT3CPE44))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3X09V7Y1VM3ENM9J56HSW871BPA0MGWHM4XDR89))
+(ok true)))

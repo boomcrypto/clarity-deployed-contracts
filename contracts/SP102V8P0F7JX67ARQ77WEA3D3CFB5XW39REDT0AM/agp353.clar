@@ -1,0 +1,15 @@
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant ONE_8 u100000000) ;; 8 decimal places
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.token-apower add-approved-contract .auto-alex-apower-helper-v3))
+(try! (contract-call? .auto-alex-apower-helper-v3 set-approved-operator 'SP1A6F9ABHQMVP92GH7T9ZBF029T1WG3SHPNMKT0D true))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP299FMFK1V8G2NCCX9C8TA55KKDGT5G615Z847BT))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP23K3G03H2MEZX88MWMRYKYYY0KHEKZZ5SMN7DSY))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3D8KHP8QR6JJ6HNBV8RQHX2R0G4BR3259RPT06))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP219TPVF8FNYR8SZGPB9918F8FAFM8FF4CFN6EAX))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP76Q16TS3Y6DD0S9HV6RB774KNRPBCBKZM9CGHQ))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPQ6HPF568VM627MBP7K58S42BQGY59AS4C7FARS))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1FNJR238ZYVKKJ8DNCCH3P0PKDMTSWW7T7GXNDB))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPH7N70QBPS38VK36EPPM237W6JH2K67AMMDEP0Y))
+		(ok true)))
