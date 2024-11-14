@@ -1,0 +1,18 @@
+---
+title: "Contract VENCE-AIRDROP-FOR-VELAR-HD"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 159208 (2024-07-25T06:43:18.000Z)
+
+Source code: {{<contractref "VENCE-AIRDROP-FOR-VELAR-HD" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT VENCE-AIRDROP-FOR-VELAR-HD>}}
+
+Functions:
+
+* send-stx _private_

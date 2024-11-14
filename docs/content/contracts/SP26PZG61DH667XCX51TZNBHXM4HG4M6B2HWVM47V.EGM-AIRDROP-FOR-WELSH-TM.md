@@ -1,0 +1,18 @@
+---
+title: "Contract EGM-AIRDROP-FOR-WELSH-TM"
+draft: true
+---
+Deployer: SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V
+
+
+ 
+
+
+
+Block height: 161702 (2024-08-13T10:31:15.000Z)
+
+Source code: {{<contractref "EGM-AIRDROP-FOR-WELSH-TM" SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V EGM-AIRDROP-FOR-WELSH-TM>}}
+
+Functions:
+
+* send-stx _private_

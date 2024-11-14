@@ -1,0 +1,18 @@
+---
+title: "Contract SABTC-AIRDROP-FOR-WELSH-JQ"
+draft: true
+---
+Deployer: SPZPCKV8CNH9PRX2D3XB44DR9S72H10ERB6S57HG
+
+
+ 
+
+
+
+Block height: 187783 (2024-11-05T10:18:05.000Z)
+
+Source code: {{<contractref "SABTC-AIRDROP-FOR-WELSH-JQ" SPZPCKV8CNH9PRX2D3XB44DR9S72H10ERB6S57HG SABTC-AIRDROP-FOR-WELSH-JQ>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract BIAO-AIRDROP-FOR-FAIR-YO"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 162428 (2024-08-18T21:10:28.000Z)
+
+Source code: {{<contractref "BIAO-AIRDROP-FOR-FAIR-YO" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 BIAO-AIRDROP-FOR-FAIR-YO>}}
+
+Functions:
+
+* send-stx _private_

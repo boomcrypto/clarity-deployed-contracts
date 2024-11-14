@@ -1,0 +1,18 @@
+---
+title: "Contract MANKO-AIRDROP-FOR-VELAR-OG"
+draft: true
+---
+Deployer: SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9
+
+
+ 
+
+
+
+Block height: 165417 (2024-09-10T02:05:51.000Z)
+
+Source code: {{<contractref "MANKO-AIRDROP-FOR-VELAR-OG" SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9 MANKO-AIRDROP-FOR-VELAR-OG>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,31 @@
+---
+title: "Contract stx-optimists-stxcity"
+draft: true
+---
+Deployer: SP3SSDY1A690QZJGG94NPZ2G4X0T8CYSJ36XN2DHH
+
+Traits:
+ SIP-0010
+
+
+
+Block height: 167160 (2024-09-24T10:31:29.000Z)
+
+Source code: {{<contractref "stx-optimists-stxcity" SP3SSDY1A690QZJGG94NPZ2G4X0T8CYSJ36XN2DHH stx-optimists-stxcity>}}
+
+Functions:
+
+* check-err _private_
+* send-stx _private_
+* send-token _private_
+* send-token-with-memo _private_
+* send-many _public_
+* set-token-uri _public_
+* transfer _public_
+* transfer-ownership _public_
+* get-balance _read_only_
+* get-decimals _read_only_
+* get-name _read_only_
+* get-symbol _read_only_
+* get-token-uri _read_only_
+* get-total-supply _read_only_

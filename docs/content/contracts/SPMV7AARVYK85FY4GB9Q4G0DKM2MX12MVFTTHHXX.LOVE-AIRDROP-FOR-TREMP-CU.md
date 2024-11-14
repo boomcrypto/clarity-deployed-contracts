@@ -1,0 +1,18 @@
+---
+title: "Contract LOVE-AIRDROP-FOR-TREMP-CU"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 159185 (2024-07-25T02:55:21.000Z)
+
+Source code: {{<contractref "LOVE-AIRDROP-FOR-TREMP-CU" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX LOVE-AIRDROP-FOR-TREMP-CU>}}
+
+Functions:
+
+* send-stx _private_

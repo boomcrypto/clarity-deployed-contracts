@@ -1,0 +1,18 @@
+---
+title: "Contract TREMP-AIRDROP-FOR-POMBOO-GL"
+draft: true
+---
+Deployer: SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X
+
+
+ 
+
+
+
+Block height: 154788 (2024-06-21T13:29:35.000Z)
+
+Source code: {{<contractref "TREMP-AIRDROP-FOR-POMBOO-GL" SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X TREMP-AIRDROP-FOR-POMBOO-GL>}}
+
+Functions:
+
+* send-stx _private_

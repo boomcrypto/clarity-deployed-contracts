@@ -1,0 +1,18 @@
+---
+title: "Contract EDLC-AIRDROP-FOR-SCHA-XM"
+draft: true
+---
+Deployer: SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V
+
+
+ 
+
+
+
+Block height: 165745 (2024-09-12T20:24:43.000Z)
+
+Source code: {{<contractref "EDLC-AIRDROP-FOR-SCHA-XM" SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V EDLC-AIRDROP-FOR-SCHA-XM>}}
+
+Functions:
+
+* send-stx _private_

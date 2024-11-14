@@ -1,0 +1,18 @@
+---
+title: "Contract NYC-AIRDROP-FOR-WELSH-QM"
+draft: true
+---
+Deployer: SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N
+
+
+ 
+
+
+
+Block height: 181656 (2024-11-01T21:29:28.000Z)
+
+Source code: {{<contractref "NYC-AIRDROP-FOR-WELSH-QM" SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N NYC-AIRDROP-FOR-WELSH-QM>}}
+
+Functions:
+
+* send-stx _private_

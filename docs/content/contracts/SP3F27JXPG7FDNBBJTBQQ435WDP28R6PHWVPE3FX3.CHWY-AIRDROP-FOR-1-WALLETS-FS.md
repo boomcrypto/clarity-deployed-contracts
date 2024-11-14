@@ -1,0 +1,18 @@
+---
+title: "Contract CHWY-AIRDROP-FOR-1-WALLETS-FS"
+draft: true
+---
+Deployer: SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3
+
+
+ 
+
+
+
+Block height: 156564 (2024-07-06T03:15:07.000Z)
+
+Source code: {{<contractref "CHWY-AIRDROP-FOR-1-WALLETS-FS" SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3 CHWY-AIRDROP-FOR-1-WALLETS-FS>}}
+
+Functions:
+
+* send-stx _private_

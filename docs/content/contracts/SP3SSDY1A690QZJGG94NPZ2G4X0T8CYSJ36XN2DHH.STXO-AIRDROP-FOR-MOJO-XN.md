@@ -1,0 +1,18 @@
+---
+title: "Contract STXO-AIRDROP-FOR-MOJO-XN"
+draft: true
+---
+Deployer: SP3SSDY1A690QZJGG94NPZ2G4X0T8CYSJ36XN2DHH
+
+
+ 
+
+
+
+Block height: 167483 (2024-09-27T00:54:46.000Z)
+
+Source code: {{<contractref "STXO-AIRDROP-FOR-MOJO-XN" SP3SSDY1A690QZJGG94NPZ2G4X0T8CYSJ36XN2DHH STXO-AIRDROP-FOR-MOJO-XN>}}
+
+Functions:
+
+* send-stx _private_

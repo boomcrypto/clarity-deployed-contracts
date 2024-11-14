@@ -1,0 +1,18 @@
+---
+title: "Contract SASHA-DONATE-FOR-STONE-SL"
+draft: true
+---
+Deployer: SP3Z6FWNDZZSS167E6DTS81G7715BK13M5108ZXHG
+
+
+ 
+
+
+
+Block height: 168751 (2024-10-06T16:07:00.000Z)
+
+Source code: {{<contractref "SASHA-DONATE-FOR-STONE-SL" SP3Z6FWNDZZSS167E6DTS81G7715BK13M5108ZXHG SASHA-DONATE-FOR-STONE-SL>}}
+
+Functions:
+
+* send-stx _private_

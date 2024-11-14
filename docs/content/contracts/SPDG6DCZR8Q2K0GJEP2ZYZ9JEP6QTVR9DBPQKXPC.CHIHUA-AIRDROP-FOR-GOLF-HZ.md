@@ -1,0 +1,18 @@
+---
+title: "Contract CHIHUA-AIRDROP-FOR-GOLF-HZ"
+draft: true
+---
+Deployer: SPDG6DCZR8Q2K0GJEP2ZYZ9JEP6QTVR9DBPQKXPC
+
+
+ 
+
+
+
+Block height: 156930 (2024-07-08T16:21:49.000Z)
+
+Source code: {{<contractref "CHIHUA-AIRDROP-FOR-GOLF-HZ" SPDG6DCZR8Q2K0GJEP2ZYZ9JEP6QTVR9DBPQKXPC CHIHUA-AIRDROP-FOR-GOLF-HZ>}}
+
+Functions:
+
+* send-stx _private_

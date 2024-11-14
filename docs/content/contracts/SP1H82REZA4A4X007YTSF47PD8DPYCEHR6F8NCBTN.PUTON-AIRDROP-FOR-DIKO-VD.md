@@ -1,0 +1,18 @@
+---
+title: "Contract PUTON-AIRDROP-FOR-DIKO-VD"
+draft: true
+---
+Deployer: SP1H82REZA4A4X007YTSF47PD8DPYCEHR6F8NCBTN
+
+
+ 
+
+
+
+Block height: 165560 (2024-09-11T08:13:24.000Z)
+
+Source code: {{<contractref "PUTON-AIRDROP-FOR-DIKO-VD" SP1H82REZA4A4X007YTSF47PD8DPYCEHR6F8NCBTN PUTON-AIRDROP-FOR-DIKO-VD>}}
+
+Functions:
+
+* send-stx _private_

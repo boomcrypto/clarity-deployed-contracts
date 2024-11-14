@@ -1,0 +1,18 @@
+---
+title: "Contract EDLC-AIRDROP-FOR-VELAR-FF"
+draft: true
+---
+Deployer: SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V
+
+
+ 
+
+
+
+Block height: 166644 (2024-09-20T08:30:40.000Z)
+
+Source code: {{<contractref "EDLC-AIRDROP-FOR-VELAR-FF" SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V EDLC-AIRDROP-FOR-VELAR-FF>}}
+
+Functions:
+
+* send-stx _private_

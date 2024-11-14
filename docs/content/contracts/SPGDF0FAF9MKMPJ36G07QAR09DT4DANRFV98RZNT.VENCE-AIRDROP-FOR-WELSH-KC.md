@@ -1,0 +1,18 @@
+---
+title: "Contract VENCE-AIRDROP-FOR-WELSH-KC"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 157952 (2024-07-16T05:19:01.000Z)
+
+Source code: {{<contractref "VENCE-AIRDROP-FOR-WELSH-KC" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT VENCE-AIRDROP-FOR-WELSH-KC>}}
+
+Functions:
+
+* send-stx _private_

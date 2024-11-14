@@ -1,0 +1,18 @@
+---
+title: "Contract YUFU-AIRDROP-FOR-POMBOO-DJ"
+draft: true
+---
+Deployer: SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ
+
+
+ 
+
+
+
+Block height: 170868 (2024-10-22T02:21:49.000Z)
+
+Source code: {{<contractref "YUFU-AIRDROP-FOR-POMBOO-DJ" SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ YUFU-AIRDROP-FOR-POMBOO-DJ>}}
+
+Functions:
+
+* send-stx _private_

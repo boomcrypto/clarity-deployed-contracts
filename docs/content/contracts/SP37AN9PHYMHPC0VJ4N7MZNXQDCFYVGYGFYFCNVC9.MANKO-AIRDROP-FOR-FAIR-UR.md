@@ -1,0 +1,18 @@
+---
+title: "Contract MANKO-AIRDROP-FOR-FAIR-UR"
+draft: true
+---
+Deployer: SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9
+
+
+ 
+
+
+
+Block height: 165296 (2024-09-09T04:45:37.000Z)
+
+Source code: {{<contractref "MANKO-AIRDROP-FOR-FAIR-UR" SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9 MANKO-AIRDROP-FOR-FAIR-UR>}}
+
+Functions:
+
+* send-stx _private_

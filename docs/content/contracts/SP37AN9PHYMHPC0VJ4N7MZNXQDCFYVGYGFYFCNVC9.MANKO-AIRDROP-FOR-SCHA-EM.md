@@ -1,0 +1,18 @@
+---
+title: "Contract MANKO-AIRDROP-FOR-SCHA-EM"
+draft: true
+---
+Deployer: SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9
+
+
+ 
+
+
+
+Block height: 165417 (2024-09-10T02:05:51.000Z)
+
+Source code: {{<contractref "MANKO-AIRDROP-FOR-SCHA-EM" SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9 MANKO-AIRDROP-FOR-SCHA-EM>}}
+
+Functions:
+
+* send-stx _private_

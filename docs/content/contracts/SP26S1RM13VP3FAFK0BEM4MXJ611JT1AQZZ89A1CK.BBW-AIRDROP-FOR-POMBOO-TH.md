@@ -1,0 +1,18 @@
+---
+title: "Contract BBW-AIRDROP-FOR-POMBOO-TH"
+draft: true
+---
+Deployer: SP26S1RM13VP3FAFK0BEM4MXJ611JT1AQZZ89A1CK
+
+
+ 
+
+
+
+Block height: 162338 (2024-08-18T03:45:05.000Z)
+
+Source code: {{<contractref "BBW-AIRDROP-FOR-POMBOO-TH" SP26S1RM13VP3FAFK0BEM4MXJ611JT1AQZZ89A1CK BBW-AIRDROP-FOR-POMBOO-TH>}}
+
+Functions:
+
+* send-stx _private_

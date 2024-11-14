@@ -1,0 +1,18 @@
+---
+title: "Contract RATZ-AIRDROP-FOR-LISTX-AQ"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 158311 (2024-07-18T23:03:34.000Z)
+
+Source code: {{<contractref "RATZ-AIRDROP-FOR-LISTX-AQ" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 RATZ-AIRDROP-FOR-LISTX-AQ>}}
+
+Functions:
+
+* send-stx _private_

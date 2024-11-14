@@ -1,0 +1,18 @@
+---
+title: "Contract SMOKE-AIRDROP-FOR-STXMAP-GM"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 163842 (2024-08-29T08:23:12.000Z)
+
+Source code: {{<contractref "SMOKE-AIRDROP-FOR-STXMAP-GM" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R SMOKE-AIRDROP-FOR-STXMAP-GM>}}
+
+Functions:
+
+* send-stx _private_

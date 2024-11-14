@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-JINDO-PT"
+draft: true
+---
+Deployer: SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5
+
+
+ 
+
+
+
+Block height: 191343 (2024-11-07T07:21:09.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-JINDO-PT" SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5 WEN-AIRDROP-FOR-JINDO-PT>}}
+
+Functions:
+
+* send-stx _private_

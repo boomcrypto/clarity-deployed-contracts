@@ -1,0 +1,18 @@
+---
+title: "Contract FRIES-AIRDROP-FOR-TREMP-TU"
+draft: true
+---
+Deployer: SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X
+
+
+ 
+
+
+
+Block height: 171381 (2024-10-25T22:35:27.000Z)
+
+Source code: {{<contractref "FRIES-AIRDROP-FOR-TREMP-TU" SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X FRIES-AIRDROP-FOR-TREMP-TU>}}
+
+Functions:
+
+* send-stx _private_

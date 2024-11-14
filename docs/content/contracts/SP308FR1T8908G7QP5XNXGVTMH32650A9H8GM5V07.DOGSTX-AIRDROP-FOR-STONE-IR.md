@@ -1,0 +1,18 @@
+---
+title: "Contract DOGSTX-AIRDROP-FOR-STONE-IR"
+draft: true
+---
+Deployer: SP308FR1T8908G7QP5XNXGVTMH32650A9H8GM5V07
+
+
+ 
+
+
+
+Block height: 166974 (2024-09-23T01:32:09.000Z)
+
+Source code: {{<contractref "DOGSTX-AIRDROP-FOR-STONE-IR" SP308FR1T8908G7QP5XNXGVTMH32650A9H8GM5V07 DOGSTX-AIRDROP-FOR-STONE-IR>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract WALTER-AIRDROP-FOR-STSW-XS"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 159907 (2024-07-30T03:03:06.000Z)
+
+Source code: {{<contractref "WALTER-AIRDROP-FOR-STSW-XS" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 WALTER-AIRDROP-FOR-STSW-XS>}}
+
+Functions:
+
+* send-stx _private_

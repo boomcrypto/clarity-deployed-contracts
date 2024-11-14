@@ -1,0 +1,96 @@
+---
+title: "Trait famairdrop-frolic-Moist"
+draft: true
+---
+```
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.;;;;;;;.;..;..;MMMiMiMMMiMiMMMiMM;.;......;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;.;;;;.;.;;.;..M;iMMMMMMiMMMMi;iMMMiMiM.MiMM.....;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.;...;.MMiMMM.MMi.MM;;M.;i;M.MMMMMiMMiM.MiM;...;..;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;.;;;;;;.;;.;.MMMMiMMM...MiM.MMMM;iMMMM.M;iM.M.MiMiMiiM.....;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;.;;;;.;.;;;;MMMiM;Mi.;Mi.MMMiMMMMMMMMMMiMMMi.M;M.;MiMiiiiM;...;.;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;.;;;;;;;;;.;MMMMMi;M;M.i;MMMMMMMMMM.;M..;;;;MMMi;iM;.MM;MiMMMi;..;.;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;.M.;.;MMMMMMMMi..MMMMMMMMMMMMM;MMi.MMMMM;;;;MMMMM.M.MMMiiM.M....M;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;.;;;;;M.;M;MMMiMMMMMMiiMMMMMMMMMMMM;MM;MMMiMMMMMMM;.;MMMMMMMMMMiiM.M;.;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;.;.;;.M;...MiMMMMMMMMMMMMMMMMMM;MMMiMMMMMMM;MMMMMM;MMMMM;.;;MMMMMMMiiii;..;;;;;;;;;;;;.
+;;;;;;;;;;;..;.;;;M;.;MM.MMM.MMMMMMMMMMMM;MMMMMMMMMMMMMMMMM;MMMM;.;;MMM;..;MMi;..MiiiM..;;;;;;;;;;;.
+;;;;;;;;;;.;;;;;MM;.MMMM.MMMMMMMMMMMMMMiMMMMiiMMMMiM;M;MMMMM;;MM.MMMM.MMMM;.;MM;M.MiMiM;.;.;;;;;;;;;
+;;;;;;;;;.;;;;.MM;.MM.M;iMMiMMMMMMMMMMi;;M;MiMiMii;;.M;;.MM;.;M;iM;M.iM;.;MMM.;MM;..iMii..;M;;;;;;;;
+;;;;;;;;.;;;;;MM;.MMiiiMMMMMMMMMMMMMMMMMMMMMi.i.MMMM;M.MMM;M;MiMiiMMMMMMM..;MM;;M;;;Miiii..;;;;;;;;;
+;;;;;;;M;;;;;MMM;MM.MM...MMMMMiMMiMMMMMMMMMMi.i.MMMMMM.MiM;MMMMM.MMMM.M;M.;.;;;M;.MM.;MMii;.;M;;;;;;
+;;;;;;;..;..MMM;MMi.MMMiMMMMMMM;MMMMMM;;MM;MMMMM.iM;MMM;;;MMMMM.MM;..;M..MM;.;;;;;.M;;.iM.M...;;;;;;
+;;;;;M;;;;;;MM;MMMMM..MMMMMMMMMMMiM;MMMM.MM;MMMMMMiiMMMMMMMMMMM.;M..;M;.;;.MM.;;;;;.;;;M.M.M..;;;;;;
+;;;;;;;;;;.MM;MMMMMiiMMMMMMMMM;MMiM;MMMMMMMMMMMMMMMMMMMMMMMMMMM.;;MMMM;.;M.;.M.;;;;;..;MMiM.;..;;;;;
+;;;;;;;;;;MMM;MMMi.iMMMMMMMM;M.iM.M..MMMMM;MMMMMMMMMMMMMMMMMMMM.M;MM.;.;Mi;;i;M.;;;.;;.;MiiMi;..;;;;
+;;;;.;;;.;MM;MMMi.MMMMMMMMiMMMM..MMMMMMMM;MMMMMMMMMMMMMMMMM;;MMMMiM;;M;;M;;MMMMM.;;;;;;.;M.M.M.;M;;;
+;;;;;;;;;MM;;MM..MMMMMMMMi;iiM.M..MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMiiMMM;;MMM.MMM.M.;;;;;;.;MiMi...;;;
+;;;;;;;.;MM;;MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM;;
+;;;;;;;;MM;;MMMMMMMMMMMMMM................MMMMMM....MMMMMMMM.....MMMMMMMMMMMM;..MMMMMMMMMMMMMMMMM;;
+;;;;;;;.MM;;MiMMMMMMMMMMMM.;;iM..MMMMMMM;.MMMMMi;i...MMMMMMM.;.;..;;;;;;MMM;i;..;iMM;.;;;;;;iM.;..;;
+;;;;;;;;MM.MiMMMMMMMMM.MMMi.;.M..Miii.;;i;MMMMi.;M..;;MMMMMMi;.M...;;;;MMM..M...;MMMMM..;;;;MM.M.;.;
+;;...;;MMM.MMMMMMMiMMMMMMMMM;.M..MMMMMiiM;MMMM.;.MM...MMMMMMi;.MM...;;MMM..M;;.;MMMMMiM..;;;MM.M.;M;
+;;.....MM;;MMMMMiMMiMMiMiMMM;.M..MMMMMMMMMMMMM.;MMMM..;MMMMMM;.MMM;..;MM.;M;M;.;iMMMMMMMM..;MM.i.;M;
+;;.....MM;.MMMMMMMMMMMMMMMM;;.M..MMMi.;MMMMMMi;iMMMM...;MMMMM;.MMMM;..Mi;M;M.;..iMMMMMMMMM..MM.i;.M;
+;;.....MM;.;iMMMMMMMMMMMMM;M;.M..;MMMM;MMMMMi;.;..;.M...MMMMi;.MMMMM....i..;i;..iMMMMMMMMMi;.iii;.M;
+;;.;..;MM;;M.MM.iMMMMMMMMMMM..M..;;M;;;MMMMM.;M;M.;;.M..;MMMi;.MMMMMM;.M;.M;i;..MMMMMMMMMMiM.iii;.M;
+;;..;;;iM;.;i.MM.MiiiMMMMMMM;.M..i;;;M;MMMMi;.;;;;;;;;;;;MMMMMM..;MMMi;.MMMMM.M...;i;.;...MMMi.i;;M;
+;;.;;;;MM;;MMM.iMMiMMM.iMMMM;.M..Mi..M;MMMM..M;...........MMi;.MMMi.;iM.;Mi;.;..iM;MMM;MM..;Mi.M.;.;
+;;.;;;;ii;;;MMMMiMMiMi.;iMMi;.M..MMMMMMMMMi;i;Mi....;;.M..;Mi;.;.MMi;;i;;Mi;.;.;MMi;;MM;.;;;Mi.M..;;
+;;.;;;;MiM.MMMMMMiMMM.i;MMM.;.M..MMMMMMMMi;.M;MMMMMMi;;.;.;MM;.;.MMMi.i;MMi;.M.;;M.iMi..;.;;Mi.;.;;;
+;;;MMMMM.M.MMMMMMMMMMM.;MMM.;.M..MMMMMMMM.;i;;MMMMMMM.;;i;..i;...;MMMMMMMMi;.M..MM.MM;;;;;;Miii;..;;
+;;..MMMMiM.;M.MMMMMMMMMM;Mi.;.M..MMMMMMMi;i;.MMMMMMMMi;.M...MiM..;;MMMMMMM.iM;..;iM;;;;;;;;iM.M.;i;;
+;;;.;;;Mii;;M.iMMMMMMMMM.M;.MM;;..MMMMi;.M;;;.MMMMMMMi.MMMMMMM;;M;MMMMM;MiiMMMMMMMMMMMMMMMMii.;..;;;
+;;;;;MMMM.M.MM;.MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMiM.;M;;;
+;;;.MMMMM.M;;;i;.MMMMMMMii;MMM;..MMMMMMMM;MMMMMMMMMMMMMMMMMMMMMMMMM;MM;.MM;iMMM;.;;;;;;.Miiii..;;;;;
+;;;;.MMMMM.M.M;i..MMMMMMMiiMMMM.i.M;MMMMMMMMMMMMMMMMMMMMMMMMMMM.M;MM;M;;;i;Mi;M.;;;;;;;MM.M.M.;M;;;;
+;;;;;MMMMMiM;.MMM..iMMMMMMii;M;MMiMMMMMMMMMMMMMMMMMMM;MMMMMMMMM.MM;;MMM;.;.;.M.;;;;;;;MM.M.M;.M;;;;;
+;;;;;MMMMMM.M..;MMi..MMMMMMiiMiMMiiMMMMM.MM;MMMMMiMMM;;;;MMMMMM.MM...MM;MMMMM.;;;;M;;MMiMMi...M;;;;;
+;;;;;;MMMMM.iM.;;MMi..MMMMMMiiMMiiMMMMMMMMMMMMMM.MMMMM;M;.;MMMM.iMMM;MM;;.i;;;;;M;MM;;MMM.;.;M;;;;;;
+;;;;;;;MMMMMiiM;;;M.MMMiMMMMMi.MMiMMMMMiiMMMi.i.MMiM;M.M.M;M;MMi.iMMMMMMiM;;;;MMMMMMMMMMiM..;;;;;;;;
+;;;;;;;;MMMMiiiM;MMiMMM..iMMMMMiMMMMMiMMMMMMi.iiMMMM;M;MMMM;MMiMMiMMMMMMM.;MMMMMMM.M.MMi;.;;;;;;;;;;
+;;;;;;;;;MMMMM.iM..MM.iMMM.MMMMMiMMMMMi;;MMM.MiMi.M;MMMMMMiM;MMM.i;iiMMM;MMM;MMMMMMMM.i;.;M;;;;;;;;;
+;;;;;;;;;;;MMMMiiM..MiMM.MMiiMMMMMMiiMMiMMMM..MMMMiiMMMMiM;MM;MMiMMMMMMMMM;MMiM;.iiiMi;.;;;;;;;;;;;;
+;;;;;;;;;;;MMMMMiiM..;MM.MMM;..iMMMMMiiMMM;MMMii;MMMiMMMMMM;..M;;;MMMMMMMMMMiiMMMMMiM;.;M;;;;;;;;;;;
+;;;;;;;;;;;;.;;;MMiM;.MMi.MMMMM..iiiMMMMMiiMMMiiiMMMMMMMMMMMMMMMMMM;MMMMM;MMMMMiMMiM;..;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;..;MMMM.;MMiMMMi;M;MM.iiMMMMMMMMMMMMM.Mi.MMMMMMMMMMMMMii;M;MMMMMMiM..;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;M...MMM;.;M;MM.i;Mi.MMMiiiiMMMMMMMMM;MiMMMMMMMMMMMM.M..i.MMMMMMM;.;.M;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;...;MMM..M;MiMi..M;Mi.MMiiMMiiiMMiMMMMMMMiMMiMMi;M;M;.MMMMMMM;;.M;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;...;MM;..M;M;iM;MM..;ii.MMiiMMMM;MMiM.M.;MM;.MM.iMMMMMiM;;;.;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;.;;;M;;;.M;MMM.M;MM.MMii;i...iMM.MM;MM;.MMiMiMMMMM.;...;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;..;;;;;..;MMMiMMiiMMM.;MMM.;MMM;..MMMMiM.MMM;.;;..M;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;MMMMM;;...;M;M;iMMMiMMMMiiiMiMMMiMiMMMM;;;.;;;i;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MMMMMM.;....;.;MM;MMMMMMMMMMMM;..;;.;.;;.;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;..MiMM;M..;;;;;;......;;.....;;..;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define-private (trans (address principal) (amount uint))
+    (contract-call? 'SP3SMQNVWRBVWC81SRJYFV4X1ZQ7AWWJFBQJMC724.fam transfer amount tx-sender address none)
+)
+
+(trans 'SP3C58KMV1WARKGPX8A59C9Z2JHXMNG7GSWVEEA9Q u180000000)
+(trans 'SP2KY7F21EWVRKJ2BQSMJTP68DDFCQ7BGKXJ50RGW u180000000)
+(trans 'SPWRJ6AQRYR8E68GS8XP3TGM33FBA898E08PM1MD u180000000)
+(trans 'SP2VG2XRJP2FH1AXK2B0B5NCDCSNW1WYC3PXN787J u180000000)
+(trans 'SP3EPT934YNETFWBRRK2KDSJ5Y1S1A3CFXFNREJB6 u180000000)
+(trans 'SP1131XRHKJ3DBYY8D4FZ32Z07GWYPT7A3Q7CSV7C u180000000)
+(trans 'SP3QSCYA62H5WQVA99S30J5PKC60VWH0T7QRRKVH9 u180000000)
+(trans 'SP12H47A1JH7B3XN7GWZ0X6DZ385N6K5QNC8K1A2T u180000000)
+(trans 'SP2FV945F0818B99WSJWTNY4VXSED2W7V0GEMSHKQ u180000000)
+(trans 'SP2EK6MPWJYXM0JE3K19AWCDT0041DFPMJERAPP9Y u180000000)
+(trans 'SP2T2YCP677B907YQC1PGJ4F5K5MTRT2QB073Z8GQ u180000000)
+(trans 'SP24J5KX6H20AP95BMAMHV7JVYMRZ1P24S4D5FTZ0 u180000000)
+(trans 'SP156PD833Q2038DXPA62YZ362H6E21E34J4YT72E u180000000)
+(trans 'SP3KEAY4YFH2FT2E996G0PE89SWQHBPDQXHH04PTY u180000000)
+(trans 'SP64RJPAKBZ4NGY0W68HVST83Y00HVXJ75R0H5GK u180000000)
+(trans 'SP272HGCRCNF13RF83QAK6BE7TGGD80T5WS64VY3D u180000000)
+(trans 'SP12C2285NTBNZH38SAAPVBDCQMWT2J2SYKC1KDC3 u180000000)
+(trans 'SP3QDADPVM068EW6814HPNBGR68S0RD3RFC7D2XWQ u180000000)
+(trans 'SP196STCKG9M3E514D3GH7F0XJX16MNWEBEN0D332 u180000000)
+(trans 'SP3NRAQW0DXJ9TRJXDETBZNNC59AC8MCC3CABZ468 u180000000)
+(trans 'SP1V3P77Q3WBM631BFFQ28NQN11AYS2T1S0E8TW0P u180000000)
+(trans 'SP2DA393EVA5FM5P00X5SVSSJA9WM6WYG0PD6XF5C u180000000)
+(trans 'SP2A0VW071VE5QXZ9699FK29F0XXQ0B8AQ5BSC431 u180000000)
+(trans 'SP2DBAHGK0QA9QYJ74630285N1M0Z9F90HCJ6QVMD u180000000)
+(trans 'SP15TQ8ZC38KT0DBE1Z359KH7R8SX2QWJ0GTDT91X u180000000)
+(trans 'SP1QBW9E73D2HWW68YBXV9H58DS63WWWX2E8ZR2GX u180000000)
+(trans 'SP3ANWJVVKYEH20BRCHZZDD45ZJGZM9Q1CKXKD9NF u180000000)
+```

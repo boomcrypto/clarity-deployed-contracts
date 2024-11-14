@@ -1,0 +1,18 @@
+---
+title: "Contract FAITH-AIRDROP-FOR-STSW-NR"
+draft: true
+---
+Deployer: SP2FB951H8AM8RHJYKCZ46GYCSQC6DTQJYFY0KQ27
+
+
+ 
+
+
+
+Block height: 156060 (2024-07-02T04:46:50.000Z)
+
+Source code: {{<contractref "FAITH-AIRDROP-FOR-STSW-NR" SP2FB951H8AM8RHJYKCZ46GYCSQC6DTQJYFY0KQ27 FAITH-AIRDROP-FOR-STSW-NR>}}
+
+Functions:
+
+* send-stx _private_

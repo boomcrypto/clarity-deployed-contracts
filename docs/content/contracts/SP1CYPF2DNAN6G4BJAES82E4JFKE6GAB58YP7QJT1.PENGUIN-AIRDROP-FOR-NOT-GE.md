@@ -1,0 +1,18 @@
+---
+title: "Contract PENGUIN-AIRDROP-FOR-NOT-GE"
+draft: true
+---
+Deployer: SP1CYPF2DNAN6G4BJAES82E4JFKE6GAB58YP7QJT1
+
+
+ 
+
+
+
+Block height: 188017 (2024-11-05T14:18:11.000Z)
+
+Source code: {{<contractref "PENGUIN-AIRDROP-FOR-NOT-GE" SP1CYPF2DNAN6G4BJAES82E4JFKE6GAB58YP7QJT1 PENGUIN-AIRDROP-FOR-NOT-GE>}}
+
+Functions:
+
+* send-stx _private_

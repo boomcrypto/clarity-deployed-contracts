@@ -1,0 +1,18 @@
+---
+title: "Contract PENGUIN-AIRDROP-FOR-MOJO-CK"
+draft: true
+---
+Deployer: SP1CYPF2DNAN6G4BJAES82E4JFKE6GAB58YP7QJT1
+
+
+ 
+
+
+
+Block height: 170780 (2024-10-21T09:44:34.000Z)
+
+Source code: {{<contractref "PENGUIN-AIRDROP-FOR-MOJO-CK" SP1CYPF2DNAN6G4BJAES82E4JFKE6GAB58YP7QJT1 PENGUIN-AIRDROP-FOR-MOJO-CK>}}
+
+Functions:
+
+* send-stx _private_

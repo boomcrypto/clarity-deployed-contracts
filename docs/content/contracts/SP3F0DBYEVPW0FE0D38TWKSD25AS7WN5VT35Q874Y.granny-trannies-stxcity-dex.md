@@ -1,0 +1,22 @@
+---
+title: "Contract granny-trannies-stxcity-dex"
+draft: true
+---
+Deployer: SP3F0DBYEVPW0FE0D38TWKSD25AS7WN5VT35Q874Y
+
+
+ 
+
+
+
+Block height: 166635 (2024-09-20T06:49:10.000Z)
+
+Source code: {{<contractref "granny-trannies-stxcity-dex" SP3F0DBYEVPW0FE0D38TWKSD25AS7WN5VT35Q874Y granny-trannies-stxcity-dex>}}
+
+Functions:
+
+* buy _public_
+* sell _public_
+* get-buyable-tokens _read_only_
+* get-sellable-stx _read_only_
+* get-tradable _read_only_

@@ -1,0 +1,18 @@
+---
+title: "Contract DGAF-AIRDROP-FOR-PEPE-EF"
+draft: true
+---
+Deployer: SP1NPDHF9CQ8B9Q045CCQS1MR9M9SGJ5TT6WFFCD2
+
+
+ 
+
+
+
+Block height: 166550 (2024-09-19T15:45:08.000Z)
+
+Source code: {{<contractref "DGAF-AIRDROP-FOR-PEPE-EF" SP1NPDHF9CQ8B9Q045CCQS1MR9M9SGJ5TT6WFFCD2 DGAF-AIRDROP-FOR-PEPE-EF>}}
+
+Functions:
+
+* send-stx _private_

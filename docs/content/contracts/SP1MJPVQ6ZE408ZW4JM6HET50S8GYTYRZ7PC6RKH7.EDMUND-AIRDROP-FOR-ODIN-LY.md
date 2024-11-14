@@ -1,0 +1,18 @@
+---
+title: "Contract EDMUND-AIRDROP-FOR-ODIN-LY"
+draft: true
+---
+Deployer: SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7
+
+
+ 
+
+
+
+Block height: 155166 (2024-06-24T18:05:31.000Z)
+
+Source code: {{<contractref "EDMUND-AIRDROP-FOR-ODIN-LY" SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7 EDMUND-AIRDROP-FOR-ODIN-LY>}}
+
+Functions:
+
+* send-stx _private_

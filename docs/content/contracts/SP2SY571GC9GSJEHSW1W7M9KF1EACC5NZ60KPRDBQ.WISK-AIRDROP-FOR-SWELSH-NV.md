@@ -1,0 +1,18 @@
+---
+title: "Contract WISK-AIRDROP-FOR-SWELSH-NV"
+draft: true
+---
+Deployer: SP2SY571GC9GSJEHSW1W7M9KF1EACC5NZ60KPRDBQ
+
+
+ 
+
+
+
+Block height: 169571 (2024-10-12T18:52:44.000Z)
+
+Source code: {{<contractref "WISK-AIRDROP-FOR-SWELSH-NV" SP2SY571GC9GSJEHSW1W7M9KF1EACC5NZ60KPRDBQ WISK-AIRDROP-FOR-SWELSH-NV>}}
+
+Functions:
+
+* send-stx _private_

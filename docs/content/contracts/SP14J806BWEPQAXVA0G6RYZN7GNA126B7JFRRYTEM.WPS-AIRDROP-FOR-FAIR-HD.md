@@ -1,0 +1,18 @@
+---
+title: "Contract WPS-AIRDROP-FOR-FAIR-HD"
+draft: true
+---
+Deployer: SP14J806BWEPQAXVA0G6RYZN7GNA126B7JFRRYTEM
+
+
+ 
+
+
+
+Block height: 190534 (2024-11-06T23:55:49.000Z)
+
+Source code: {{<contractref "WPS-AIRDROP-FOR-FAIR-HD" SP14J806BWEPQAXVA0G6RYZN7GNA126B7JFRRYTEM WPS-AIRDROP-FOR-FAIR-HD>}}
+
+Functions:
+
+* send-stx _private_

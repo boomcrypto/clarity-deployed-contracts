@@ -1,0 +1,18 @@
+---
+title: "Contract BAO-AIRDROP-FOR-LEO-VM"
+draft: true
+---
+Deployer: SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB
+
+
+ 
+
+
+
+Block height: 171270 (2024-10-25T04:01:08.000Z)
+
+Source code: {{<contractref "BAO-AIRDROP-FOR-LEO-VM" SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB BAO-AIRDROP-FOR-LEO-VM>}}
+
+Functions:
+
+* send-stx _private_

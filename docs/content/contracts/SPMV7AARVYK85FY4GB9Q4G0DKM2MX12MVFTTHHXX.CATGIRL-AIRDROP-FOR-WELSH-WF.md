@@ -1,0 +1,18 @@
+---
+title: "Contract CATGIRL-AIRDROP-FOR-WELSH-WF"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 157540 (2024-07-13T08:57:55.000Z)
+
+Source code: {{<contractref "CATGIRL-AIRDROP-FOR-WELSH-WF" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX CATGIRL-AIRDROP-FOR-WELSH-WF>}}
+
+Functions:
+
+* send-stx _private_

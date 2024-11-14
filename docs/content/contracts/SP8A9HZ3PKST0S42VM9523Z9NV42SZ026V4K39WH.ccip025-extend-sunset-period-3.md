@@ -1,0 +1,32 @@
+---
+title: "Contract ccip025-extend-sunset-period-3"
+draft: true
+---
+Deployer: SP8A9HZ3PKST0S42VM9523Z9NV42SZ026V4K39WH
+
+
+ 
+
+
+
+Block height: 177927 (2024-10-31T07:23:06.000Z)
+
+Source code: {{<contractref "ccip025-extend-sunset-period-3" SP8A9HZ3PKST0S42VM9523Z9NV42SZ026V4K39WH ccip025-extend-sunset-period-3>}}
+
+Functions:
+
+* get-block-hash _private_
+* scale-down _private_
+* scale-up _private_
+* update-city-votes _private_
+* execute _public_
+* vote-on-proposal _public_
+* get-mia-vote _read_only_
+* get-proposal-info _read_only_
+* get-vote-period _read_only_
+* get-vote-total-mia _read_only_
+* get-vote-total-mia-or-default _read_only_
+* get-vote-totals _read_only_
+* get-voter-info _read_only_
+* is-executable _read_only_
+* is-vote-active _read_only_

@@ -1,0 +1,18 @@
+---
+title: "Contract FRESH-DONATE-FOR-MOIST-VM"
+draft: true
+---
+Deployer: SPZ7CR83QD9KYPFR25MV5KV88BH0Q4YX7N52D8SH
+
+
+ 
+
+
+
+Block height: 169288 (2024-10-10T17:06:32.000Z)
+
+Source code: {{<contractref "FRESH-DONATE-FOR-MOIST-VM" SPZ7CR83QD9KYPFR25MV5KV88BH0Q4YX7N52D8SH FRESH-DONATE-FOR-MOIST-VM>}}
+
+Functions:
+
+* send-stx _private_

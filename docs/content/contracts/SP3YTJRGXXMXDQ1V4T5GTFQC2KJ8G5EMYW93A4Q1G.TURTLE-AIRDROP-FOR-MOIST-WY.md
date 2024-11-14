@@ -1,0 +1,18 @@
+---
+title: "Contract TURTLE-AIRDROP-FOR-MOIST-WY"
+draft: true
+---
+Deployer: SP3YTJRGXXMXDQ1V4T5GTFQC2KJ8G5EMYW93A4Q1G
+
+
+ 
+
+
+
+Block height: 167409 (2024-09-26T09:09:59.000Z)
+
+Source code: {{<contractref "TURTLE-AIRDROP-FOR-MOIST-WY" SP3YTJRGXXMXDQ1V4T5GTFQC2KJ8G5EMYW93A4Q1G TURTLE-AIRDROP-FOR-MOIST-WY>}}
+
+Functions:
+
+* send-stx _private_

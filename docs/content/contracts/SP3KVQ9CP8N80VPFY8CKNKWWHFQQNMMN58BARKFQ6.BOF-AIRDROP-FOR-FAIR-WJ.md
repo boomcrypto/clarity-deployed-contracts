@@ -1,0 +1,18 @@
+---
+title: "Contract BOF-AIRDROP-FOR-FAIR-WJ"
+draft: true
+---
+Deployer: SP3KVQ9CP8N80VPFY8CKNKWWHFQQNMMN58BARKFQ6
+
+
+ 
+
+
+
+Block height: 205811 (2024-11-12T13:46:15.000Z)
+
+Source code: {{<contractref "BOF-AIRDROP-FOR-FAIR-WJ" SP3KVQ9CP8N80VPFY8CKNKWWHFQQNMMN58BARKFQ6 BOF-AIRDROP-FOR-FAIR-WJ>}}
+
+Functions:
+
+* send-stx _private_

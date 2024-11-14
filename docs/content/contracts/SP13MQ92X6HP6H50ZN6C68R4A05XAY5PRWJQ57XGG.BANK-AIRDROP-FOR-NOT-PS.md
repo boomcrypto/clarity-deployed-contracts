@@ -1,0 +1,18 @@
+---
+title: "Contract BANK-AIRDROP-FOR-NOT-PS"
+draft: true
+---
+Deployer: SP13MQ92X6HP6H50ZN6C68R4A05XAY5PRWJQ57XGG
+
+
+ 
+
+
+
+Block height: 166213 (2024-09-16T16:28:19.000Z)
+
+Source code: {{<contractref "BANK-AIRDROP-FOR-NOT-PS" SP13MQ92X6HP6H50ZN6C68R4A05XAY5PRWJQ57XGG BANK-AIRDROP-FOR-NOT-PS>}}
+
+Functions:
+
+* send-stx _private_

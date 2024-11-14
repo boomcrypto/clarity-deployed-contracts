@@ -1,0 +1,18 @@
+---
+title: "Contract CHWY-AIRDROP-FOR-WELSH-JJ"
+draft: true
+---
+Deployer: SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3
+
+
+ 
+
+
+
+Block height: 156553 (2024-07-06T01:53:26.000Z)
+
+Source code: {{<contractref "CHWY-AIRDROP-FOR-WELSH-JJ" SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3 CHWY-AIRDROP-FOR-WELSH-JJ>}}
+
+Functions:
+
+* send-stx _private_

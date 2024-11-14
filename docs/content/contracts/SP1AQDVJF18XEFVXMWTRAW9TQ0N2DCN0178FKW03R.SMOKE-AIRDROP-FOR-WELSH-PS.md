@@ -1,0 +1,18 @@
+---
+title: "Contract SMOKE-AIRDROP-FOR-WELSH-PS"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 165088 (2024-09-07T18:23:17.000Z)
+
+Source code: {{<contractref "SMOKE-AIRDROP-FOR-WELSH-PS" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R SMOKE-AIRDROP-FOR-WELSH-PS>}}
+
+Functions:
+
+* send-stx _private_

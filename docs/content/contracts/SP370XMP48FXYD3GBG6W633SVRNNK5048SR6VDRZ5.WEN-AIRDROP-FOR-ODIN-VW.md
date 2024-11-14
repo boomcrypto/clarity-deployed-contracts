@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-ODIN-VW"
+draft: true
+---
+Deployer: SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5
+
+
+ 
+
+
+
+Block height: 170828 (2024-10-21T18:37:28.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-ODIN-VW" SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5 WEN-AIRDROP-FOR-ODIN-VW>}}
+
+Functions:
+
+* send-stx _private_

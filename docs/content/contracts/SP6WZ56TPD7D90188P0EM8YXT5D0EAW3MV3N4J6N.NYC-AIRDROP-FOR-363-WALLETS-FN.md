@@ -1,0 +1,18 @@
+---
+title: "Contract NYC-AIRDROP-FOR-363-WALLETS-FN"
+draft: true
+---
+Deployer: SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N
+
+
+ 
+
+
+
+Block height: 198607 (2024-11-09T21:12:10.000Z)
+
+Source code: {{<contractref "NYC-AIRDROP-FOR-363-WALLETS-FN" SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N NYC-AIRDROP-FOR-363-WALLETS-FN>}}
+
+Functions:
+
+* send-stx _private_

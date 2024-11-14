@@ -1,0 +1,18 @@
+---
+title: "Contract BLEWY-AIRDROP-FOR-NOT-KV"
+draft: true
+---
+Deployer: SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC
+
+
+ 
+
+
+
+Block height: 169941 (2024-10-15T13:32:14.000Z)
+
+Source code: {{<contractref "BLEWY-AIRDROP-FOR-NOT-KV" SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC BLEWY-AIRDROP-FOR-NOT-KV>}}
+
+Functions:
+
+* send-stx _private_

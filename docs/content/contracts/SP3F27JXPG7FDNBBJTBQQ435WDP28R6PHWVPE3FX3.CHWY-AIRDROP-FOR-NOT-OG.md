@@ -1,0 +1,18 @@
+---
+title: "Contract CHWY-AIRDROP-FOR-NOT-OG"
+draft: true
+---
+Deployer: SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3
+
+
+ 
+
+
+
+Block height: 156554 (2024-07-06T02:02:51.000Z)
+
+Source code: {{<contractref "CHWY-AIRDROP-FOR-NOT-OG" SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3 CHWY-AIRDROP-FOR-NOT-OG>}}
+
+Functions:
+
+* send-stx _private_

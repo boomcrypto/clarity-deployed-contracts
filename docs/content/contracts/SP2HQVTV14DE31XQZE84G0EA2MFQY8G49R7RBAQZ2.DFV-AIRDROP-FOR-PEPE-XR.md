@@ -1,0 +1,18 @@
+---
+title: "Contract DFV-AIRDROP-FOR-PEPE-XR"
+draft: true
+---
+Deployer: SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2
+
+
+ 
+
+
+
+Block height: 154826 (2024-06-21T23:45:44.000Z)
+
+Source code: {{<contractref "DFV-AIRDROP-FOR-PEPE-XR" SP2HQVTV14DE31XQZE84G0EA2MFQY8G49R7RBAQZ2 DFV-AIRDROP-FOR-PEPE-XR>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract CLIVE-AIRDROP-FOR-LEO-BK"
+draft: true
+---
+Deployer: SP371690BDHK9WRH3KXXRWNK62YR8N1P5JSYGQKRM
+
+
+ 
+
+
+
+Block height: 170804 (2024-10-21T13:53:07.000Z)
+
+Source code: {{<contractref "CLIVE-AIRDROP-FOR-LEO-BK" SP371690BDHK9WRH3KXXRWNK62YR8N1P5JSYGQKRM CLIVE-AIRDROP-FOR-LEO-BK>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract MANKO-AIRDROP-FOR-ODIN-IC"
+draft: true
+---
+Deployer: SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9
+
+
+ 
+
+
+
+Block height: 167467 (2024-09-26T22:24:36.000Z)
+
+Source code: {{<contractref "MANKO-AIRDROP-FOR-ODIN-IC" SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9 MANKO-AIRDROP-FOR-ODIN-IC>}}
+
+Functions:
+
+* send-stx _private_

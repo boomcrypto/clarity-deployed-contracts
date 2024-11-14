@@ -1,0 +1,18 @@
+---
+title: "Contract MSCB-AIRDROP-FOR-6-WALLETS-YY"
+draft: true
+---
+Deployer: SP1GHMMZC2WKX7N63Z50E1SKW6S3JNQA4NH6WN7QF
+
+
+ 
+
+
+
+Block height: 164713 (2024-09-05T00:06:39.000Z)
+
+Source code: {{<contractref "MSCB-AIRDROP-FOR-6-WALLETS-YY" SP1GHMMZC2WKX7N63Z50E1SKW6S3JNQA4NH6WN7QF MSCB-AIRDROP-FOR-6-WALLETS-YY>}}
+
+Functions:
+
+* send-stx _private_

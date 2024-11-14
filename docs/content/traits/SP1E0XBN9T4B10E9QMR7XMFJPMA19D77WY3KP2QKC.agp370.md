@@ -1,0 +1,97 @@
+---
+title: "Trait agp370"
+draft: true
+---
+```
+;; SPDX-License-Identifier: BUSL-1.1
+
+(impl-trait 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.proposal-trait.proposal-trait)
+(use-trait ft-trait 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.trait-sip-010.sip-010-trait)
+
+(define-constant ONE_8 u100000000) ;; 8 decimal places
+
+(define-constant revenue-in-stx u8830115000000)
+
+(define-constant revenue-list (list
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-alex, amount: u36002940068891 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxbtc, amount: u9339657 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxusd, amount: u206565594088 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmia, amount: u238800818131780 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wnyc, amount: u56005373685514 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wusda, amount: u53555417738 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wdiko, amount: u502255199201 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wcorgi, amount: u381975016869590 } 
+{ token: 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt, amount: u480069074825 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wban, amount: u14566074754 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wslm, amount: u53214644854 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wstx-v2, amount: u3946274265785 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-chax, amount: u1088302652964 } 
+{ token: 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc, amount: u13674630 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-ordg, amount: u52881723726 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-ormm, amount: u25867157424404 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-ornj, amount: u91165758902 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-db20, amount: u123059349113 } 
+{ token: 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-ssko, amount: u368360654942 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-tx20, amount: u1234705390214 } 
+{ token: 'SP3K8BC0PPEVCV7NZ6QSRWPQ2JE9E5B6N3PA0KBR9.brc20-trio, amount: u9447576269 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wgus, amount: u501652937660912 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wpepe, amount: u477007259508500 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wlong, amount: u7680155896657380 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wnot, amount: u6054866643273610000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmax, amount: u646446829892484 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmega, amount: u22365140000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmick, amount: u54988279058546900 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wplay, amount: u238741454321374 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-whashiko, amount: u8620792670953500000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wlqstx-v3, amount: u8686427834 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wwif, amount: u535334583248673 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wvibes, amount: u2964161261040 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wleo, amount: u222827556315809 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wlialex, amount: u592860132076 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wstxoshi, amount: u22676476256539 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wwsbtc, amount: u300527595768 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wall, amount: u137781959442750000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wnakamoto, amount: u87371114333895000000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-waewbtc, amount: u1971 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-waeusdc, amount: u2516624375 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wgoat, amount: u337855277377435 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wfrodo, amount: u3301084437371 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wkiki, amount: u263994915187103 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wstxtest, amount: u99044122686144300 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmoon, amount: u355707090699217 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wdfv, amount: u5248235488500 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wtremp, amount: u23830317000000 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wgme, amount: u1195325169725 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wwen, amount: u949896760026509 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wfast, amount: u153395492037525 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wflint, amount: u634251825600288 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wgiggle, amount: u394852246542500 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wmojo, amount: u723873361072461 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wpomboo, amount: u38401407053641 } 
+{ token: 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wwojak, amount: u733976823017234 } 
+{ token: 'SP1E0XBN9T4B10E9QMR7XMFJPMA19D77WY3KP2QKC.token-wcatstacks, amount: u18982367615495 } 
+))
+
+(define-public (execute (sender principal))
+	(begin
+		(try! (fold check-err (collect-revenue revenue-list) (ok true)))
+		(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.executor-dao set-extensions (list { extension: .treasury-grant-v3, enabled: true } )))
+		(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.treasury-grant-v2 pause true))		
+		(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-alex transfer-fixed u11720448365161 tx-sender 'SPFD5XBCJWX0RJP35N6YF4S32JWRVXKGZCQ0BX7S none)) ;; STX 12329.911680 at 0.1052
+		(try! (contract-call? .treasury-grant-v3 add-to-claim-base revenue-in-stx))
+		(try! (contract-call? .treasury-grant-v3 pause false))		
+		(ok true)))
+
+(define-private (collect-revenue (details (list 500 { token: <ft-trait>, amount: uint })))
+	(map collect-revenue-iter details))
+
+(define-private (collect-revenue-iter (details { token: <ft-trait>, amount: uint }))
+	(let (
+			(token-trait (get token details)))
+	(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.amm-vault-v2-01 transfer-ft token-trait (get amount details) 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.executor-dao))
+	(contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.amm-vault-v2-01 remove-from-reserve (contract-of token-trait) (get amount details))))
+
+(define-private (check-err (result (response bool uint)) (prior (response bool uint)))
+  (match prior ok-value result err-value (err err-value)))
+
+```

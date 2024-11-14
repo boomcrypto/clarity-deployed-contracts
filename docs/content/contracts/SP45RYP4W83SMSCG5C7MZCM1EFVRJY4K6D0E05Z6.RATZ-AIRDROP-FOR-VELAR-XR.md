@@ -1,0 +1,18 @@
+---
+title: "Contract RATZ-AIRDROP-FOR-VELAR-XR"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 157797 (2024-07-15T02:15:43.000Z)
+
+Source code: {{<contractref "RATZ-AIRDROP-FOR-VELAR-XR" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 RATZ-AIRDROP-FOR-VELAR-XR>}}
+
+Functions:
+
+* send-stx _private_

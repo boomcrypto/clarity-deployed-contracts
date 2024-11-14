@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-2097890000-CATGIRL"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 154854 (2024-06-22T03:51:11.000Z)
+
+Source code: {{<contractref "BURN-2097890000-CATGIRL" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX BURN-2097890000-CATGIRL>}}
+
+Functions:
+
+* send-stx _private_

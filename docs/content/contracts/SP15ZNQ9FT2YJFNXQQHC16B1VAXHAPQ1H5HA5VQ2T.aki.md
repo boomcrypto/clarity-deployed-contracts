@@ -1,0 +1,31 @@
+---
+title: "Contract aki"
+draft: true
+---
+Deployer: SP15ZNQ9FT2YJFNXQQHC16B1VAXHAPQ1H5HA5VQ2T
+
+Traits:
+ SIP-0010
+
+
+
+Block height: 165665 (2024-09-12T06:15:52.000Z)
+
+Source code: {{<contractref "aki" SP15ZNQ9FT2YJFNXQQHC16B1VAXHAPQ1H5HA5VQ2T aki>}}
+
+Functions:
+
+* check-err _private_
+* send-stx _private_
+* send-token _private_
+* send-token-with-memo _private_
+* send-many _public_
+* set-token-uri _public_
+* transfer _public_
+* transfer-ownership _public_
+* get-balance _read_only_
+* get-decimals _read_only_
+* get-name _read_only_
+* get-symbol _read_only_
+* get-token-uri _read_only_
+* get-total-supply _read_only_

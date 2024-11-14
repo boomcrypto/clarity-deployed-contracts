@@ -1,0 +1,18 @@
+---
+title: "Contract VENCE-AIRDROP-FOR-TREMP-CN"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 159459 (2024-07-27T00:32:47.000Z)
+
+Source code: {{<contractref "VENCE-AIRDROP-FOR-TREMP-CN" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT VENCE-AIRDROP-FOR-TREMP-CN>}}
+
+Functions:
+
+* send-stx _private_

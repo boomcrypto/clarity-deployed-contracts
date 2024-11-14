@@ -1,0 +1,432 @@
+---
+title: "Trait memegoat-community-vote-010"
+draft: true
+---
+```
+;;
+;; MEMEGOAT PROPOSALS
+;;
+(impl-trait .proposal-trait.proposal-trait)
+
+;; ERRS
+(define-constant ERR-UNAUTHORISED (err u1000))
+(define-constant ERR-NOT-QUALIFIED (err u1001))
+(define-constant ERR-ALREADY-ACTIVATED (err u1002))
+(define-constant ERR-NOT-ACTIVATED (err u1003))
+(define-constant ERR-BELOW-MIN-PERIOD (err u2001))
+(define-constant ERR-INVALID-OPTION (err u2002))
+(define-constant ERR-HAS-VOTED (err u3002))
+
+;; STORAGE
+(define-data-var activated bool false)
+(define-data-var duration uint u0)
+(define-data-var start-block uint u0)
+(define-data-var end-block uint u0)
+(define-map votes {option: uint} uint)
+(define-map vote-record principal bool)
+
+;; READ-ONLY CALLS
+(define-read-only (get-votes-by-op (op uint))
+  (default-to u0 (map-get? votes {option: op}))
+)
+
+(define-read-only (is-dao-or-extension)
+	(ok (asserts! (or (is-eq tx-sender .memegoat-community-dao) (contract-call? .memegoat-community-dao is-extension contract-caller)) ERR-UNAUTHORISED))
+)
+
+(define-read-only (get-proposal-data)
+  (ok {
+    start-block: (var-get start-block),
+    end-block: (var-get end-block),
+    duration: (var-get duration)
+  })
+)
+
+(define-read-only (get-votes)
+  (ok {
+    op1: {id: u0, votes: (get-votes-by-op u0)},
+    op2: {id: u1, votes: (get-votes-by-op u1)},
+    op3: {id: u2, votes: (get-votes-by-op u2)},
+    op4: {id: u3, votes: (get-votes-by-op u3)}
+  })
+)
+
+(define-read-only (get-total-votes)
+  (let
+    (
+      (vote-opts (list u0 u1 u2 u3))
+    )
+    (ok (fold get-votes-by-op-iter vote-opts u0))
+  )
+)
+
+(define-read-only (check-has-voted (addr principal))
+ (default-to false (map-get? vote-record addr))
+)
+
+;; PUBLIC CALLS
+(define-public (activate (duration_ uint))
+  (begin
+    (try! (is-dao-or-extension))
+    (asserts! (not (var-get activated)) ERR-ALREADY-ACTIVATED)
+    (asserts! (> duration_ u0) ERR-BELOW-MIN-PERIOD)
+    (var-set activated true)
+    (var-set duration duration_)
+    (var-set start-block burn-block-height)
+    (ok (var-set end-block (+ burn-block-height duration_)))
+  )
+)
+
+(define-public (vote (opt uint))
+  (let
+    (
+      (sender tx-sender)
+      (has-stake (contract-call? .memegoat-staking-v1 get-user-stake-has-staked sender))
+      (stake-amount (get deposit-amount (try! (contract-call? .memegoat-staking-v1 get-user-staking-data sender))))
+      (curr-votes (get-votes-by-op opt))
+    )
+    (asserts! has-stake ERR-NOT-QUALIFIED)
+    (asserts! (< opt u4) ERR-INVALID-OPTION)
+    (asserts! (not (check-has-voted sender)) ERR-HAS-VOTED)
+
+    (map-set votes {option: opt} (+ curr-votes stake-amount))
+    (ok (map-set vote-record sender true))
+  )
+)
+
+(define-public (execute (sender principal) (opt uint))
+  (begin
+    (try! (is-dao-or-extension))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u17
+      (list 
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u17}
+        {user: 'SP1T07GK9H4M0WP4N1DSSA7NJ7GNTQZ0GBZM0GAR2, old-id: u17}
+        {user: 'SP1GDRM1565PRSSK2GZJ1XXAQZYEQPSD5J079DMTF, old-id: u17}
+        {user: 'SP99B9SNEY20XZ5PDCR30VC520QPWCEAAVHHEC2W, old-id: u17}
+        {user: 'SP35MER4PHM6XGB99YDRQAK0M0JQ8F9CVF04VZ1VX, old-id: u17}
+        {user: 'SP3C79MES43VN3W4T9VJS5W8CENCTNF5JFHGSHW1G, old-id: u17}
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u17}
+        {user: 'SP3JFEKTFHVC3B9RRQ46FNC8MFRZPHVYYTFWYRX6W, old-id: u17}
+        {user: 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C, old-id: u17}
+        {user: 'SP1VEHWR3SVWZWN24YQTHS3CVSMWEHK39CBM6Z3F5, old-id: u17}
+        {user: 'SP3MJ27QVV5ZZ9YWZFF2TW27FC2KVNNFKK6TCSWAA, old-id: u17}
+        {user: 'SPJASS1NWD1RT051QJZMWKTBBN4SPW6SYHFTDRJ1, old-id: u17}
+        {user: 'SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6, old-id: u17}
+        {user: 'SP20QS4PBRFWRQFHVKQHBR3C8TETC6H89QMXBQB8M, old-id: u17}
+        {user: 'SP326H2T31PKEBR5VDPDG0FCHCGCBKFCN61Y5V8Z0, old-id: u17}
+        {user: 'SP1NGMS9Z48PRXFAG2MKBSP0PWERF07C0KV9SPJ66, old-id: u17}
+      )
+    ))
+
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u19
+      (list 
+        {user: 'SPTBAXKRKT7EXTZ6QRZFG1145M0BZ0TTX3HJZTFW, old-id: u19}
+        {user: 'SP1G18KGVMP2RF5S2387DBC4VRZGK2T9ETMMVT7BB, old-id: u19}
+        {user: 'SPTMN1SDXBFFZM5HQQD6TTSDA2X2GQS1436XV35G, old-id: u19}
+        {user: 'SP1DZ6CVX4TYYNRV39WBPSH18EMA5C6S6TZHBZT75, old-id: u19}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u19}
+        {user: 'SPH1ZAHN998PFH9A2CBNQ5EM3HKXG08FA0CKF4MB, old-id: u19}
+        {user: 'SP326H2T31PKEBR5VDPDG0FCHCGCBKFCN61Y5V8Z0, old-id: u19}
+        {user: 'SP2SNQHT55ZM0TBF7DD0TA39XM652QZ97E3CXN2SJ, old-id: u19}
+        {user: 'SP26V1A3HBSSTDNFHXCWRP991R6FBFSYD7RQR0MX5, old-id: u19}
+        {user: 'SP3A3TV7J83JXEMQYJ2Q59GF94PTFYY66ZF0FB40, old-id: u19}
+        {user: 'SP9469CHQ3SZB16XX7YNM0QFEQCD3WA3D85CP6C0, old-id: u19}
+        {user: 'SPYK0YH7AK4GM2YCHZRS33B5G0HMT5SR7JYF1FNX, old-id: u19}
+        {user: 'SP28JZJY7BQHGT0NBN62RP9FDPH9MSY1KFGMPFT93, old-id: u19}
+        {user: 'SP1H45JS07GWQWMT57JE20X17AQCNVYAS7NHW2HVR, old-id: u19}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u19}
+        {user: 'SPTWA5VVS3TEBNVYC419AY454MEHM0HZH0DQD16, old-id: u19}
+        {user: 'SP2P0QX0C70S8SJ8VYP530JFMNPHNVJBQY3KEZ9ZC, old-id: u19}
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u19}
+        {user: 'SPSQ4W56BY5XKZR8YJMXYP1CKJ64TT4CQ04GFQT8, old-id: u19}
+        {user: 'SP1HGP6E8ZHZBRA91NME5MPCC1ZQA6VTREQD723GP, old-id: u19}
+        {user: 'SP2XHGP0P45WDJ1XZPZZT2Q0MV3WBAP7SN7ZWCGN5, old-id: u19}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u20
+      (list 
+        {user: 'SP1CFWC7XAJ5PG1QN2N2FKJC7AS5GN1MDSX8VAW58, old-id: u20}
+        {user: 'SPTBAXKRKT7EXTZ6QRZFG1145M0BZ0TTX3HJZTFW, old-id: u20}
+        {user: 'SP1DZ6CVX4TYYNRV39WBPSH18EMA5C6S6TZHBZT75, old-id: u20}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u20}
+        {user: 'SP1H45JS07GWQWMT57JE20X17AQCNVYAS7NHW2HVR, old-id: u20}
+        {user: 'SP2XHGP0P45WDJ1XZPZZT2Q0MV3WBAP7SN7ZWCGN5, old-id: u20}
+        {user: 'SP9469CHQ3SZB16XX7YNM0QFEQCD3WA3D85CP6C0, old-id: u20}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u20}
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u20}
+        {user: 'SP326H2T31PKEBR5VDPDG0FCHCGCBKFCN61Y5V8Z0, old-id: u20}
+        {user: 'SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR, old-id: u20}
+        {user: 'SP2D8RP8J0EYMZPFTT0SS0YE4HR0JV6CBBAB9508F, old-id: u20}
+        {user: 'SP1EHG5M8H61ACV1JYRD9Z9TC8BKSW519YZ4WE5Z4, old-id: u20}
+        {user: 'SP2P0QX0C70S8SJ8VYP530JFMNPHNVJBQY3KEZ9ZC, old-id: u20}
+        {user: 'SPTWA5VVS3TEBNVYC419AY454MEHM0HZH0DQD16, old-id: u20}
+        {user: 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C, old-id: u20}
+        {user: 'SP3DYP99Z4RPX11G384JR7GAN9RQD6WWKGKW9TC4E, old-id: u20}
+        {user: 'SPHP86DAAH57SXA7982ZZQAAQVFPHDA18DVV4PZ8, old-id: u20}
+        {user: 'SP1RJC76DDEGTXEA21MNVDAV40Y4HW845C9J46RJS, old-id: u20}
+        {user: 'SPH1ZAHN998PFH9A2CBNQ5EM3HKXG08FA0CKF4MB, old-id: u20}
+        {user: 'SP3MNEB60Z00ER0Z3X9C0GN24V19ADKDQA84MG6ZF, old-id: u20}
+        {user: 'SP0A9EJYBVAFZ69BX902DPBEQ4SN14GG84GV5XX7, old-id: u20}
+        {user: 'SPD92QTZAZK21RJY56K9PAS2HNPA0X12EEW83RFD, old-id: u20}
+        {user: 'SP3VNFZPX0YFJPS3XQMRB5GSA8VBRNYBNWPBHYE2H, old-id: u20}
+        {user: 'SP3GC9REP70TB8SP9BDCZ335QJQBPW4BFFAS0S3BD, old-id: u20}
+        {user: 'SP2BQFEHZDQVVDYZXS4C9XC8AFQ72B76YZGZKR3S4, old-id: u20}
+        {user: 'SP184G3Z35YNXH6KYB8Q4YHWRW0PACMNM8JNG49FD, old-id: u20}
+        {user: 'SP1RW1JY0ARAXXDNRYFRX6Z34Y33HZ9EHJ8D7GTD0, old-id: u20}
+        {user: 'SP1GDZW1X3XM5VZS78E17M7MM753HJRH5D46EF4AH, old-id: u20}
+        {user: 'SP2E435GKNJS9Z3790HEJFCRZRE4YSSEB5EG4WXK7, old-id: u20}
+        {user: 'SP3Y40CTVZNBH77Z8GXNGNY7KBM2E0VYXB88S9ETD, old-id: u20}
+        {user: 'SP2328SA29G0ANHQ220W1JGF7E3WGRWB28363X0YH, old-id: u20}
+        {user: 'SP26QMFEDRBGVNMANH5XJ7KX0NG9QDP2KAJVBGZD0, old-id: u20}
+        {user: 'SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6, old-id: u20}
+        {user: 'SP372B3QPFAC65VY7R68GK4Z8WNRZ74NRWGWM9W4F, old-id: u20}
+        {user: 'SP2NDAH1WKKY6609Q0R2RZ2N2ZXTJ26TC05SS1NR2, old-id: u20}
+        {user: 'SPRYTBB9QG0G8Z47PWKDYQ9FY7RGSTK5KH2NZBCY, old-id: u20}
+        {user: 'SP6DJT5SKVAH3MV8WDZZ802KCSZ1Q4PFMPAK3ZPH, old-id: u20}
+        {user: 'SP1NGMS9Z48PRXFAG2MKBSP0PWERF07C0KV9SPJ66, old-id: u20}
+        {user: 'SP1Y56F45C8JXAF6TQ0PT9A06ARWMFH9V9DNMJNCP, old-id: u20}
+        {user: 'SP3KKDCSMY5TTDNR3JMJRHG0HXVADZT397K49AA7C, old-id: u20}
+        {user: 'SP1A1T85J6VAB7W6JM4FR127TZ45GG7E00ZG9B4ZX, old-id: u20}
+        {user: 'SP2BRGBD7RR0T5TDSKBD4AWVZND07P5T8NRYFA7NJ, old-id: u20}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u21
+      (list 
+        {user: 'SP3NB10161WV6XYZDCG3KC8CHER9ABMWQS6WAEQ98, old-id: u21}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u21}
+        {user: 'SP24JJ0VPGZ1ZGWMFB4S17MXMWGZ6KDKWXJXQF72E, old-id: u21}
+        {user: 'SP1YSYKEC4FN7WS5ZHG94GRZN7J6ZZ6ZFADSWZV1E, old-id: u21}
+        {user: 'SP3PMHDXDDDJ3PXEGK90E8MXJDDHP90FZCM99MG0G, old-id: u21}
+        {user: 'SPTWA5VVS3TEBNVYC419AY454MEHM0HZH0DQD16, old-id: u21}
+        {user: 'SP30TN9ZWDW49BSDEQM3SCXSGGF309V61ERZ764J0, old-id: u21}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u21}
+        {user: 'SP3693FC2T1EBWV213XSKX329BBKC24QWP6MNPR7E, old-id: u21}
+        {user: 'SP2BK08YGYKAVD1B83JMJ94EBV37NVTRJRNGZYD5P, old-id: u21}
+        {user: 'SP5H85ARNQJNZ1AVK4GJWJE4DPPPKE67PFWVBMXS, old-id: u21}
+        {user: 'SP1KKNRR6STJCDS71FMY2XS9SB8M8YGC652NDQMW4, old-id: u21}
+        {user: 'SP26EQ2B43D8DWBVVBTWPKEGPAYAA5JDFXTTHE3CP, old-id: u21}
+        {user: 'SP1Y56F45C8JXAF6TQ0PT9A06ARWMFH9V9DNMJNCP, old-id: u21}
+        {user: 'SP14MA7Q244WBZCTN9CEPEJEJDQHMC6VMT2T3KCCZ, old-id: u21}
+        {user: 'SP2XHGP0P45WDJ1XZPZZT2Q0MV3WBAP7SN7ZWCGN5, old-id: u21}
+        {user: 'SP2BRGBD7RR0T5TDSKBD4AWVZND07P5T8NRYFA7NJ, old-id: u21}
+        {user: 'SPMY8J8KB0NYX3N1V39V2MV0GTEWDNY2PWQ6W67V, old-id: u21}
+        {user: 'SP1H45JS07GWQWMT57JE20X17AQCNVYAS7NHW2HVR, old-id: u21}
+        {user: 'SP1MBC8R3SM3XTV88CWDDTH9DECYQBHS5Y8A0T25A, old-id: u21}
+        {user: 'SP2EK9G4ARFR0CZ0C4S7MNRNQWH21KBKRB5XH1C4V, old-id: u21}
+        {user: 'SP1NGMS9Z48PRXFAG2MKBSP0PWERF07C0KV9SPJ66, old-id: u21}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u22
+      (list 
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u22}
+        {user: 'SP1T07GK9H4M0WP4N1DSSA7NJ7GNTQZ0GBZM0GAR2, old-id: u22}
+        {user: 'SP2D8RP8J0EYMZPFTT0SS0YE4HR0JV6CBBAB9508F, old-id: u22}
+        {user: 'SP2EAW0J3EW0G80KQW9MFKJMD5E20EFG2YMKTEGJG, old-id: u22}
+        {user: 'SP1GDW0J415CXC25MJEMMBK3W32Z2BW9K1Q8B3WKE, old-id: u22}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u22}
+        {user: 'SP260ZF58NPJZCJGB2K51327RW299BHES24W4ARKE, old-id: u22}
+        {user: 'SP1MP4A2TZBX935NS93V5QP8ESG8534XARQFQPCMG, old-id: u22}
+        {user: 'SP2QVKZ2GWP97TW4RNCT8TN65JRJPVAKERHYSS13E, old-id: u22}
+        {user: 'SP11EY3Q9JHMJQG0X8CQYPG4EH143C6W4RQWJ9HXQ, old-id: u22}
+        {user: 'SP20QS4PBRFWRQFHVKQHBR3C8TETC6H89QMXBQB8M, old-id: u22}
+        {user: 'SP35MER4PHM6XGB99YDRQAK0M0JQ8F9CVF04VZ1VX, old-id: u22}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u22}
+        {user: 'SP3R5TCK97NMBS1V1MARCK0YTDFWG1FKJ94EFQTF4, old-id: u22}
+        {user: 'SPG68GXC7ZFEW8GGDGX1Z3K5XWABX89CERGDAASE, old-id: u22}
+        {user: 'SP2J6Y09JMFWWZCT4VJX0BA5W7A9HZP5EX96Y6VZY, old-id: u22}
+        {user: 'SPBWF76FHRNA9C1A6ZZ896B3XRRK5TGGW7X9A55A, old-id: u22}
+        {user: 'SPSQ4W56BY5XKZR8YJMXYP1CKJ64TT4CQ04GFQT8, old-id: u22}
+        {user: 'SPESDYPQP2ZH3HBZTMMJNE5MHPCY8KE6TSAK10FT, old-id: u22}
+        {user: 'SP3MJ27QVV5ZZ9YWZFF2TW27FC2KVNNFKK6TCSWAA, old-id: u22}
+        {user: 'SPPP6E721JK7ETZQQ2911JQ8E729H1T467M34CNW, old-id: u22}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u23
+      (list 
+        {user: 'SP1GDW0J415CXC25MJEMMBK3W32Z2BW9K1Q8B3WKE, old-id: u23}
+        {user: 'SP3NB10161WV6XYZDCG3KC8CHER9ABMWQS6WAEQ98, old-id: u23}
+        {user: 'SP30TN9ZWDW49BSDEQM3SCXSGGF309V61ERZ764J0, old-id: u23}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u23}
+        {user: 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C, old-id: u23}
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u23}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u23}
+        {user: 'SP1EHG5M8H61ACV1JYRD9Z9TC8BKSW519YZ4WE5Z4, old-id: u23}
+        {user: 'SPVHHRF0SWTFZHGWJSXC0QXRFH45CH56EMSB2PK9, old-id: u23}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u23}
+        {user: 'SP1HGP6E8ZHZBRA91NME5MPCC1ZQA6VTREQD723GP, old-id: u23}
+        {user: 'SP1RJC76DDEGTXEA21MNVDAV40Y4HW845C9J46RJS, old-id: u23}
+        {user: 'SP1ESSCE9ZNYE9KKP8S2MZFBWGMST6VQFANB7XXWM, old-id: u23}
+        {user: 'SP3C70CKZYG6YT2ZYKYF7VPMT3GR9XVAQVXK51AW1, old-id: u23}
+        {user: 'SP111JB0E6RHZANHKT8Z5CBE68MHH8Y7SREXQCWC0, old-id: u23}
+        {user: 'SP3S33CEW6BNHTC6Q5XW68M17Y60DQW7NJ36RCKWJ, old-id: u23}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u24
+      (list 
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u24}
+        {user: 'SPHP86DAAH57SXA7982ZZQAAQVFPHDA18DVV4PZ8, old-id: u24}
+        {user: 'SP301D8E6XYWA05DX8F8HSD73NT2XB376R47G0STV, old-id: u24}
+        {user: 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C, old-id: u24}
+        {user: 'SP1GDRM1565PRSSK2GZJ1XXAQZYEQPSD5J079DMTF, old-id: u24}
+        {user: 'SP1DZ6CVX4TYYNRV39WBPSH18EMA5C6S6TZHBZT75, old-id: u24}
+        {user: 'SP3MJ27QVV5ZZ9YWZFF2TW27FC2KVNNFKK6TCSWAA, old-id: u24}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u24}
+        {user: 'SPX5CBAMGM7R0DWEX1077HN13QVMRQHRAWW4X401, old-id: u24}
+        {user: 'SP38M1K82GX1CK3W4KTPF6VYA4YD4YJBV3GYDQ1H, old-id: u24}
+        {user: 'SPJASS1NWD1RT051QJZMWKTBBN4SPW6SYHFTDRJ1, old-id: u24}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u24}
+        {user: 'SP237DS5PDSEC6CSHYSVTMB1S81JJXK2RCKB2W22E, old-id: u24}
+        {user: 'SP3CDRXW1V3YEDKY47PCTV6EA5NVZMDCS7HCJW38X, old-id: u24}
+        {user: 'SPSQ4W56BY5XKZR8YJMXYP1CKJ64TT4CQ04GFQT8, old-id: u24}
+        {user: 'SPBWF76FHRNA9C1A6ZZ896B3XRRK5TGGW7X9A55A, old-id: u24}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u25
+      (list 
+        {user: 'SP1CFWC7XAJ5PG1QN2N2FKJC7AS5GN1MDSX8VAW58, old-id: u25}
+        {user: 'SP31DFRJ0QZ07AK7JHH5P47KNRETMV0W564Y8VB2C, old-id: u25}
+        {user: 'SP3NEWV1EPV1Y9KKSGDSC63CFE5ASA9QHAHWGTPS6, old-id: u25}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u25}
+        {user: 'SPESDYPQP2ZH3HBZTMMJNE5MHPCY8KE6TSAK10FT, old-id: u25}
+        {user: 'SP1RJC76DDEGTXEA21MNVDAV40Y4HW845C9J46RJS, old-id: u25}
+        {user: 'SP2J6Y09JMFWWZCT4VJX0BA5W7A9HZP5EX96Y6VZY, old-id: u25}
+        {user: 'SP3666P2667S8GEYCM2BT801Q54YF0FERH9Z8RS0B, old-id: u25}
+        {user: 'SP2EAW0J3EW0G80KQW9MFKJMD5E20EFG2YMKTEGJG, old-id: u25}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u26
+      (list 
+        {user: 'SP1Q46XYE20N9WQAQ5WPSER1M6Q3M0ZP1JJMHV049, old-id: u26}
+        {user: 'SP1MDR5HY5HR3XB6NEP2AQ234E6TT7XTWS77JVKPA, old-id: u26}
+        {user: 'SP1CFWC7XAJ5PG1QN2N2FKJC7AS5GN1MDSX8VAW58, old-id: u26}
+        {user: 'SP301D8E6XYWA05DX8F8HSD73NT2XB376R47G0STV, old-id: u26}
+        {user: 'SPTBAXKRKT7EXTZ6QRZFG1145M0BZ0TTX3HJZTFW, old-id: u26}
+        {user: 'SP1WK5MA8RPTT10C2EQ4BEQYN3BBEYY8MCY5FFKRQ, old-id: u26}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u26}
+        {user: 'SP2JDKWQ77WN7S0PRCS872HFJ21ZT78P6G1WCW2B, old-id: u26}
+        {user: 'SP1H45JS07GWQWMT57JE20X17AQCNVYAS7NHW2HVR, old-id: u26}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u26}
+        {user: 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C, old-id: u26}
+        {user: 'SP2SZMMXE1AW4599RE016XCP7409JMTKY7E5JX7WR, old-id: u26}
+        {user: 'SP3NEWV1EPV1Y9KKSGDSC63CFE5ASA9QHAHWGTPS6, old-id: u26}
+        {user: 'SP3DYP99Z4RPX11G384JR7GAN9RQD6WWKGKW9TC4E, old-id: u26}
+        {user: 'SP2P0QX0C70S8SJ8VYP530JFMNPHNVJBQY3KEZ9ZC, old-id: u26}
+        {user: 'SP49PX512DWJ0JG3D3WJ016Y4R6WJA17QANBQ4BW, old-id: u26}
+        {user: 'SPTMN1SDXBFFZM5HQQD6TTSDA2X2GQS1436XV35G, old-id: u26}
+        {user: 'SP2D8RP8J0EYMZPFTT0SS0YE4HR0JV6CBBAB9508F, old-id: u26}
+        {user: 'SP1RXD8QZSANSYETD782M88PK8EXRXHX6E82HBPG6, old-id: u26}
+        {user: 'SPHZW8N7EMXHY7N72JNE2EE1TD4Z1FZ8GENAHYFS, old-id: u26}
+        {user: 'SP3MJ27QVV5ZZ9YWZFF2TW27FC2KVNNFKK6TCSWAA, old-id: u26}
+        {user: 'SP2XHGP0P45WDJ1XZPZZT2Q0MV3WBAP7SN7ZWCGN5, old-id: u26}
+        {user: 'SP35MER4PHM6XGB99YDRQAK0M0JQ8F9CVF04VZ1VX, old-id: u26}
+        {user: 'SP1T07GK9H4M0WP4N1DSSA7NJ7GNTQZ0GBZM0GAR2, old-id: u26}
+        {user: 'SP1B7W6MFD5D20VD4MQVQ54FS9KTM7N41WM5Z4WFR, old-id: u26}
+        {user: 'SP2S7AE08KCDQQ7S7JF4W6FH0GZ9920ENC3ET9ATP, old-id: u26}
+        {user: 'SP3SKH6YB515J76KVDHDHBTE2GQ4CV6QJHC5GJKRF, old-id: u26}
+        {user: 'SPGKXNY6J7X936RZ7Q42RMZQHSZWQECHH7RRBRXY, old-id: u26}
+        {user: 'SP7Z1X5MTQV61SXR3A4PGTC0V45J5EBHNNNHTNES, old-id: u26}
+        {user: 'SP372B3QPFAC65VY7R68GK4Z8WNRZ74NRWGWM9W4F, old-id: u26}
+        {user: 'SP9469CHQ3SZB16XX7YNM0QFEQCD3WA3D85CP6C0, old-id: u26}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u26}
+        {user: 'SP3SD2ZAQHRRHRREYM67MY6QQPN67GX6NFJ3XJ5WN, old-id: u26}
+        {user: 'SP3S33CEW6BNHTC6Q5XW68M17Y60DQW7NJ36RCKWJ, old-id: u26}
+        {user: 'SP3MTR701Y14SM1E5QJW5Y44C8B5VHSKT1VA917NS, old-id: u26}
+        {user: 'SP8SHCQXZJZN6TS58MTX6M4PBN5PQ110F0PAEG9T, old-id: u26}
+        {user: 'SPC2ST1E89RZTN3YJHVDK77EGSJN323Q2YVQ3M62, old-id: u26}
+        {user: 'SP30GN0876VKPZD1T8FY5FWQB18G8W6SM5JDCC2GG, old-id: u26}
+        {user: 'SP2FZMQQT0FG9GNFVT04YA5QCG7NE4ECKANJ2QNVZ, old-id: u26}
+        {user: 'SP28ZTJS8Q58ERK8MDNFGQA85CHQRP4SYH85B95SG, old-id: u26}
+        {user: 'SP3ZKZJARSF2Q7Z2MX5Z3KRGCFKZKWW7TGHE3MQY2, old-id: u26}
+        {user: 'SP326H2T31PKEBR5VDPDG0FCHCGCBKFCN61Y5V8Z0, old-id: u26}
+        {user: 'SP2SNQHT55ZM0TBF7DD0TA39XM652QZ97E3CXN2SJ, old-id: u26}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u27
+      (list 
+        {user: 'SP1MDR5HY5HR3XB6NEP2AQ234E6TT7XTWS77JVKPA, old-id: u27}
+        {user: 'SP1CFWC7XAJ5PG1QN2N2FKJC7AS5GN1MDSX8VAW58, old-id: u27}
+        {user: 'SP3MTR701Y14SM1E5QJW5Y44C8B5VHSKT1VA917NS, old-id: u27}
+        {user: 'SP3SKH6YB515J76KVDHDHBTE2GQ4CV6QJHC5GJKRF, old-id: u27}
+        {user: 'SP98HDVTX71PSG3VZDNXCPX1XD9TSH47H42H3AXD, old-id: u27}
+        {user: 'SP35MER4PHM6XGB99YDRQAK0M0JQ8F9CVF04VZ1VX, old-id: u27}
+        {user: 'SP3NEWV1EPV1Y9KKSGDSC63CFE5ASA9QHAHWGTPS6, old-id: u27}
+        {user: 'SP1WK5MA8RPTT10C2EQ4BEQYN3BBEYY8MCY5FFKRQ, old-id: u27}
+        {user: 'SP326H2T31PKEBR5VDPDG0FCHCGCBKFCN61Y5V8Z0, old-id: u27}
+        {user: 'SP9469CHQ3SZB16XX7YNM0QFEQCD3WA3D85CP6C0, old-id: u27}
+        {user: 'SP30TN9ZWDW49BSDEQM3SCXSGGF309V61ERZ764J0, old-id: u27}
+        {user: 'SP2SNQHT55ZM0TBF7DD0TA39XM652QZ97E3CXN2SJ, old-id: u27}
+        {user: 'SP3MJ27QVV5ZZ9YWZFF2TW27FC2KVNNFKK6TCSWAA, old-id: u27}
+        {user: 'SP1EHG5M8H61ACV1JYRD9Z9TC8BKSW519YZ4WE5Z4, old-id: u27}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u27}
+        {user: 'SP1DZ6CVX4TYYNRV39WBPSH18EMA5C6S6TZHBZT75, old-id: u27}
+        {user: 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH, old-id: u27}
+        {user: 'SPSQ4W56BY5XKZR8YJMXYP1CKJ64TT4CQ04GFQT8, old-id: u27}
+        {user: 'SP1T07GK9H4M0WP4N1DSSA7NJ7GNTQZ0GBZM0GAR2, old-id: u27}
+        {user: 'SP2S7AE08KCDQQ7S7JF4W6FH0GZ9920ENC3ET9ATP, old-id: u27}
+        {user: 'SP2NFAYZCZQ31MV2JCA529GABH2FNDJ1F931K70K8, old-id: u27}
+        {user: 'SP1HGP6E8ZHZBRA91NME5MPCC1ZQA6VTREQD723GP, old-id: u27}
+        {user: 'SP31DFRJ0QZ07AK7JHH5P47KNRETMV0W564Y8VB2C, old-id: u27}
+        {user: 'SP2M4KHGC0C77RFX4GV86EZ1R8BYSS3A3CPMYX5F2, old-id: u27}
+        {user: 'SP19Q8SX1CPPGD1TN45WHK12ZJJKKCPY80YSTV8SJ, old-id: u27}
+        {user: 'SP1Q46XYE20N9WQAQ5WPSER1M6Q3M0ZP1JJMHV049, old-id: u27}
+        {user: 'SP8SHCQXZJZN6TS58MTX6M4PBN5PQ110F0PAEG9T, old-id: u27}
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u27}
+        {user: 'SPTWA5VVS3TEBNVYC419AY454MEHM0HZH0DQD16, old-id: u27}
+      )
+    ))
+
+    (try! (contract-call? .memegoat-community-pools-v2 move-user-records
+      u28
+      (list 
+        {user: 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66, old-id: u28}
+        {user: 'SP1WK5MA8RPTT10C2EQ4BEQYN3BBEYY8MCY5FFKRQ, old-id: u28}
+        {user: 'SP3SKH6YB515J76KVDHDHBTE2GQ4CV6QJHC5GJKRF, old-id: u28}
+        {user: 'SP3MTR701Y14SM1E5QJW5Y44C8B5VHSKT1VA917NS, old-id: u28}
+        {user: 'SP31DFRJ0QZ07AK7JHH5P47KNRETMV0W564Y8VB2C, old-id: u28}
+        {user: 'SP3DYP99Z4RPX11G384JR7GAN9RQD6WWKGKW9TC4E, old-id: u28}
+        {user: 'SP3NEWV1EPV1Y9KKSGDSC63CFE5ASA9QHAHWGTPS6, old-id: u28}
+        {user: 'SP1EHG5M8H61ACV1JYRD9Z9TC8BKSW519YZ4WE5Z4, old-id: u28}
+        {user: 'SP1CFWC7XAJ5PG1QN2N2FKJC7AS5GN1MDSX8VAW58, old-id: u28}
+        {user: 'SP2J1EX6Y8ZANKZ68ZK3FCPNDDRHT447C1RY7FZTW, old-id: u28}
+        {user: 'SP1RXD8QZSANSYETD782M88PK8EXRXHX6E82HBPG6, old-id: u28}
+        {user: 'SP36KK1WYNES6725ERKNCFHYFXBF81E8S73AAPKGP, old-id: u28}
+        {user: 'SP8SHCQXZJZN6TS58MTX6M4PBN5PQ110F0PAEG9T, old-id: u28}
+        {user: 'SPC2ST1E89RZTN3YJHVDK77EGSJN323Q2YVQ3M62, old-id: u28}
+        {user: 'SP301D8E6XYWA05DX8F8HSD73NT2XB376R47G0STV, old-id: u28}
+        {user: 'SP2P0QX0C70S8SJ8VYP530JFMNPHNVJBQY3KEZ9ZC, old-id: u28}
+        {user: 'SP2SNQHT55ZM0TBF7DD0TA39XM652QZ97E3CXN2SJ, old-id: u28}
+        {user: 'SP372B3QPFAC65VY7R68GK4Z8WNRZ74NRWGWM9W4F, old-id: u28}
+        {user: 'SP9469CHQ3SZB16XX7YNM0QFEQCD3WA3D85CP6C0, old-id: u28}
+      )
+    ))
+
+
+    (ok true)
+  )
+)
+
+;; PRIVATE CALLS
+(define-private (get-votes-by-op-iter (op uint) (total uint))
+  (+ total (get-votes-by-op op))
+)
+```

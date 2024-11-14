@@ -1,0 +1,46 @@
+---
+title: "Trait migrate-wrapped"
+draft: true
+---
+```
+(impl-trait .extension-trait.extension-trait)
+(impl-trait .proposal-trait.proposal-trait)
+(use-trait ft-trait .trait-sip-010.sip-010-trait)
+(define-constant err-unauthorised (err u1000))
+(define-constant err-paused (err u1001))
+(define-data-var is-paused bool true)
+(define-read-only (is-dao-or-extension)
+	(ok (asserts! (or (is-eq tx-sender .executor-dao) (contract-call? .executor-dao is-extension contract-caller)) err-unauthorised)))
+(define-read-only (get-paused)
+  (var-get is-paused))
+(define-public (migrate)
+	(let (
+			(sender tx-sender)
+			(xbtc-bal (unwrap-panic (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxbtc get-balance-fixed sender)))
+			(xusd-bal (unwrap-panic (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxusd get-balance-fixed sender))))
+		(asserts! (not (var-get is-paused)) err-paused)
+		(and (> xbtc-bal u0)
+			(begin
+				(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxbtc transfer-fixed xbtc-bal sender (as-contract tx-sender) none))
+				(as-contract (try! (contract-call? .token-abtc mint-fixed xbtc-bal sender)))))
+		(and (> xusd-bal u0)
+			(begin
+				(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.token-wxusd transfer-fixed xusd-bal sender (as-contract tx-sender) none))
+				(as-contract (try! (contract-call? .token-susdt mint-fixed xusd-bal sender)))))		
+		(ok true)))
+(define-public (set-paused (paused bool))
+  (begin
+    (try! (is-dao-or-extension))
+    (ok (var-set is-paused paused))))
+(define-public (transfer-fixed (token-trait <ft-trait>) (amount uint) (recipient principal))
+	(begin
+		(try! (is-dao-or-extension))
+		(as-contract (contract-call? token-trait transfer-fixed amount tx-sender recipient none))))
+(define-public (execute (sender principal))
+	(begin		
+		(try! (contract-call? .executor-dao set-extensions (list { extension: .migrate-wrapped, enabled: true })))
+		(try! (set-paused false))
+		(ok true)))
+(define-public (callback (sender principal) (payload (buff 2048)))
+	(ok true))
+```

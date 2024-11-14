@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-50000000-Smoke"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 164100 (2024-08-31T12:16:13.000Z)
+
+Source code: {{<contractref "BURN-50000000-Smoke" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R BURN-50000000-Smoke>}}
+
+Functions:
+
+

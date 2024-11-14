@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-WELSH-EA"
+draft: true
+---
+Deployer: SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5
+
+
+ 
+
+
+
+Block height: 170467 (2024-10-19T10:29:37.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-WELSH-EA" SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5 WEN-AIRDROP-FOR-WELSH-EA>}}
+
+Functions:
+
+* send-stx _private_

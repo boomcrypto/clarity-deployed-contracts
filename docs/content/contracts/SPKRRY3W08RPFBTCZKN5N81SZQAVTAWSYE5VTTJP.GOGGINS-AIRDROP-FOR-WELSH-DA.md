@@ -1,0 +1,18 @@
+---
+title: "Contract GOGGINS-AIRDROP-FOR-WELSH-DA"
+draft: true
+---
+Deployer: SPKRRY3W08RPFBTCZKN5N81SZQAVTAWSYE5VTTJP
+
+
+ 
+
+
+
+Block height: 208847 (2024-11-13T14:32:33.000Z)
+
+Source code: {{<contractref "GOGGINS-AIRDROP-FOR-WELSH-DA" SPKRRY3W08RPFBTCZKN5N81SZQAVTAWSYE5VTTJP GOGGINS-AIRDROP-FOR-WELSH-DA>}}
+
+Functions:
+
+* send-stx _private_

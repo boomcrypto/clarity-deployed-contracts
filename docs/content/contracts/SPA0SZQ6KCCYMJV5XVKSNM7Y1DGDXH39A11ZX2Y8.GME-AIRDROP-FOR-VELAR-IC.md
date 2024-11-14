@@ -1,0 +1,18 @@
+---
+title: "Contract GME-AIRDROP-FOR-VELAR-IC"
+draft: true
+---
+Deployer: SPA0SZQ6KCCYMJV5XVKSNM7Y1DGDXH39A11ZX2Y8
+
+
+ 
+
+
+
+Block height: 155156 (2024-06-24T15:10:40.000Z)
+
+Source code: {{<contractref "GME-AIRDROP-FOR-VELAR-IC" SPA0SZQ6KCCYMJV5XVKSNM7Y1DGDXH39A11ZX2Y8 GME-AIRDROP-FOR-VELAR-IC>}}
+
+Functions:
+
+* send-stx _private_

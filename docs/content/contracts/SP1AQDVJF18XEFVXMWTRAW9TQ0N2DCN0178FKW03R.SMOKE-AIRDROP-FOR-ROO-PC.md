@@ -1,0 +1,18 @@
+---
+title: "Contract SMOKE-AIRDROP-FOR-ROO-PC"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 165107 (2024-09-07T22:08:08.000Z)
+
+Source code: {{<contractref "SMOKE-AIRDROP-FOR-ROO-PC" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R SMOKE-AIRDROP-FOR-ROO-PC>}}
+
+Functions:
+
+* send-stx _private_

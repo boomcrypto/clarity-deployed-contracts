@@ -1,0 +1,18 @@
+---
+title: "Contract FRIES-AIRDROP-FOR-ROO-AB"
+draft: true
+---
+Deployer: SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X
+
+
+ 
+
+
+
+Block height: 171238 (2024-10-24T22:17:26.000Z)
+
+Source code: {{<contractref "FRIES-AIRDROP-FOR-ROO-AB" SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X FRIES-AIRDROP-FOR-ROO-AB>}}
+
+Functions:
+
+* send-stx _private_

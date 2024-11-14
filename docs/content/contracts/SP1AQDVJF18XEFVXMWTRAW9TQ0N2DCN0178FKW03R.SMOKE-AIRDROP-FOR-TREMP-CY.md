@@ -1,0 +1,18 @@
+---
+title: "Contract SMOKE-AIRDROP-FOR-TREMP-CY"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 165085 (2024-09-07T17:57:08.000Z)
+
+Source code: {{<contractref "SMOKE-AIRDROP-FOR-TREMP-CY" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R SMOKE-AIRDROP-FOR-TREMP-CY>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract BIAO-AIRDROP-FOR-STSW-YN"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 157378 (2024-07-12T02:16:03.000Z)
+
+Source code: {{<contractref "BIAO-AIRDROP-FOR-STSW-YN" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 BIAO-AIRDROP-FOR-STSW-YN>}}
+
+Functions:
+
+* send-stx _private_

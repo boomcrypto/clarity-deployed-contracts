@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-WELSH-KY"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 156522 (2024-07-05T18:31:44.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-WELSH-KY" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX WEN-AIRDROP-FOR-WELSH-KY>}}
+
+Functions:
+
+* send-stx _private_

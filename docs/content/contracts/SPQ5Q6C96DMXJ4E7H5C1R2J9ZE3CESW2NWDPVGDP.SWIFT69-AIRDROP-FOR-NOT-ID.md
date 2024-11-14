@@ -1,0 +1,18 @@
+---
+title: "Contract SWIFT69-AIRDROP-FOR-NOT-ID"
+draft: true
+---
+Deployer: SPQ5Q6C96DMXJ4E7H5C1R2J9ZE3CESW2NWDPVGDP
+
+
+ 
+
+
+
+Block height: 166006 (2024-09-15T03:23:39.000Z)
+
+Source code: {{<contractref "SWIFT69-AIRDROP-FOR-NOT-ID" SPQ5Q6C96DMXJ4E7H5C1R2J9ZE3CESW2NWDPVGDP SWIFT69-AIRDROP-FOR-NOT-ID>}}
+
+Functions:
+
+* send-stx _private_

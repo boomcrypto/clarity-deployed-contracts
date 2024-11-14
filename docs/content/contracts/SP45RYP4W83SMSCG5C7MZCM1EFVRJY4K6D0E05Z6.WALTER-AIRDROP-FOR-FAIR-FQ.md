@@ -1,0 +1,18 @@
+---
+title: "Contract WALTER-AIRDROP-FOR-FAIR-FQ"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 161732 (2024-08-13T15:14:43.000Z)
+
+Source code: {{<contractref "WALTER-AIRDROP-FOR-FAIR-FQ" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 WALTER-AIRDROP-FOR-FAIR-FQ>}}
+
+Functions:
+
+* send-stx _private_

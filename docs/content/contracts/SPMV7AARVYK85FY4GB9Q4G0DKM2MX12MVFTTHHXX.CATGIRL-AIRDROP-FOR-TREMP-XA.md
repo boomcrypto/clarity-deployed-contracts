@@ -1,0 +1,18 @@
+---
+title: "Contract CATGIRL-AIRDROP-FOR-TREMP-XA"
+draft: true
+---
+Deployer: SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX
+
+
+ 
+
+
+
+Block height: 155425 (2024-06-27T00:42:31.000Z)
+
+Source code: {{<contractref "CATGIRL-AIRDROP-FOR-TREMP-XA" SPMV7AARVYK85FY4GB9Q4G0DKM2MX12MVFTTHHXX CATGIRL-AIRDROP-FOR-TREMP-XA>}}
+
+Functions:
+
+* send-stx _private_

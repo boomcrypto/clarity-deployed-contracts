@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-925400000-TATE"
+draft: true
+---
+Deployer: SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR
+
+
+ 
+
+
+
+Block height: 165948 (2024-09-14T12:37:13.000Z)
+
+Source code: {{<contractref "BURN-925400000-TATE" SP2470N2A31DGDHX541MK2FKJSRHSCW907S5KKYTR BURN-925400000-TATE>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-ALEX-DV"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 165199 (2024-09-08T12:12:38.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-ALEX-DV" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-ALEX-DV>}}
+
+Functions:
+
+* send-stx _private_

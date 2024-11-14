@@ -1,0 +1,161 @@
+---
+title: "Trait synthetic-welsh"
+draft: true
+---
+```
+(define-constant ERR-UNAUTHORIZED u1)
+(define-constant ERR-YOU-POOR u2)
+(define-fungible-token synthetic-welsh)
+(define-data-var token-uri (optional (string-utf8 256)) (some u"https://charisma.rocks/api/v0/tokens/SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.synthetic-welsh"))
+(define-constant contract-creator tx-sender)
+(impl-trait .dao-traits-v4.sip010-ft-trait)
+
+;; SIP-010 Standard
+
+(define-public (transfer (amount uint) (from principal) (to principal) (memo (optional (buff 34))))
+    (begin
+        (asserts! (is-eq from tx-sender)
+            (err ERR-UNAUTHORIZED))
+
+        (ft-transfer? synthetic-welsh amount from to)
+    )
+)
+
+(define-read-only (get-name)
+    (ok "Synthetic Welsh")
+)
+
+(define-read-only (get-symbol)
+    (ok "iouWELSH")
+)
+
+(define-read-only (get-decimals)
+    (ok u6)
+)
+
+(define-read-only (get-balance (user principal))
+    (ok (ft-get-balance synthetic-welsh user)
+    )
+)
+
+(define-read-only (get-total-supply)
+    (ok (ft-get-supply synthetic-welsh)
+    )
+)
+
+(define-public (set-token-uri (value (string-utf8 256)))
+    (if 
+        (is-eq tx-sender contract-creator) 
+            (ok (var-set token-uri (some value))) 
+        (err ERR-UNAUTHORIZED)
+    )
+)
+
+(define-read-only (get-token-uri)
+    (ok (var-get token-uri)
+    )
+)
+
+;; send-many
+
+(define-public (send-many (recipients (list 200 { to: principal, amount: uint, memo: (optional (buff 34)) })))
+  (fold check-err
+    (map send-token recipients)
+    (ok true)
+  )
+)
+
+(define-private (check-err (result (response bool uint)) (prior (response bool uint)))
+  (match prior ok-value result
+               err-value (err err-value)
+  )
+)
+
+(define-private (send-token (recipient { to: principal, amount: uint, memo: (optional (buff 34)) }))
+  (send-token-with-memo (get amount recipient) (get to recipient) (get memo recipient))
+)
+
+(define-private (send-token-with-memo (amount uint) (to principal) (memo (optional (buff 34))))
+  (let
+    ((transferOk (try! (transfer amount tx-sender to memo))))
+    (ok transferOk)
+  )
+)
+
+(define-public (burn (amount uint))
+  (ft-burn? synthetic-welsh amount tx-sender)
+)
+
+;; initial minting
+
+(begin
+  ;; mint 2m for dex lp
+  (try! (ft-mint? synthetic-welsh u2000000000000 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS)) 
+  ;; mint ious for those who lost in the exploit
+  (try! (ft-mint? synthetic-welsh u33894836660127 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS)) 
+  (try! (ft-mint? synthetic-welsh u18920953288246 'SP3T1M18J3VX038KSYPP5G450WVWWG9F9G6GAZA4Q)) 
+  (try! (ft-mint? synthetic-welsh u6055324553993 'SP1X7X9SCHHK4JG4K5NXZ4TDNWKBQR759A85XC1PC)) 
+  (try! (ft-mint? synthetic-welsh u4154923983268 'SP3WAAYXPC6WZNEC7SHGR36D32RJPZVXRR1BG0QSY)) 
+  (try! (ft-mint? synthetic-welsh u3330572084402 'SP10ECZKBTMVGV9Z41A9QQP80TQFZK2QRSV5BWNMX)) 
+  (try! (ft-mint? synthetic-welsh u3009645998521 'SP3KVRE3RDYYSJ3JDGXKA0K15CC4JEA2ZGX4TJ5EC)) 
+  (try! (ft-mint? synthetic-welsh u1713319731083 'SP34V64PNDN1535R0DP60EBSXASJHKJ5NH8JPHBQH)) 
+  (try! (ft-mint? synthetic-welsh u1700000000000 'SPGYCP878RYFVT03ZT8TWGPKNYTSQB1578VVXHGE)) 
+  (try! (ft-mint? synthetic-welsh u1571574270869 'SPAFPBD7M89973WDEN68FKYW761RQVYNHSEFQZB9)) 
+  (try! (ft-mint? synthetic-welsh u1108812193342 'SP1FF8MVW3RD1KT6KJ0G0WPMWARRH7FN49DGE3SNT)) 
+  (try! (ft-mint? synthetic-welsh u1089210014955 'SP1NPDHF9CQ8B9Q045CCQS1MR9M9SGJ5TT6WFFCD2)) 
+  (try! (ft-mint? synthetic-welsh u1000984784674 'SP3VMAHTFVN9ED5FB073MK1B8MGNCZW5VCEHFFD7C)) 
+  (try! (ft-mint? synthetic-welsh u802524986603 'SP25DP4A9QDM42KC40EXTYQPMQCT1P0R5243GWEGS)) 
+  (try! (ft-mint? synthetic-welsh u800087421318 'SP2PPYXC7B0G5Y7JXJZ3QA2KY4657HAQTTS5KJ5HQ)) 
+  (try! (ft-mint? synthetic-welsh u730250967278 'SPCDCWBEZ9ZEK49BNMDE2MDMJ0E01W02H9SA4TVZ)) 
+  (try! (ft-mint? synthetic-welsh u513552135438 'SP1EMXT9RET8W5TXQ325BG3TJ6X15NXV5GKEGVQE6)) 
+  (try! (ft-mint? synthetic-welsh u500000000000 'SP2T5ZS0WA4BP31E3CTK5GDAY3VKJ1JXSGHDQZD66)) 
+  (try! (ft-mint? synthetic-welsh u479170109990 'SP25SF2MPZZS8Q20QA3VTYJXTHAHCRNM5MSZYDNB0)) 
+  (try! (ft-mint? synthetic-welsh u459303964948 'SP3C7508XY726X7Z4DECMDAGMD85MYPGF9GE5RQ12)) 
+  (try! (ft-mint? synthetic-welsh u452105787860 'SP2ZRF8JCSA852P2K4ZB7RS21M43NYFKPSQ7DG1N8))
+  (try! (ft-mint? synthetic-welsh u310241765061 'SP3AFSKPE2BQ84WXEZ03PQ2E18B02A8ZZWK6190KW))
+  (try! (ft-mint? synthetic-welsh u254931698800 'SP1454QJJZC5E7Q5D25R32Q1WYCGAN2MZHC1W349D))
+  (try! (ft-mint? synthetic-welsh u233228179793 'SP1953PHRF5Y4VJ4C47SP8DQKEW0TZ2ANAW4XN8R4))
+  (try! (ft-mint? synthetic-welsh u205699662809 'SP2Z8Q9C1SMZXSGKJ2Z43JMAD0AQWR14EFQRG23DY))
+  (try! (ft-mint? synthetic-welsh u185962232718 'SPAQN4FQ9FY58RCZG1GEP5Q3RSDS7PSW3QXA6XZV))
+  (try! (ft-mint? synthetic-welsh u183556697292 'SPBNZD0NMBJVRYJZ3SJ4MTRSZ3FEMGGTV2YM5MFV))
+  (try! (ft-mint? synthetic-welsh u176030926892 'SPWC45P8JQP1VG9NDNPJ6ZXPVZ4XXGK06GXR5XN3))
+  (try! (ft-mint? synthetic-welsh u144480074935 'SP5W88Y324AKEPZZJB89YKCGFKZRS5H4W8XBZ1K4))
+  (try! (ft-mint? synthetic-welsh u126263640055 'SP1DZ6CVX4TYYNRV39WBPSH18EMA5C6S6TZHBZT75))
+  (try! (ft-mint? synthetic-welsh u107504405473 'SP2Z2CBMGWB9MQZAF5Z8X56KS69XRV3SJF4WKJ7J9))
+  (try! (ft-mint? synthetic-welsh u91298423000 'SP2GYXR37WGDP11A2CT9T4HBXDPS8SA6YTHQ8A2NH))
+  (try! (ft-mint? synthetic-welsh u77486488419 'SP26PZG61DH667XCX51TZNBHXM4HG4M6B2HWVM47V))
+  (try! (ft-mint? synthetic-welsh u64755100707 'SP1RDVQHYK1DGF3WR2BM83BCCKPWDS2M8FX11WDWP))
+  (try! (ft-mint? synthetic-welsh u54473030271 'SP23S4KHTBQADHS6Q0EQVHTC7Q9YRGBSD0F3X6QY))
+  (try! (ft-mint? synthetic-welsh u53525335392 'SP2RNHHQDTHGHPEVX83291K4AQZVGWEJ7WCQQDA9R))
+  (try! (ft-mint? synthetic-welsh u51967548616 'SPJYAPKCEDJSHMAJFHZ1BQDY6ZGQZBRSWMXE2TT5))
+  (try! (ft-mint? synthetic-welsh u42334239406 'SP1HAQ4NW6HH98PMJP55CY0FXCT3XWZ95KY0Y731R))
+  (try! (ft-mint? synthetic-welsh u40110219011 'SP1KD2BS98HCAEZQB3A4AXNS2KNAFTXF2CTJBQWF6))
+  (try! (ft-mint? synthetic-welsh u39421053664 'SP1KMAA7TPZ5AZZ4W67X74MJNFKMN576604CWNBQS))
+  (try! (ft-mint? synthetic-welsh u39420090634 'SP1S9FRC77Q6P7MFABWF88S712K7RY5Q7C2YKE85M))
+  (try! (ft-mint? synthetic-welsh u27095564211 'SP3QJ0MM9G8M3DSF5NEX7CEJ99NFDQ81WG17T7RMC))
+  (try! (ft-mint? synthetic-welsh u20012510614 'SPXYRKWDFKBZN3GTS3W9A1MQ0PFTFAHZGGV9V1MJ))
+  (try! (ft-mint? synthetic-welsh u17588367448 'SP3M3Y5W82QV4S05CNMWXGKZER5YEVSRD7JXVWBBZ))
+  (try! (ft-mint? synthetic-welsh u14909226877 'SP1ERZZ0G7KERNCXQDJF4GTHCF8DGZB8001YCNPQG))
+  (try! (ft-mint? synthetic-welsh u10400127072 'SP2944D80P2TQY1EY4E5RFWP3NZFGM3N6DEWPDTGX))
+  (try! (ft-mint? synthetic-welsh u10315075896 'SPGNRR2GG22EKH62N8DCW58YB4D1PVK8TP0KQTHD))
+  (try! (ft-mint? synthetic-welsh u10032403904 'SP38M1K82GX1CK3W4KTPF6VYA4YD4YJBV3GYDQ1H))
+  (try! (ft-mint? synthetic-welsh u8851245343 'SPBC5CXC2KMBYEQJX5ANRZ7JBYQJZZQ8JN2HZ20X))
+  (try! (ft-mint? synthetic-welsh u8590102976 'SP2Z7EPPAQGCVSTSKG13DT6YRN8X21HVD83Y5YH1N))
+  (try! (ft-mint? synthetic-welsh u8582722736 'SP1FHC2XXJW3CQFNFZX60633E5WPWST4DBW8JFP66))
+  (try! (ft-mint? synthetic-welsh u8172208369 'SP327AMYAAJFHDSDGE6AD0HTACYQ4CCXJGT47M2H3))
+  (try! (ft-mint? synthetic-welsh u7369729065 'SP1P882HWHCTBKEPPEDZ1MY2CPKF1JJT2XMFNT289))
+  (try! (ft-mint? synthetic-welsh u6743219849 'SP34NJCCYANQR5YAY58JHX7AGCZ4E82EFYD0FR0TP))
+  (try! (ft-mint? synthetic-welsh u4387479875 'SP2SMSPX443W4HTX9YT9WVV5C0A212FJ8WQMGT51M))
+  (try! (ft-mint? synthetic-welsh u2915663675 'SPENXM9Q8CKQGJF9DBRF12WR0SQXFQMYJKRAZG3F))
+  (try! (ft-mint? synthetic-welsh u2577128421 'SP2G9AFSSMAK1S8PSCQTX19M40ENWFV4HZDDT7TYH))
+  (try! (ft-mint? synthetic-welsh u1708384018 'SP2FPTH274BXVB1E2HNXBAMGABV5TCSZTFNC16FR3))
+  (try! (ft-mint? synthetic-welsh u915077706 'SP1F1JA8SSGGGFN0PDX55J25YRNRJQAWY56QR0F6J))
+  (try! (ft-mint? synthetic-welsh u861331998 'SPKZT8CFR5DNTKDR2BCWQA9WR32GP3GT0CPV8V24))
+  (try! (ft-mint? synthetic-welsh u500000000 'SP2A0VW071VE5QXZ9699FK29F0XXQ0B8AQ5BSC431))
+  (try! (ft-mint? synthetic-welsh u424453415 'SPWRJ6AQRYR8E68GS8XP3TGM33FBA898E08PM1MD))
+  (try! (ft-mint? synthetic-welsh u416982969 'SPHZW8N7EMXHY7N72JNE2EE1TD4Z1FZ8GENAHYFS))
+  (try! (ft-mint? synthetic-welsh u302191663 'SP2QVKZ2GWP97TW4RNCT8TN65JRJPVAKERHYSS13E))
+  (try! (ft-mint? synthetic-welsh u100000000 'SPPB155Z73HHGF2EDE1FPZDEM0NY65PTMQK17W75))
+  (try! (ft-mint? synthetic-welsh u48150359 'SP3J3WXWS5QTABAE0S14XX8BXPW76RJMADGAX3FR6))
+)
+```

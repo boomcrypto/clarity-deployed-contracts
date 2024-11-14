@@ -1,0 +1,109 @@
+---
+title: "Trait batch-1718980288025"
+draft: true
+---
+```
+;; title: template-batch-endorsements
+
+;; traits
+;;
+(impl-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)
+
+;; token definitions
+;; 
+;; (VAR) based on title of collection
+(define-non-fungible-token endorsement uint)
+;; constants
+;;
+;; (VAR) changes based on the number of recipients
+(define-constant TOTAL u40)
+(define-constant ERROR-NOT-IMPLEMENTED u1)
+(define-constant ERROR-UNAUTHORIZED u1000)
+(define-constant ERROR-ALREADY-MINTED u1001)
+
+;; (VAR) changes based on the collection ipfs hash
+(define-constant IPFS-ROOT "ipfs://ipfs/bafybeie3g533wgszho27a4qjcbm4a6zg2tbejquakduaytsxauhbnbcfgy/{id}.json")
+
+
+;; data vars
+;;
+(define-data-var last-token-id uint u0)
+;; data maps
+;;
+
+
+;; public functions
+;;
+(define-private (mint (address principal))
+    (let (
+        (token-id (+ u1 (var-get last-token-id)))
+    ) 
+    (var-set last-token-id token-id)
+    (nft-mint? endorsement token-id address)))
+
+;; Non transferrable
+(define-public (transfer (id uint) (sender principal) (recipient principal)) 
+    (err ERROR-NOT-IMPLEMENTED))
+
+(define-public (burn (id uint)) 
+    (let (
+        (owner (unwrap! (nft-get-owner? endorsement id) (err ERROR-UNAUTHORIZED)))
+    ) 
+    (asserts! (is-eq owner tx-sender) (err ERROR-UNAUTHORIZED))
+    (nft-burn? endorsement id owner)))
+;; read only functions
+;;
+
+;; this would be constant to mark collection as preminted
+(define-read-only (get-last-token-id) 
+    (ok TOTAL))
+
+(define-read-only (get-owner (id uint))
+    (ok (nft-get-owner? endorsement id)))
+
+(define-read-only (get-token-uri (token-id uint))
+    (ok (some IPFS-ROOT)))
+
+;;; mint calls here
+(mint 'SP07XHRXFN0226RZBB2WK7JVM7EGDFZHEGFT75KH)
+(mint 'SP12H55ASYC3ZQA8ANA1GYM125J04NV04XKDR24MG)
+(mint 'SP177JV93RYPWWTX5F0MK9NVQ3YTXB4YQZGBPP6H4)
+(mint 'SP1EMXT9RET8W5TXQ325BG3TJ6X15NXV5GKEGVQE6)
+(mint 'SP1FKNDXR7XQQF001C45V0BCMTDXF90RHNNQ5HAYH)
+(mint 'SP1M15K5RT7C0DTHSTB4N0DXNTEKJ7PG0RAE75VC2)
+(mint 'SP1RF8HQKYXRQEAKA0YR5TJCJRGG7KWMNBNXB1TWB)
+(mint 'SP1ZCYG0D3HCK2F7SY8VH9ZREB0JWCBSAPFNS8V5Z)
+(mint 'SP1ZCYG0D3HCK2F7SY8VH9ZREB0JWCBSAPFNS8V5Z)
+(mint 'SP20YV1NB4NC6BJ605NF43QXRNF5XNTF6C4SSMGVD)
+(mint 'SP2116N7B3R9BP8HZQG7WHAQMRQJJB4G8PZ920Q58)
+(mint 'SP27G4BAETJAXHDNCGVAC2036476MC3BE9K87CJ2D)
+(mint 'SP27X9GJABE7YC1XSJZ42XNAA518SAP04XBC6Z9MZ)
+(mint 'SP28RZ1QXMXJXVKRRCR3D7GR5D48XY0NNA9MZWHJB)
+(mint 'SP2B2Z4BMMY9R592CVT07W18D3X69X1TPZ1KCAQAT)
+(mint 'SP2F0DP9Z3KSS0DABDBJN0DA0SHMCVWHXPVTH3PJJ)
+(mint 'SP2H6HVZK6X3Z8F4PKF284AZJR6FH4H9J4W6KVV8T)
+(mint 'SP2HJVJQS0TRBTQ1WAWWN9H9W2HKGDZ7H5EZCEAQC)
+(mint 'SP2NHZDAMMEEASE4DKHYYCVAG8RF8PA7YHPPW40BX)
+(mint 'SP2RNHHQDTHGHPEVX83291K4AQZVGWEJ7WCQQDA9R)
+(mint 'SP32AEEF6WW5Y0NMJ1S8SBSZDAY8R5J32NBZFPKKZ)
+(mint 'SP36XZDY557Y1CQ6H5DZ1NGZP1Y943RBTY0KBWAKG)
+(mint 'SP3805SB51TKD7ER035N4PH1J65EMQ50RGCPM7A3S)
+(mint 'SP38D3077Y3X898RD3R64QT8QH5BFCREZMXRY1Z5Q)
+(mint 'SP3EN2WMVAP7SNVV1QJA0ZZ6TC3R0044FZXE8PQTX)
+(mint 'SP3K03B3549K9X6SW9MY8Y81EMDE2M3N93A1B7AFJ)
+(mint 'SP3RDC4C9B0A2FG8B7DQ9MBTFPYQZNDAVCBME8Q41)
+(mint 'SP3RW6BW9F5STYG2K8XS5EP5PM33E0DNQT4XEG864)
+(mint 'SP3T23YN6MBF44YNV910FD8JNMN1NZYGKG3MMZ73X)
+(mint 'SP70S68PQ3FZ5N8ERJVXQQXWBWNTSCMFZWWFZXNR)
+(mint 'SP7QQ9DV0DMV7YW4HR713MKBWADVA0BFC2J65PJT)
+(mint 'SP921QAAVJPF22MFK5960BV9Q3GS5H1Z3HN4GWEQ)
+(mint 'SPBNW26DF9PYCC0KZ1Q695GWB7KDWWRC5EHCDZTN)
+(mint 'SPM1Q7YG18378H6W254YN8PABEVRPT38ZCY01SJD)
+(mint 'SPP3HM2E4JXGT26G1QRWQ2YTR5WT040S5NKXZYFC)
+(mint 'SPP74WS833MY99FXA1H2QC64RFMVCNZ37765FM3R)
+(mint 'SPPCHF5474M4X5ZS79TCKSNRKJ24Y71J77ZKTAP3)
+(mint 'SPT0C06EVZ9JHRKVKJJ5NXGAJQSREP20TYQX2QVJ)
+(mint 'SPW0CHYR5S4J0DM03ACH2PH9ZHPFJ776Z1EQBPSV)
+(mint 'SPXW8BXG2S88SX7C1CJ3BVFEGR51SFGRF8DMYC93)
+
+```

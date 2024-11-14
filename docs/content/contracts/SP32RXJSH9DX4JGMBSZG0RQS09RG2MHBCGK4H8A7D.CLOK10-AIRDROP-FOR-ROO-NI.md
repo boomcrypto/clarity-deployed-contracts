@@ -1,0 +1,18 @@
+---
+title: "Contract CLOK10-AIRDROP-FOR-ROO-NI"
+draft: true
+---
+Deployer: SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D
+
+
+ 
+
+
+
+Block height: 158515 (2024-07-20T11:22:03.000Z)
+
+Source code: {{<contractref "CLOK10-AIRDROP-FOR-ROO-NI" SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D CLOK10-AIRDROP-FOR-ROO-NI>}}
+
+Functions:
+
+* send-stx _private_

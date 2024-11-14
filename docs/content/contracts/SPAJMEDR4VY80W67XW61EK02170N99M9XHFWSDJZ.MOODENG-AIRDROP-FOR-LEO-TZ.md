@@ -1,0 +1,18 @@
+---
+title: "Contract MOODENG-AIRDROP-FOR-LEO-TZ"
+draft: true
+---
+Deployer: SPAJMEDR4VY80W67XW61EK02170N99M9XHFWSDJZ
+
+
+ 
+
+
+
+Block height: 170657 (2024-10-20T16:37:49.000Z)
+
+Source code: {{<contractref "MOODENG-AIRDROP-FOR-LEO-TZ" SPAJMEDR4VY80W67XW61EK02170N99M9XHFWSDJZ MOODENG-AIRDROP-FOR-LEO-TZ>}}
+
+Functions:
+
+* send-stx _private_

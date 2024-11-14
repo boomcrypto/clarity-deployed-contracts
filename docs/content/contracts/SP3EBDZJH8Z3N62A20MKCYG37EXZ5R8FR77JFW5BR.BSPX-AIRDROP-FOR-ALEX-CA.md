@@ -1,0 +1,18 @@
+---
+title: "Contract BSPX-AIRDROP-FOR-ALEX-CA"
+draft: true
+---
+Deployer: SP3EBDZJH8Z3N62A20MKCYG37EXZ5R8FR77JFW5BR
+
+
+ 
+
+
+
+Block height: 209105 (2024-11-13T16:00:11.000Z)
+
+Source code: {{<contractref "BSPX-AIRDROP-FOR-ALEX-CA" SP3EBDZJH8Z3N62A20MKCYG37EXZ5R8FR77JFW5BR BSPX-AIRDROP-FOR-ALEX-CA>}}
+
+Functions:
+
+* send-stx _private_

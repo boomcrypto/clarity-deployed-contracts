@@ -1,0 +1,18 @@
+---
+title: "Contract SCOOBY-AIRDROP-FOR-POMBOO-WM"
+draft: true
+---
+Deployer: SPK5HH9QVYDNXNDCFH6W5AMRSR5K83ZMT4GPPK7M
+
+
+ 
+
+
+
+Block height: 157961 (2024-07-16T06:49:46.000Z)
+
+Source code: {{<contractref "SCOOBY-AIRDROP-FOR-POMBOO-WM" SPK5HH9QVYDNXNDCFH6W5AMRSR5K83ZMT4GPPK7M SCOOBY-AIRDROP-FOR-POMBOO-WM>}}
+
+Functions:
+
+* send-stx _private_

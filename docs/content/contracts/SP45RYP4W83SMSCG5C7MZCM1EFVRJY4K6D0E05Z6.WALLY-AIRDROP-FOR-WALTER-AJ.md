@@ -1,0 +1,18 @@
+---
+title: "Contract WALLY-AIRDROP-FOR-WALTER-AJ"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 168121 (2024-10-02T05:16:48.000Z)
+
+Source code: {{<contractref "WALLY-AIRDROP-FOR-WALTER-AJ" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 WALLY-AIRDROP-FOR-WALTER-AJ>}}
+
+Functions:
+
+* send-stx _private_

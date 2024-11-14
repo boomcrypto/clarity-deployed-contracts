@@ -1,0 +1,18 @@
+---
+title: "Contract STONX-AIRDROP-FOR-WELSH-RL"
+draft: true
+---
+Deployer: SP227N7W9RAE6ME6YGCMZNAS783GWQMMYSYKNA3XZ
+
+
+ 
+
+
+
+Block height: 164804 (2024-09-05T14:25:30.000Z)
+
+Source code: {{<contractref "STONX-AIRDROP-FOR-WELSH-RL" SP227N7W9RAE6ME6YGCMZNAS783GWQMMYSYKNA3XZ STONX-AIRDROP-FOR-WELSH-RL>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract GYAT-AIRDROP-FOR-WELSH-VW"
+draft: true
+---
+Deployer: SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH
+
+
+ 
+
+
+
+Block height: 161888 (2024-08-14T19:44:30.000Z)
+
+Source code: {{<contractref "GYAT-AIRDROP-FOR-WELSH-VW" SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH GYAT-AIRDROP-FOR-WELSH-VW>}}
+
+Functions:
+
+* send-stx _private_

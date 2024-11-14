@@ -1,0 +1,18 @@
+---
+title: "Contract NYC-AIRDROP-FOR-MOON-JE"
+draft: true
+---
+Deployer: SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N
+
+
+ 
+
+
+
+Block height: 180031 (2024-11-01T04:41:17.000Z)
+
+Source code: {{<contractref "NYC-AIRDROP-FOR-MOON-JE" SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N NYC-AIRDROP-FOR-MOON-JE>}}
+
+Functions:
+
+* send-stx _private_

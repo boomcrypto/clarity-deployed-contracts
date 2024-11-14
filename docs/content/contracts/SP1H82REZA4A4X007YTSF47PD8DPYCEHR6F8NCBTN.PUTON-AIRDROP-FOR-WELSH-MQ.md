@@ -1,0 +1,18 @@
+---
+title: "Contract PUTON-AIRDROP-FOR-WELSH-MQ"
+draft: true
+---
+Deployer: SP1H82REZA4A4X007YTSF47PD8DPYCEHR6F8NCBTN
+
+
+ 
+
+
+
+Block height: 165558 (2024-09-11T07:19:38.000Z)
+
+Source code: {{<contractref "PUTON-AIRDROP-FOR-WELSH-MQ" SP1H82REZA4A4X007YTSF47PD8DPYCEHR6F8NCBTN PUTON-AIRDROP-FOR-WELSH-MQ>}}
+
+Functions:
+
+* send-stx _private_

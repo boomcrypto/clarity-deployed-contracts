@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-467867-THCAM"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 183940 (2024-11-03T02:55:51.000Z)
+
+Source code: {{<contractref "BURN-467867-THCAM" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR BURN-467867-THCAM>}}
+
+Functions:
+
+* send-stx _private_

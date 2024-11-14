@@ -1,0 +1,18 @@
+---
+title: "Contract YACHT-AIRDROP-FOR-LISTX-GE"
+draft: true
+---
+Deployer: SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY
+
+
+ 
+
+
+
+Block height: 155343 (2024-06-26T07:16:28.000Z)
+
+Source code: {{<contractref "YACHT-AIRDROP-FOR-LISTX-GE" SP1TWRN18FMT7PFJ1511BTRAFQ8E3A1EQ7BNXZKY YACHT-AIRDROP-FOR-LISTX-GE>}}
+
+Functions:
+
+* send-stx _private_

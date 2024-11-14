@@ -1,0 +1,18 @@
+---
+title: "Contract GOLF-AIRDROP-FOR-TREMP-LU"
+draft: true
+---
+Deployer: SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD
+
+
+ 
+
+
+
+Block height: 155221 (2024-06-25T04:02:42.000Z)
+
+Source code: {{<contractref "GOLF-AIRDROP-FOR-TREMP-LU" SP1CYY7BKYD60R08K734K9SC6GRZD4ZSN4WCDE5BD GOLF-AIRDROP-FOR-TREMP-LU>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract MANKO-AIRDROP-FOR-LEO-QU"
+draft: true
+---
+Deployer: SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9
+
+
+ 
+
+
+
+Block height: 167486 (2024-09-27T01:39:33.000Z)
+
+Source code: {{<contractref "MANKO-AIRDROP-FOR-LEO-QU" SP37AN9PHYMHPC0VJ4N7MZNXQDCFYVGYGFYFCNVC9 MANKO-AIRDROP-FOR-LEO-QU>}}
+
+Functions:
+
+* send-stx _private_

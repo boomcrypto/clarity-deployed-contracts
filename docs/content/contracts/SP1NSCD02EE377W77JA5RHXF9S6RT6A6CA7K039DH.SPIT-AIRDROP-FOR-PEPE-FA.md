@@ -1,0 +1,18 @@
+---
+title: "Contract SPIT-AIRDROP-FOR-PEPE-FA"
+draft: true
+---
+Deployer: SP1NSCD02EE377W77JA5RHXF9S6RT6A6CA7K039DH
+
+
+ 
+
+
+
+Block height: 155084 (2024-06-24T03:28:04.000Z)
+
+Source code: {{<contractref "SPIT-AIRDROP-FOR-PEPE-FA" SP1NSCD02EE377W77JA5RHXF9S6RT6A6CA7K039DH SPIT-AIRDROP-FOR-PEPE-FA>}}
+
+Functions:
+
+* send-stx _private_

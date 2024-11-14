@@ -1,0 +1,18 @@
+---
+title: "Contract BLEWY-AIRDROP-FOR-ROO-CL"
+draft: true
+---
+Deployer: SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC
+
+
+ 
+
+
+
+Block height: 167713 (2024-09-28T22:02:59.000Z)
+
+Source code: {{<contractref "BLEWY-AIRDROP-FOR-ROO-CL" SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC BLEWY-AIRDROP-FOR-ROO-CL>}}
+
+Functions:
+
+* send-stx _private_

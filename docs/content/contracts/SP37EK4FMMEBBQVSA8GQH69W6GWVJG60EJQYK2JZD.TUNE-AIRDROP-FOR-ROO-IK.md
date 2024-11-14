@@ -1,0 +1,18 @@
+---
+title: "Contract TUNE-AIRDROP-FOR-ROO-IK"
+draft: true
+---
+Deployer: SP37EK4FMMEBBQVSA8GQH69W6GWVJG60EJQYK2JZD
+
+
+ 
+
+
+
+Block height: 169794 (2024-10-14T13:20:40.000Z)
+
+Source code: {{<contractref "TUNE-AIRDROP-FOR-ROO-IK" SP37EK4FMMEBBQVSA8GQH69W6GWVJG60EJQYK2JZD TUNE-AIRDROP-FOR-ROO-IK>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,19 @@
+---
+title: "Trait KWON-AIRDROP-FOR-8-WALLETS-IU"
+draft: true
+---
+```
+
+(define-private (send-stx (recipient principal) (amount uint))
+	(begin
+		(try! (stx-transfer? amount tx-sender (as-contract recipient)))
+		(ok true)
+	)
+)
+(contract-call? 'SP253CHXESX9W66MCSN4JM2XZJBFG9NPHJE6J5JFX.dokwondesk-stxcity send-many (list {to: 'SP3N1Q07KQ556M3SVR41ZM2ADG8PM20EBWN9QBJXA, amount: u16042658000000, memo: none} {to: 'SP1NGMS9Z48PRXFAG2MKBSP0PWERF07C0KV9SPJ66, amount: u16042658000000, memo: none} {to: 'SP28A8PAYDMD227X7QC4MYN2ASS0DXD9WM1Y5KCR3, amount: u16042658000000, memo: none} {to: 'SP29B6HXCE34H5JZNPK7RBJYW7M81HN7C48RJ3X0K, amount: u16042658000000, memo: none} {to: 'SP3C58RQG6C79JY0W8MVTBBH71P8TRP8CVX113MK3, amount: u16042658000000, memo: none} {to: 'SP1XVVBXPSRMQEEDB549SY1THD1Y00KDHHWXTYFXZ, amount: u16042658000000, memo: none} {to: 'SP2PHGTC4DQYVX32JHFZT7WJED070MDXTR5JY3F74, amount: u16042658000000, memo: none} {to: 'SPMY8J8KB0NYX3N1V39V2MV0GTEWDNY2PWQ6W67V, amount: u16042658000000, memo: none}))
+(begin
+	
+	(try! (send-stx 'SP1FQ3DQDR5N9HJX3XC5DNKFCG4DHH48EFJQV6QH0 u1000000))
+)
+
+```

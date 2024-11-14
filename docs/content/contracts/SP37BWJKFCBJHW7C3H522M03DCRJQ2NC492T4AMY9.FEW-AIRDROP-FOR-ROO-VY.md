@@ -1,0 +1,18 @@
+---
+title: "Contract FEW-AIRDROP-FOR-ROO-VY"
+draft: true
+---
+Deployer: SP37BWJKFCBJHW7C3H522M03DCRJQ2NC492T4AMY9
+
+
+ 
+
+
+
+Block height: 155617 (2024-06-28T16:56:52.000Z)
+
+Source code: {{<contractref "FEW-AIRDROP-FOR-ROO-VY" SP37BWJKFCBJHW7C3H522M03DCRJQ2NC492T4AMY9 FEW-AIRDROP-FOR-ROO-VY>}}
+
+Functions:
+
+* send-stx _private_

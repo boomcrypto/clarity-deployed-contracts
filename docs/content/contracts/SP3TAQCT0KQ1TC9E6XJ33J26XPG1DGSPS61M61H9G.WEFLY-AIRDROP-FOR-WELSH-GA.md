@@ -1,0 +1,18 @@
+---
+title: "Contract WEFLY-AIRDROP-FOR-WELSH-GA"
+draft: true
+---
+Deployer: SP3TAQCT0KQ1TC9E6XJ33J26XPG1DGSPS61M61H9G
+
+
+ 
+
+
+
+Block height: 164693 (2024-09-04T20:35:11.000Z)
+
+Source code: {{<contractref "WEFLY-AIRDROP-FOR-WELSH-GA" SP3TAQCT0KQ1TC9E6XJ33J26XPG1DGSPS61M61H9G WEFLY-AIRDROP-FOR-WELSH-GA>}}
+
+Functions:
+
+* send-stx _private_

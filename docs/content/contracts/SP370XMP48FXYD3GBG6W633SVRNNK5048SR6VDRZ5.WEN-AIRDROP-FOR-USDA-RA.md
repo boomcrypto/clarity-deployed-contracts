@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-USDA-RA"
+draft: true
+---
+Deployer: SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5
+
+
+ 
+
+
+
+Block height: 170634 (2024-10-20T13:11:02.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-USDA-RA" SP370XMP48FXYD3GBG6W633SVRNNK5048SR6VDRZ5 WEN-AIRDROP-FOR-USDA-RA>}}
+
+Functions:
+
+* send-stx _private_

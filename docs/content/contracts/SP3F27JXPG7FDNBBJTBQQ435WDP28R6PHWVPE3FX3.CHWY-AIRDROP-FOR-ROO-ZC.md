@@ -1,0 +1,18 @@
+---
+title: "Contract CHWY-AIRDROP-FOR-ROO-ZC"
+draft: true
+---
+Deployer: SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3
+
+
+ 
+
+
+
+Block height: 156522 (2024-07-05T18:31:44.000Z)
+
+Source code: {{<contractref "CHWY-AIRDROP-FOR-ROO-ZC" SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3 CHWY-AIRDROP-FOR-ROO-ZC>}}
+
+Functions:
+
+* send-stx _private_

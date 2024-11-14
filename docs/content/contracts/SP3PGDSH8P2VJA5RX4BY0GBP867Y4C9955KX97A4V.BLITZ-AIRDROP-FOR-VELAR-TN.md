@@ -1,0 +1,18 @@
+---
+title: "Contract BLITZ-AIRDROP-FOR-VELAR-TN"
+draft: true
+---
+Deployer: SP3PGDSH8P2VJA5RX4BY0GBP867Y4C9955KX97A4V
+
+
+ 
+
+
+
+Block height: 156719 (2024-07-07T04:27:07.000Z)
+
+Source code: {{<contractref "BLITZ-AIRDROP-FOR-VELAR-TN" SP3PGDSH8P2VJA5RX4BY0GBP867Y4C9955KX97A4V BLITZ-AIRDROP-FOR-VELAR-TN>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract FRED-AIRDROP-FOR-ROO-RT"
+draft: true
+---
+Deployer: SP33RS6M5D5FJAN9HGARY5TQW8F7FXZXPXGHX7NV1
+
+
+ 
+
+
+
+Block height: 185474 (2024-11-04T01:29:07.000Z)
+
+Source code: {{<contractref "FRED-AIRDROP-FOR-ROO-RT" SP33RS6M5D5FJAN9HGARY5TQW8F7FXZXPXGHX7NV1 FRED-AIRDROP-FOR-ROO-RT>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,22 @@
+---
+title: "Trait agp333"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant ONE_8 u100000000)
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3SSFEDCVS5JGF972A8JP4WFGBGJ6C8M7H1S1E8E))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1J9610W1ZEQW91BFC0NZVNE1G6SJG6EX3MS1E7K))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1XZAVJA5D1SFSEZTCQ239S137WRGX3B4DECA8JC))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2J9JNX7TKXB89VQ9767R9AY4VT5W78BZC3H76XF))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1YR8XPY3JJZXQ91MMFTE1FT7RA7DF6NAWMQ2C84))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1MRA7ZXQF2EH2QS7VPDYG0GH7NXQ9T3T0ZHG936))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP36VW9RNZV667DFP2KZEC055ZJ8XSEZDX3W8WS0F))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3CQKDTCWDEDFRP8F0D0RNY86ZA497BZJX9DPTEX))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3HKWW21Y42WY9E729DBQA2H0VR77QGKSATNH6EA))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2W54KPAAVAD9E3QF8CB6QC46190D0AZCA0BD950))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3WXWMD8NC947EASJCMCVT11YDDMBHPXT8WE9WMF))
+(ok true)))
+```

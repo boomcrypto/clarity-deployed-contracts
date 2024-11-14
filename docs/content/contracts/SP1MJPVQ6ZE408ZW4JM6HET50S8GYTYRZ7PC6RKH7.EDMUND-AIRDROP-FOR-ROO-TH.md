@@ -1,0 +1,18 @@
+---
+title: "Contract EDMUND-AIRDROP-FOR-ROO-TH"
+draft: true
+---
+Deployer: SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7
+
+
+ 
+
+
+
+Block height: 155166 (2024-06-24T18:05:31.000Z)
+
+Source code: {{<contractref "EDMUND-AIRDROP-FOR-ROO-TH" SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7 EDMUND-AIRDROP-FOR-ROO-TH>}}
+
+Functions:
+
+* send-stx _private_

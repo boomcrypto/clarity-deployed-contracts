@@ -1,0 +1,18 @@
+---
+title: "Contract FRIES-AIRDROP-FOR-WELSH-FI"
+draft: true
+---
+Deployer: SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X
+
+
+ 
+
+
+
+Block height: 179558 (2024-10-31T22:44:27.000Z)
+
+Source code: {{<contractref "FRIES-AIRDROP-FOR-WELSH-FI" SPC743GZ4Y1CPNXTSB1J3NRF9NTRPMN2K9J32W0X FRIES-AIRDROP-FOR-WELSH-FI>}}
+
+Functions:
+
+* send-stx _private_

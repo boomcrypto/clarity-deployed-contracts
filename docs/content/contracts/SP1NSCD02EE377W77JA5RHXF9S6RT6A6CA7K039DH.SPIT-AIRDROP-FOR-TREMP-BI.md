@@ -1,0 +1,18 @@
+---
+title: "Contract SPIT-AIRDROP-FOR-TREMP-BI"
+draft: true
+---
+Deployer: SP1NSCD02EE377W77JA5RHXF9S6RT6A6CA7K039DH
+
+
+ 
+
+
+
+Block height: 159311 (2024-07-25T23:20:10.000Z)
+
+Source code: {{<contractref "SPIT-AIRDROP-FOR-TREMP-BI" SP1NSCD02EE377W77JA5RHXF9S6RT6A6CA7K039DH SPIT-AIRDROP-FOR-TREMP-BI>}}
+
+Functions:
+
+* send-stx _private_

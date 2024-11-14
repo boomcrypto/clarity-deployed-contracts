@@ -1,0 +1,18 @@
+---
+title: "Contract GYAT-AIRDROP-FOR-NOT-NB"
+draft: true
+---
+Deployer: SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH
+
+
+ 
+
+
+
+Block height: 162584 (2024-08-20T03:35:02.000Z)
+
+Source code: {{<contractref "GYAT-AIRDROP-FOR-NOT-NB" SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH GYAT-AIRDROP-FOR-NOT-NB>}}
+
+Functions:
+
+* send-stx _private_

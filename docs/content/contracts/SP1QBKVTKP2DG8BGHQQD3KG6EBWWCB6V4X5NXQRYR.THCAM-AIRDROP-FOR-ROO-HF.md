@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-ROO-HF"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 165357 (2024-09-09T15:32:12.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-ROO-HF" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-ROO-HF>}}
+
+Functions:
+
+* send-stx _private_

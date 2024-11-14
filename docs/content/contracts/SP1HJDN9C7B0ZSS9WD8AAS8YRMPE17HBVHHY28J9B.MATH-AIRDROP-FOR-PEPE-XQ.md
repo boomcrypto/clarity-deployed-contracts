@@ -1,0 +1,18 @@
+---
+title: "Contract MATH-AIRDROP-FOR-PEPE-XQ"
+draft: true
+---
+Deployer: SP1HJDN9C7B0ZSS9WD8AAS8YRMPE17HBVHHY28J9B
+
+
+ 
+
+
+
+Block height: 169550 (2024-10-12T15:54:47.000Z)
+
+Source code: {{<contractref "MATH-AIRDROP-FOR-PEPE-XQ" SP1HJDN9C7B0ZSS9WD8AAS8YRMPE17HBVHHY28J9B MATH-AIRDROP-FOR-PEPE-XQ>}}
+
+Functions:
+
+* send-stx _private_

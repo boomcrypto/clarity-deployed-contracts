@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-983422363-Beans"
+draft: true
+---
+Deployer: SP23QP2XG6Q8HQZNKGTQZR9S8PFECAGFSC94X4237
+
+
+ 
+
+
+
+Block height: 198669 (2024-11-09T22:29:43.000Z)
+
+Source code: {{<contractref "BURN-983422363-Beans" SP23QP2XG6Q8HQZNKGTQZR9S8PFECAGFSC94X4237 BURN-983422363-Beans>}}
+
+Functions:
+
+

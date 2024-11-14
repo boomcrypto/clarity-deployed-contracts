@@ -1,0 +1,18 @@
+---
+title: "Contract BEARD-AIRDROP-FOR-FAIR-BX"
+draft: true
+---
+Deployer: SP38GBVK5HEJ0MBH4CRJ9HQEW86HX0H9AP1HZ3SVZ
+
+
+ 
+
+
+
+Block height: 161616 (2024-08-12T16:18:16.000Z)
+
+Source code: {{<contractref "BEARD-AIRDROP-FOR-FAIR-BX" SP38GBVK5HEJ0MBH4CRJ9HQEW86HX0H9AP1HZ3SVZ BEARD-AIRDROP-FOR-FAIR-BX>}}
+
+Functions:
+
+* send-stx _private_

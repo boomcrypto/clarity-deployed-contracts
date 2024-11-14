@@ -1,0 +1,18 @@
+---
+title: "Contract BRICS-AIRDROP-FOR-STSW-WM"
+draft: true
+---
+Deployer: SP2FB951H8AM8RHJYKCZ46GYCSQC6DTQJYFY0KQ27
+
+
+ 
+
+
+
+Block height: 155111 (2024-06-24T07:48:26.000Z)
+
+Source code: {{<contractref "BRICS-AIRDROP-FOR-STSW-WM" SP2FB951H8AM8RHJYKCZ46GYCSQC6DTQJYFY0KQ27 BRICS-AIRDROP-FOR-STSW-WM>}}
+
+Functions:
+
+* send-stx _private_

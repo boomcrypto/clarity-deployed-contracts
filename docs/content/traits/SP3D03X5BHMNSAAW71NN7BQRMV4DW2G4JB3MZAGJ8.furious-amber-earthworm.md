@@ -1,0 +1,9 @@
+---
+title: "Trait furious-amber-earthworm"
+draft: true
+---
+```
+(contract-call? .zesty-chocolate-skink name-airdrop 0x7365746f7261 0x627463 u106436 u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+(contract-call? .zesty-chocolate-skink name-airdrop 0x7365747061746f 0x627463 u99697 u262800 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+(contract-call? .zesty-chocolate-skink name-airdrop 0x736574706179 0x627463 u32857 u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+```

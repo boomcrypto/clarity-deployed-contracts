@@ -1,0 +1,18 @@
+---
+title: "Contract GME-AIRDROP-FOR-LISTX-FF"
+draft: true
+---
+Deployer: SPA0SZQ6KCCYMJV5XVKSNM7Y1DGDXH39A11ZX2Y8
+
+
+ 
+
+
+
+Block height: 155159 (2024-06-24T16:21:37.000Z)
+
+Source code: {{<contractref "GME-AIRDROP-FOR-LISTX-FF" SPA0SZQ6KCCYMJV5XVKSNM7Y1DGDXH39A11ZX2Y8 GME-AIRDROP-FOR-LISTX-FF>}}
+
+Functions:
+
+* send-stx _private_

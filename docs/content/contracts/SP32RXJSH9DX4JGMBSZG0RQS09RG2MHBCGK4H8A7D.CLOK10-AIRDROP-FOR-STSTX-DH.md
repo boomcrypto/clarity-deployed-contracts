@@ -1,0 +1,18 @@
+---
+title: "Contract CLOK10-AIRDROP-FOR-STSTX-DH"
+draft: true
+---
+Deployer: SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D
+
+
+ 
+
+
+
+Block height: 158179 (2024-07-17T20:00:50.000Z)
+
+Source code: {{<contractref "CLOK10-AIRDROP-FOR-STSTX-DH" SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D CLOK10-AIRDROP-FOR-STSTX-DH>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract DOGSTX-AIRDROP-FOR-FAIR-WO"
+draft: true
+---
+Deployer: SP308FR1T8908G7QP5XNXGVTMH32650A9H8GM5V07
+
+
+ 
+
+
+
+Block height: 167269 (2024-09-25T06:35:28.000Z)
+
+Source code: {{<contractref "DOGSTX-AIRDROP-FOR-FAIR-WO" SP308FR1T8908G7QP5XNXGVTMH32650A9H8GM5V07 DOGSTX-AIRDROP-FOR-FAIR-WO>}}
+
+Functions:
+
+* send-stx _private_

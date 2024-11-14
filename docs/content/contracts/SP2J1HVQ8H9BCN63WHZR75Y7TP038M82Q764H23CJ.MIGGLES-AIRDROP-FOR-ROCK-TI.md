@@ -1,0 +1,18 @@
+---
+title: "Contract MIGGLES-AIRDROP-FOR-ROCK-TI"
+draft: true
+---
+Deployer: SP2J1HVQ8H9BCN63WHZR75Y7TP038M82Q764H23CJ
+
+
+ 
+
+
+
+Block height: 158316 (2024-07-18T23:43:06.000Z)
+
+Source code: {{<contractref "MIGGLES-AIRDROP-FOR-ROCK-TI" SP2J1HVQ8H9BCN63WHZR75Y7TP038M82Q764H23CJ MIGGLES-AIRDROP-FOR-ROCK-TI>}}
+
+Functions:
+
+* send-stx _private_

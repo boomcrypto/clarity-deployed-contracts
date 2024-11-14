@@ -1,0 +1,18 @@
+---
+title: "Contract TEN-AIRDROP-FOR-ODIN-EI"
+draft: true
+---
+Deployer: SP3QJ0MM9G8M3DSF5NEX7CEJ99NFDQ81WG17T7RMC
+
+
+ 
+
+
+
+Block height: 167484 (2024-09-27T01:21:46.000Z)
+
+Source code: {{<contractref "TEN-AIRDROP-FOR-ODIN-EI" SP3QJ0MM9G8M3DSF5NEX7CEJ99NFDQ81WG17T7RMC TEN-AIRDROP-FOR-ODIN-EI>}}
+
+Functions:
+
+* send-stx _private_

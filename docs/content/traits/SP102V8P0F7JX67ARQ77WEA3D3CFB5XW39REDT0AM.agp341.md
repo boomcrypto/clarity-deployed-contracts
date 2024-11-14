@@ -1,0 +1,41 @@
+---
+title: "Trait agp341"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-public (execute (sender principal))
+	(begin
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP35YTZG77NA0FHFWFD41AX3RX8TYSD80BYFN99VD))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP377JJ50B6CEY608G8EHHPDS7CFNQ01JTW65KG6T))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP81H7RYQRFZ66MX4DQTHJHE8SSF7VJGGGZ68BVD))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP32SDEX60662QYZR2BAMCGJKPSJGPDXB24HNVZ6Q))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1SF5XZXVMCVVJM9FDJP4K0DWKXSCNMJKPRYP222))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1XP167C7ZB3XMDT68H3M6QDFW40CDCGWMPPQPR7))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPA7BGE9Z191QCQ2Y0TCK85GGJCYS32V4DXECGZW))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP330EMRAK5X2JWDS5KE70T9FVS3NDGFYP2A4AZX5))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3KQA58EWB4A1EDVAYWC53D5HJCZHB0VV071KZ9J))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP13888E513272048R5VFNQZ1HVWNHKX0K2Q4N6MA))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP42Q5ZTEHZKXMQ8YT3KJ9AS14FE88ZS0K54XSFK))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP11C817W3RQZXJR34CK3HXVFBD9TKE6NW6GQCS2Q))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2X9944YAQX2QVBCE2CCZP0ZB732RA5HW79J84M7))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1Z9QG11G8ZCS960MCBS8TZ3GR4WFC2AD9Q5R2ES))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPGNXS634N3165QEX9WTYPSZAFEP9SAD0QE826YE))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP731WKTNJWHGBVQP63KPJZ88EMMYVQ5GXN9EC9E))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3AA6361GZDFRGDPQ8YYYH35DTV438JRCVNAHBR6))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2G70P78F2TR3HCZWDBBTM6K0GEMBCH97P3H07KV))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP5CZCM0GZQK4K1XSTGS42QE32HEXND0JAWRNPH6))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPT2FDJNRS51KYB70JT76PPF954YT0M5G13R67HN))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1BYNAY378A6S592J9WWDAB9BFM8YS5DSYGQTGSD))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP17AMXKCDMA11WRD4SBQTG6ZFQEKZ291JNN04T26))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPPMVJT70Y8SCPAFHH6SJR7SPXHD6ME34WW95QS4))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3XXHJJY78C8MKNAKEF97VD0Q0K2CR055Y1MQ4AT))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP31PP9YWR6J04RA084ZRMNHG3EFDBK75ZEMNP0ZV))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2R9F15RSJBKKNHA6369SPR4Q27AV6JVDK13QE6T))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP39MEVG2G36Q7P8C6E923TPM2M0JBNJ429MC5YE))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1DXF0K3309Z60M70PMHEZH6QH1ST4942F21EZXA))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3DD6E1YDYBCN30H28VWT0FCWWQQ11J9HKER15RH))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1TR85ZHDRT91AK07AKC9PDNGQ8T63RQM249J6VQ))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP37AMF2BT8MA3NW00F155863VEH1EF0R5V11CA2W))
+(ok true)))
+```

@@ -19,7 +19,7 @@ Change the api node in `scripts/constants.mjs` if you don't want to use Hiro's a
 0. In branch `docs`, pull from remote to be up-to-date.
 1. In branch `main`,
    1. call `pnpm run start` to pull new contracts since the last call (stored in `last-block.txt`).
-   2. call `pnpm run update:name` to check all contract deployers and add them to a list of they own a BNS name.
+   2. call `pnpm run update:name` to check all contract deployers and add them to a list if they own a BNS name.
    3. call `pnpm run update:hash` to create a list of duplicate contracts by hash of source code.
 2. In branch `docs` (used for github pages)
 

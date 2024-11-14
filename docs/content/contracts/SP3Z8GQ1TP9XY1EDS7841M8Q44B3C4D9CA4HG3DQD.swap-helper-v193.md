@@ -1,0 +1,20 @@
+---
+title: "Contract swap-helper-v193"
+draft: true
+---
+Deployer: SP3Z8GQ1TP9XY1EDS7841M8Q44B3C4D9CA4HG3DQD
+
+
+ 
+
+
+
+Block height: 168348 (2024-10-03T23:24:52.000Z)
+
+Source code: {{<contractref "swap-helper-v193" SP3Z8GQ1TP9XY1EDS7841M8Q44B3C4D9CA4HG3DQD swap-helper-v193>}}
+
+Functions:
+
+* o76c0dbe41b8c1e62 _private_
+* o8adeff1da6d86250 _private_
+* swap-helper _public_

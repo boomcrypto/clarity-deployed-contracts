@@ -1,0 +1,18 @@
+---
+title: "Contract GERI-AIRDROP-FOR-ODIN-QV"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 162956 (2024-08-22T19:06:24.000Z)
+
+Source code: {{<contractref "GERI-AIRDROP-FOR-ODIN-QV" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 GERI-AIRDROP-FOR-ODIN-QV>}}
+
+Functions:
+
+* send-stx _private_

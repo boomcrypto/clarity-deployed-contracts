@@ -1,0 +1,18 @@
+---
+title: "Contract GYAT-AIRDROP-FOR-FAIR-KW"
+draft: true
+---
+Deployer: SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH
+
+
+ 
+
+
+
+Block height: 161887 (2024-08-14T19:40:19.000Z)
+
+Source code: {{<contractref "GYAT-AIRDROP-FOR-FAIR-KW" SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH GYAT-AIRDROP-FOR-FAIR-KW>}}
+
+Functions:
+
+* send-stx _private_

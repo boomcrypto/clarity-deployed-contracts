@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-40000111222-bbw"
+draft: true
+---
+Deployer: SP26S1RM13VP3FAFK0BEM4MXJ611JT1AQZZ89A1CK
+
+
+ 
+
+
+
+Block height: 162356 (2024-08-18T08:29:31.000Z)
+
+Source code: {{<contractref "BURN-40000111222-bbw" SP26S1RM13VP3FAFK0BEM4MXJ611JT1AQZZ89A1CK BURN-40000111222-bbw>}}
+
+Functions:
+
+

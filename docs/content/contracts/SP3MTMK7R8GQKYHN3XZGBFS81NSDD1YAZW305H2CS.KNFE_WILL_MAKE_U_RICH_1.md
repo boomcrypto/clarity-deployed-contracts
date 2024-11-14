@@ -1,0 +1,18 @@
+---
+title: "Contract KNFE_WILL_MAKE_U_RICH_1"
+draft: true
+---
+Deployer: SP3MTMK7R8GQKYHN3XZGBFS81NSDD1YAZW305H2CS
+
+
+ 
+
+
+
+Block height: 154840 (2024-06-22T01:21:42.000Z)
+
+Source code: {{<contractref "KNFE_WILL_MAKE_U_RICH_1" SP3MTMK7R8GQKYHN3XZGBFS81NSDD1YAZW305H2CS KNFE_WILL_MAKE_U_RICH_1>}}
+
+Functions:
+
+* airdrop _public_

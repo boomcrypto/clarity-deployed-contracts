@@ -1,0 +1,18 @@
+---
+title: "Contract MIA-AIRDROP-FOR-EDLC-TH"
+draft: true
+---
+Deployer: SP3YB4JCE0H9QCE63MQ199BM8GXWV24E13G9J381F
+
+
+ 
+
+
+
+Block height: 171143 (2024-10-24T04:02:18.000Z)
+
+Source code: {{<contractref "MIA-AIRDROP-FOR-EDLC-TH" SP3YB4JCE0H9QCE63MQ199BM8GXWV24E13G9J381F MIA-AIRDROP-FOR-EDLC-TH>}}
+
+Functions:
+
+* send-stx _private_

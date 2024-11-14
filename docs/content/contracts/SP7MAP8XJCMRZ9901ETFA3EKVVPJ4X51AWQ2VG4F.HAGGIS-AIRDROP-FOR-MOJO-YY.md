@@ -1,0 +1,18 @@
+---
+title: "Contract HAGGIS-AIRDROP-FOR-MOJO-YY"
+draft: true
+---
+Deployer: SP7MAP8XJCMRZ9901ETFA3EKVVPJ4X51AWQ2VG4F
+
+
+ 
+
+
+
+Block height: 166488 (2024-09-19T01:05:03.000Z)
+
+Source code: {{<contractref "HAGGIS-AIRDROP-FOR-MOJO-YY" SP7MAP8XJCMRZ9901ETFA3EKVVPJ4X51AWQ2VG4F HAGGIS-AIRDROP-FOR-MOJO-YY>}}
+
+Functions:
+
+* send-stx _private_

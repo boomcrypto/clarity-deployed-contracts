@@ -1,0 +1,18 @@
+---
+title: "Contract ROULETTE-AIRDROP-FOR-ROO-AT"
+draft: true
+---
+Deployer: SP2M6H8EHQ4KJ0BDPWZCKCF04FA6AXERFZ0CPCJK9
+
+
+ 
+
+
+
+Block height: 209720 (2024-11-13T20:39:40.000Z)
+
+Source code: {{<contractref "ROULETTE-AIRDROP-FOR-ROO-AT" SP2M6H8EHQ4KJ0BDPWZCKCF04FA6AXERFZ0CPCJK9 ROULETTE-AIRDROP-FOR-ROO-AT>}}
+
+Functions:
+
+* send-stx _private_

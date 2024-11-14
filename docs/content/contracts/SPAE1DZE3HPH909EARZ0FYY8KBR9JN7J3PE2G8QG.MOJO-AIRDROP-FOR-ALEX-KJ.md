@@ -1,0 +1,18 @@
+---
+title: "Contract MOJO-AIRDROP-FOR-ALEX-KJ"
+draft: true
+---
+Deployer: SPAE1DZE3HPH909EARZ0FYY8KBR9JN7J3PE2G8QG
+
+
+ 
+
+
+
+Block height: 161698 (2024-08-13T09:23:55.000Z)
+
+Source code: {{<contractref "MOJO-AIRDROP-FOR-ALEX-KJ" SPAE1DZE3HPH909EARZ0FYY8KBR9JN7J3PE2G8QG MOJO-AIRDROP-FOR-ALEX-KJ>}}
+
+Functions:
+
+* send-stx _private_

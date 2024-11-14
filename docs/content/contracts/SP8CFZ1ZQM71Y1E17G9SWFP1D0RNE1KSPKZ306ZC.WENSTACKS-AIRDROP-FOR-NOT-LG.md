@@ -1,0 +1,18 @@
+---
+title: "Contract WENSTACKS-AIRDROP-FOR-NOT-LG"
+draft: true
+---
+Deployer: SP8CFZ1ZQM71Y1E17G9SWFP1D0RNE1KSPKZ306ZC
+
+
+ 
+
+
+
+Block height: 159220 (2024-07-25T08:04:10.000Z)
+
+Source code: {{<contractref "WENSTACKS-AIRDROP-FOR-NOT-LG" SP8CFZ1ZQM71Y1E17G9SWFP1D0RNE1KSPKZ306ZC WENSTACKS-AIRDROP-FOR-NOT-LG>}}
+
+Functions:
+
+* send-stx _private_

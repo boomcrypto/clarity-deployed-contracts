@@ -1,0 +1,10 @@
+---
+title: "Trait n"
+draft: true
+---
+```
+(contract-call? .ma-test-1 mng-airdrop-name 0x30 0x627463 none (some u78281) u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+(contract-call? .ma-test-1 mng-airdrop-name 0x3030303030 0x627463 none (some u79313) u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+(contract-call? .ma-test-1 mng-airdrop-name 0x30303030303030 0x627463 none (some u94945) u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+(contract-call? .ma-test-1 mng-airdrop-name 0x3030303030303030 0x627463 none (some u94945) u0 'SP3D03X5BHMNSAAW71NN7BQRMV4DW2G4JB3MZAGJ8)
+```

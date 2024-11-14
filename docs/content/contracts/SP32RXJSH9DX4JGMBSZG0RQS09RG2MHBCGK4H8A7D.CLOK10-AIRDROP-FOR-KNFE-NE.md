@@ -1,0 +1,18 @@
+---
+title: "Contract CLOK10-AIRDROP-FOR-KNFE-NE"
+draft: true
+---
+Deployer: SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D
+
+
+ 
+
+
+
+Block height: 158785 (2024-07-22T08:53:06.000Z)
+
+Source code: {{<contractref "CLOK10-AIRDROP-FOR-KNFE-NE" SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D CLOK10-AIRDROP-FOR-KNFE-NE>}}
+
+Functions:
+
+* send-stx _private_

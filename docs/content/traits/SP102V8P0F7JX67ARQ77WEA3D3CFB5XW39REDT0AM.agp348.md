@@ -1,0 +1,31 @@
+---
+title: "Trait agp348"
+draft: true
+---
+```
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant ONE_8 u100000000) ;; 8 decimal places
+(define-constant gsmr 'SP31YA1ZJFR9D2S8QDCPFM212FVCV6P3S5EB12T53)
+(define-constant target 'SPPGQ7VHF8XEZC2SPZ2KW11KNN19W9G2RX38Y2XE)
+(define-public (execute (sender principal))
+	(let (			
+			(vesting-details (try! (contract-call? .treasury-grant get-vesting-or-fail gsmr)))
+			(user-stats (try! (contract-call? .treasury-grant get-stats gsmr)))
+			(alex-amt (+ (get available user-stats) (get remaining user-stats))))
+		(try! (contract-call? .treasury-grant set-vesting-many (list { participant: gsmr, details: (merge vesting-details { alex: u0 })})))
+		(try! (contract-call? .treasury-grant transfer-fixed .token-alex alex-amt target))
+		
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2PJTD0MSVS03F4MW72DK1XH5WH1MTW4NVDZMS5E))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1ETSB1E85X4MFHM3506RPRHZH0QRMBC2J6W0RD9))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1ZJSZP1RY4D7RM3RP78J10SS06EHKVR6NESWC1B))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SPHWB7M37EWYE2R81JJNDAP96E8H2DBFT7NQHBNM))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2X5K5PT62CE5S66YY7CNNETW7D4C2SCH05N83H0))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2ZPTBTDKSKTZK2PJ33AKSZ2TY3J3DHKDMQH4TH0))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP3JD1P6KSMHFC2Q08YF4QYHZKKKPQ0XE1069F4X6))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP13KGM39MC8R8FQ4WJJV0ME3NQ5AXAJKNAFB841C))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP1HFY2NV2C666NY5XA47YTSMJ9YY4DRKY3QJ77G))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP2A89AA9RDVB3BAE4R5CRARG8FMTJN7K13PGXNR5))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP5HP07QMBKG3GQSWJ8FN1D8M927VXF06033F0B0))
+(try! (contract-call? .migrate-legacy-v2-wl finalise-migrate 'SP17NVQDXPVA3NYFCSB876WM32M3ZX06EE1Y9YQ79))		
+		(ok true)))
+```

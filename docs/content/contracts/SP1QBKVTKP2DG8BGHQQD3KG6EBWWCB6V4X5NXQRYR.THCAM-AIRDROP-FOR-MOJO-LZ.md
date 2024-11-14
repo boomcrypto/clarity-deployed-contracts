@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-MOJO-LZ"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 166129 (2024-09-15T23:44:07.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-MOJO-LZ" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-MOJO-LZ>}}
+
+Functions:
+
+* send-stx _private_

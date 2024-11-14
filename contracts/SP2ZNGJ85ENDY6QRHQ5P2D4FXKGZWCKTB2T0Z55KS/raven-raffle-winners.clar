@@ -1,0 +1,11 @@
+(define-public (execute (sender principal))
+	(begin
+    ;; raffle winners
+		(try! (contract-call? 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.odins-raven transfer u46 tx-sender 'SP2Z8Q9C1SMZXSGKJ2Z43JMAD0AQWR14EFQRG23DY))
+		(try! (contract-call? 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.odins-raven transfer u47 tx-sender 'SP1GN9H48K7813BQDMQGRW1YREV9R2Z8307QKXDKV))
+		(try! (contract-call? 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.odins-raven transfer u48 tx-sender 'SP20FG5HZH3PZJRVCG6SQA2ZP3SV6WEXCVAGCKX1D))
+		(try! (contract-call? 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.odins-raven transfer u49 tx-sender 'SP3KVRE3RDYYSJ3JDGXKA0K15CC4JEA2ZGX4TJ5EC))
+		(try! (contract-call? 'SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS.odins-raven transfer u50 tx-sender 'SP20FG5HZH3PZJRVCG6SQA2ZP3SV6WEXCVAGCKX1D))
+		(ok true)
+	)
+)

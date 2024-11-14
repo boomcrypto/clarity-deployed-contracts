@@ -1,0 +1,18 @@
+---
+title: "Contract BE-AIRDROP-FOR-BOOSTER-VO"
+draft: true
+---
+Deployer: SP2G25PAH31RXFPWNBZ89RANB6EFPEEXE87G65WG4
+
+
+ 
+
+
+
+Block height: 198532 (2024-11-09T19:59:34.000Z)
+
+Source code: {{<contractref "BE-AIRDROP-FOR-BOOSTER-VO" SP2G25PAH31RXFPWNBZ89RANB6EFPEEXE87G65WG4 BE-AIRDROP-FOR-BOOSTER-VO>}}
+
+Functions:
+
+* send-stx _private_

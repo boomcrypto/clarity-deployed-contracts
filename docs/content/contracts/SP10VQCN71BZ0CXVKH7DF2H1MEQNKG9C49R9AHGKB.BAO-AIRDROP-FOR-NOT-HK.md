@@ -1,0 +1,18 @@
+---
+title: "Contract BAO-AIRDROP-FOR-NOT-HK"
+draft: true
+---
+Deployer: SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB
+
+
+ 
+
+
+
+Block height: 169761 (2024-10-14T06:36:53.000Z)
+
+Source code: {{<contractref "BAO-AIRDROP-FOR-NOT-HK" SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB BAO-AIRDROP-FOR-NOT-HK>}}
+
+Functions:
+
+* send-stx _private_

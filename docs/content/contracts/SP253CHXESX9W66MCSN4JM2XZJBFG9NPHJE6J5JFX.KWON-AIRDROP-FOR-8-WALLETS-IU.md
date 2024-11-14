@@ -1,0 +1,18 @@
+---
+title: "Contract KWON-AIRDROP-FOR-8-WALLETS-IU"
+draft: true
+---
+Deployer: SP253CHXESX9W66MCSN4JM2XZJBFG9NPHJE6J5JFX
+
+
+ 
+
+
+
+Block height: 189535 (2024-11-06T12:18:28.000Z)
+
+Source code: {{<contractref "KWON-AIRDROP-FOR-8-WALLETS-IU" SP253CHXESX9W66MCSN4JM2XZJBFG9NPHJE6J5JFX KWON-AIRDROP-FOR-8-WALLETS-IU>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract MOJO-AIRDROP-FOR-LISTX-TL"
+draft: true
+---
+Deployer: SPAE1DZE3HPH909EARZ0FYY8KBR9JN7J3PE2G8QG
+
+
+ 
+
+
+
+Block height: 161699 (2024-08-13T09:34:05.000Z)
+
+Source code: {{<contractref "MOJO-AIRDROP-FOR-LISTX-TL" SPAE1DZE3HPH909EARZ0FYY8KBR9JN7J3PE2G8QG MOJO-AIRDROP-FOR-LISTX-TL>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract MST-AIRDROP-FOR-MOJO-CB"
+draft: true
+---
+Deployer: SPKMQ8QD26HS1B2E9KXWCDKRF63X0RP8BZ361QTH
+
+
+ 
+
+
+
+Block height: 164754 (2024-09-05T06:17:19.000Z)
+
+Source code: {{<contractref "MST-AIRDROP-FOR-MOJO-CB" SPKMQ8QD26HS1B2E9KXWCDKRF63X0RP8BZ361QTH MST-AIRDROP-FOR-MOJO-CB>}}
+
+Functions:
+
+* send-stx _private_

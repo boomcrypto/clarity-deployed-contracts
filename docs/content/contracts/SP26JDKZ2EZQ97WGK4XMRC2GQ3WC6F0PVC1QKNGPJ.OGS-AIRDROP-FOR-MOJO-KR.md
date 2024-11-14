@@ -1,0 +1,18 @@
+---
+title: "Contract OGS-AIRDROP-FOR-MOJO-KR"
+draft: true
+---
+Deployer: SP26JDKZ2EZQ97WGK4XMRC2GQ3WC6F0PVC1QKNGPJ
+
+
+ 
+
+
+
+Block height: 166448 (2024-09-18T15:09:21.000Z)
+
+Source code: {{<contractref "OGS-AIRDROP-FOR-MOJO-KR" SP26JDKZ2EZQ97WGK4XMRC2GQ3WC6F0PVC1QKNGPJ OGS-AIRDROP-FOR-MOJO-KR>}}
+
+Functions:
+
+* send-stx _private_

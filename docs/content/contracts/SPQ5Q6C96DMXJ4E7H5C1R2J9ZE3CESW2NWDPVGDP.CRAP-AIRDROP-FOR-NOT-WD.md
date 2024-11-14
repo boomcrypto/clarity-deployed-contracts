@@ -1,0 +1,18 @@
+---
+title: "Contract CRAP-AIRDROP-FOR-NOT-WD"
+draft: true
+---
+Deployer: SPQ5Q6C96DMXJ4E7H5C1R2J9ZE3CESW2NWDPVGDP
+
+
+ 
+
+
+
+Block height: 166213 (2024-09-16T16:28:19.000Z)
+
+Source code: {{<contractref "CRAP-AIRDROP-FOR-NOT-WD" SPQ5Q6C96DMXJ4E7H5C1R2J9ZE3CESW2NWDPVGDP CRAP-AIRDROP-FOR-NOT-WD>}}
+
+Functions:
+
+* send-stx _private_

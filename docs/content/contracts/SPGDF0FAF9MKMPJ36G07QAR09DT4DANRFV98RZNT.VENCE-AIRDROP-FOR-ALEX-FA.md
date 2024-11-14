@@ -1,0 +1,18 @@
+---
+title: "Contract VENCE-AIRDROP-FOR-ALEX-FA"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 160590 (2024-08-04T11:23:13.000Z)
+
+Source code: {{<contractref "VENCE-AIRDROP-FOR-ALEX-FA" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT VENCE-AIRDROP-FOR-ALEX-FA>}}
+
+Functions:
+
+* send-stx _private_

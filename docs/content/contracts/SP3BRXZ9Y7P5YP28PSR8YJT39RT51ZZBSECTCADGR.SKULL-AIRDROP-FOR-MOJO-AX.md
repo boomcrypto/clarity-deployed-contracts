@@ -1,0 +1,18 @@
+---
+title: "Contract SKULL-AIRDROP-FOR-MOJO-AX"
+draft: true
+---
+Deployer: SP3BRXZ9Y7P5YP28PSR8YJT39RT51ZZBSECTCADGR
+
+
+ 
+
+
+
+Block height: 164182 (2024-09-01T02:20:50.000Z)
+
+Source code: {{<contractref "SKULL-AIRDROP-FOR-MOJO-AX" SP3BRXZ9Y7P5YP28PSR8YJT39RT51ZZBSECTCADGR SKULL-AIRDROP-FOR-MOJO-AX>}}
+
+Functions:
+
+* send-stx _private_

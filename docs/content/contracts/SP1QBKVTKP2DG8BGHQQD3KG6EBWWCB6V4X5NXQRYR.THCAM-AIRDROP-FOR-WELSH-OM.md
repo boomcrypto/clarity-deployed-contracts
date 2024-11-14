@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-WELSH-OM"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 166640 (2024-09-20T07:13:54.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-WELSH-OM" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-WELSH-OM>}}
+
+Functions:
+
+* send-stx _private_

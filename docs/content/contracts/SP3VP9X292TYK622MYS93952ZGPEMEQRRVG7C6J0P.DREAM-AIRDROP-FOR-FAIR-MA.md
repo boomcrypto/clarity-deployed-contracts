@@ -1,0 +1,18 @@
+---
+title: "Contract DREAM-AIRDROP-FOR-FAIR-MA"
+draft: true
+---
+Deployer: SP3VP9X292TYK622MYS93952ZGPEMEQRRVG7C6J0P
+
+
+ 
+
+
+
+Block height: 195450 (2024-11-08T17:54:47.000Z)
+
+Source code: {{<contractref "DREAM-AIRDROP-FOR-FAIR-MA" SP3VP9X292TYK622MYS93952ZGPEMEQRRVG7C6J0P DREAM-AIRDROP-FOR-FAIR-MA>}}
+
+Functions:
+
+* send-stx _private_

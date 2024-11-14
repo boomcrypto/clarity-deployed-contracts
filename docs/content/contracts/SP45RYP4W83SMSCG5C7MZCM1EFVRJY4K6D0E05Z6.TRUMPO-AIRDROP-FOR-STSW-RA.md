@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMPO-AIRDROP-FOR-STSW-RA"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 158031 (2024-07-16T19:32:42.000Z)
+
+Source code: {{<contractref "TRUMPO-AIRDROP-FOR-STSW-RA" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 TRUMPO-AIRDROP-FOR-STSW-RA>}}
+
+Functions:
+
+* send-stx _private_

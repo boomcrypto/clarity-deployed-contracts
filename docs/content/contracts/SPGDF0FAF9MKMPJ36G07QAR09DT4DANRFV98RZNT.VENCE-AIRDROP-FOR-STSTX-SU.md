@@ -1,0 +1,18 @@
+---
+title: "Contract VENCE-AIRDROP-FOR-STSTX-SU"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 161616 (2024-08-12T16:18:16.000Z)
+
+Source code: {{<contractref "VENCE-AIRDROP-FOR-STSTX-SU" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT VENCE-AIRDROP-FOR-STSTX-SU>}}
+
+Functions:
+
+* send-stx _private_

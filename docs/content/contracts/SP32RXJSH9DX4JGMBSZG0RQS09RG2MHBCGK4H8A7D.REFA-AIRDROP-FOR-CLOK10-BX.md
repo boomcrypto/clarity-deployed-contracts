@@ -1,0 +1,18 @@
+---
+title: "Contract REFA-AIRDROP-FOR-CLOK10-BX"
+draft: true
+---
+Deployer: SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D
+
+
+ 
+
+
+
+Block height: 166654 (2024-09-20T10:07:20.000Z)
+
+Source code: {{<contractref "REFA-AIRDROP-FOR-CLOK10-BX" SP32RXJSH9DX4JGMBSZG0RQS09RG2MHBCGK4H8A7D REFA-AIRDROP-FOR-CLOK10-BX>}}
+
+Functions:
+
+* send-stx _private_

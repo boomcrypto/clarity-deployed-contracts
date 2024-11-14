@@ -1,0 +1,18 @@
+---
+title: "Contract MJT-AIRDROP-FOR-MOJO-RP"
+draft: true
+---
+Deployer: SPAPEK8YHYS9PTK4HKBEZ9F68D1NV4KQ54K5ZPWW
+
+
+ 
+
+
+
+Block height: 162460 (2024-08-19T03:42:47.000Z)
+
+Source code: {{<contractref "MJT-AIRDROP-FOR-MOJO-RP" SPAPEK8YHYS9PTK4HKBEZ9F68D1NV4KQ54K5ZPWW MJT-AIRDROP-FOR-MOJO-RP>}}
+
+Functions:
+
+* send-stx _private_

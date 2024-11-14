@@ -1,0 +1,18 @@
+---
+title: "Contract BLEWY-AIRDROP-FOR-PEPE-XC"
+draft: true
+---
+Deployer: SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC
+
+
+ 
+
+
+
+Block height: 169941 (2024-10-15T13:32:14.000Z)
+
+Source code: {{<contractref "BLEWY-AIRDROP-FOR-PEPE-XC" SP1HPB7YTZDXMZSZD51C113PQFAXKSNR0QYFFPWVC BLEWY-AIRDROP-FOR-PEPE-XC>}}
+
+Functions:
+
+* send-stx _private_

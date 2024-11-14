@@ -1,0 +1,18 @@
+---
+title: "Contract SCOOBY-AIRDROP-FOR-ODIN-QV"
+draft: true
+---
+Deployer: SPK5HH9QVYDNXNDCFH6W5AMRSR5K83ZMT4GPPK7M
+
+
+ 
+
+
+
+Block height: 157967 (2024-07-16T07:42:42.000Z)
+
+Source code: {{<contractref "SCOOBY-AIRDROP-FOR-ODIN-QV" SPK5HH9QVYDNXNDCFH6W5AMRSR5K83ZMT4GPPK7M SCOOBY-AIRDROP-FOR-ODIN-QV>}}
+
+Functions:
+
+* send-stx _private_

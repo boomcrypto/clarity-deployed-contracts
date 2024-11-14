@@ -1,0 +1,18 @@
+---
+title: "Contract PEGGY-AIRDROP-FOR-LEO-HD"
+draft: true
+---
+Deployer: SPQYMRAKZPQPJAADX5JBEFT0FHE3RZZK9F8TYBQ3
+
+
+ 
+
+
+
+Block height: 183715 (2024-11-02T23:37:11.000Z)
+
+Source code: {{<contractref "PEGGY-AIRDROP-FOR-LEO-HD" SPQYMRAKZPQPJAADX5JBEFT0FHE3RZZK9F8TYBQ3 PEGGY-AIRDROP-FOR-LEO-HD>}}
+
+Functions:
+
+* send-stx _private_

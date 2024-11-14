@@ -1,0 +1,18 @@
+---
+title: "Contract MOODENG-AIRDROP-FOR-WELSH-LS"
+draft: true
+---
+Deployer: SPAJMEDR4VY80W67XW61EK02170N99M9XHFWSDJZ
+
+
+ 
+
+
+
+Block height: 170657 (2024-10-20T16:37:49.000Z)
+
+Source code: {{<contractref "MOODENG-AIRDROP-FOR-WELSH-LS" SPAJMEDR4VY80W67XW61EK02170N99M9XHFWSDJZ MOODENG-AIRDROP-FOR-WELSH-LS>}}
+
+Functions:
+
+* send-stx _private_

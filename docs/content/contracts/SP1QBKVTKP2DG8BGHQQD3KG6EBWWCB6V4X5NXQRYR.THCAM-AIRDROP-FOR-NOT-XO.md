@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-NOT-XO"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 165197 (2024-09-08T11:38:33.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-NOT-XO" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-NOT-XO>}}
+
+Functions:
+
+* send-stx _private_

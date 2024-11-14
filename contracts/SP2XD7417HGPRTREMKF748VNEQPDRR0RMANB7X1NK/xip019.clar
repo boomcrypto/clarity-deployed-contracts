@@ -1,0 +1,10 @@
+(impl-trait .proposal-trait.proposal-trait)
+(define-constant MAX_UINT u240282366920938463463374607431768211455)
+(define-constant ONE_8 u100000000)
+(define-public (execute (sender principal))
+	(begin	
+		(try! (contract-call? .cross-bridge-registry-v2-01 set-approved-pair { token: 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc, chain-id: u3 } { approved: true, burnable: false, fee: u0, min-fee: u0, min-amount: u0, max-amount: MAX_UINT }))
+		(try! (contract-call? .mint-for-vault-v2-01 mint-for-vault .token-abtc (* u500 ONE_8) u3 0x0055797647eA5aE4977bB8CB444E8D7ac1b20fB3 0x00145aad24d11c4d5ac6576c9c1c4b1ed0ee797a1897))
+		(try! (contract-call? .mint-for-vault-v2-01 mint-for-vault .token-abtc (* u68 ONE_8) u3 0xA7a010c543C6D6eaaB6eef5CB4a64671Da43d9BC 0x001436ddce23789ce968dc4a560d90dc8a65b2c62d56))
+		(try! (contract-call? .cross-bridge-registry-v2-01 set-approved-pair { token: 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc, chain-id: u3 } { approved: true, burnable: false, fee: u0, min-fee: u0, min-amount: u0, max-amount: u2000000000 }))
+		(ok true)))

@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-57000000000-VENCE"
+draft: true
+---
+Deployer: SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT
+
+
+ 
+
+
+
+Block height: 158043 (2024-07-16T21:41:37.000Z)
+
+Source code: {{<contractref "BURN-57000000000-VENCE" SPGDF0FAF9MKMPJ36G07QAR09DT4DANRFV98RZNT BURN-57000000000-VENCE>}}
+
+Functions:
+
+* send-stx _private_

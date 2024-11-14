@@ -1,0 +1,18 @@
+---
+title: "Contract PEGGY-AIRDROP-FOR-GOATSTX-FJ"
+draft: true
+---
+Deployer: SPQYMRAKZPQPJAADX5JBEFT0FHE3RZZK9F8TYBQ3
+
+
+ 
+
+
+
+Block height: 171763 (2024-10-28T15:48:48.000Z)
+
+Source code: {{<contractref "PEGGY-AIRDROP-FOR-GOATSTX-FJ" SPQYMRAKZPQPJAADX5JBEFT0FHE3RZZK9F8TYBQ3 PEGGY-AIRDROP-FOR-GOATSTX-FJ>}}
+
+Functions:
+
+* send-stx _private_

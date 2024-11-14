@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-10000000-TREMP"
+draft: true
+---
+Deployer: SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X
+
+
+ 
+
+
+
+Block height: 163741 (2024-08-28T15:57:14.000Z)
+
+Source code: {{<contractref "BURN-10000000-TREMP" SP3TMGZ7WTT658PA632A3BA4B1GRXBNNEN8XPZQ5X BURN-10000000-TREMP>}}
+
+Functions:
+
+* send-stx _private_

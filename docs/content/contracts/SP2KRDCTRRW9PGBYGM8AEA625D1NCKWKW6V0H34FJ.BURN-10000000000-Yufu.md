@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-10000000000-Yufu"
+draft: true
+---
+Deployer: SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ
+
+
+ 
+
+
+
+Block height: 170176 (2024-10-17T06:55:27.000Z)
+
+Source code: {{<contractref "BURN-10000000000-Yufu" SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ BURN-10000000000-Yufu>}}
+
+Functions:
+
+

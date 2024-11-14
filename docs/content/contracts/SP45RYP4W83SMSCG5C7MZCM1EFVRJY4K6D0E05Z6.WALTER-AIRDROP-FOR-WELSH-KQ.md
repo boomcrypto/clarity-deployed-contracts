@@ -1,0 +1,18 @@
+---
+title: "Contract WALTER-AIRDROP-FOR-WELSH-KQ"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 165648 (2024-09-12T02:45:17.000Z)
+
+Source code: {{<contractref "WALTER-AIRDROP-FOR-WELSH-KQ" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 WALTER-AIRDROP-FOR-WELSH-KQ>}}
+
+Functions:
+
+* send-stx _private_

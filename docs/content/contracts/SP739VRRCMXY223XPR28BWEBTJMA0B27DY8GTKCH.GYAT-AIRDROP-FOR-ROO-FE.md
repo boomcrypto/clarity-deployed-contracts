@@ -1,0 +1,18 @@
+---
+title: "Contract GYAT-AIRDROP-FOR-ROO-FE"
+draft: true
+---
+Deployer: SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH
+
+
+ 
+
+
+
+Block height: 162821 (2024-08-21T20:46:38.000Z)
+
+Source code: {{<contractref "GYAT-AIRDROP-FOR-ROO-FE" SP739VRRCMXY223XPR28BWEBTJMA0B27DY8GTKCH GYAT-AIRDROP-FOR-ROO-FE>}}
+
+Functions:
+
+* send-stx _private_

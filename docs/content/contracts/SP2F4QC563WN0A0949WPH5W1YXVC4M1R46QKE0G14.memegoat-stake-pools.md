@@ -1,0 +1,50 @@
+---
+title: "Contract memegoat-stake-pools"
+draft: true
+---
+Deployer: SP2F4QC563WN0A0949WPH5W1YXVC4M1R46QKE0G14
+
+
+ 
+
+
+
+Block height: 166151 (2024-09-16T03:49:50.000Z)
+
+Source code: {{<contractref "memegoat-stake-pools" SP2F4QC563WN0A0949WPH5W1YXVC4M1R46QKE0G14 memegoat-stake-pools>}}
+
+Functions:
+
+* do-calculate _private_
+* do-calculate-reward _private_
+* do-calculate-user-rewards _private_
+* do-claim-reward _private_
+* do-stake _private_
+* do-withdraw-stake _private_
+* from-precision _private_
+* get-next-stake-id _private_
+* last-block-reward-applicable _private_
+* move _private_
+* move-p _private_
+* pow-decimals _private_
+* to-precision _private_
+* callback _public_
+* claim-reward _public_
+* create-pool _public_
+* move-pools _public_
+* move-user-records _public_
+* pause _public_
+* set-approval-status _public_
+* set-fee _public_
+* stake _public_
+* unstake _public_
+* calculate-rewards _read_only_
+* get-pool-fee _read_only_
+* get-stake-nonce _read_only_
+* get-stake-pool _read_only_
+* get-stake-pool-exists _read_only_
+* get-user-stake-has-stake _read_only_
+* get-user-staking-data _read_only_
+* get-user-staking-data-exists _read_only_
+* is-dao-or-extension _read_only_
+* is-paused _read_only_

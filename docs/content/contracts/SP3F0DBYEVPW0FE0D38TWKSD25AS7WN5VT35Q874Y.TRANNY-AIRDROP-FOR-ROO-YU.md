@@ -1,0 +1,18 @@
+---
+title: "Contract TRANNY-AIRDROP-FOR-ROO-YU"
+draft: true
+---
+Deployer: SP3F0DBYEVPW0FE0D38TWKSD25AS7WN5VT35Q874Y
+
+
+ 
+
+
+
+Block height: 166683 (2024-09-20T15:48:25.000Z)
+
+Source code: {{<contractref "TRANNY-AIRDROP-FOR-ROO-YU" SP3F0DBYEVPW0FE0D38TWKSD25AS7WN5VT35Q874Y TRANNY-AIRDROP-FOR-ROO-YU>}}
+
+Functions:
+
+* send-stx _private_

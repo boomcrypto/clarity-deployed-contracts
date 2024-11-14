@@ -1,0 +1,6 @@
+(contract-call? 'SP28NB976TJHHGF4218KT194NPWP9N1X3WY516Z1P.new-hashiko send-many 
+    (list
+        {to: 'SP8FFZ0X5Q4QR377F6RWTNAYJSCPFDRM0C2F1KBW, amount: u4000000000000, memo: none}
+        {to: 'SP3MNRVJBRFBT5XVY7NYN58HG723SB20Q5HQ13X08, amount: u2000000000000, memo: none}
+    )
+)

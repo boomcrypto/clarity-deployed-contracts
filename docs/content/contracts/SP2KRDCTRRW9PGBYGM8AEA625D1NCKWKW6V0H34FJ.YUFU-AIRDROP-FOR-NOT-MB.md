@@ -1,0 +1,18 @@
+---
+title: "Contract YUFU-AIRDROP-FOR-NOT-MB"
+draft: true
+---
+Deployer: SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ
+
+
+ 
+
+
+
+Block height: 170435 (2024-10-19T04:52:51.000Z)
+
+Source code: {{<contractref "YUFU-AIRDROP-FOR-NOT-MB" SP2KRDCTRRW9PGBYGM8AEA625D1NCKWKW6V0H34FJ YUFU-AIRDROP-FOR-NOT-MB>}}
+
+Functions:
+
+* send-stx _private_

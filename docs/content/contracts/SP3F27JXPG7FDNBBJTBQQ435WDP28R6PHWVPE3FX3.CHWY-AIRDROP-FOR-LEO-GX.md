@@ -1,0 +1,18 @@
+---
+title: "Contract CHWY-AIRDROP-FOR-LEO-GX"
+draft: true
+---
+Deployer: SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3
+
+
+ 
+
+
+
+Block height: 156553 (2024-07-06T01:53:26.000Z)
+
+Source code: {{<contractref "CHWY-AIRDROP-FOR-LEO-GX" SP3F27JXPG7FDNBBJTBQQ435WDP28R6PHWVPE3FX3 CHWY-AIRDROP-FOR-LEO-GX>}}
+
+Functions:
+
+* send-stx _private_

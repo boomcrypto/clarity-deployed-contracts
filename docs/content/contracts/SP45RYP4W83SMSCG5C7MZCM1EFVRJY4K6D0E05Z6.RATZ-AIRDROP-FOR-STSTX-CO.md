@@ -1,0 +1,18 @@
+---
+title: "Contract RATZ-AIRDROP-FOR-STSTX-CO"
+draft: true
+---
+Deployer: SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6
+
+
+ 
+
+
+
+Block height: 158035 (2024-07-16T20:48:46.000Z)
+
+Source code: {{<contractref "RATZ-AIRDROP-FOR-STSTX-CO" SP45RYP4W83SMSCG5C7MZCM1EFVRJY4K6D0E05Z6 RATZ-AIRDROP-FOR-STSTX-CO>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract BEARD-AIRDROP-FOR-WELSH-WJ"
+draft: true
+---
+Deployer: SP38GBVK5HEJ0MBH4CRJ9HQEW86HX0H9AP1HZ3SVZ
+
+
+ 
+
+
+
+Block height: 161746 (2024-08-13T17:23:43.000Z)
+
+Source code: {{<contractref "BEARD-AIRDROP-FOR-WELSH-WJ" SP38GBVK5HEJ0MBH4CRJ9HQEW86HX0H9AP1HZ3SVZ BEARD-AIRDROP-FOR-WELSH-WJ>}}
+
+Functions:
+
+* send-stx _private_

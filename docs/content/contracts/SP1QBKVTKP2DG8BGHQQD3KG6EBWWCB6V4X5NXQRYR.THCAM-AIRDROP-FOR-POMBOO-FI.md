@@ -1,0 +1,18 @@
+---
+title: "Contract THCAM-AIRDROP-FOR-POMBOO-FI"
+draft: true
+---
+Deployer: SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR
+
+
+ 
+
+
+
+Block height: 165198 (2024-09-08T11:40:31.000Z)
+
+Source code: {{<contractref "THCAM-AIRDROP-FOR-POMBOO-FI" SP1QBKVTKP2DG8BGHQQD3KG6EBWWCB6V4X5NXQRYR THCAM-AIRDROP-FOR-POMBOO-FI>}}
+
+Functions:
+
+* send-stx _private_

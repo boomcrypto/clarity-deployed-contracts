@@ -1,0 +1,18 @@
+---
+title: "Contract NYC-AIRDROP-FOR-NYC-TY"
+draft: true
+---
+Deployer: SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N
+
+
+ 
+
+
+
+Block height: 169701 (2024-10-13T18:28:42.000Z)
+
+Source code: {{<contractref "NYC-AIRDROP-FOR-NYC-TY" SP6WZ56TPD7D90188P0EM8YXT5D0EAW3MV3N4J6N NYC-AIRDROP-FOR-NYC-TY>}}
+
+Functions:
+
+* send-stx _private_

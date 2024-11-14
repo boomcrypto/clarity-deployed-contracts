@@ -1,0 +1,18 @@
+---
+title: "Contract BAO-AIRDROP-FOR-WELSH-LS"
+draft: true
+---
+Deployer: SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB
+
+
+ 
+
+
+
+Block height: 170349 (2024-10-18T14:52:12.000Z)
+
+Source code: {{<contractref "BAO-AIRDROP-FOR-WELSH-LS" SP10VQCN71BZ0CXVKH7DF2H1MEQNKG9C49R9AHGKB BAO-AIRDROP-FOR-WELSH-LS>}}
+
+Functions:
+
+* send-stx _private_
