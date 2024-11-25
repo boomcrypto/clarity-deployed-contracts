@@ -1,0 +1,18 @@
+---
+title: "Contract TM-AIRDROP-FOR-MOJO-SY"
+draft: true
+---
+Deployer: SP12VCCGEY7E2BEXHZNWBP1010PBAJDR9HRSXJQHB
+
+
+ 
+
+
+
+Block height: 229594 (2024-11-18T13:57:59.000Z)
+
+Source code: {{<contractref "TM-AIRDROP-FOR-MOJO-SY" SP12VCCGEY7E2BEXHZNWBP1010PBAJDR9HRSXJQHB TM-AIRDROP-FOR-MOJO-SY>}}
+
+Functions:
+
+* send-stx _private_

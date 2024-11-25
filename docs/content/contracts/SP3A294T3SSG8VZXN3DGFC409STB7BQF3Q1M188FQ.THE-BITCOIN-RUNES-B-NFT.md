@@ -1,0 +1,18 @@
+---
+title: "Contract THE-BITCOIN-RUNES-B-NFT"
+draft: true
+---
+Deployer: SP3A294T3SSG8VZXN3DGFC409STB7BQF3Q1M188FQ
+
+
+ 
+
+
+
+Block height: 212926 (2024-11-14T20:54:05.000Z)
+
+Source code: {{<contractref "THE-BITCOIN-RUNES-B-NFT" SP3A294T3SSG8VZXN3DGFC409STB7BQF3Q1M188FQ THE-BITCOIN-RUNES-B-NFT>}}
+
+Functions:
+
+* airdrop _private_

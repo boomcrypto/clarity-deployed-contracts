@@ -1,0 +1,18 @@
+---
+title: "Contract FRO-AIRDROP-FOR-AEWBTC-OC"
+draft: true
+---
+Deployer: SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R
+
+
+ 
+
+
+
+Block height: 212054 (2024-11-14T15:48:10.000Z)
+
+Source code: {{<contractref "FRO-AIRDROP-FOR-AEWBTC-OC" SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R FRO-AIRDROP-FOR-AEWBTC-OC>}}
+
+Functions:
+
+* send-stx _private_

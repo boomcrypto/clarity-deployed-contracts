@@ -1,0 +1,18 @@
+---
+title: "Contract SAVE-AIRDROP-FOR-PEPE-TQ"
+draft: true
+---
+Deployer: SP1F8AEVYSYK572MNYYNAX5XAH4M8PRHH0R7VDZEW
+
+
+ 
+
+
+
+Block height: 232702 (2024-11-19T04:58:08.000Z)
+
+Source code: {{<contractref "SAVE-AIRDROP-FOR-PEPE-TQ" SP1F8AEVYSYK572MNYYNAX5XAH4M8PRHH0R7VDZEW SAVE-AIRDROP-FOR-PEPE-TQ>}}
+
+Functions:
+
+* send-stx _private_

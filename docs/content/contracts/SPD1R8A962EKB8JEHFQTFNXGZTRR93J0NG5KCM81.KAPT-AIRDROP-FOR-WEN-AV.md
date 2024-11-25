@@ -1,0 +1,18 @@
+---
+title: "Contract KAPT-AIRDROP-FOR-WEN-AV"
+draft: true
+---
+Deployer: SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81
+
+
+ 
+
+
+
+Block height: 249877 (2024-11-23T03:56:54.000Z)
+
+Source code: {{<contractref "KAPT-AIRDROP-FOR-WEN-AV" SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81 KAPT-AIRDROP-FOR-WEN-AV>}}
+
+Functions:
+
+* send-stx _private_

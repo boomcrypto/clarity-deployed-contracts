@@ -1,0 +1,18 @@
+---
+title: "Contract NEIGH-AIRDROP-FOR-WELSH-LR"
+draft: true
+---
+Deployer: SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y
+
+
+ 
+
+
+
+Block height: 235486 (2024-11-19T19:46:35.000Z)
+
+Source code: {{<contractref "NEIGH-AIRDROP-FOR-WELSH-LR" SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y NEIGH-AIRDROP-FOR-WELSH-LR>}}
+
+Functions:
+
+* send-stx _private_

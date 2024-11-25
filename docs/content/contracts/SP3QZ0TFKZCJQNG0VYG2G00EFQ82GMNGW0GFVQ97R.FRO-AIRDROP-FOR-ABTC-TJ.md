@@ -1,0 +1,18 @@
+---
+title: "Contract FRO-AIRDROP-FOR-ABTC-TJ"
+draft: true
+---
+Deployer: SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R
+
+
+ 
+
+
+
+Block height: 212087 (2024-11-14T16:00:34.000Z)
+
+Source code: {{<contractref "FRO-AIRDROP-FOR-ABTC-TJ" SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R FRO-AIRDROP-FOR-ABTC-TJ>}}
+
+Functions:
+
+* send-stx _private_

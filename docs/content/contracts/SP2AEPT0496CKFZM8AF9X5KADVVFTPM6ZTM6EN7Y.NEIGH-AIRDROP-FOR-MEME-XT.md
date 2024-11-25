@@ -1,0 +1,18 @@
+---
+title: "Contract NEIGH-AIRDROP-FOR-MEME-XT"
+draft: true
+---
+Deployer: SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y
+
+
+ 
+
+
+
+Block height: 238940 (2024-11-20T15:47:24.000Z)
+
+Source code: {{<contractref "NEIGH-AIRDROP-FOR-MEME-XT" SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y NEIGH-AIRDROP-FOR-MEME-XT>}}
+
+Functions:
+
+* send-stx _private_

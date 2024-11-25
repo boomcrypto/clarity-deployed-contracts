@@ -1,0 +1,18 @@
+---
+title: "Contract HODL-AIRDROP-FOR-WOJAK-HH"
+draft: true
+---
+Deployer: SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB
+
+
+ 
+
+
+
+Block height: 228863 (2024-11-18T10:50:03.000Z)
+
+Source code: {{<contractref "HODL-AIRDROP-FOR-WOJAK-HH" SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB HODL-AIRDROP-FOR-WOJAK-HH>}}
+
+Functions:
+
+* send-stx _private_

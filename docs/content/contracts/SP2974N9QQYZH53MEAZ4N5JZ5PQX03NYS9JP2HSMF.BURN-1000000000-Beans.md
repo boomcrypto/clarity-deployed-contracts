@@ -1,0 +1,18 @@
+---
+title: "Contract BURN-1000000000-Beans"
+draft: true
+---
+Deployer: SP2974N9QQYZH53MEAZ4N5JZ5PQX03NYS9JP2HSMF
+
+
+ 
+
+
+
+Block height: 220484 (2024-11-16T12:03:12.000Z)
+
+Source code: {{<contractref "BURN-1000000000-Beans" SP2974N9QQYZH53MEAZ4N5JZ5PQX03NYS9JP2HSMF BURN-1000000000-Beans>}}
+
+Functions:
+
+

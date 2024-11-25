@@ -1,0 +1,18 @@
+---
+title: "Contract SCI-AIRDROP-FOR-FAIR-VW"
+draft: true
+---
+Deployer: SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE
+
+
+ 
+
+
+
+Block height: 225784 (2024-11-17T17:29:49.000Z)
+
+Source code: {{<contractref "SCI-AIRDROP-FOR-FAIR-VW" SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE SCI-AIRDROP-FOR-FAIR-VW>}}
+
+Functions:
+
+* send-stx _private_

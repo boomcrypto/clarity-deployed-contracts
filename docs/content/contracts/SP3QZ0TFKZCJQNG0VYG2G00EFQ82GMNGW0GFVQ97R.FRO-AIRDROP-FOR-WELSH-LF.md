@@ -1,0 +1,18 @@
+---
+title: "Contract FRO-AIRDROP-FOR-WELSH-LF"
+draft: true
+---
+Deployer: SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R
+
+
+ 
+
+
+
+Block height: 211940 (2024-11-14T14:45:46.000Z)
+
+Source code: {{<contractref "FRO-AIRDROP-FOR-WELSH-LF" SP3QZ0TFKZCJQNG0VYG2G00EFQ82GMNGW0GFVQ97R FRO-AIRDROP-FOR-WELSH-LF>}}
+
+Functions:
+
+* send-stx _private_

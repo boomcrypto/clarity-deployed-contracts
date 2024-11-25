@@ -1,0 +1,18 @@
+---
+title: "Contract STXARMY-AIRDROP-FOR-ALEX-JM"
+draft: true
+---
+Deployer: SP2ZYR2314Z50MZF2K5N0266R1JX6VDZR9P501Z9B
+
+
+ 
+
+
+
+Block height: 212511 (2024-11-14T18:51:22.000Z)
+
+Source code: {{<contractref "STXARMY-AIRDROP-FOR-ALEX-JM" SP2ZYR2314Z50MZF2K5N0266R1JX6VDZR9P501Z9B STXARMY-AIRDROP-FOR-ALEX-JM>}}
+
+Functions:
+
+* send-stx _private_

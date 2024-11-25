@@ -1,0 +1,18 @@
+---
+title: "Contract SAVE-AIRDROP-FOR-FAIR-JP"
+draft: true
+---
+Deployer: SP1F8AEVYSYK572MNYYNAX5XAH4M8PRHH0R7VDZEW
+
+
+ 
+
+
+
+Block height: 232736 (2024-11-19T05:08:45.000Z)
+
+Source code: {{<contractref "SAVE-AIRDROP-FOR-FAIR-JP" SP1F8AEVYSYK572MNYYNAX5XAH4M8PRHH0R7VDZEW SAVE-AIRDROP-FOR-FAIR-JP>}}
+
+Functions:
+
+* send-stx _private_

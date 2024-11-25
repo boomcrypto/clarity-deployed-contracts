@@ -1,0 +1,18 @@
+---
+title: "Contract HODL-AIRDROP-FOR-BSPX-IV"
+draft: true
+---
+Deployer: SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB
+
+
+ 
+
+
+
+Block height: 228861 (2024-11-18T10:50:03.000Z)
+
+Source code: {{<contractref "HODL-AIRDROP-FOR-BSPX-IV" SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB HODL-AIRDROP-FOR-BSPX-IV>}}
+
+Functions:
+
+* send-stx _private_

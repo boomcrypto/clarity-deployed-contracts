@@ -1,0 +1,18 @@
+---
+title: "Contract SCI-AIRDROP-FOR-WELSH-IX"
+draft: true
+---
+Deployer: SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE
+
+
+ 
+
+
+
+Block height: 225688 (2024-11-17T17:08:50.000Z)
+
+Source code: {{<contractref "SCI-AIRDROP-FOR-WELSH-IX" SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE SCI-AIRDROP-FOR-WELSH-IX>}}
+
+Functions:
+
+* send-stx _private_

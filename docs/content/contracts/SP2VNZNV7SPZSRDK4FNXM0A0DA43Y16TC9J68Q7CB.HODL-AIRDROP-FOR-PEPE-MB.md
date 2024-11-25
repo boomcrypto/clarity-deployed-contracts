@@ -1,0 +1,18 @@
+---
+title: "Contract HODL-AIRDROP-FOR-PEPE-MB"
+draft: true
+---
+Deployer: SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB
+
+
+ 
+
+
+
+Block height: 228866 (2024-11-18T11:01:47.000Z)
+
+Source code: {{<contractref "HODL-AIRDROP-FOR-PEPE-MB" SP2VNZNV7SPZSRDK4FNXM0A0DA43Y16TC9J68Q7CB HODL-AIRDROP-FOR-PEPE-MB>}}
+
+Functions:
+
+* send-stx _private_

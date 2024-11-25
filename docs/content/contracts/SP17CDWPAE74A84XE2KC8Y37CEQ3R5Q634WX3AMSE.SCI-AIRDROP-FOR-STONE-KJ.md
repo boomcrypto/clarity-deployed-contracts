@@ -1,0 +1,18 @@
+---
+title: "Contract SCI-AIRDROP-FOR-STONE-KJ"
+draft: true
+---
+Deployer: SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE
+
+
+ 
+
+
+
+Block height: 225650 (2024-11-17T16:54:35.000Z)
+
+Source code: {{<contractref "SCI-AIRDROP-FOR-STONE-KJ" SP17CDWPAE74A84XE2KC8Y37CEQ3R5Q634WX3AMSE SCI-AIRDROP-FOR-STONE-KJ>}}
+
+Functions:
+
+* send-stx _private_

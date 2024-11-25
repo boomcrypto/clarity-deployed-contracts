@@ -1,0 +1,18 @@
+---
+title: "Contract NEIGH-AIRDROP-FOR-SAYLOR-JC"
+draft: true
+---
+Deployer: SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y
+
+
+ 
+
+
+
+Block height: 235621 (2024-11-19T20:09:28.000Z)
+
+Source code: {{<contractref "NEIGH-AIRDROP-FOR-SAYLOR-JC" SP2AEPT0496CKFZM8AF9X5KADVVFTPM6ZTM6EN7Y NEIGH-AIRDROP-FOR-SAYLOR-JC>}}
+
+Functions:
+
+* send-stx _private_

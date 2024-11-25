@@ -1,0 +1,18 @@
+---
+title: "Contract ECO-AIRDROP-FOR-FAIR-IK"
+draft: true
+---
+Deployer: SP7XAX5CHYM6V1SYHSE83RYS9ZVA23MNTPNGMTZ5
+
+
+ 
+
+
+
+Block height: 212235 (2024-11-14T17:09:41.000Z)
+
+Source code: {{<contractref "ECO-AIRDROP-FOR-FAIR-IK" SP7XAX5CHYM6V1SYHSE83RYS9ZVA23MNTPNGMTZ5 ECO-AIRDROP-FOR-FAIR-IK>}}
+
+Functions:
+
+* send-stx _private_
