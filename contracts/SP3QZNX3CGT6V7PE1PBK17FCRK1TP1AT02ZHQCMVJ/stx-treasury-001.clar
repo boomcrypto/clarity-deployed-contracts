@@ -1,0 +1,16 @@
+(define-constant ERR-PERMISSION-DENIED (err u3000))  
+(define-constant ERR-PRECONDITION-FAILED (err u3001))  
+(define-constant ERR-CONTRACT-NOT-FOUND (err u3002))  
+(define-constant ERR-CONTRACT-LOCKED (err u3999))   
+(define-public (deposit-stx (amount uint))
+    (begin 
+        (asserts! (> amount u0) ERR-PRECONDITION-FAILED)  
+        (stx-transfer? amount tx-sender (as-contract tx-sender))  
+    ))
+(define-public (withdraw-stx (amount uint) (recipient principal))
+    (begin
+        (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+        (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u1) ERR-PERMISSION-DENIED)  
+        (asserts! (> amount u0) ERR-PRECONDITION-FAILED)  
+        (as-contract (stx-transfer? amount tx-sender recipient))  
+    ))
