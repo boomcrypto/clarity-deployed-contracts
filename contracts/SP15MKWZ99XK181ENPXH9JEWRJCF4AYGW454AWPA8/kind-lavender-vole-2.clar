@@ -1,0 +1,144 @@
+(use-trait ft 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.ft-trait.ft-trait)
+
+(define-constant wstx 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.wstx)
+(define-constant zsbtc 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.zsbtc-v2-0)
+(define-constant sbtc 'SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4.sbtc-token)
+
+(define-constant err-not-found (err u8000000))
+
+(define-constant one u100000000)
+
+(define-read-only (get-sbtc-rewards (who principal))
+    (let (
+        ;; gets with interest
+        ;; (reward-balance (unwrap-panic (convert-to sbtc wstx (unwrap-panic (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.zsbtc-v2-0 get-balance who)))))
+        (reward-balance u100000000)
+        (reward-decimals (unwrap-panic (get-precision wstx)))
+        (reward-program-income-state (unwrap-panic (get-reward-program-income sbtc wstx)))
+        )
+        ;; get increase in rewards
+        (let (
+            (cumulated-balance
+                ;; (unwrap-panic
+                ;;     (calculate-cumulated-balance
+                ;;         who
+                ;;         'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.zsbtc-v2-0
+                ;;         sbtc
+                ;;         wstx
+                ;;         reward-balance
+                ;;         reward-decimals))
+                u100000000
+            )
+            (balance-increase (- cumulated-balance reward-balance))
+            (new-user-index u100000000
+                ;; (get-normalized-income
+                ;;     (get liquidity-rate reward-program-income-state)
+                ;;     (get last-updated-block reward-program-income-state)
+                ;;     (get last-liquidity-cumulative-index reward-program-income-state))
+                )
+            )
+            ;; update income of the rewarded asset to latest
+            balance-increase
+        )
+    )
+)
+
+(define-read-only (get-precision (asset <ft>))
+    (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.incentives get-precision asset)
+)
+
+(define-read-only (convert-to
+    (from <ft>)
+    (to <ft>)
+    (from-amount uint))
+    (begin
+        (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.incentives convert-to
+            from
+            to
+            from-amount
+        )
+    )
+)
+
+
+(define-read-only (calculate-cumulated-balance
+  (who principal)
+  (lp-supplied-asset <ft>)
+  (supplied-asset <ft>)
+  (reward-asset <ft>)
+  (asset-balance uint)
+  (asset-decimals uint))
+  (let (
+    (rewarded-reserve-data (unwrap! (get-reward-program-income supplied-asset reward-asset) err-not-found))
+    (reserve-normalized-income
+      (get-normalized-income
+        (get liquidity-rate rewarded-reserve-data)
+        (get last-updated-block rewarded-reserve-data)
+        (get last-liquidity-cumulative-index rewarded-reserve-data))))
+      (ok 
+        (mul-precision-with-factor
+          asset-balance
+          asset-decimals
+          (div
+            reserve-normalized-income
+            (unwrap! (get-user-program-index-eval who) err-not-found)))
+      )
+  )
+)
+
+(define-read-only (get-user-program-index-eval
+    (who principal)
+    )
+    (match (get-user-program-index who sbtc wstx)
+        index (ok index)
+        (let ((balance (unwrap-panic (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.zsbtc-v2-0 get-balance who))))
+            (if (> balance u0)
+                ;; if had a balance already, receive all income
+                (ok one)
+                ;; if had no balance, receive the asset's last liquidity index
+                (ok (get last-liquidity-cumulative-index (unwrap! (get-reward-program-income sbtc wstx) err-not-found)))
+            )
+        )
+    )
+)
+
+
+(define-read-only (get-normalized-income
+    (current-liquidity-rate uint)
+    (last-updated-block uint)
+    (last-liquidity-cumulative-index uint))
+    (begin
+        (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.pool-0-reserve-v2-0 get-normalized-income
+            current-liquidity-rate
+            last-updated-block
+            last-liquidity-cumulative-index
+        )
+    )
+)
+
+(define-private (get-user-program-index
+    (who principal)
+    (supplied-asset <ft>)
+    (reward-asset <ft>)
+    )
+    (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.incentives get-user-program-index
+        who
+        supplied-asset
+        reward-asset
+    )
+)
+
+(define-private (get-reward-program-income
+    (supplied-asset <ft>)
+    (reward-asset <ft>)
+    )
+    (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.incentives get-reward-program-income
+        supplied-asset
+        reward-asset
+    )
+)
+
+(define-read-only (mul (x uint) (y uint)) (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.math-v2-0 mul x y))
+(define-read-only (div (x uint) (y uint)) (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.math-v2-0 div x y))
+(define-read-only (mul-precision-with-factor (a uint) (decimals-a uint) (b-fixed uint))
+  (contract-call? 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.math-v2-0 mul-precision-with-factor a decimals-a b-fixed))
