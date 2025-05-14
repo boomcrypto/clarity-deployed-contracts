@@ -1,0 +1,18 @@
+---
+title: "Contract PXS-AIRDROP-FOR-LEO-AM"
+draft: true
+---
+Deployer: SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680
+
+
+ 
+
+
+
+Block height: 1146336 (2025-05-12T13:05:25.000Z)
+
+Source code: {{<contractref "PXS-AIRDROP-FOR-LEO-AM" SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680 PXS-AIRDROP-FOR-LEO-AM>}}
+
+Functions:
+
+* send-stx _private_

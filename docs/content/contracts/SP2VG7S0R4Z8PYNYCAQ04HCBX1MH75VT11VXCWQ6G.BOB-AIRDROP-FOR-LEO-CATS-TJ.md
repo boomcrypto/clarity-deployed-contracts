@@ -1,0 +1,18 @@
+---
+title: "Contract BOB-AIRDROP-FOR-LEO-CATS-TJ"
+draft: true
+---
+Deployer: SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G
+
+
+ 
+
+
+
+Block height: 298313 (2024-12-06T01:28:03.000Z)
+
+Source code: {{<contractref "BOB-AIRDROP-FOR-LEO-CATS-TJ" SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G BOB-AIRDROP-FOR-LEO-CATS-TJ>}}
+
+Functions:
+
+* send-stx _private_

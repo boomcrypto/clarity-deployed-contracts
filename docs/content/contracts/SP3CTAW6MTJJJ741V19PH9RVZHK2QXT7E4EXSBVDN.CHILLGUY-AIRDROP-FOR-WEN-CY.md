@@ -1,0 +1,18 @@
+---
+title: "Contract CHILLGUY-AIRDROP-FOR-WEN-CY"
+draft: true
+---
+Deployer: SP3CTAW6MTJJJ741V19PH9RVZHK2QXT7E4EXSBVDN
+
+
+ 
+
+
+
+Block height: 269034 (2024-11-28T08:32:43.000Z)
+
+Source code: {{<contractref "CHILLGUY-AIRDROP-FOR-WEN-CY" SP3CTAW6MTJJJ741V19PH9RVZHK2QXT7E4EXSBVDN CHILLGUY-AIRDROP-FOR-WEN-CY>}}
+
+Functions:
+
+* send-stx _private_

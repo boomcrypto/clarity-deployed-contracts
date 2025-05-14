@@ -1,0 +1,18 @@
+---
+title: "Contract BULLISH-AIRDROP-FOR-SAI-EQ"
+draft: true
+---
+Deployer: SP29AVAWQECDPKBWKCV7JMDQ0ZG9V4EHQG7KVQVWV
+
+
+ 
+
+
+
+Block height: 303201 (2024-12-07T10:45:23.000Z)
+
+Source code: {{<contractref "BULLISH-AIRDROP-FOR-SAI-EQ" SP29AVAWQECDPKBWKCV7JMDQ0ZG9V4EHQG7KVQVWV BULLISH-AIRDROP-FOR-SAI-EQ>}}
+
+Functions:
+
+* send-stx _private_

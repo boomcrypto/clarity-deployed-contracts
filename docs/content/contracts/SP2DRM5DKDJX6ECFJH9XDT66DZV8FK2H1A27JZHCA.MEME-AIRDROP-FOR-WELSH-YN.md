@@ -1,0 +1,18 @@
+---
+title: "Contract MEME-AIRDROP-FOR-WELSH-YN"
+draft: true
+---
+Deployer: SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA
+
+
+ 
+
+
+
+Block height: 298520 (2024-12-06T02:33:59.000Z)
+
+Source code: {{<contractref "MEME-AIRDROP-FOR-WELSH-YN" SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA MEME-AIRDROP-FOR-WELSH-YN>}}
+
+Functions:
+
+* send-stx _private_

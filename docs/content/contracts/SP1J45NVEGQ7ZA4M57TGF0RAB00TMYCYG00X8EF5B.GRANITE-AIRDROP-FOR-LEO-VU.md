@@ -1,0 +1,18 @@
+---
+title: "Contract GRANITE-AIRDROP-FOR-LEO-VU"
+draft: true
+---
+Deployer: SP1J45NVEGQ7ZA4M57TGF0RAB00TMYCYG00X8EF5B
+
+
+ 
+
+
+
+Block height: 447453 (2025-01-10T16:41:12.000Z)
+
+Source code: {{<contractref "GRANITE-AIRDROP-FOR-LEO-VU" SP1J45NVEGQ7ZA4M57TGF0RAB00TMYCYG00X8EF5B GRANITE-AIRDROP-FOR-LEO-VU>}}
+
+Functions:
+
+* send-stx _private_

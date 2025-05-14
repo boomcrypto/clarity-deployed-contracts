@@ -1,0 +1,18 @@
+---
+title: "Contract GM-AIRDROP-FOR-69-WALLETS-YW"
+draft: true
+---
+Deployer: SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8
+
+
+ 
+
+
+
+Block height: 327485 (2024-12-13T13:34:09.000Z)
+
+Source code: {{<contractref "GM-AIRDROP-FOR-69-WALLETS-YW" SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8 GM-AIRDROP-FOR-69-WALLETS-YW>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMP-AIRDROP-FOR-SBTC-ZU"
+draft: true
+---
+Deployer: SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT
+
+
+ 
+
+
+
+Block height: 479260 (2025-01-18T13:06:18.000Z)
+
+Source code: {{<contractref "TRUMP-AIRDROP-FOR-SBTC-ZU" SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT TRUMP-AIRDROP-FOR-SBTC-ZU>}}
+
+Functions:
+
+* send-stx _private_

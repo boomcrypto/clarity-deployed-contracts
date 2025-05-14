@@ -1,0 +1,18 @@
+---
+title: "Contract PXS-AIRDROP-FOR-WELSH-IE"
+draft: true
+---
+Deployer: SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680
+
+
+ 
+
+
+
+Block height: 1146339 (2025-05-12T13:05:25.000Z)
+
+Source code: {{<contractref "PXS-AIRDROP-FOR-WELSH-IE" SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680 PXS-AIRDROP-FOR-WELSH-IE>}}
+
+Functions:
+
+* send-stx _private_

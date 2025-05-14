@@ -1,0 +1,18 @@
+---
+title: "Contract BOB-AIRDROP-FOR-CHA-UQ"
+draft: true
+---
+Deployer: SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G
+
+
+ 
+
+
+
+Block height: 299070 (2024-12-06T05:47:32.000Z)
+
+Source code: {{<contractref "BOB-AIRDROP-FOR-CHA-UQ" SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G BOB-AIRDROP-FOR-CHA-UQ>}}
+
+Functions:
+
+* send-stx _private_

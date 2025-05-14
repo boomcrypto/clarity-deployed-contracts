@@ -1,0 +1,18 @@
+---
+title: "Contract AMIGO-DONATE-FOR-MSTR-MQ"
+draft: true
+---
+Deployer: SP3SE348DFBQT3PV6YT9B85014W0XAC5CT5Q50FB3
+
+
+ 
+
+
+
+Block height: 619537 (2025-02-15T12:19:00.000Z)
+
+Source code: {{<contractref "AMIGO-DONATE-FOR-MSTR-MQ" SP3SE348DFBQT3PV6YT9B85014W0XAC5CT5Q50FB3 AMIGO-DONATE-FOR-MSTR-MQ>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract NEDEX-AIRDROP-FOR-STXAI-GK"
+draft: true
+---
+Deployer: SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S
+
+
+ 
+
+
+
+Block height: 501851 (2025-01-23T08:33:31.000Z)
+
+Source code: {{<contractref "NEDEX-AIRDROP-FOR-STXAI-GK" SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S NEDEX-AIRDROP-FOR-STXAI-GK>}}
+
+Functions:
+
+* send-stx _private_

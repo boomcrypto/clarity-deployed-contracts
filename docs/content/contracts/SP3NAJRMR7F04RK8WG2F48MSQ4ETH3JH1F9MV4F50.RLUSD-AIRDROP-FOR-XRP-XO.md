@@ -1,0 +1,18 @@
+---
+title: "Contract RLUSD-AIRDROP-FOR-XRP-XO"
+draft: true
+---
+Deployer: SP3NAJRMR7F04RK8WG2F48MSQ4ETH3JH1F9MV4F50
+
+
+ 
+
+
+
+Block height: 392929 (2024-12-28T03:50:07.000Z)
+
+Source code: {{<contractref "RLUSD-AIRDROP-FOR-XRP-XO" SP3NAJRMR7F04RK8WG2F48MSQ4ETH3JH1F9MV4F50 RLUSD-AIRDROP-FOR-XRP-XO>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract DYM-AIRDROP-FOR-KAPT-QB"
+draft: true
+---
+Deployer: SPPXV9FF4A7C509J79638VX751XT2FJEAQFWMDWN
+
+
+ 
+
+
+
+Block height: 497807 (2025-01-22T14:02:20.000Z)
+
+Source code: {{<contractref "DYM-AIRDROP-FOR-KAPT-QB" SPPXV9FF4A7C509J79638VX751XT2FJEAQFWMDWN DYM-AIRDROP-FOR-KAPT-QB>}}
+
+Functions:
+
+* send-stx _private_

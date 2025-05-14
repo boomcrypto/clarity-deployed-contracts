@@ -1,0 +1,18 @@
+---
+title: "Contract NEDEX-AIRDROP-FOR-MSTR-LI"
+draft: true
+---
+Deployer: SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S
+
+
+ 
+
+
+
+Block height: 501925 (2025-01-23T08:54:56.000Z)
+
+Source code: {{<contractref "NEDEX-AIRDROP-FOR-MSTR-LI" SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S NEDEX-AIRDROP-FOR-MSTR-LI>}}
+
+Functions:
+
+* send-stx _private_

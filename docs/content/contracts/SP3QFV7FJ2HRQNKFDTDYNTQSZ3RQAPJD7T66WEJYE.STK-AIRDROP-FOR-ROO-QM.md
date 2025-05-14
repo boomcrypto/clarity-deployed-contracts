@@ -1,0 +1,18 @@
+---
+title: "Contract STK-AIRDROP-FOR-ROO-QM"
+draft: true
+---
+Deployer: SP3QFV7FJ2HRQNKFDTDYNTQSZ3RQAPJD7T66WEJYE
+
+
+ 
+
+
+
+Block height: 311151 (2024-12-09T15:15:47.000Z)
+
+Source code: {{<contractref "STK-AIRDROP-FOR-ROO-QM" SP3QFV7FJ2HRQNKFDTDYNTQSZ3RQAPJD7T66WEJYE STK-AIRDROP-FOR-ROO-QM>}}
+
+Functions:
+
+* send-stx _private_

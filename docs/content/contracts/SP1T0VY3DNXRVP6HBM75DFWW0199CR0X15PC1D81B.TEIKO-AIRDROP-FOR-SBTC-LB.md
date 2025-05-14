@@ -1,0 +1,18 @@
+---
+title: "Contract TEIKO-AIRDROP-FOR-SBTC-LB"
+draft: true
+---
+Deployer: SP1T0VY3DNXRVP6HBM75DFWW0199CR0X15PC1D81B
+
+
+ 
+
+
+
+Block height: 1148199 (2025-05-12T17:47:17.000Z)
+
+Source code: {{<contractref "TEIKO-AIRDROP-FOR-SBTC-LB" SP1T0VY3DNXRVP6HBM75DFWW0199CR0X15PC1D81B TEIKO-AIRDROP-FOR-SBTC-LB>}}
+
+Functions:
+
+* send-stx _private_

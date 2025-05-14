@@ -1,0 +1,19 @@
+---
+title: "Trait GM-AIRDROP-FOR-9-WALLETS-UO"
+draft: true
+---
+```
+
+(define-private (send-stx (recipient principal) (amount uint))
+	(begin
+		(try! (stx-transfer? amount tx-sender (as-contract recipient)))
+		(ok true)
+	)
+)
+(contract-call? 'SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8.gm-stxcity send-many (list {to: 'SP1NTTJ1RK90T8A6FQD51ZBTQWX9E55E9XWFEYABX, amount: u8888000000, memo: none} {to: 'SP2ZM0FFZGQ64SX8G287QJEPH2KYF0EZRDJ15PSYC, amount: u8888000000, memo: none} {to: 'SP2MYQF316JWNY0M6MBGRFPZS17GJKRA26ZPB35HM, amount: u8888000000, memo: none} {to: 'SP389APB4DHZ836P4AE9RJW7EKEZAPV5NPDNG7N46, amount: u8888000000, memo: none} {to: 'SP1GC94NAKZF8ZP8AK0WB84ECHAH4HR1E4WTX0KBS, amount: u8888000000, memo: none} {to: 'SPG7NZBX51ZH59DWNR0QC4DDQGTVVTENMQRGJ4HT, amount: u8888000000, memo: none} {to: 'SP25SKSXDBBXDN1HR7151FBH81H6AXF0RKQPHK886, amount: u8888000000, memo: none} {to: 'SPPQHD39H09R19MKA1VBACDFZ8KPVRVVSAZN8A4X, amount: u8888000000, memo: none} {to: 'SP10HSK80JRJNB1DQH610KANEQAVSX18229Z7H9DX, amount: u8888000000, memo: none}))
+(begin
+	
+	(try! (send-stx 'SP1FQ3DQDR5N9HJX3XC5DNKFCG4DHH48EFJQV6QH0 u1000000))
+)
+
+```

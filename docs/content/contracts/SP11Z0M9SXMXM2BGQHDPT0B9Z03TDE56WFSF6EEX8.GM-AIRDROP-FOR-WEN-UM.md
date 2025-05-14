@@ -1,0 +1,18 @@
+---
+title: "Contract GM-AIRDROP-FOR-WEN-UM"
+draft: true
+---
+Deployer: SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8
+
+
+ 
+
+
+
+Block height: 483559 (2025-01-19T13:22:16.000Z)
+
+Source code: {{<contractref "GM-AIRDROP-FOR-WEN-UM" SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8 GM-AIRDROP-FOR-WEN-UM>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract WELSH-BALLS-TO-WPS-BALLS"
+draft: true
+---
+Deployer: SP3J9CZ0HNRZX7S5YBAFPT3SJ4KP1PBSRVP3TQAT7
+
+
+ 
+
+
+
+Block height: 406622 (2024-12-31T13:22:23.000Z)
+
+Source code: {{<contractref "WELSH-BALLS-TO-WPS-BALLS" SP3J9CZ0HNRZX7S5YBAFPT3SJ4KP1PBSRVP3TQAT7 WELSH-BALLS-TO-WPS-BALLS>}}
+
+Functions:
+
+* airdrop _private_

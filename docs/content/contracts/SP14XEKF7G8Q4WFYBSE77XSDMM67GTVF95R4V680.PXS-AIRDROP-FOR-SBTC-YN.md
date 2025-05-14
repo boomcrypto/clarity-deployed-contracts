@@ -1,0 +1,18 @@
+---
+title: "Contract PXS-AIRDROP-FOR-SBTC-YN"
+draft: true
+---
+Deployer: SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680
+
+
+ 
+
+
+
+Block height: 1146353 (2025-05-12T13:05:25.000Z)
+
+Source code: {{<contractref "PXS-AIRDROP-FOR-SBTC-YN" SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680 PXS-AIRDROP-FOR-SBTC-YN>}}
+
+Functions:
+
+* send-stx _private_

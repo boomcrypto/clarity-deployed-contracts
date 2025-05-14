@@ -1,0 +1,18 @@
+---
+title: "Contract SMOKE-AIRDROP-FOR-KAPT-MX"
+draft: true
+---
+Deployer: SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R
+
+
+ 
+
+
+
+Block height: 508177 (2025-01-24T13:56:04.000Z)
+
+Source code: {{<contractref "SMOKE-AIRDROP-FOR-KAPT-MX" SP1AQDVJF18XEFVXMWTRAW9TQ0N2DCN0178FKW03R SMOKE-AIRDROP-FOR-KAPT-MX>}}
+
+Functions:
+
+* send-stx _private_

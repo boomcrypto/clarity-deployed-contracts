@@ -1,0 +1,29 @@
+---
+title: "Trait agp468"
+draft: true
+---
+```
+;; SPDX-License-Identifier: BUSL-1.1
+(impl-trait 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.proposal-trait.proposal-trait)
+
+(define-constant err-mismatch (err u1001))
+
+(define-constant ONE_8 u100000000)
+
+(define-public (execute (sender principal))
+    (begin
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP2M63AXV9862ZEXEC3K0KNND50YHNK4BAMFW0AAJ))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP2TC9QR04SYRKDZC6TY0T1KR4CYE67EVZHXV9K1P))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP3M8W4GHJV85YYHGFZ7BHRTCAX7WN2ZRDZB17NZ))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP1W4EJF44KX2HJCCQKNEW55KG2CP2KKQFSVNHHXP))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP36TJ2VHWRRQE4N49E40026P197Z9HJ8TMST8YB7))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP1G1K83HYGRDPP238K4ZVQTG6J8NFYZYMSYV2C73))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP36Y664SW5K3CN8MVH1Y6G348CZFHSN480SV7Z93))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP28NYYQC6EJ2MRXGPJ2776NGPQBNDT4SD8HT6XWK))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP1GS76T4NA9PJT6F3FGZ4A3M5XJD1B59AC2F5NR4))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP2HER43N8VR9EJH6X8W3KP9SVA9WNPSSMWFF3HY5))
+(try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.migrate-legacy-v2-wl finalise-migrate 'SP15XHNTNEPKYG1ADGG7AYBZ2DM4QX31X87QN9N9S))
+
+(ok true)))
+
+```

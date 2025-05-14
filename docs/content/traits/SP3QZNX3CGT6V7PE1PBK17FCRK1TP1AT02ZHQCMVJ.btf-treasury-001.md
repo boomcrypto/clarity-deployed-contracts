@@ -1,0 +1,25 @@
+---
+title: "Trait btf-treasury-001"
+draft: true
+---
+```
+(define-constant ERR-PERMISSION-DENIED (err u2000))
+(define-constant ERR-CONTRACT-LOCKED (err u2999))
+(define-public (pay-fee (amount uint))
+    (begin
+        (try! (contract-call? .btf-token-001 transfer amount tx-sender (as-contract tx-sender) none))
+        (ok true)
+    )
+)
+(define-public (withdraw (amount uint) (recipient principal))
+    (begin
+        (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+        (asserts! (contract-call? .btf-protocol-cpc-001 has-permission tx-sender u1) ERR-PERMISSION-DENIED)
+        (try! (as-contract (contract-call? .btf-token-001 transfer amount tx-sender recipient none)))
+        (ok true)
+    )
+)
+(define-read-only (get-treasury-balance)
+    (contract-call? .btf-token-001 get-balance (as-contract tx-sender))
+)
+```

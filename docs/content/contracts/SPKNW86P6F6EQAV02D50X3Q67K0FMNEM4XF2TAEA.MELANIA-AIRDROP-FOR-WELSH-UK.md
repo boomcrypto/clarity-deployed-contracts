@@ -1,0 +1,18 @@
+---
+title: "Contract MELANIA-AIRDROP-FOR-WELSH-UK"
+draft: true
+---
+Deployer: SPKNW86P6F6EQAV02D50X3Q67K0FMNEM4XF2TAEA
+
+
+ 
+
+
+
+Block height: 485465 (2025-01-19T22:48:35.000Z)
+
+Source code: {{<contractref "MELANIA-AIRDROP-FOR-WELSH-UK" SPKNW86P6F6EQAV02D50X3Q67K0FMNEM4XF2TAEA MELANIA-AIRDROP-FOR-WELSH-UK>}}
+
+Functions:
+
+* send-stx _private_

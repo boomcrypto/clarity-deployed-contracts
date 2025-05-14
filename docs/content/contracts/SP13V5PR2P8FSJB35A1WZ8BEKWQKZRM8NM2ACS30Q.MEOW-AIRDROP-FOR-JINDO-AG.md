@@ -1,0 +1,18 @@
+---
+title: "Contract MEOW-AIRDROP-FOR-JINDO-AG"
+draft: true
+---
+Deployer: SP13V5PR2P8FSJB35A1WZ8BEKWQKZRM8NM2ACS30Q
+
+
+ 
+
+
+
+Block height: 529310 (2025-01-29T08:10:23.000Z)
+
+Source code: {{<contractref "MEOW-AIRDROP-FOR-JINDO-AG" SP13V5PR2P8FSJB35A1WZ8BEKWQKZRM8NM2ACS30Q MEOW-AIRDROP-FOR-JINDO-AG>}}
+
+Functions:
+
+* send-stx _private_

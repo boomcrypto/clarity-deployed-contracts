@@ -1,0 +1,18 @@
+---
+title: "Contract NEXA-AIRDROP-FOR-ROCK-MX"
+draft: true
+---
+Deployer: SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S
+
+
+ 
+
+
+
+Block height: 456728 (2025-01-12T23:40:51.000Z)
+
+Source code: {{<contractref "NEXA-AIRDROP-FOR-ROCK-MX" SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S NEXA-AIRDROP-FOR-ROCK-MX>}}
+
+Functions:
+
+* send-stx _private_

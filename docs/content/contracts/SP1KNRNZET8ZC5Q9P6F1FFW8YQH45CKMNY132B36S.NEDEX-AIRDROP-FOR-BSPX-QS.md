@@ -1,0 +1,18 @@
+---
+title: "Contract NEDEX-AIRDROP-FOR-BSPX-QS"
+draft: true
+---
+Deployer: SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S
+
+
+ 
+
+
+
+Block height: 501880 (2025-01-23T08:42:04.000Z)
+
+Source code: {{<contractref "NEDEX-AIRDROP-FOR-BSPX-QS" SP1KNRNZET8ZC5Q9P6F1FFW8YQH45CKMNY132B36S NEDEX-AIRDROP-FOR-BSPX-QS>}}
+
+Functions:
+
+* send-stx _private_

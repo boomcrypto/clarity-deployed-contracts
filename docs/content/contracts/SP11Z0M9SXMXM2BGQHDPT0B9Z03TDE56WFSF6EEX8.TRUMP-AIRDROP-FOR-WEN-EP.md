@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMP-AIRDROP-FOR-WEN-EP"
+draft: true
+---
+Deployer: SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8
+
+
+ 
+
+
+
+Block height: 483506 (2025-01-19T12:40:11.000Z)
+
+Source code: {{<contractref "TRUMP-AIRDROP-FOR-WEN-EP" SP11Z0M9SXMXM2BGQHDPT0B9Z03TDE56WFSF6EEX8 TRUMP-AIRDROP-FOR-WEN-EP>}}
+
+Functions:
+
+* send-stx _private_

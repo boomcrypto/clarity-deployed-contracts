@@ -1,0 +1,18 @@
+---
+title: "Contract NASTY-DONATE-FOR-MEME-AP"
+draft: true
+---
+Deployer: SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT
+
+
+ 
+
+
+
+Block height: 269065 (2024-11-28T09:11:15.000Z)
+
+Source code: {{<contractref "NASTY-DONATE-FOR-MEME-AP" SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT NASTY-DONATE-FOR-MEME-AP>}}
+
+Functions:
+
+* send-stx _private_

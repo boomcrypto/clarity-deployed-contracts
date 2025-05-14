@@ -1,0 +1,18 @@
+---
+title: "Contract NASTY-AIRDROP-FOR-NOT-PUNK-IX"
+draft: true
+---
+Deployer: SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT
+
+
+ 
+
+
+
+Block height: 369519 (2024-12-22T10:19:04.000Z)
+
+Source code: {{<contractref "NASTY-AIRDROP-FOR-NOT-PUNK-IX" SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT NASTY-AIRDROP-FOR-NOT-PUNK-IX>}}
+
+Functions:
+
+* send-stx _private_

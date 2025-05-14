@@ -1,0 +1,18 @@
+---
+title: "Contract AIDOG-AIRDROP-FOR-SAI-GT"
+draft: true
+---
+Deployer: SPC77TE65CT7M37RZ7V282KE66CFBEMBNQZKN5WD
+
+
+ 
+
+
+
+Block height: 312415 (2024-12-10T00:53:30.000Z)
+
+Source code: {{<contractref "AIDOG-AIRDROP-FOR-SAI-GT" SPC77TE65CT7M37RZ7V282KE66CFBEMBNQZKN5WD AIDOG-AIRDROP-FOR-SAI-GT>}}
+
+Functions:
+
+* send-stx _private_

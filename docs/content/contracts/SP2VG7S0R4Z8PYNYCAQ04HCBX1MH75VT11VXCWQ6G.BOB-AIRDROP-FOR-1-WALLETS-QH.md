@@ -1,0 +1,18 @@
+---
+title: "Contract BOB-AIRDROP-FOR-1-WALLETS-QH"
+draft: true
+---
+Deployer: SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G
+
+
+ 
+
+
+
+Block height: 298090 (2024-12-06T00:06:48.000Z)
+
+Source code: {{<contractref "BOB-AIRDROP-FOR-1-WALLETS-QH" SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G BOB-AIRDROP-FOR-1-WALLETS-QH>}}
+
+Functions:
+
+* send-stx _private_

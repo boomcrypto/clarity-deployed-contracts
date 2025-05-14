@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMP-AIRDROP-FOR-WELSH-BC"
+draft: true
+---
+Deployer: SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT
+
+
+ 
+
+
+
+Block height: 479218 (2025-01-18T12:51:39.000Z)
+
+Source code: {{<contractref "TRUMP-AIRDROP-FOR-WELSH-BC" SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT TRUMP-AIRDROP-FOR-WELSH-BC>}}
+
+Functions:
+
+* send-stx _private_

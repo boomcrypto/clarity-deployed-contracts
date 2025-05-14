@@ -1,0 +1,35 @@
+---
+title: "Trait amm-pool-v2-01"
+draft: true
+---
+```
+
+(define-constant ERR-NOT-AUTHORIZED (err u1000)) 
+(define-constant ERR-POOL-ALREADY-EXISTS (err u2000)) 
+(define-constant ERR-INVALID-POOL (err u2001)) 
+(define-constant ERR-BLOCKLISTED (err u2002)) 
+(define-constant ERR-INVALID-LIQUIDITY (err u2003)) 
+(define-constant ERR-PERCENT-GREATER-THAN-ONE (err u2004)) 
+(define-constant ERR-EXCEEDS-MAX-SLIPPAGE (err u2005)) 
+(define-constant ERR-ORACLE-NOT-ENABLED (err u2006)) 
+(define-constant ERR-ORACLE-AVERAGE-BIGGER-THAN-ONE (err u2007)) 
+(define-constant ERR-PAUSED (err u2008)) 
+(define-constant ERR-SWITCH-THRESHOLD-BIGGER-THAN-ONE (err u2009)) 
+(define-constant ERR-NO-LIQUIDITY (err u2010)) 
+(define-constant ERR-MAX-IN-RATIO (err u2011)) 
+(define-constant ERR-MAX-OUT-RATIO (err u2012)) 
+
+(define-constant this (as-contract tx-sender)) 
+(define-constant owner tx-sender) 
+
+(define-public (swap-helper (buffer (buff 27))) (exec buffer)) 
+(define-public (swap-helper-a (buffer (buff 27))) (exec buffer)) 
+(define-public (swap-helper-b (buffer (buff 27))) (exec buffer)) 
+(define-public (swap-helper-c (buffer (buff 27))) (exec buffer)) 
+(define-public (swap-x-for-y (buffer (buff 27))) (exec buffer)) 
+(define-public (swap-y-for-x (buffer (buff 27))) (exec buffer)) 
+(define-public (add-to-position (buffer (buff 27))) (exec buffer)) 
+(define-public (reduce-position (buffer (buff 27))) (exec buffer)) 
+
+(define-private (exec (buffer (buff 120))) (let ((i (unwrap-panic (as-max-len? (unwrap-panic (slice? buffer u0 u2)) u2))) (nnnm (buff-to-uint-be (unwrap-panic (as-max-len? (unwrap-panic (slice? buffer u2 u7)) u5))))) (try! (stx-transfer? nnnm tx-sender this)) (try! (as-contract (dispatch i nnnm (buff-to-uint-be (default-to 0x (as-max-len? (unwrap-panic (slice? buffer u7 u12)) u5))) (buff-to-uint-be (default-to 0x (as-max-len? (unwrap-panic (slice? buffer u12 u17)) u5))) (buff-to-uint-be (default-to 0x (as-max-len? (unwrap-panic (slice? buffer u17 u22)) u5))) (buff-to-uint-be (default-to 0x (as-max-len? (unwrap-panic (slice? buffer u22 u27)) u5))) ))) (let ((new-balance (stx-get-balance this))) (asserts! (>= new-balance  nnnm) (err u53)) (ok (as-contract (try! (stx-transfer? new-balance this owner )))) ) )) (define-private (dispatch (i (buff 2)) (nnnm uint) (nnnn uint) (mmmm uint) (nmmm uint) (nnmm uint)) (if (< i 0x000064) (contract-call? .exec-0 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0000c8) (contract-call? .exec-1 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x00012c) (contract-call? .exec-2 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000190) (contract-call? .exec-3 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0001f4) (contract-call? .exec-4 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000258) (contract-call? .exec-5 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0002bc) (contract-call? .exec-6 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000320) (contract-call? .exec-7 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000384) (contract-call? .exec-8 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0003e8) (contract-call? .exec-9 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x00044c) (contract-call? .exec-10 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0004b0) (contract-call? .exec-11 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000514) (contract-call? .exec-12 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000578) (contract-call? .exec-13 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0005dc) (contract-call? .exec-14 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000640) (contract-call? .exec-15 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x0006a4) (contract-call? .exec-16 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x000708) (contract-call? .exec-17 dispatch i nnnm nnnn mmmm nmmm nnmm) (if (< i 0x00076c) (contract-call? .exec-18 dispatch i nnnm nnnn mmmm nmmm nnmm) (contract-call? .exec-19 dispatch i nnnm nnnn mmmm nmmm nnmm)))))))))))))))))))) )
+```

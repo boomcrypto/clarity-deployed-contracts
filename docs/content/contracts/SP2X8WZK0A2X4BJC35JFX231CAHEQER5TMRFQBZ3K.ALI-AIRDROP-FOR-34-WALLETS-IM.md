@@ -1,0 +1,18 @@
+---
+title: "Contract ALI-AIRDROP-FOR-34-WALLETS-IM"
+draft: true
+---
+Deployer: SP2X8WZK0A2X4BJC35JFX231CAHEQER5TMRFQBZ3K
+
+
+ 
+
+
+
+Block height: 284211 (2024-12-02T07:31:25.000Z)
+
+Source code: {{<contractref "ALI-AIRDROP-FOR-34-WALLETS-IM" SP2X8WZK0A2X4BJC35JFX231CAHEQER5TMRFQBZ3K ALI-AIRDROP-FOR-34-WALLETS-IM>}}
+
+Functions:
+
+* send-stx _private_

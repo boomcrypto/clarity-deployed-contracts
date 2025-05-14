@@ -1,0 +1,18 @@
+---
+title: "Contract MELANIA-AIRDROP-FOR-ROO-HQ"
+draft: true
+---
+Deployer: SPKNW86P6F6EQAV02D50X3Q67K0FMNEM4XF2TAEA
+
+
+ 
+
+
+
+Block height: 485513 (2025-01-19T23:04:03.000Z)
+
+Source code: {{<contractref "MELANIA-AIRDROP-FOR-ROO-HQ" SPKNW86P6F6EQAV02D50X3Q67K0FMNEM4XF2TAEA MELANIA-AIRDROP-FOR-ROO-HQ>}}
+
+Functions:
+
+* send-stx _private_

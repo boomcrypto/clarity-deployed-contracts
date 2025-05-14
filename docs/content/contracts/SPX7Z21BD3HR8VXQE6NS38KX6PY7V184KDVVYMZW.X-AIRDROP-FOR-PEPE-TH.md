@@ -1,0 +1,18 @@
+---
+title: "Contract X-AIRDROP-FOR-PEPE-TH"
+draft: true
+---
+Deployer: SPX7Z21BD3HR8VXQE6NS38KX6PY7V184KDVVYMZW
+
+
+ 
+
+
+
+Block height: 259822 (2024-11-25T20:49:08.000Z)
+
+Source code: {{<contractref "X-AIRDROP-FOR-PEPE-TH" SPX7Z21BD3HR8VXQE6NS38KX6PY7V184KDVVYMZW X-AIRDROP-FOR-PEPE-TH>}}
+
+Functions:
+
+* send-stx _private_

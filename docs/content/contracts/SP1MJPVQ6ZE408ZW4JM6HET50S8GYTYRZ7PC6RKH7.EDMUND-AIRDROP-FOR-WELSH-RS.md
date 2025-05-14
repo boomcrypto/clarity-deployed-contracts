@@ -1,0 +1,18 @@
+---
+title: "Contract EDMUND-AIRDROP-FOR-WELSH-RS"
+draft: true
+---
+Deployer: SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7
+
+
+ 
+
+
+
+Block height: 354066 (2024-12-19T04:32:57.000Z)
+
+Source code: {{<contractref "EDMUND-AIRDROP-FOR-WELSH-RS" SP1MJPVQ6ZE408ZW4JM6HET50S8GYTYRZ7PC6RKH7 EDMUND-AIRDROP-FOR-WELSH-RS>}}
+
+Functions:
+
+* send-stx _private_

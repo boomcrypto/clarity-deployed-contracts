@@ -1,0 +1,18 @@
+---
+title: "Contract SHARK-AIRDROP-FOR-WELSH-KK"
+draft: true
+---
+Deployer: SP1KMAA7TPZ5AZZ4W67X74MJNFKMN576604CWNBQS
+
+
+ 
+
+
+
+Block height: 1114295 (2025-05-08T16:30:59.000Z)
+
+Source code: {{<contractref "SHARK-AIRDROP-FOR-WELSH-KK" SP1KMAA7TPZ5AZZ4W67X74MJNFKMN576604CWNBQS SHARK-AIRDROP-FOR-WELSH-KK>}}
+
+Functions:
+
+* send-stx _private_

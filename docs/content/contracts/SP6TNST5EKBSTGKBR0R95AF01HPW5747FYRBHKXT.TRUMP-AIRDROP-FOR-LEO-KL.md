@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMP-AIRDROP-FOR-LEO-KL"
+draft: true
+---
+Deployer: SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT
+
+
+ 
+
+
+
+Block height: 479281 (2025-01-18T13:06:18.000Z)
+
+Source code: {{<contractref "TRUMP-AIRDROP-FOR-LEO-KL" SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT TRUMP-AIRDROP-FOR-LEO-KL>}}
+
+Functions:
+
+* send-stx _private_

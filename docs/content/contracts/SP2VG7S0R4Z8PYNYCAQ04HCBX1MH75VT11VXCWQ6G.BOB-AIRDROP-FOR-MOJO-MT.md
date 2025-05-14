@@ -1,0 +1,18 @@
+---
+title: "Contract BOB-AIRDROP-FOR-MOJO-MT"
+draft: true
+---
+Deployer: SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G
+
+
+ 
+
+
+
+Block height: 298282 (2024-12-06T00:59:41.000Z)
+
+Source code: {{<contractref "BOB-AIRDROP-FOR-MOJO-MT" SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G BOB-AIRDROP-FOR-MOJO-MT>}}
+
+Functions:
+
+* send-stx _private_

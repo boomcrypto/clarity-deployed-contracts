@@ -1,0 +1,18 @@
+---
+title: "Contract NEXA-AIRDROP-FOR-1-WALLETS-RA"
+draft: true
+---
+Deployer: SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S
+
+
+ 
+
+
+
+Block height: 449651 (2025-01-11T05:18:59.000Z)
+
+Source code: {{<contractref "NEXA-AIRDROP-FOR-1-WALLETS-RA" SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S NEXA-AIRDROP-FOR-1-WALLETS-RA>}}
+
+Functions:
+
+* send-stx _private_

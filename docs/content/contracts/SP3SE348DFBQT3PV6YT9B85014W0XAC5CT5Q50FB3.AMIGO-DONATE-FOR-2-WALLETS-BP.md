@@ -1,0 +1,18 @@
+---
+title: "Contract AMIGO-DONATE-FOR-2-WALLETS-BP"
+draft: true
+---
+Deployer: SP3SE348DFBQT3PV6YT9B85014W0XAC5CT5Q50FB3
+
+
+ 
+
+
+
+Block height: 448486 (2025-01-10T22:49:36.000Z)
+
+Source code: {{<contractref "AMIGO-DONATE-FOR-2-WALLETS-BP" SP3SE348DFBQT3PV6YT9B85014W0XAC5CT5Q50FB3 AMIGO-DONATE-FOR-2-WALLETS-BP>}}
+
+Functions:
+
+* send-stx _private_

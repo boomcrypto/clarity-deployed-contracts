@@ -1,0 +1,18 @@
+---
+title: "Contract MALI-AIRDROP-FOR-CHA-JZ"
+draft: true
+---
+Deployer: SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0
+
+
+ 
+
+
+
+Block height: 805445 (2025-03-19T14:11:49.000Z)
+
+Source code: {{<contractref "MALI-AIRDROP-FOR-CHA-JZ" SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0 MALI-AIRDROP-FOR-CHA-JZ>}}
+
+Functions:
+
+* send-stx _private_

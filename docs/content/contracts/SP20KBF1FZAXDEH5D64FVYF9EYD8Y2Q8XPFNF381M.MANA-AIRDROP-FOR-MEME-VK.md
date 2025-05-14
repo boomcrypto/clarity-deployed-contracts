@@ -1,0 +1,18 @@
+---
+title: "Contract MANA-AIRDROP-FOR-MEME-VK"
+draft: true
+---
+Deployer: SP20KBF1FZAXDEH5D64FVYF9EYD8Y2Q8XPFNF381M
+
+
+ 
+
+
+
+Block height: 299532 (2024-12-06T09:12:22.000Z)
+
+Source code: {{<contractref "MANA-AIRDROP-FOR-MEME-VK" SP20KBF1FZAXDEH5D64FVYF9EYD8Y2Q8XPFNF381M MANA-AIRDROP-FOR-MEME-VK>}}
+
+Functions:
+
+* send-stx _private_

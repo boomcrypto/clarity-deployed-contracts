@@ -1,0 +1,18 @@
+---
+title: "Contract MSTR-AIRDROP-FOR-9-WALLETS-CR"
+draft: true
+---
+Deployer: SPQFACZ5KGYJH3XG8BDWW2VGGRBJ8BPFVEXEVC6M
+
+
+ 
+
+
+
+Block height: 438955 (2025-01-08T17:28:41.000Z)
+
+Source code: {{<contractref "MSTR-AIRDROP-FOR-9-WALLETS-CR" SPQFACZ5KGYJH3XG8BDWW2VGGRBJ8BPFVEXEVC6M MSTR-AIRDROP-FOR-9-WALLETS-CR>}}
+
+Functions:
+
+* send-stx _private_

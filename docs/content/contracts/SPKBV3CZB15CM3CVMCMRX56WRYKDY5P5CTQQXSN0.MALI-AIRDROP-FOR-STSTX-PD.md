@@ -1,0 +1,18 @@
+---
+title: "Contract MALI-AIRDROP-FOR-STSTX-PD"
+draft: true
+---
+Deployer: SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0
+
+
+ 
+
+
+
+Block height: 770774 (2025-03-14T00:35:24.000Z)
+
+Source code: {{<contractref "MALI-AIRDROP-FOR-STSTX-PD" SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0 MALI-AIRDROP-FOR-STSTX-PD>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract KAPT-AIRDROP-FOR-LEO-DK"
+draft: true
+---
+Deployer: SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81
+
+
+ 
+
+
+
+Block height: 299353 (2024-12-06T08:07:00.000Z)
+
+Source code: {{<contractref "KAPT-AIRDROP-FOR-LEO-DK" SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81 KAPT-AIRDROP-FOR-LEO-DK>}}
+
+Functions:
+
+* send-stx _private_

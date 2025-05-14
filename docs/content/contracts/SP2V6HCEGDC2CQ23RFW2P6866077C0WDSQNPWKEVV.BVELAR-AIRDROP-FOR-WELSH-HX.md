@@ -1,0 +1,18 @@
+---
+title: "Contract BVELAR-AIRDROP-FOR-WELSH-HX"
+draft: true
+---
+Deployer: SP2V6HCEGDC2CQ23RFW2P6866077C0WDSQNPWKEVV
+
+
+ 
+
+
+
+Block height: 344783 (2024-12-17T08:41:51.000Z)
+
+Source code: {{<contractref "BVELAR-AIRDROP-FOR-WELSH-HX" SP2V6HCEGDC2CQ23RFW2P6866077C0WDSQNPWKEVV BVELAR-AIRDROP-FOR-WELSH-HX>}}
+
+Functions:
+
+* send-stx _private_

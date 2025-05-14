@@ -1,0 +1,7 @@
+---
+title: "Trait amm-pool-v2-03"
+draft: true
+---
+```
+(use-trait nma 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.trait-sip-010.sip-010-trait) (use-trait nmb 'SP2AKWJYC7BNY18W1XXKPGP0YVEK63QJG4793Z2D4.sip-010-trait-ft-standard.sip-010-trait) (use-trait sspl 'SP1Z92MPDQEWZXW36VX71Q25HKF5K2EPCJ304F275.liquidity-token-trait-v4c.liquidity-token-trait) (define-public (o3 (t <nma>) (tt <nma>) (ttt <nma>) (ii uint) (ll uint) (n uint) (jj <nmb>) (jlj <nmb>) (nin <sspl>) (min-amt uint) (nn uint)) (let ((sender tx-sender) (this (as-contract tx-sender)) ) (try! (stx-transfer? (/ ii u100) sender this)) (as-contract (stx-transfer? (unwrap-panic (element-at? (try! (contract-call? 'SP1Z92MPDQEWZXW36VX71Q25HKF5K2EPCJ304F275.stackswap-swap-v5k swap-y-for-x jlj jj nin (/ (try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.amm-pool-v2-01 swap-helper-a t tt ttt ll n ii (some u1)) ) nn) min-amt )) u0)) this sender)) ) ) (define-public (p3 (t <nma>) (tt <nma>) (ttt <nma>) (min-amt uint) (ll uint) (n uint) (jj <nmb>) (jlj <nmb>) (nin <sspl>) (li uint) (nn uint)) (let ((sender tx-sender) (this (as-contract tx-sender)) ) (try! (stx-transfer? li sender this)) (as-contract (stx-transfer? (/ (try! (contract-call? 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.amm-pool-v2-01 swap-helper-a t tt ttt ll n (* (unwrap-panic (element-at? (try! (contract-call? 'SP1Z92MPDQEWZXW36VX71Q25HKF5K2EPCJ304F275.stackswap-swap-v5k swap-x-for-y jj jlj nin li u1)) u1) ) nn) (some min-amt) )) u100) this sender))) )
+```

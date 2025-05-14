@@ -1,0 +1,18 @@
+---
+title: "Contract TEST-AIRDROP-FOR-WEN-FJ"
+draft: true
+---
+Deployer: SPB8PXKR86CKJNVG8Y3AQKFEZJX57NW2W8JPVXQA
+
+
+ 
+
+
+
+Block height: 298525 (2024-12-06T02:42:47.000Z)
+
+Source code: {{<contractref "TEST-AIRDROP-FOR-WEN-FJ" SPB8PXKR86CKJNVG8Y3AQKFEZJX57NW2W8JPVXQA TEST-AIRDROP-FOR-WEN-FJ>}}
+
+Functions:
+
+* send-stx _private_

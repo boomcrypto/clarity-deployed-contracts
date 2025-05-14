@@ -1,0 +1,39 @@
+---
+title: "Contract monkey-d-luffy-rc10"
+draft: true
+---
+Deployer: SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS
+
+Traits:
+ SIP-0010
+
+
+
+Block height: 1062273 (2025-05-01T04:46:45.000Z)
+
+Source code: {{<contractref "monkey-d-luffy-rc10" SP2ZNGJ85ENDY6QRHQ5P2D4FXKGZWCKTB2T0Z55KS monkey-d-luffy-rc10>}}
+
+Functions:
+
+* get-byte _private_
+* get-reserves _private_
+* add-liquidity _public_
+* burn _public_
+* remove-liquidity _public_
+* set-token-uri _public_
+* swap-a-to-b _public_
+* swap-b-to-a _public_
+* transfer _public_
+* x-add-liquidity _public_
+* x-remove-liquidity _public_
+* x-swap-a-to-b _public_
+* x-swap-b-to-a _public_
+* get-balance _read_only_
+* get-decimals _read_only_
+* get-liquidity-quote _read_only_
+* get-name _read_only_
+* get-reserves-quote _read_only_
+* get-swap-quote _read_only_
+* get-symbol _read_only_
+* get-token-uri _read_only_
+* get-total-supply _read_only_

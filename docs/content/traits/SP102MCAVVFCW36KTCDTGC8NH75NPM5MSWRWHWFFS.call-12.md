@@ -1,0 +1,40 @@
+---
+title: "Trait call-12"
+draft: true
+---
+```
+(use-trait ft 'SP2VCQJGH7PHP2DJK7Z0V48AGBHQAW3R3ZW1QF4N.ft-trait.ft-trait)
+
+(define-public 
+  (call (price-feed-bytes (optional (buff 8192)))
+  (asset <ft>)
+  )
+  (begin
+    (match price-feed-bytes
+      bytes (begin
+        (try! 
+          (contract-call? 'SP3R4F6C1J3JQWWCVZ3S7FRRYPMYG6ZW6RZK31FXY.pyth-oracle-v3 verify-and-update-price-feeds
+            bytes
+            {
+              pyth-storage-contract: 'SP3R4F6C1J3JQWWCVZ3S7FRRYPMYG6ZW6RZK31FXY.pyth-storage-v3,
+              pyth-decoder-contract: 'SP3R4F6C1J3JQWWCVZ3S7FRRYPMYG6ZW6RZK31FXY.pyth-pnau-decoder-v2,
+              wormhole-core-contract: 'SP3R4F6C1J3JQWWCVZ3S7FRRYPMYG6ZW6RZK31FXY.wormhole-core-v3,
+            }
+          )
+        )
+        true
+      )
+      (begin
+        (print "no-feed-update")
+        ;; do nothing if none
+        true
+      )
+    )
+
+  (contract-call? .zu-bist
+    get-asset-price
+    asset
+  )
+  )
+)
+```

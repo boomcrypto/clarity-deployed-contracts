@@ -1,0 +1,18 @@
+---
+title: "Contract WEN-AIRDROP-FOR-26-WALLETS-ZU"
+draft: true
+---
+Deployer: SP3KE6P7G1XYHWNX3024WJPG31TZC1K0X1923KFXT
+
+
+ 
+
+
+
+Block height: 261328 (2024-11-26T04:20:55.000Z)
+
+Source code: {{<contractref "WEN-AIRDROP-FOR-26-WALLETS-ZU" SP3KE6P7G1XYHWNX3024WJPG31TZC1K0X1923KFXT WEN-AIRDROP-FOR-26-WALLETS-ZU>}}
+
+Functions:
+
+* send-stx _private_

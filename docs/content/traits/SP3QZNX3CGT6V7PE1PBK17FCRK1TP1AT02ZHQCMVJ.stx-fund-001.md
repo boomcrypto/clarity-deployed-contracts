@@ -1,0 +1,151 @@
+---
+title: "Trait stx-fund-001"
+draft: true
+---
+```
+(define-data-var buy-token-tax uint u2)
+(define-map buy-orders
+  principal
+  { amount-stx: uint })
+(define-map sell-orders
+  principal
+  { amount-btf: uint })
+(define-data-var minimum-stx uint u1000000)  
+(define-data-var minimum-btf uint u100000000)  
+(define-constant ERR-PERMISSION-DENIED (err u4000))  
+(define-constant ERR-PRECONDITION-FAILED (err u4001))  
+(define-constant ERR-ORDER-NOT-FOUND (err u4003))  
+(define-constant ERR-ORDER-ALREADY-EXISTS (err u4004))  
+(define-constant ERR-CONTRACT-LOCKED (err u4999)) 
+(define-public (place-buy-order (amount-stx uint))
+  (begin
+    (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+    (asserts! (>= amount-stx (var-get minimum-stx)) ERR-PRECONDITION-FAILED)  
+    (asserts! (is-none (map-get? buy-orders tx-sender)) ERR-ORDER-ALREADY-EXISTS)  
+    (try! (stx-transfer? amount-stx tx-sender (as-contract tx-sender)))  
+    (map-set buy-orders tx-sender { amount-stx: amount-stx })  
+    (ok true)
+  )
+)
+(define-public (cancel-buy-order)
+  (let (
+      (caller tx-sender)
+    )
+    (match (get-buy-order tx-sender)
+      order
+      (begin
+        (map-delete buy-orders tx-sender)  
+        (try! (as-contract (stx-transfer? (get amount-stx order) tx-sender caller)))  
+        (ok true)
+      )
+      ERR-ORDER-NOT-FOUND  
+    )
+  )
+)
+(define-public (fulfill-buy-order (amount-btf uint) (user principal))
+  (begin
+    (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+    (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u10) ERR-PERMISSION-DENIED)
+    (asserts! (> amount-btf u0) ERR-PRECONDITION-FAILED)  
+    (match (get-buy-order user)
+      order 
+      (begin
+        (map-delete buy-orders user)  
+        (try! (mint-token amount-btf user))  
+        (try! (as-contract (stx-transfer? (get amount-stx order) tx-sender .stx-treasury-001)))  
+        (ok true)
+      )
+      ERR-ORDER-NOT-FOUND  
+    )
+  )
+)
+(define-private (mint-token (amount-btf uint) (user principal))
+    (begin
+        (let ((tax (/ (* (get-buy-token-tax) amount-btf) u100))  
+              (amount-to-user (- amount-btf tax)))  
+            (try! (as-contract (contract-call? .btf-token-001 mint amount-to-user user)))  
+            (try! (as-contract (contract-call? .btf-token-001 mint tax tx-sender)))  
+            (try! (as-contract (contract-call? .btf-treasury-001 pay-fee tax)))
+            (ok true)
+        )
+    )
+)
+(define-public (place-sell-order (amount-btf uint))
+  (begin
+    (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+    (asserts! (>= amount-btf (var-get minimum-btf)) ERR-PRECONDITION-FAILED)  
+    (asserts! (is-none (map-get? sell-orders tx-sender)) ERR-ORDER-ALREADY-EXISTS)  
+    (try! (contract-call? .btf-token-001 transfer amount-btf tx-sender (as-contract tx-sender) none))  
+    (map-set sell-orders tx-sender { amount-btf: amount-btf })  
+    (ok true)
+  )
+)
+(define-public (cancel-sell-order)
+  (let (
+      (caller tx-sender)
+    )
+    (match (get-sell-order tx-sender)
+      order
+      (begin
+        (map-delete sell-orders tx-sender)  
+        (try! (as-contract (contract-call? .btf-token-001 transfer (get amount-btf order) tx-sender caller none)))  
+        (ok true)
+      )
+      ERR-ORDER-NOT-FOUND  
+    )
+  )
+)
+(define-public (fulfill-sell-order (user principal) (amount-stx uint))
+  (begin
+    (asserts! (as-contract (contract-call? .btf-protocol-cpc-001 is-contract-unlocked tx-sender)) ERR-CONTRACT-LOCKED)
+    (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u10) ERR-PERMISSION-DENIED)
+    (match (get-sell-order user)
+      order
+      (begin
+        (map-delete sell-orders user)  
+        (try! (as-contract (contract-call? .btf-token-001 burn (get amount-btf order))))  
+        (try! (as-contract (contract-call? .stx-treasury-001 withdraw-stx amount-stx user)))  
+        (ok true)
+      )
+      ERR-ORDER-NOT-FOUND  
+    )
+  )
+)
+(define-read-only (get-buy-order (user principal))
+  (map-get? buy-orders user)
+)
+(define-read-only (get-sell-order (user principal))
+  (map-get? sell-orders user)
+)
+(define-read-only (get-buy-token-tax)
+  (var-get buy-token-tax)
+)
+(define-read-only (get-minimum-stx)
+  (var-get minimum-stx)
+)
+(define-read-only (get-minimum-btf)
+  (var-get minimum-btf)
+)
+(define-public (set-buy-token-tax (new-tax uint))
+  (begin
+    (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u10) ERR-PERMISSION-DENIED)
+    (var-set buy-token-tax new-tax)
+    (ok true)
+  )
+)
+(define-public (set-minimum-stx (new-minimum-stx uint))
+  (begin
+    (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u10) ERR-PERMISSION-DENIED)
+    (var-set minimum-stx new-minimum-stx)
+    (ok true)
+  )
+)
+(define-public (set-minimum-btf (new-minimum-btf uint))
+  (begin
+    (asserts! (contract-call? .btf-protocol-cpc-001 has-permission contract-caller u10) ERR-PERMISSION-DENIED)
+    (var-set minimum-btf new-minimum-btf)
+    (ok true)
+  )
+)
+
+```

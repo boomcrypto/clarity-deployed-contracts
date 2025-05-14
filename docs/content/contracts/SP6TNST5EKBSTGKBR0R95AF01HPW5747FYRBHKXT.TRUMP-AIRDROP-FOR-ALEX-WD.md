@@ -1,0 +1,18 @@
+---
+title: "Contract TRUMP-AIRDROP-FOR-ALEX-WD"
+draft: true
+---
+Deployer: SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT
+
+
+ 
+
+
+
+Block height: 479283 (2025-01-18T13:16:18.000Z)
+
+Source code: {{<contractref "TRUMP-AIRDROP-FOR-ALEX-WD" SP6TNST5EKBSTGKBR0R95AF01HPW5747FYRBHKXT TRUMP-AIRDROP-FOR-ALEX-WD>}}
+
+Functions:
+
+* send-stx _private_

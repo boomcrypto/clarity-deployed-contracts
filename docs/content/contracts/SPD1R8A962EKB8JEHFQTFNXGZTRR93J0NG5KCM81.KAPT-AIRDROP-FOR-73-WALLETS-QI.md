@@ -1,0 +1,18 @@
+---
+title: "Contract KAPT-AIRDROP-FOR-73-WALLETS-QI"
+draft: true
+---
+Deployer: SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81
+
+
+ 
+
+
+
+Block height: 685375 (2025-02-27T14:58:10.000Z)
+
+Source code: {{<contractref "KAPT-AIRDROP-FOR-73-WALLETS-QI" SPD1R8A962EKB8JEHFQTFNXGZTRR93J0NG5KCM81 KAPT-AIRDROP-FOR-73-WALLETS-QI>}}
+
+Functions:
+
+* send-stx _private_

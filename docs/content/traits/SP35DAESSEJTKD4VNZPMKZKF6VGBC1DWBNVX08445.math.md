@@ -1,0 +1,39 @@
+---
+title: "Trait math"
+draft: true
+---
+```
+
+    (define-constant DECI u1000000)
+    (define-read-only (div-ceil (x uint) (y uint))
+      (if (is-eq x u0) u0 (+ u1 (/ (- x u1) y))))
+    (define-read-only (calc-out-y (in-x uint) (virtual-reserve-x uint) (virtual-reserve-y uint))
+        (let ((k (* virtual-reserve-x virtual-reserve-y)) 
+              (virtual-reserve-y-after (div-ceil k (+ virtual-reserve-x in-x)))
+              (out-y (- virtual-reserve-y virtual-reserve-y-after)))
+            (ok out-y)
+        ) 
+    )
+    (define-read-only (calc-out-x (in-y uint) (virtual-reserve-x uint) (virtual-reserve-y uint))
+        (let ((k (* virtual-reserve-x virtual-reserve-y)) 
+              (virtual-reserve-x-after (div-ceil k (+ virtual-reserve-y in-y)))
+              (out-x (- virtual-reserve-x virtual-reserve-x-after)))
+            (ok out-x) 
+        )
+    )
+    (define-read-only (calc-required-in-x (out-y uint) (virtual-reserve-x uint) (virtual-reserve-y uint))
+        (let ((k (* virtual-reserve-x virtual-reserve-y)) 
+              (virtual-reserve-x-after (div-ceil k (- virtual-reserve-y out-y)))
+              (required-in-x (- virtual-reserve-x-after virtual-reserve-x)))
+            (ok required-in-x)
+        )
+    )
+    (define-read-only (calc-required-in-y (out-x uint) (virtual-reserve-x uint) (virtual-reserve-y uint))
+        (let ((k (* virtual-reserve-x virtual-reserve-y)) 
+              (virtual-reserve-y-after (div-ceil k (- virtual-reserve-x out-x)))
+              (required-in-y (- virtual-reserve-y-after virtual-reserve-y)))
+            (ok required-in-y)
+        ) 
+    )
+    
+```

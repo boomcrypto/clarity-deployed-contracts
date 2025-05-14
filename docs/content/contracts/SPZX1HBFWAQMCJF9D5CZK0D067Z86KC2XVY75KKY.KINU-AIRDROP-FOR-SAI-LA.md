@@ -1,0 +1,18 @@
+---
+title: "Contract KINU-AIRDROP-FOR-SAI-LA"
+draft: true
+---
+Deployer: SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY
+
+
+ 
+
+
+
+Block height: 315013 (2024-12-10T17:34:10.000Z)
+
+Source code: {{<contractref "KINU-AIRDROP-FOR-SAI-LA" SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY KINU-AIRDROP-FOR-SAI-LA>}}
+
+Functions:
+
+* send-stx _private_

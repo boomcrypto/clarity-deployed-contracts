@@ -1,0 +1,18 @@
+---
+title: "Contract BROS-AIRDROP-FOR-NAKAPACK-OF"
+draft: true
+---
+Deployer: SPMWB0BNTFM19PWTNP0SJ2WX3PW5GTTMBS8BGZ5X
+
+
+ 
+
+
+
+Block height: 322683 (2024-12-12T13:02:57.000Z)
+
+Source code: {{<contractref "BROS-AIRDROP-FOR-NAKAPACK-OF" SPMWB0BNTFM19PWTNP0SJ2WX3PW5GTTMBS8BGZ5X BROS-AIRDROP-FOR-NAKAPACK-OF>}}
+
+Functions:
+
+* send-stx _private_

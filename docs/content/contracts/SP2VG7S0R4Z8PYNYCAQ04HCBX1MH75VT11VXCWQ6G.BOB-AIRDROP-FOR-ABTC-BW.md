@@ -1,0 +1,18 @@
+---
+title: "Contract BOB-AIRDROP-FOR-ABTC-BW"
+draft: true
+---
+Deployer: SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G
+
+
+ 
+
+
+
+Block height: 299078 (2024-12-06T05:47:32.000Z)
+
+Source code: {{<contractref "BOB-AIRDROP-FOR-ABTC-BW" SP2VG7S0R4Z8PYNYCAQ04HCBX1MH75VT11VXCWQ6G BOB-AIRDROP-FOR-ABTC-BW>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,49 @@
+---
+title: "Contract gated-012"
+draft: true
+---
+Deployer: SP2BRB6P0BK6T35DHTGXCV6MZ5TGRN5E0RKZ1T8B5
+
+Traits:
+SIP-009 
+
+
+
+Block height: 259610 (2024-11-25T19:50:15.000Z)
+
+Source code: {{<contractref "gated-012" SP2BRB6P0BK6T35DHTGXCV6MZ5TGRN5E0RKZ1T8B5 gated-012>}}
+
+Functions:
+
+* airdrop-track-1 _private_
+* airdrop-track-2 _private_
+* airdrop-track-3 _private_
+* airdrop-track-4 _private_
+* airdrop-track-5 _private_
+* airdrop-track-6 _private_
+* airdrop-track-7 _private_
+* airdrop-track-8 _private_
+* is-sender-owner _private_
+* airdrop-track-1-migration _public_
+* airdrop-track-2-migration _public_
+* airdrop-track-3-migration _public_
+* airdrop-track-4-migration _public_
+* airdrop-track-5-migration _public_
+* airdrop-track-6-migration _public_
+* airdrop-track-7-migration _public_
+* airdrop-track-8-migration _public_
+* mint-album _public_
+* mint-track-1 _public_
+* mint-track-2 _public_
+* mint-track-3 _public_
+* mint-track-4 _public_
+* mint-track-5 _public_
+* mint-track-6 _public_
+* mint-track-7 _public_
+* mint-track-8 _public_
+* transfer _public_
+* unlist-in-ustx _public_
+* get-last-token-id _read_only_
+* get-listing-in-ustx _read_only_
+* get-owner _read_only_
+* get-token-uri _read_only_

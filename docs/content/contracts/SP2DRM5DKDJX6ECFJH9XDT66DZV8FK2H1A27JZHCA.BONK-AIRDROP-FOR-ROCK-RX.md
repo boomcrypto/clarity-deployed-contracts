@@ -1,0 +1,18 @@
+---
+title: "Contract BONK-AIRDROP-FOR-ROCK-RX"
+draft: true
+---
+Deployer: SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA
+
+
+ 
+
+
+
+Block height: 1127082 (2025-05-10T06:55:18.000Z)
+
+Source code: {{<contractref "BONK-AIRDROP-FOR-ROCK-RX" SP2DRM5DKDJX6ECFJH9XDT66DZV8FK2H1A27JZHCA BONK-AIRDROP-FOR-ROCK-RX>}}
+
+Functions:
+
+* send-stx _private_

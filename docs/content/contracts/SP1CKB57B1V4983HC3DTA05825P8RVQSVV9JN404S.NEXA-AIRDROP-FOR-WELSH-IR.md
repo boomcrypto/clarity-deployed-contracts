@@ -1,0 +1,18 @@
+---
+title: "Contract NEXA-AIRDROP-FOR-WELSH-IR"
+draft: true
+---
+Deployer: SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S
+
+
+ 
+
+
+
+Block height: 453559 (2025-01-12T03:16:13.000Z)
+
+Source code: {{<contractref "NEXA-AIRDROP-FOR-WELSH-IR" SP1CKB57B1V4983HC3DTA05825P8RVQSVV9JN404S NEXA-AIRDROP-FOR-WELSH-IR>}}
+
+Functions:
+
+* send-stx _private_

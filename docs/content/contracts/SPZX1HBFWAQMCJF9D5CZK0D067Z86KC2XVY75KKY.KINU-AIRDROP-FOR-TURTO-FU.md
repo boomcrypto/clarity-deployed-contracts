@@ -1,0 +1,18 @@
+---
+title: "Contract KINU-AIRDROP-FOR-TURTO-FU"
+draft: true
+---
+Deployer: SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY
+
+
+ 
+
+
+
+Block height: 315563 (2024-12-10T20:14:55.000Z)
+
+Source code: {{<contractref "KINU-AIRDROP-FOR-TURTO-FU" SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY KINU-AIRDROP-FOR-TURTO-FU>}}
+
+Functions:
+
+* send-stx _private_

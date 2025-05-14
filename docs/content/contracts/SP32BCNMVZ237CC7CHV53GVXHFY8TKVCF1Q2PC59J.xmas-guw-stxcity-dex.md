@@ -1,0 +1,22 @@
+---
+title: "Contract xmas-guw-stxcity-dex"
+draft: true
+---
+Deployer: SP32BCNMVZ237CC7CHV53GVXHFY8TKVCF1Q2PC59J
+
+
+ 
+
+
+
+Block height: 355575 (2024-12-19T11:55:13.000Z)
+
+Source code: {{<contractref "xmas-guw-stxcity-dex" SP32BCNMVZ237CC7CHV53GVXHFY8TKVCF1Q2PC59J xmas-guw-stxcity-dex>}}
+
+Functions:
+
+* buy _public_
+* sell _public_
+* get-buyable-tokens _read_only_
+* get-sellable-stx _read_only_
+* get-tradable _read_only_

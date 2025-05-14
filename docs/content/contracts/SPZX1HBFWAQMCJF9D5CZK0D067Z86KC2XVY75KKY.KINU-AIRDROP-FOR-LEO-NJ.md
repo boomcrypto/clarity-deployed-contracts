@@ -1,0 +1,18 @@
+---
+title: "Contract KINU-AIRDROP-FOR-LEO-NJ"
+draft: true
+---
+Deployer: SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY
+
+
+ 
+
+
+
+Block height: 315567 (2024-12-10T20:14:55.000Z)
+
+Source code: {{<contractref "KINU-AIRDROP-FOR-LEO-NJ" SPZX1HBFWAQMCJF9D5CZK0D067Z86KC2XVY75KKY KINU-AIRDROP-FOR-LEO-NJ>}}
+
+Functions:
+
+* send-stx _private_

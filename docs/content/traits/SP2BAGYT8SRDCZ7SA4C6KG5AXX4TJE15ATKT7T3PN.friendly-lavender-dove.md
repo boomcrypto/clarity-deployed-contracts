@@ -1,0 +1,31 @@
+---
+title: "Trait friendly-lavender-dove"
+draft: true
+---
+```
+(define-public (xpe-10)
+  (begin
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (try! (contract-call? .tiny-lime-python xpe))
+    (ok true)
+  )
+)
+```

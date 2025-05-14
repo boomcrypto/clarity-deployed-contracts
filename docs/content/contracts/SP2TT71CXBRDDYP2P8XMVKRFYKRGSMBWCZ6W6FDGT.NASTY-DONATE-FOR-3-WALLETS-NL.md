@@ -1,0 +1,18 @@
+---
+title: "Contract NASTY-DONATE-FOR-3-WALLETS-NL"
+draft: true
+---
+Deployer: SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT
+
+
+ 
+
+
+
+Block height: 280328 (2024-12-01T04:41:40.000Z)
+
+Source code: {{<contractref "NASTY-DONATE-FOR-3-WALLETS-NL" SP2TT71CXBRDDYP2P8XMVKRFYKRGSMBWCZ6W6FDGT NASTY-DONATE-FOR-3-WALLETS-NL>}}
+
+Functions:
+
+* send-stx _private_

@@ -1,0 +1,18 @@
+---
+title: "Contract MALI-AIRDROP-FOR-WELSH-RH"
+draft: true
+---
+Deployer: SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0
+
+
+ 
+
+
+
+Block height: 818360 (2025-03-21T13:29:23.000Z)
+
+Source code: {{<contractref "MALI-AIRDROP-FOR-WELSH-RH" SPKBV3CZB15CM3CVMCMRX56WRYKDY5P5CTQQXSN0 MALI-AIRDROP-FOR-WELSH-RH>}}
+
+Functions:
+
+* send-stx _private_

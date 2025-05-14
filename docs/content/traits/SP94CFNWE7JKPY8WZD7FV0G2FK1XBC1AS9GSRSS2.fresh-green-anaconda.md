@@ -1,0 +1,41 @@
+---
+title: "Trait fresh-green-anaconda"
+draft: true
+---
+```
+(define-public (xpe-10)
+  (begin
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (try! (contract-call? .net-red-mandrill xpe))
+    (ok true)
+  )
+)
+```
