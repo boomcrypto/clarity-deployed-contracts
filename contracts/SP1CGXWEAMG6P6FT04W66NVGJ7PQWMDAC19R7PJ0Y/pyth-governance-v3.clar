@@ -1,0 +1,476 @@
+;; Title: pyth-governance
+;; Version: v3
+;; Check for latest version: https://github.com/Trust-Machines/stacks-pyth-bridge#latest-version
+;; Report an issue: https://github.com/Trust-Machines/stacks-pyth-bridge/issues
+
+(use-trait pyth-proxy-trait .pyth-traits-v2.proxy-trait)
+(use-trait pyth-decoder-trait .pyth-traits-v2.decoder-trait)
+(use-trait pyth-storage-trait .pyth-traits-v2.storage-trait)
+(use-trait wormhole-core-trait .wormhole-traits-v2.core-trait)
+
+(define-constant PTGM_MAGIC 0x5054474d) ;; 'PTGM': Pyth Governance Message
+
+;; VAA including some commands for administrating Pyth contract
+;; The oracle contract address must be upgraded
+(define-constant PTGM_UPDATE_PYTH_ORACLE_ADDRESS 0x00)
+;; Authorize governance change
+(define-constant PTGM_UPDATE_GOVERNANCE_DATA_SOURCE 0x01)
+;; Which wormhole emitter is allowed to send price updates
+(define-constant PTGM_UPDATE_PRICES_DATA_SOURCES 0x02)
+;; Fee is charged when you submit a new price
+(define-constant PTGM_UPDATE_FEE 0x03)
+;; Stale price threshold 
+(define-constant PTGM_STALE_PRICE_THRESHOLD 0x04)
+;; Upgrade wormhole contract 
+(define-constant PTGM_UPDATE_WORMHOLE_CORE_ADDRESS 0x06)
+;; Special Stacks operation: update recipient address
+(define-constant PTGM_UPDATE_RECIPIENT_ADDRESS 0xa0)
+;; Special Stacks operation: update storage contract address
+(define-constant PTGM_UPDATE_PYTH_STORAGE_ADDRESS 0xa1)
+;; Special Stacks operation: update decoder contract address
+(define-constant PTGM_UPDATE_PYTH_DECODER_ADDRESS 0xa2)
+;; Stacks chain id attributed by Pyth
+(define-constant EXPECTED_CHAIN_ID (if is-in-mainnet 0xea86 0xc377))
+;; Stacks module id attributed by Pyth
+(define-constant EXPECTED_MODULE 0x03)
+;; Emitter data size
+(define-constant SIZE_OF_EMITTER_DATA u34)
+
+;; Error unexpected action
+(define-constant ERR_UNEXPECTED_ACTION (err u4001))
+;; Error unexpected action
+(define-constant ERR_INVALID_ACTION_PAYLOAD (err u4002))
+;; Error unauthorized control flow
+(define-constant ERR_UNAUTHORIZED_ACCESS (err u4003))
+;; Error outdated action
+(define-constant ERR_OUTDATED (err u4004))
+;; Error unauthorized update
+(define-constant ERR_UNAUTHORIZED_UPDATE (err u4005))
+;; Error parsing PTGM
+(define-constant ERR_INVALID_PTGM (err u4006))
+;; Error not standard principal
+(define-constant ERR_NOT_STANDARD_PRINCIPAL (err u4007))
+;; Error Ptgm overlay bytes
+(define-constant ERR_PTGM_CHECK_OVERLAY (err u4008))
+;; Error invalid price data source
+(define-constant ERR_INVALID_PRICE_DATA_SOURCES (err u4009))
+
+(define-data-var governance-data-source 
+	{ emitter-chain: uint, emitter-address: (buff 32) }
+	{ emitter-chain: u1, emitter-address: 0x5635979a221c34931e32620b9293a463065555ea71fe97cd6237ade875b12e9e })
+
+(define-data-var prices-data-sources 
+	(list 255 { emitter-chain: uint, emitter-address: (buff 32) })
+	(list
+		{ emitter-chain: u1, emitter-address: 0x6bb14509a612f01fbbc4cffeebd4bbfb492a86df717ebe92eb6df432a3f00a25 }
+		{ emitter-chain: u26, emitter-address: 0xf8cd23c2ab91237730770bbea08d61005cdda0984348f3f6eecb559638c0bba0 }
+		{ emitter-chain: u26, emitter-address: 0xe101faedac5851e32b9b23b5f9411a8c2bac4aae3ed4dd7b811dd1a72ea4aa71 }))
+
+(define-data-var fee-value 
+	{ mantissa: uint, exponent: uint } 
+	{ mantissa: u1, exponent: u0 })
+
+(define-data-var stale-price-threshold uint (if is-in-mainnet (* u2 u60 u60) (* u5 u365 u24 u60 u60))) ;; defaults: 2 hours on Mainnet, 5 years on Testnet
+(define-data-var fee-recipient-address principal (if is-in-mainnet 'SP3CRXBDXQ2N5P7E25Q39MEX1HSMRDSEAP3CFK2Z3 'ST3CRXBDXQ2N5P7E25Q39MEX1HSMRDSEAP1JST19D))
+(define-data-var last-sequence-processed uint u0)
+
+;; Execution plan management
+(define-data-var current-execution-plan { 
+	pyth-oracle-contract: principal,
+	pyth-decoder-contract: principal, 
+	pyth-storage-contract: principal,
+	wormhole-core-contract: principal
+} { 
+		pyth-oracle-contract: .pyth-oracle-v4,
+		pyth-decoder-contract: .pyth-pnau-decoder-v3, 
+		pyth-storage-contract: .pyth-storage-v4,
+		wormhole-core-contract: .wormhole-core-v4
+})
+
+(define-read-only (check-execution-flow 
+	(former-contract-caller principal)
+	(execution-plan-opt (optional {
+		pyth-storage-contract: <pyth-storage-trait>,
+		pyth-decoder-contract: <pyth-decoder-trait>,
+		wormhole-core-contract: <wormhole-core-trait>
+	})))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(success (if (is-eq contract-caller (get pyth-storage-contract expected-execution-plan))
+				;; The storage contract is checking its execution flow
+				;; Must always be invoked by the proxy
+				(try! (expect-contract-call-performed-by-expected-oracle-contract former-contract-caller expected-execution-plan))
+				;; Other contract
+				(if (is-eq contract-caller (get pyth-decoder-contract expected-execution-plan))
+					;; The decoding contract is checking its execution flow
+					(try! (expect-contract-call-performed-by-expected-oracle-contract former-contract-caller expected-execution-plan))
+					(if (is-eq contract-caller (get pyth-oracle-contract expected-execution-plan))
+						;; The proxy contract is checking its execution flow
+						(let ((execution-plan (unwrap! execution-plan-opt ERR_UNAUTHORIZED_ACCESS)))
+							;; Ensure that storage contract is the one expected
+							(try! (expect-active-storage-contract (get pyth-storage-contract execution-plan) expected-execution-plan))
+							;; Ensure that decoder contract is the one expected
+							(try! (expect-active-decoder-contract (get pyth-decoder-contract execution-plan) expected-execution-plan))
+							;; Ensure that wormhole contract is the one expected
+							(try! (expect-active-wormhole-contract (get wormhole-core-contract execution-plan) expected-execution-plan)))
+						false)))))
+		(if success (ok true) ERR_UNAUTHORIZED_ACCESS)))
+
+(define-read-only (check-storage-contract 
+	(storage-contract <pyth-storage-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan)))
+		;; Ensure that storage contract is the one expected
+		(expect-active-storage-contract storage-contract expected-execution-plan)))
+
+(define-read-only (get-current-execution-plan)
+	(var-get current-execution-plan))
+
+(define-read-only (get-fee-info)
+	(merge (var-get fee-value) { address: (var-get fee-recipient-address) }))
+
+(define-read-only (get-stale-price-threshold)
+	(var-get stale-price-threshold))
+
+(define-read-only (get-authorized-prices-data-sources)
+	(var-get prices-data-sources))
+
+(define-public (update-fee-value (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_FEE) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update fee-value
+		(let ((updated-data (try! (parse-and-verify-fee-value (get body ptgm)))))
+			(var-set fee-value updated-data)
+			;; Emit event
+			(print { type: "fee-value", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-stale-price-threshold (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_STALE_PRICE_THRESHOLD) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update stale-price-threshold
+		(let ((updated-data (try! (parse-and-verify-stale-price-threshold (get body ptgm)))))
+			(var-set stale-price-threshold updated-data)
+			;; Emit event
+			(print { type: "stale-price-threshold", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-fee-recipient-address (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_RECIPIENT_ADDRESS) ERR_UNEXPECTED_ACTION)
+			;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update fee-recipient-address
+		(let ((updated-data (try! (parse-principal (get body ptgm)))))
+			(var-set fee-recipient-address updated-data)
+			;; Emit event
+			(print { type: "fee-recipient-address", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-wormhole-core-contract (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_WORMHOLE_CORE_ADDRESS) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update execution plan
+		(let ((updated-data (try! (parse-principal (get body ptgm)))))
+			(var-set current-execution-plan (merge expected-execution-plan { wormhole-core-contract: updated-data }))
+			;; Emit event
+			(print { type: "wormhole-core-contract", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-pyth-oracle-contract (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_PYTH_ORACLE_ADDRESS) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update execution plan
+		(let ((updated-data (try! (parse-principal (get body ptgm)))))
+			(var-set current-execution-plan (merge expected-execution-plan { pyth-oracle-contract: updated-data }))
+			;; Emit event
+			(print { type: "pyth-oracle-contract", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-pyth-decoder-contract (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_PYTH_DECODER_ADDRESS) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update execution plan
+		(let ((updated-data (try! (parse-principal (get body ptgm)))))
+			(var-set current-execution-plan (merge expected-execution-plan { pyth-decoder-contract: updated-data }))
+			;; Emit event
+			(print { type: "pyth-decoder-contract", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-pyth-storage-contract (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_PYTH_STORAGE_ADDRESS) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update execution plan
+		(let ((updated-data (try! (parse-principal (get body ptgm)))))
+			(var-set current-execution-plan (merge expected-execution-plan { pyth-storage-contract: updated-data }))
+			;; Emit event
+			(print { type: "pyth-storage-contract", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-prices-data-sources (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_PRICES_DATA_SOURCES) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update prices-data-sources
+		(let ((updated-data (try! (parse-and-verify-prices-data-sources (get body ptgm)))))
+			(var-set prices-data-sources updated-data)
+			;; Emit event
+			(print { type: "prices-data-sources", action: "updated", data: updated-data })
+			(ok updated-data))))
+
+(define-public (update-governance-data-source (vaa-bytes (buff 8192)) (wormhole-core-contract <wormhole-core-trait>))
+	(let ((expected-execution-plan (var-get current-execution-plan))
+			(vaa (try! (contract-call? wormhole-core-contract parse-and-verify-vaa vaa-bytes)))
+			(ptgm (try! (parse-and-verify-ptgm (get payload vaa) (get sequence vaa)))))
+		;; Ensure action's expected
+		(asserts! (is-eq (get action ptgm) PTGM_UPDATE_GOVERNANCE_DATA_SOURCE) ERR_UNEXPECTED_ACTION)
+		;; Ensure that the action is authorized
+		(try! (check-update-source (get emitter-chain vaa) (get emitter-address vaa)))
+		;; Ensure that the latest wormhole contract is used
+		(try! (expect-active-wormhole-contract wormhole-core-contract expected-execution-plan))
+		;; Update governance-data-source
+		(let ((updated-data (try! (parse-and-verify-governance-data-source (get body ptgm))))
+				(data-source {emitter-chain: (get emitter-chain updated-data), emitter-address: (get emitter-address updated-data)})
+				(new-sequence (get emitter-sequence updated-data)))
+			(var-set governance-data-source data-source)
+			(var-set last-sequence-processed new-sequence)
+			;; Emit event
+			(print { type: "governance-data-source", action: "updated", data: updated-data })
+			(ok updated-data)    
+		)))
+
+(define-private (check-update-source (emitter-chain uint) (emitter-address (buff 32)))
+	(let ((authorized-data-source (var-get governance-data-source)))
+		;; Check data-source
+		(asserts! (is-eq authorized-data-source { emitter-chain: emitter-chain, emitter-address: emitter-address }) ERR_UNAUTHORIZED_UPDATE)
+		(ok true)))
+
+(define-private (expect-contract-call-performed-by-expected-oracle-contract 
+	(former-contract-caller principal) 
+	(expected-plan { 
+		pyth-oracle-contract: principal,
+		pyth-decoder-contract: principal, 
+		pyth-storage-contract: principal,
+		wormhole-core-contract: principal
+	}))
+	(begin
+		(asserts! (is-eq former-contract-caller (get pyth-oracle-contract expected-plan)) ERR_UNAUTHORIZED_ACCESS)
+		(ok true)))
+
+(define-private (expect-active-storage-contract 
+	(storage-contract <pyth-storage-trait>)
+	(expected-plan { 
+		pyth-oracle-contract: principal,
+		pyth-decoder-contract: principal, 
+		pyth-storage-contract: principal,
+		wormhole-core-contract: principal
+	}))
+	(begin
+		(asserts! (is-eq (contract-of storage-contract) (get pyth-storage-contract expected-plan)) ERR_UNAUTHORIZED_ACCESS)
+		(ok true)))
+
+(define-private (expect-active-decoder-contract 
+	(decoder-contract <pyth-decoder-trait>)
+	(expected-plan { 
+		pyth-oracle-contract: principal,
+		pyth-decoder-contract: principal, 
+		pyth-storage-contract: principal,
+		wormhole-core-contract: principal
+	}))
+	(begin
+		(asserts! (is-eq (contract-of decoder-contract) (get pyth-decoder-contract expected-plan)) ERR_UNAUTHORIZED_ACCESS)
+		(ok true)))
+
+(define-private (expect-active-wormhole-contract 
+	(wormhole-contract <wormhole-core-trait>)
+	(expected-plan { 
+		pyth-oracle-contract: principal,
+		pyth-decoder-contract: principal, 
+		pyth-storage-contract: principal,
+		wormhole-core-contract: principal
+	}))
+	(begin
+		(asserts! (is-eq (contract-of wormhole-contract) (get wormhole-core-contract expected-plan)) ERR_UNAUTHORIZED_ACCESS)
+		(ok true)))
+
+(define-private (parse-and-verify-ptgm (ptgm-bytes (buff 8192)) (sequence uint))
+	(let ((magic (unwrap! (read-buff-4 ptgm-bytes u0) ERR_INVALID_PTGM))
+			(module (unwrap! (read-buff-1 ptgm-bytes u4) ERR_INVALID_PTGM))
+			(action (unwrap! (read-buff-1 ptgm-bytes u5) ERR_INVALID_PTGM))
+			(target-chain-id (unwrap! (read-buff-2 ptgm-bytes u6) ERR_INVALID_PTGM))
+			(body (unwrap! (slice? ptgm-bytes u8 (len ptgm-bytes)) ERR_INVALID_PTGM)))
+		;; Check magic bytes
+		(asserts! (is-eq magic PTGM_MAGIC) ERR_INVALID_PTGM)
+		;; Check target-chain-id
+		(asserts! (is-eq target-chain-id EXPECTED_CHAIN_ID) ERR_INVALID_PTGM)
+		;; Check module
+		(asserts! (is-eq module EXPECTED_MODULE) ERR_INVALID_PTGM)
+		;; Check Sequence
+		(asserts! (> sequence (var-get last-sequence-processed)) ERR_OUTDATED)
+		;; Update Sequence
+		(var-set last-sequence-processed sequence)
+		(ok { action: action, body: body })))
+
+(define-private (parse-and-verify-fee-value (ptgm-body (buff 8192)))
+	(let ((mantissa (unwrap! (read-uint-64 ptgm-body u0) ERR_INVALID_ACTION_PAYLOAD))
+			(exponent (unwrap! (read-uint-64 ptgm-body u8) ERR_INVALID_ACTION_PAYLOAD)))
+		(asserts! (is-eq u16 (len ptgm-body)) ERR_PTGM_CHECK_OVERLAY)
+		(ok { mantissa: mantissa, exponent: exponent })))
+
+(define-private (parse-and-verify-stale-price-threshold (ptgm-body (buff 8192)))
+	(let ((stale-price-threshold-val (unwrap! (read-uint-64 ptgm-body u0) ERR_INVALID_ACTION_PAYLOAD)))
+		(asserts! (is-eq u8 (len ptgm-body)) ERR_PTGM_CHECK_OVERLAY)     
+		(ok stale-price-threshold-val)))
+
+(define-private (parse-and-verify-governance-data-source (ptgm-body (buff 8192)))
+	(let ((emitter-chain (unwrap! (read-uint-16 ptgm-body u0) ERR_INVALID_ACTION_PAYLOAD))
+			(emitter-sequence (unwrap! (read-uint-64 ptgm-body u2) ERR_INVALID_ACTION_PAYLOAD))
+			(emitter-address (unwrap! (read-buff-32 ptgm-body u10) ERR_INVALID_ACTION_PAYLOAD)))
+		(asserts! (is-eq u42 (len ptgm-body)) ERR_PTGM_CHECK_OVERLAY)      
+		(ok { emitter-chain: emitter-chain, emitter-sequence: emitter-sequence, emitter-address: emitter-address })))
+
+(define-private (parse-principal (ptgm-body (buff 8192)))
+	(let ((principal-len (try! (read-uint-8 ptgm-body u0)))
+			(principal-bytes (slice ptgm-body u1 (some principal-len)))
+			(new-principal (unwrap! (from-consensus-buff? principal principal-bytes) ERR_INVALID_ACTION_PAYLOAD)))
+		(asserts! (is-eq (+ u1 principal-len) (len ptgm-body)) ERR_PTGM_CHECK_OVERLAY)    
+		(asserts! (is-standard new-principal) ERR_NOT_STANDARD_PRINCIPAL)
+		(ok new-principal))) 
+
+(define-private (parse-and-verify-prices-data-sources (ptgm-body (buff 8192)))
+	(let ((num-data-sources (try! (read-uint-8 ptgm-body u0)))
+			(data-sources-bytes (slice ptgm-body u1 none))
+			(data-sources-bundle (fold parse-data-source data-sources-bytes { 
+				result: (list), 
+				cursor: {
+					index: u0,
+					next-update-index: u0
+				},
+				bytes: data-sources-bytes,
+				limit: num-data-sources 
+			}))
+			(data-sources (get result data-sources-bundle)))
+		(asserts! (is-eq (get next-update-index (get cursor data-sources-bundle)) (len data-sources-bytes)) ERR_PTGM_CHECK_OVERLAY)
+		(asserts! (is-eq num-data-sources (len data-sources)) ERR_INVALID_PRICE_DATA_SOURCES)  
+		(ok data-sources)))
+
+(define-private (parse-data-source
+		(entry (buff 1)) 
+		(acc { 
+			cursor: { 
+				index: uint,
+				next-update-index: uint
+			},
+			bytes: (buff 8192),
+			result: (list 255 { emitter-chain: uint, emitter-address: (buff 32) }), 
+			limit: uint
+		}))
+	(let ((cursor (get cursor acc))
+			(offset (get index cursor))
+			(next-update-index (get next-update-index cursor)))
+		(if (is-eq (len (get result acc)) (get limit acc)) acc
+			(if (is-eq offset next-update-index)
+				;; Parse update
+				(let ((bytes (get bytes acc))
+						(emitter-chain (unwrap-panic (read-uint-16 bytes offset)))
+						(emitter-address (unwrap-panic (read-buff-32 bytes (+ offset u2)))))
+					{
+						cursor: { 
+							index: (+ offset u1),
+							next-update-index: (+ offset SIZE_OF_EMITTER_DATA),
+						},
+						bytes: bytes,
+						result: (unwrap-panic (as-max-len? (append (get result acc) { 
+							emitter-chain: emitter-chain, 
+							emitter-address: emitter-address 
+						}) u255)),
+						limit: (get limit acc),
+					})
+				;; Increment position
+				{
+						cursor: { 
+							index: (+ offset u1),
+							next-update-index: next-update-index,
+						},
+						bytes: (get bytes acc),
+						result: (get result acc),
+						limit: (get limit acc)
+				}))))
+
+(define-private (read-buff (bytes (buff 8192)) (pos uint) (length uint))
+	(ok (unwrap! (slice? bytes pos (+ pos length)) (err u1))))
+
+(define-private (read-buff-1 (bytes (buff 8192)) (pos uint))
+	(ok (unwrap! (as-max-len? (unwrap! (slice? bytes pos (+ pos u1)) (err u1)) u1) (err u1))))
+
+(define-private (read-buff-2 (bytes (buff 8192)) (pos uint))
+	(ok (unwrap! (as-max-len? (unwrap! (slice? bytes pos (+ pos u2)) (err u1)) u2) (err u1))))
+
+(define-private (read-buff-4 (bytes (buff 8192)) (pos uint))
+	(ok (unwrap! (as-max-len? (unwrap! (slice? bytes pos (+ pos u4)) (err u1)) u4) (err u1))))
+
+(define-private (read-buff-32 (bytes (buff 8192)) (pos uint))
+	(ok (unwrap! (as-max-len? (unwrap! (slice? bytes pos (+ pos u32)) (err u1)) u32) (err u1))))
+
+(define-private (read-uint-8 (bytes (buff 8192)) (pos uint))
+	(ok (buff-to-uint-be (unwrap-panic (as-max-len? (try! (read-buff bytes pos u1)) u1)))))
+
+(define-private (read-uint-16 (bytes (buff 8192)) (pos uint))
+	(ok (buff-to-uint-be (unwrap-panic (as-max-len? (try! (read-buff bytes pos u2)) u2)))))
+
+(define-private (read-uint-64 (bytes (buff 8192)) (pos uint))
+	(ok (buff-to-uint-be (unwrap-panic (as-max-len? (try! (read-buff bytes pos u8)) u8)))))
+
+(define-private (slice (bytes (buff 8192)) (pos uint) (size (optional uint)))
+	(match (slice? bytes pos (match size value (+ pos value) (len bytes))) b b 0x))

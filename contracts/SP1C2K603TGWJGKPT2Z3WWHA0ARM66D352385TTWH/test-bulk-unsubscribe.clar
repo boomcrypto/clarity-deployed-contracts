@@ -1,0 +1,10 @@
+(define-public (bulk-unsubscribe)
+  (begin 
+    (try! (contract-call? 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber admin-unsubscribe 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers u1))
+    (try! (contract-call? 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber admin-unsubscribe 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers u2))
+    (try! (contract-call? 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber admin-unsubscribe 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers u3))
+    (try! (contract-call? 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber admin-unsubscribe 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers u4))
+    (try! (contract-call? 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber admin-unsubscribe 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers u5))
+    (ok true)
+  )
+)

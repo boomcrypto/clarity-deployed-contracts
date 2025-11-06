@@ -1,0 +1,1 @@
+(define-trait o7dd5601e ((oda47c2f4 (uint (buff 20)) (response uint uint))))

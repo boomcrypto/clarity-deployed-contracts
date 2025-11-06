@@ -1,0 +1,15 @@
+(define-trait bsd-trait
+  (
+    (protocol-mint (principal uint) (response bool uint))
+    (protocol-transfer (uint principal principal) (response bool uint))
+    (protocol-burn (principal uint) (response bool uint))
+    (add-privileged-protocol-principal (principal) (response bool uint))
+    (remove-privileged-protocol-principal (principal) (response bool uint))
+    (propose-owner (principal) (response bool uint))
+    (claim-owner () (response bool uint))
+    (get-all-privileged-principals () (response (list 100 principal) uint))
+    (transfer (uint principal principal (optional (buff 34))) (response bool uint))
+    (burn (uint principal) (response bool uint))
+	(set-token-uri ((optional (string-utf8 256))) (response bool uint))
+  )
+) 

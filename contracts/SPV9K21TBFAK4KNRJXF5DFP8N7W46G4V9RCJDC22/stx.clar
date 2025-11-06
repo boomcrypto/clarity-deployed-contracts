@@ -1,0 +1,1 @@
+;; register stx as a principal

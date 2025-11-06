@@ -1,0 +1,1 @@
+{amount: u100000000, bitcoin-txid: 0x4290e74e56818a81ea7348b1a15a868e7570433094ae697bb883ce5e4c8a3334, burn-hash: 0x58969d455d51be49372727410b2b04733afe1925b2fd9d8831d97e1fcecdb349, burn-height: u28077, output-index: u1, sweep-txid: 0xbc17b4d07ffa15087ba823909a7bab6fe4ed249ff41e5fd0ade3c555398ba6c2, topic: "completed-deposit"}
