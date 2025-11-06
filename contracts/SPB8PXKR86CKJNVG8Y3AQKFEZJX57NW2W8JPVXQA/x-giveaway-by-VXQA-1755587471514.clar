@@ -1,0 +1,12 @@
+;; X_Giveaway Airdrop Contract - By stx.city 
+;; Airdrop Creator: SPB8PXKR86CKJNVG8Y3AQKFEZJX57NW2W8JPVXQA
+;; X Giveaway URL: https://x.com/khoa_work/status/1947304959231545449
+
+(try! (stx-transfer? u1000 tx-sender 'SP272RCH1BZ3YFQKVC94Q04J3YJ1T7W4G2P6Z8VJ6))
+(try! (stx-transfer? u1000 tx-sender 'SPS7V7SWB9C1YPP8Y99S0FFGC1BG4WCC1PBPJJJY))
+(try! (stx-transfer? u1000 tx-sender 'SP30EAHAMB9MYBCBDTAXNBBC1CCNR3XJHV9SDB1MS))
+(try! (stx-transfer? u1000 tx-sender 'SP1B46TPZD8Y3ETHGZYJAPHD9GHJK81K08WRB127X))
+(try! (stx-transfer? u1000 tx-sender 'SP1MP4A2TZBX935NS93V5QP8ESG8534XARQFQPCMG))
+
+;; Send fee to STXCITY 
+(try! (stx-transfer? u2000000 tx-sender 'SP13AK1HNCSC66XD8J4KATQ3C752825ZYM7MECAAA))

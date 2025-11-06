@@ -1,0 +1,21 @@
+(define-constant BURN_AMOUNT u100000000)
+(define-constant BURN_AMT_10 (* BURN_AMOUNT u10))
+
+(define-public (claim (amount uint))
+    (let (
+    (claim-amount (clamp amount))
+    (op {opcode: (some 0x00), pool: .hooter-farm-rewards})
+    (result-0 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-1 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-2 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-3 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-4 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-5 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-6 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-7 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-8 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op)))
+    (result-9 (try! (contract-call? .multihop swap-1 BURN_AMOUNT op))))
+    (ok {dx: claim-amount, dy: claim-amount, dk: (unwrap-panic (contract-call? .hooter-the-owl get-balance .hooter-farm))})))
+
+(define-read-only (clamp (amount uint))
+    (if (<= amount BURN_AMT_10) amount BURN_AMT_10))

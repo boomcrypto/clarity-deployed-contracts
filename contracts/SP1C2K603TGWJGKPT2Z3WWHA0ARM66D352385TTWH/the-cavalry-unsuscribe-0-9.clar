@@ -1,0 +1,18 @@
+(define-constant multipliers-contract 'SP1C2K603TGWJGKPT2Z3WWHA0ARM66D352385TTWH.the-cavalry-multipliers)
+(define-constant spoints-subscriber 'SP217FZ8AZYTGPKMERWZ6FYRAK4ZZ6YHMJ7XQXGEV.the-cavalry-spoints-subscriber)
+
+(define-public (run-once)
+  (begin
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u0))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u1))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u2))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u3))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u4))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u5))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u6))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u7))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u8))
+    (try! (contract-call? spoints-subscriber admin-unsubscribe multipliers-contract u9))
+    (ok true)
+  )
+)

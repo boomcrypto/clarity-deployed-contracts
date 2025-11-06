@@ -1,0 +1,1 @@
+(define-public (donate) (ok u1000000))

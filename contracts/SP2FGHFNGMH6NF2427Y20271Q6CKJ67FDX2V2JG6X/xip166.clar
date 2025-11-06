@@ -1,0 +1,21 @@
+;; SPDX-License-Identifier: BUSL-1.1
+
+(impl-trait 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.proposal-trait.proposal-trait)
+(use-trait ft-trait 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.trait-sip-010.sip-010-trait)
+
+(define-constant MAX_UINT u240282366920938463463374607431768211455)
+(define-constant ONE_8 u100000000)
+
+(define-public (execute (sender principal))
+	(let (
+		(abtc-1 (unwrap-panic (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc get-balance-fixed 'SP1SNT6GK28RWFHDZEQ4510MDC80XH2DANN553KZ4)))
+		(abtc-2 (unwrap-panic (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc get-balance-fixed 'SP2VCNXGRZCBTP8E9MQ6DJPFVXRBPWBN63FE06A1M)))
+		(ausd-1 (unwrap-panic (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt get-balance-fixed 'SP1SNT6GK28RWFHDZEQ4510MDC80XH2DANN553KZ4)))
+		(ausd-2 (unwrap-panic (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt get-balance-fixed 'SP2VCNXGRZCBTP8E9MQ6DJPFVXRBPWBN63FE06A1M)))
+	)
+(and (> abtc-1 u0) (try! (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc burn-fixed abtc-1 'SP1SNT6GK28RWFHDZEQ4510MDC80XH2DANN553KZ4)))
+(and (> abtc-2 u0) (try! (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-abtc burn-fixed abtc-2 'SP2VCNXGRZCBTP8E9MQ6DJPFVXRBPWBN63FE06A1M)))
+(and (> ausd-1 u0) (try! (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt burn-fixed ausd-1 'SP1SNT6GK28RWFHDZEQ4510MDC80XH2DANN553KZ4)))
+(and (> ausd-2 u0) (try! (contract-call? 'SP2XD7417HGPRTREMKF748VNEQPDRR0RMANB7X1NK.token-susdt burn-fixed ausd-2 'SP2VCNXGRZCBTP8E9MQ6DJPFVXRBPWBN63FE06A1M)))
+
+(ok true)))

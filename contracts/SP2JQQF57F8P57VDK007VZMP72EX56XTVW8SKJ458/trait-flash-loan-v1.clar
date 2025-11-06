@@ -1,0 +1,8 @@
+;; SPDX-License-Identifier: BUSL-1.1
+
+(define-trait flash-loan
+  (
+    ;; Callback function once the request amount is transferred to contract-caller
+    (on-granite-flash-loan (uint uint (optional (buff 20480))) (response bool uint))
+  )
+)

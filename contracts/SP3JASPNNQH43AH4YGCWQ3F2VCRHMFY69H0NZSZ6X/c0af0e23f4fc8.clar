@@ -1,0 +1,1 @@
+(define-trait o7dd5601e ((exec-swap (uint (buff 20)) (response uint uint))))
