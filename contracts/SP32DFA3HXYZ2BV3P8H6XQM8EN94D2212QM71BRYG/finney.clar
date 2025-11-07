@@ -5,7 +5,7 @@
 ;; (use-trait sip-010-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)
 (impl-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)
 
-(define-constant MAXSUPPLY u21000000)
+(define-constant MAXSUPPLY u21000000000000000)
 (define-fungible-token finney MAXSUPPLY)
 (define-constant contract-owner tx-sender)
 (define-constant err-service-only (err u100))
@@ -111,7 +111,7 @@
 ;; Mint
 ;; ---------------------------------------------------------
 (begin
-  (try! (send-stx 'SP3A2R2763JHY9FTBX19GA02H58025Y9KVX301NYP u1557632))
-  (try! (ft-mint? finney u20790000 contract-owner))
-  (try! (ft-mint? finney u210000 'SP3A2R2763JHY9FTBX19GA02H58025Y9KVX301NYP))
+  (try! (send-stx 'SP3A2R2763JHY9FTBX19GA02H58025Y9KVX301NYP u1510574))
+  (try! (ft-mint? finney u20790000000000000 contract-owner))
+  (try! (ft-mint? finney u210000000000000 'SP3A2R2763JHY9FTBX19GA02H58025Y9KVX301NYP))
 )
