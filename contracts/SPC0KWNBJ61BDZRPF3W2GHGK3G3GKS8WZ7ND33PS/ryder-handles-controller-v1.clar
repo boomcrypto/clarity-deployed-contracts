@@ -192,3 +192,4 @@
 
 (define-read-only (get-contract-owner)
     (var-get contract-owner))
+
